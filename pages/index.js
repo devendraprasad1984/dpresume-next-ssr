@@ -32,3 +32,28 @@ export const getStaticProps = async () => {
 //         }
 //     }
 // }
+
+
+// This function gets called at build time on server-side.
+// It won't be called on client-side, so you can even do
+// direct database queries. See the "Technical details" section.
+
+// export async function getStaticProps() {
+//     // Call an external API endpoint to get data.
+//     // You can use any data fetching library
+//
+//     var res = await fetch(
+//         'https://www.ajmadison.com/product3.0/packages.index.json.php?sku=RF28R7351SR'
+//     );
+//
+//     var json = await res.json();
+//
+//     data = JSON.stringify(json);
+//     console.log('data ', data);
+//
+//     return {
+//         props: {
+//             data: json,
+//         },
+//     };
+// }

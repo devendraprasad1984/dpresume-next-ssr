@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 
-const Header = () => {
+const Meta = () => {
     return <Head>
         <title>dpresume.com next.js SSR - Server Side Rendering</title>
         <meta name='keywords'
@@ -9,4 +9,4 @@ const Header = () => {
     </Head>
 
 }
-export default Header
+export default Meta

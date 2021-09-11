@@ -1,0 +1,7 @@
+.wid-100{
+    width: 100%;
+}
+.wid-100-vw{
+    display: flex;
+    width: 100vw;
+}

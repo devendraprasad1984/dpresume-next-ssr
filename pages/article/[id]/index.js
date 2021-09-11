@@ -5,13 +5,13 @@ import Meta from "../../../components/common/meta";
 import {BaseHeader} from "../../../config/fetchHeadBaseConfig";
 
 
-const article = ({article}) => {
+const article = ({post}) => {
     // const router = useRouter()
     // const {id} = router.query
     return <div>
-        <Meta title={article.title} description={article.excerpt}/>
-        <h1>{article.title}</h1>
-        <p>{article.body}</p>
+        <Meta title={post.title || ''} description={post.body.substring(0, 100) || ''}/>
+        <h1>{post.title || ''}</h1>
+        <p>{post.body || ''}</p>
         <br/>
         <GO text={'go back'} where={'/'}/>
     </div>
@@ -35,7 +35,7 @@ export const getStaticProps = async (context) => {
     const data = await res.json()
     return {
         props: {
-            article: data
+            post: data
         }
     }
 }
@@ -47,7 +47,7 @@ export const getStaticPaths = async () => {
     const ids = data.map(row => row.id)
     const paths = ids.map(id => ({params: {id: id.toString()}}))
     return {
-        paths, fallback: true
+        paths, fallback: false
     }
 }
 

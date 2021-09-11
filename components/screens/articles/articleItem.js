@@ -3,12 +3,16 @@ import commonStyles from "../../../styles/common.module.css";
 
 
 const ArticleItem = ({item}) => {
-    return <Link href={'/article/[id]'} as={`/article/${item.id}`} className={commonStyles.card}>
-        <a>
-            <h3>{item.title} &rarr;</h3>
-            <p>{item.body}</p>
-        </a>
-    </Link>
+    return <>
+        <div className={commonStyles.card}>
+            <Link href={'/article/[id]'} as={`/article/${item.id}`}>
+                <a>
+                    <h3>{item.title} &rarr;</h3>
+                    <p>{item.body}</p>
+                </a>
+            </Link>
+        </div>
+    </>
 }
 
 export default ArticleItem

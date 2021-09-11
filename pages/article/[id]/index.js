@@ -1,5 +1,6 @@
 import React from 'react'
 import {useRouter} from "next/router";
+import GO from "../../../components/common/go";
 
 
 const article = (props) => {
@@ -10,6 +11,8 @@ const article = (props) => {
     return <div>
         <h1>{title}</h1>
         <p>{body}</p>
+        <br/>
+        <GO text={'go back'} where={'/'}/>
     </div>
 }
 

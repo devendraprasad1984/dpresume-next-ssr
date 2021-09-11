@@ -8,7 +8,7 @@ const ArticleItem = ({item}) => {
             <Link href={'/article/[id]'} as={`/article/${item.id}`}>
                 <a>
                     <h3>{item.title} &rarr;</h3>
-                    <p>{item.body}</p>
+                    <p>{item.excerpt}</p>
                 </a>
             </Link>
         </div>

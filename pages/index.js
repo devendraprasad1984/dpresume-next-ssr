@@ -1,5 +1,3 @@
-import Meta from "../components/common/meta";
-import DisplayList from "../components/common/displayList";
 import ArticleList from "../components/screens/articles/articleList";
 import {server} from "../config";
 
@@ -9,7 +7,6 @@ export default function Home(props) {
     // console.log('articles.js', articles.js)
     return (
         <div>
-            <Meta/>
             <h1>Welcome to dpresume.com next.js app</h1>
             <ArticleList list={articles}/>
         </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import GO from "../../../components/common/go";
-import Meta from "../../../components/common/meta";
 import {server} from "../../../config";
+import Meta from "../../../components/common/meta";
 
 
 const article = ({article}) => {

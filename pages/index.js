@@ -19,7 +19,7 @@ export const getStaticProps = async () => {
     const articles = await res.json()
     return {
         props: {
-            articles
+            articles: articles.data || []
         }
     }
 }

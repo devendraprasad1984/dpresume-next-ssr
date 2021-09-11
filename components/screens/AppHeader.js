@@ -6,6 +6,7 @@ const AppHeader=props=>{
             <h1 className={headerStyles.title}>
                 <span>App header</span> dpresume
             </h1>
+            <p className={headerStyles.description}>Perfect dpresume.com simple website</p>
         </div>
     </>
 }

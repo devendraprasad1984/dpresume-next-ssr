@@ -2,3 +2,6 @@ https://github.com/bradtraversy/next-crash-course/
 
 npm i -g serve
 serve -s out -p 6200
+
+use prisma with nextjs to talking to database like postgres or mysql
+

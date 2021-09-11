@@ -1,4 +1,4 @@
-import articles from '../../../offline/articles'
+import {articles} from '../../../offline/articles'
 
 
 export default function handler(req, res) {

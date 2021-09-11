@@ -5,7 +5,7 @@ import ArticleList from "../components/screens/articles/articleList";
 
 export default function Home(props) {
     const {articles} = props
-    // console.log('articles', articles)
+    // console.log('articles.js', articles.js)
     return (
         <div>
             <Meta/>

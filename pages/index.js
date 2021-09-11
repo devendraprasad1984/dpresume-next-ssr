@@ -1,11 +1,26 @@
-import Meta from "../components/header/meta";
+import Meta from "../components/common/meta";
+import DisplayList from "../components/common/displayList";
+import ArticleList from "../components/screens/articles/articleList";
 
 
-export default function Home() {
+export default function Home(props) {
+    const {articles} = props
+    // console.log('articles', articles)
     return (
         <div>
             <Meta/>
             <h1>Welcome to dpresume.com next.js app</h1>
+            <ArticleList list={articles}/>
         </div>
     )
+}
+
+export const getStaticProps = async () => {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=6`)
+    const articles = await res.json()
+    return {
+        props: {
+            articles
+        }
+    }
 }

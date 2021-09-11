@@ -4,7 +4,7 @@ import articles from '../../../offline/articles'
 export default function handler(req, res) {
     const id = req.query.id || -1
     // console.log('trying to find',id, req.query)
-    const filtered = articles.filter(article => article.id === parseInt(id))
+    const filtered = articles.filter(article => parseInt(article.id) === parseInt(id))
     if (filtered.length > 0)
         res.status(200).json(filtered[0])
     else {

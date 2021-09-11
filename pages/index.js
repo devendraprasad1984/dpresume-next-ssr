@@ -1,6 +1,7 @@
 import Meta from "../components/common/meta";
 import DisplayList from "../components/common/displayList";
 import ArticleList from "../components/screens/articles/articleList";
+import {server} from "../config";
 
 
 export default function Home(props) {
@@ -16,7 +17,7 @@ export default function Home(props) {
 }
 
 export const getStaticProps = async () => {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=6`)
+    const res = await fetch(`${server}/api/articles`)
     const articles = await res.json()
     return {
         props: {
@@ -24,3 +25,13 @@ export const getStaticProps = async () => {
         }
     }
 }
+
+// export const getStaticProps = async () => {
+//     const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=6`)
+//     const articles = await res.json()
+//     return {
+//         props: {
+//             articles
+//         }
+//     }
+// }

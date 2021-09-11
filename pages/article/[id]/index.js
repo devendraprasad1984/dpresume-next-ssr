@@ -1,29 +1,52 @@
 import React from 'react'
-import {useRouter} from "next/router";
 import GO from "../../../components/common/go";
+import Meta from "../../../components/common/meta";
+import {server} from "../../../config";
 
 
-const article = (props) => {
-    const router = useRouter()
-    const {id} = router.query
-    const {articleById} = props
-    const {title, body} = articleById
+const article = ({article}) => {
+    // const router = useRouter()
+    // const {id} = router.query
     return <div>
-        <h1>{title}</h1>
-        <p>{body}</p>
+        <Meta title={article.title} description={article.excerpt}/>
+        <h1>{article.title}</h1>
+        <p>{article.body}</p>
         <br/>
         <GO text={'go back'} where={'/'}/>
     </div>
 }
 
-export const getServerSideProps = async (context) => {
-    const {id} = context.params
-    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
-    let articleById = await res.json()
+//render and fetches every time from server
+// export const getServerSideProps = async (context) => {
+//     const {id} = context.params
+//     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+//     let articleById = await res.json()
+//     return {
+//         props: {
+//             articleById
+//         }
+//     }
+// }
+
+//getStatic Props
+export const getStaticProps = async (context) => {
+    const res = await fetch(`${server}/api/articles/${context.params.id}`)
+    const article = await res.json()
     return {
         props: {
-            articleById
+            article
         }
+    }
+}
+
+//setup static paths
+export const getStaticPaths = async () => {
+    const res = await fetch(`${server}/api/articles`)
+    let allArticles = await res.json()
+    const ids = allArticles.map(article => article.id)
+    const paths = ids.map(id => ({params: {id: id.toString()}}))
+    return {
+        paths, fallback: false
     }
 }
 

@@ -7,7 +7,7 @@ const DisplayList = props => {
         if (list.length === 0) return
         return list.map((row, index) => {
             let res = fields.split(',').map((fld, fi) => <span key={'fld' + fi}>{row[fld]}</span>)
-            return <div className={commonStyles.card}>{res}</div>
+            return <div key={'item-id-'+index} className={commonStyles.card}>{res}</div>
         })
     }
     return <div className={commonStyles.grid}>

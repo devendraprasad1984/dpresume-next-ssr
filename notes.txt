@@ -1,2 +1,4 @@
 https://github.com/bradtraversy/next-crash-course/
 
+npm i -g serve
+serve -s out -p 6200

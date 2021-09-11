@@ -1,5 +1,6 @@
 import ArticleList from "../components/screens/articles/articleList";
 import {server} from "../config";
+import {BaseHeader} from "../config/fetchHeadBaseConfig";
 
 
 export default function Home(props) {
@@ -14,7 +15,7 @@ export default function Home(props) {
 }
 
 export const getStaticProps = async () => {
-    const res = await fetch(`${server}/api/articles`)
+    const res = await fetch(`${server}/api/articles`, BaseHeader)
     const articles = await res.json()
     return {
         props: {

@@ -2,6 +2,7 @@ import React from 'react'
 import GO from "../../../components/common/go";
 import {server} from "../../../config";
 import Meta from "../../../components/common/meta";
+import {BaseHeader} from "../../../config/fetchHeadBaseConfig";
 
 
 const article = ({article}) => {
@@ -30,7 +31,7 @@ const article = ({article}) => {
 
 //getStatic Props
 export const getStaticProps = async (context) => {
-    const res = await fetch(`${server}/api/articles/${context.params.id}`)
+    const res = await fetch(`${server}/api/articles/${context.params.id}`, BaseHeader)
     const article = await res.json()
     return {
         props: {
@@ -41,7 +42,7 @@ export const getStaticProps = async (context) => {
 
 //setup static paths
 export const getStaticPaths = async () => {
-    const res = await fetch(`${server}/api/articles`)
+    const res = await fetch(`${server}/api/articles`, BaseHeader)
     let allArticles = await res.json()
     const ids = allArticles.map(article => article.id)
     const paths = ids.map(id => ({params: {id: id.toString()}}))

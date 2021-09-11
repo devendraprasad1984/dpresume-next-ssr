@@ -1,6 +1,6 @@
 import React from 'react'
 import GO from "../../../components/common/go";
-import {server} from "../../../config";
+import {endpoints} from "../../../config";
 import Meta from "../../../components/common/meta";
 import {BaseHeader} from "../../../config/fetchHeadBaseConfig";
 
@@ -31,23 +31,23 @@ const article = ({article}) => {
 
 //getStatic Props
 export const getStaticProps = async (context) => {
-    const res = await fetch(`${server}/api/articles/${context.params.id}`, BaseHeader)
-    const article = await res.json()
+    const res = await fetch(`${endpoints.posts}/${context.params.id}`, BaseHeader)
+    const data = await res.json()
     return {
         props: {
-            article: article.data || []
+            article: data
         }
     }
 }
 
 //setup static paths
 export const getStaticPaths = async () => {
-    const res = await fetch(`${server}/api/articles`, BaseHeader)
-    let allArticles = await res.json()
-    const ids = allArticles.data.map(article => article.id)
+    const res = await fetch(endpoints.posts, BaseHeader)
+    let data = await res.json()
+    const ids = data.map(row => row.id)
     const paths = ids.map(id => ({params: {id: id.toString()}}))
     return {
-        paths, fallback: false
+        paths, fallback: true
     }
 }
 

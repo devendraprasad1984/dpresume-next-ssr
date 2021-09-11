@@ -1,25 +1,24 @@
 import ArticleList from "../components/screens/articles/articleList";
-import {server} from "../config";
+import {endpoints} from "../config";
 import {BaseHeader} from "../config/fetchHeadBaseConfig";
 
 
-export default function Home(props) {
-    const {articles} = props
+export default function Home({posts}) {
     // console.log('articles.js', articles.js)
     return (
         <div>
             <h1>Welcome to dpresume.com next.js app</h1>
-            <ArticleList list={articles}/>
+            <ArticleList list={posts}/>
         </div>
     )
 }
 
 export const getStaticProps = async () => {
-    const res = await fetch(`${server}/api/articles`, BaseHeader)
-    const articles = await res.json()
+    const res = await fetch(endpoints.posts, BaseHeader)
+    const posts = await res.json()
     return {
         props: {
-            articles: articles.data || []
+            posts
         }
     }
 }

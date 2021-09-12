@@ -6,7 +6,7 @@
 /*.active {*/
 /*    background-image: var(--gradient-image-color);*/
 /*}*/
-.active{
+.active {
     background: -webkit-linear-gradient(var(--link-active-color1), var(--link-active-color2));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -121,9 +121,12 @@ h1 {
 }
 
 .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+}
+
+.notfound .notfound-404 {
+    position: relative;
+    height: 180px;
 }
 
 b {
@@ -325,6 +328,7 @@ section {
     align-self: flex-end;
     text-align: right;
 }
+
 
 .right {
     /*float: right;*/

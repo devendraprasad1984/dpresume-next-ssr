@@ -1,6 +1,7 @@
 import BaseHeader from "./baseHeader";
 import Menu from "./bottomLinks";
 import endpoints from "./endpoints";
+import messages from "./messages";
 
 
 export const config = {
@@ -9,5 +10,6 @@ export const config = {
     info: 'technophile . dynamic . motivated . inquisitive',
     menu: Menu(),
     header:(method='GET')=> BaseHeader(method),
-    endpoints
+    endpoints,
+    messages
 }

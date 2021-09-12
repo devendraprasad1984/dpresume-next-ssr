@@ -24,3 +24,4 @@ const useAPI = (url) => {
     })
     return {data, loading, error}
 }
+export default useAPI

@@ -4,6 +4,7 @@ import endpoints from "./endpoints";
 import messages from "./messages";
 import localdata from "./localdata";
 import colors from "./colors";
+import chars from "./chars";
 
 
 export const config = {
@@ -15,5 +16,6 @@ export const config = {
     endpoints,
     messages,
     localdata,
-    colors
+    colors,
+    chars
 }

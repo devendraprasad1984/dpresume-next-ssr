@@ -11,3 +11,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+body, iframe {
+  background-image: var(--body-linear-grad-color);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./css/gstaticFont.woff2) format('woff2');
+}
+
+
+@font-face {
+  font-family: "Gotham Rounded";
+  font-style: normal;
+  font-weight: 450;
+  font-display: swap;
+  src: url(./css/GothamRounded-Medium.woff2) format('woff2');
+}
+
+@-ms-viewport {
+  width: 100vw;
+  height: 100vh;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+  font-family: 'Gotham Rounded', monospace;
+}

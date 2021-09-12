@@ -12,7 +12,7 @@ const Experience = props => {
             return <div key={'proj_exp_' + i}>
                 <h1>{role} - {time}</h1>
                 <BasicDisplay list={projects} tag={'Projects'} className={'margin-ud'}/>
-                <BasicDisplay list={summary} tag={'Experience'} className={'margin-ud'}/>
+                <BasicDisplay list={summary} tag={'Roles & Responsbilities'} className={'margin-ud'}/>
             </div>
         })
     }

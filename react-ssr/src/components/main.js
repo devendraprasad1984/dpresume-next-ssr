@@ -1,12 +1,13 @@
 import Nav from "./common/nav";
+import HeaderInfo from "./common/headerInfo";
 
 
-const Main=props=>{
+const Main = props => {
     return <div>
         <header>
+            <HeaderInfo/>
             <Nav/>
         </header>
-        <aside>aside</aside>
         <section>section</section>
         <footer>footer</footer>
     </div>

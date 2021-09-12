@@ -5,6 +5,7 @@ import educationData from '../resources/education.json'
 import achievementData from '../resources/achievements.json'
 import certData from '../resources/certifications.json'
 import experienceData from '../resources/prof_expr.json'
+import projectsData from '../resources/projects.json'
 
 
 const localdata = {
@@ -14,6 +15,7 @@ const localdata = {
     EDUCATION: educationData,
     ACHIEVMENT: achievementData,
     CERT_DATA: certData,
-    EXPERIENCE:experienceData
+    EXPERIENCE: experienceData,
+    PROJECTS: projectsData
 }
 export default localdata

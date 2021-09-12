@@ -3,6 +3,7 @@ import Education from "../components/screens/education";
 import Achievement from "../components/screens/achievement";
 import Certificate from "../components/screens/certificate";
 import Experience from "../components/screens/experience";
+import Projects from "../components/screens/projects";
 
 
 export default function Menu() {
@@ -13,7 +14,7 @@ export default function Menu() {
         {name: 'Certification', action: '', uri: '', icon: '', component: <Certificate/>},
         {name: 'Experience', action: '', uri: '', icon: '', component: <Experience/>},
         {name: 'SomeJs', action: '', uri: '', icon: ''},
-        {name: 'Projects', action: '', uri: '', icon: ''},
+        {name: 'Projects', action: '', uri: '', icon: '', component: <Projects/>},
         {name: 'Skills', action: '', uri: '', icon: ''},
         {name: 'Notes', action: '', uri: '', icon: ''},
         {name: 'Code', action: '', uri: '', icon: ''},

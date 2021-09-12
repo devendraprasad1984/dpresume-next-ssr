@@ -1,0 +1,31 @@
+﻿{
+  "RBS-Natwest": [
+    {
+      "name": "CeX / RfX, Natwest Group, Mar2021 - Sep2021",
+      "desc": "These projects are regression projects for Risk Based Markets Economic factors and\n    produce risk weights on scenario variables. To achieve this, we hook univar and moody’s\n    analytics APIs and get data snapshots and do regression & analytics over it. We used\n    internal SSO, python3, django, django-rest, postgres and React.Js to achieve the output"
+    },
+    {
+      "name": "Smart Disability Initiatives, Natwest Group, Aug2020 - Jan2021",
+      "desc": "I have opted to be in the disability initiative and contributed by making one social network\nplatform for disabled carers and NGOs and CII-IBDN indian government body and native\napp for the BDF(Business Disability Forum) group in the UK"
+    },
+    {
+      "name": "Arria NLG Budgets and Forecasts Narratives, Jul2019 - Nov2020",
+      "desc": "This project was intended for automatic commentary / notes / narratives generation from\nbank statement reports using Arria.com NLG platform and using Tableau UI /\ndashboarding capabilities."
+    },
+    {
+      "name": "Finance Portal, Apr2016 - Jul2018",
+      "desc": "Across the Bank, for statutory / regulatory needs, the project uses standard and\nconfigurable reports approach to building disclosures using MVC, Python3 & Tornado, Javascript, React/Html5 and Sql & PlSql in Oracle 11g."
+    },
+    {
+      "name": "CNMS - Cash Nostro Management System, Oct2011 - Jan2015",
+      "desc": "Soap implemented, python proxy server, acts as middleware, the aim was to have a single instance accessing\nRBS cash balances server and can give relevant data to authorized clients identified by\nIPs."
+    }
+  ],
+  "Syntel": [],
+  "Nine-Dimensions": [],
+  "DAVIM": [],
+  "Miscellaneous": "L3 support, non technology / reporting / migration projects",
+  "Agile-Ceremonies": "planning, estimation, sprint, retrospective, review",
+  "SDLC": "requirements gathering, analysis, design, coding, testing, deployment and support",
+  "Others": "Library Management, PRVit, MDO, iPub, few automation tools in excel"
+}

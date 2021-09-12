@@ -1,5 +1,5 @@
 import {config} from "../../configs/config";
-import NoData from "../common/nodata";
+import HomeDemo from "./homeDemo";
 
 
 const Home = props => {
@@ -9,10 +9,10 @@ const Home = props => {
             return <div key={'summary-key-' + index} dangerouslySetInnerHTML={{__html: summary}}/>
         })
     }
-    if (summaryData === undefined || summaryData.length === 0) return <NoData text={'please wait...'}/>
+
     return <div>
-        <h1>home</h1>
         {displaySummary()}
+        <HomeDemo/>
     </div>
 }
 export default Home

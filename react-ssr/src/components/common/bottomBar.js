@@ -15,7 +15,7 @@ const BottomBar = props => {
     }
     if (linkData.length === 0) return <NoData/>
     return <>
-        <div className='bottom right'>
+        <div className='bottom right margin-ud'>
             {displayLinks()}
         </div>
     </>

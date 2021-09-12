@@ -121,12 +121,24 @@ h1 {
 }
 
 .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
 .notfound .notfound-404 {
     position: relative;
     height: 180px;
+}
+
+.margin-ud *{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.margin-rl{
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 b {
@@ -273,7 +285,7 @@ footer, .bottom {
     bottom: 0;
     left: 0;
     margin-top: 2em;
-    position: fixed;
+    /*position: fixed;*/
     width: 100%;
 }
 

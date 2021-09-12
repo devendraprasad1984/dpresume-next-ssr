@@ -1,8 +1,0 @@
-https://github.com/bradtraversy/next-crash-course/
-
-npm i -g serve
-serve -s out -p 6200
-
-as nextjs helps in serverside rendering, this is really helpful
-use prisma with nextjs to talking to database like sqlite postgres or mysql
-

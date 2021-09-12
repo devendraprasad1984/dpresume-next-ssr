@@ -10,6 +10,7 @@ const useAPI = (url) => {
         //mouting
         setLoading(true)
         get(url, (res) => {
+            console.log('data', res)
             if (res.error !== undefined)
                 setError({error: res.error})
             else {
@@ -19,9 +20,9 @@ const useAPI = (url) => {
         })
         return () => {
             //unmounting
-            setLoading(false)
+            // setLoading(false)
         }
-    })
+    },[])
     return {data, loading, error}
 }
 export default useAPI

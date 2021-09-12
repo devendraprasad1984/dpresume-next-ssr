@@ -1,22 +1,21 @@
-import {useState} from "react";
-import useAPI from "../../hooks/fetchHook";
 import {config} from "../../configs/config";
 import NoData from "./nodata";
 
 
 const BottomBar = props => {
-    const [links, setLinks] = useState([])
-    const {data, loading, error} = useAPI(config.endpoints.links)
+    const linkData = config.localdata.LINKS
 
     const displayLinks = () => {
-        if (links.length === 0) return null
-        return links.map(link => {
-            return <span>{link}</span>
+        const linksKey = Object.keys(linkData)
+        const linksValues = Object.values(linkData)
+        if (linksKey.length === 0) return null
+        return linksKey.map((link, index) => {
+            return <a className='btn' href={linksValues[index]} target='_blank' key={'link-key-' + index}>{link}</a>
         })
     }
-    if (loading == true || links.length === 0) return <NoData/>
+    if (linkData.length === 0) return <NoData/>
     return <>
-        <div className='bottom flexbox'>
+        <div className='bottom'>
             {displayLinks()}
         </div>
     </>

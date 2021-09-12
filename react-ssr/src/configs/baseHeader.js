@@ -1,6 +1,8 @@
-export default function BaseHeader(method='GET') {
+export default function BaseHeader(method = 'GET') {
     return {
         method,
-        "Content-Type":"application/json"
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Access-Control-Allow-Origin": "*"
     }
 }

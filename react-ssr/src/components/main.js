@@ -1,5 +1,6 @@
 import Nav from "./common/nav";
 import HeaderInfo from "./common/headerInfo";
+import BottomBar from "./common/bottomBar";
 
 
 const Main = props => {
@@ -9,7 +10,7 @@ const Main = props => {
             <Nav/>
         </header>
         <section>section</section>
-        <footer>footer</footer>
+        <footer><BottomBar/></footer>
     </div>
 }
 export default Main

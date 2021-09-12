@@ -1,5 +1,6 @@
 export default function BaseHeader(method='GET') {
     return {
-        method
+        method,
+        "Content-Type":"application/json"
     }
 }

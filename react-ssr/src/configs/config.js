@@ -7,5 +7,5 @@ export const config = {
     rightTitle: 'Tech Lead Software Engineer',
     info: 'technophile . dynamic . motivated . inquisitive',
     menu: Menu(),
-    header: BaseHeader()
+    header:(method='GET')=> BaseHeader(method)
 }

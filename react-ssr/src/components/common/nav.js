@@ -1,5 +1,5 @@
 import {config} from "../../configs/config";
-import {BrowserRouter, NavLink, Route, Switch} from 'react-router-dom'
+import {HashRouter, NavLink, Route, Switch} from 'react-router-dom'
 import Home from "../screens/home";
 import NoData from "./nodata";
 
@@ -20,7 +20,7 @@ const Nav = props => {
         })
     }
     return <>
-        <BrowserRouter>
+        <HashRouter>
             <nav className='nav'>
                 <ul>
                     {displayMenu()}
@@ -32,7 +32,7 @@ const Nav = props => {
                     {displayRoute()}
                 </Switch>
             </div>
-        </BrowserRouter>
+        </HashRouter>
     </>
 }
 

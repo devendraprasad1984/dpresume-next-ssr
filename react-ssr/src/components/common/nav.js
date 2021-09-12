@@ -7,9 +7,10 @@ import NoData from "./nodata";
 const Nav = props => {
     const displayMenu = () => {
         return config.menu.map((item, index) => {
-            return <li key={'menu-item-' + index}>
+            return <span key={'menu-item-' + index} className='link size15 margin-ud'>
                 <NavLink exact={true} activeClassName='active'
-                         to={'/' + item.name.toLowerCase()}>{item.name}</NavLink></li>
+                         to={'/' + item.name.toLowerCase()}>{item.name}</NavLink>
+            </span>
         })
     }
     const displayRoute = () => {
@@ -24,9 +25,9 @@ const Nav = props => {
         <HashRouter>
             <div className='row'>
                 <nav className='content-left'>
-                    <ul>
+                    <div className='col'>
                         {displayMenu()}
-                    </ul>
+                    </div>
                 </nav>
                 <div className='content-right'>
                     <Switch>

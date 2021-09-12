@@ -1,7 +1,7 @@
 import HTML from "./htmlComponent";
 
 
-const BasicDisplay = ({list}) => {
+const BasicDisplay = ({list, tag, className}) => {
     const display = () => {
         if (list === undefined) return null
         if (list.length === 0) return null
@@ -9,7 +9,10 @@ const BasicDisplay = ({list}) => {
             return <div key={'key-' + index}><HTML text={row}/></div>
         })
     }
-    return <div>{display()}</div>
+    return <div className={className}>
+        <div className='xblue size20'>{tag||''}</div>
+        {display()}
+    </div>
 }
 
 export default BasicDisplay

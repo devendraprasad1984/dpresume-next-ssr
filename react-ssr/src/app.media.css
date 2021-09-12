@@ -9,14 +9,14 @@
     }
 
     .content-left {
-        display: none;
+        /*display: none;*/
         position: fixed;
-        /*background-image: var(--gradient-image-color);*/
-        background-color: var(--grad-color2);
+        /*background-image: var(--body-linear-grad-color);*/
+        background-color: var(--grad-color1);
         z-index: 10000;
         height: 100%;
         width: 70vw;
-        top: 20px;
+        top: 10px;
     }
 
     #imgPic, .imgPic {

@@ -1,6 +1,4 @@
 import {config} from "../../configs/config";
-import HTML from "../common/htmlComponent";
-import HomeDemo from "./homeDemo";
 import BasicDisplay from "../common/basicDisplay";
 
 

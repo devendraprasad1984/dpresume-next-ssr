@@ -1,4 +1,5 @@
-<pre><div class='codeBlock'>
+<pre>
+<div class='codeBlock'>
 String.prototype.reverseme = function () {
     return reverseString(this)
 }

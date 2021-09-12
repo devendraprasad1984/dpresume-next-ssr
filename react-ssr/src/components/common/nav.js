@@ -14,8 +14,9 @@ const Nav = props => {
     const displayRoute = () => {
         return config.menu.map((item, index) => {
             let path = '/' + item.name.toLowerCase()
-            if (item.component === undefined) return <Route path={path}><NoData type='404'/></Route>
-            return <Route path={path}>{item.component}</Route>
+            let routekey='route-item-'+index
+            if (item.component === undefined) return <Route key={routekey} path={path}><NoData type='404'/></Route>
+            return <Route key={routekey}  path={path}>{item.component}</Route>
         })
     }
     return <>

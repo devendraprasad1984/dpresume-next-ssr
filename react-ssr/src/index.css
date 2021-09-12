@@ -18,8 +18,8 @@ code {
   --black-color: #222;
   --grad-color1: #fdefea;
   --grad-color2: #ddf8dd;
-  --link-active-color1: #862cd5;
-  --link-active-color2: #fa8560;
+  --link-active-color1: #ba7ef3;
+  --link-active-color2: #f6ab91;
   --gradient-image-color: linear-gradient(to right, var(--link-active-color1), var(--link-active-color2));
   --body-linear-grad-color: linear-gradient(to bottom, var(--grad-color1), var(--grad-color2));
   --medium-violet: #b71d7d;

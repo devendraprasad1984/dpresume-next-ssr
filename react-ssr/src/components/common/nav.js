@@ -25,9 +25,7 @@ const Nav = props => {
         <HashRouter>
             <div className='row'>
                 <nav className='content-left'>
-                    <div className='col'>
-                        {displayMenu()}
-                    </div>
+                    <div className='col'>{displayMenu()}</div>
                 </nav>
                 <div className='content-right'>
                     <Switch>

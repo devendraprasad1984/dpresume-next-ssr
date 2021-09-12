@@ -1,10 +1,11 @@
 body {
-  margin: 0.5rem;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  /*margin: 0.5rem;*/
+  /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',*/
+  /*  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',*/
+  /*  sans-serif;*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 97vh;
 }
 
 code {
@@ -15,17 +16,17 @@ code {
   --purple-color: #7f279e;
   --gray-color: #797979;
   --black-color: #222;
-  --grad-color1: #ffefe3;
-  --grad-color2: #e4f8e4;
-  --link-active-color1: #c997ee;
-  --link-active-color2: #f3cdc1;
+  --grad-color1: #fdefea;
+  --grad-color2: #ddf8dd;
+  --link-active-color1: #862cd5;
+  --link-active-color2: #fa8560;
   --gradient-image-color: linear-gradient(to right, var(--link-active-color1), var(--link-active-color2));
   --body-linear-grad-color: linear-gradient(to bottom, var(--grad-color1), var(--grad-color2));
   --medium-violet: #b71d7d;
 }
 
 body, iframe {
-  /*background-image: var(--body-linear-grad-color);*/
+  background-image: var(--body-linear-grad-color);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -42,7 +43,7 @@ body, iframe {
 @font-face {
   font-family: "Gotham Rounded";
   font-style: normal;
-  font-weight: 450;
+  font-weight: 350;
   font-display: swap;
   src: url(./css/GothamRounded-Medium.woff2) format('woff2');
 }

@@ -7,9 +7,10 @@ const Main = props => {
     return <div>
         <header>
             <HeaderInfo/>
-            <Nav/>
         </header>
-        <section>section</section>
+        <section>
+            <Nav/>
+        </section>
         <footer><BottomBar/></footer>
     </div>
 }

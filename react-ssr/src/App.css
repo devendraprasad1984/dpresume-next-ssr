@@ -1,10 +1,20 @@
 
-a, :not(i,.icons, .size10, .size15, .size20) {
+:not(i,.icons, .size10, .size15, .size20) {
     color: var(--black-color);
 }
 
-.active {
-    background-image: var(--gradient-image-color)
+/*.active {*/
+/*    background-image: var(--gradient-image-color);*/
+/*}*/
+.active{
+    background: -webkit-linear-gradient(var(--link-active-color1), var(--link-active-color2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+}
+
+.nav {
+    background-color: var(--black-color);
 }
 
 .nav ul {
@@ -18,8 +28,10 @@ a, :not(i,.icons, .size10, .size15, .size20) {
     align-content: center;
 }
 
-.nav ul li{
-    padding: 1rem;
+.nav ul li, .nav ul li a {
+    padding: 5px;
+    margin: 2px;
+    color: var(--grad-color2) !important;
 }
 
 h1 {

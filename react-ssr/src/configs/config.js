@@ -1,5 +1,5 @@
 import BaseHeader from "./baseHeader";
-import Menu from "./bottomLinks";
+import Menu from "./menu";
 import endpoints from "./endpoints";
 import messages from "./messages";
 import localdata from "./localdata";

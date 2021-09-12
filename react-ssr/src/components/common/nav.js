@@ -25,10 +25,12 @@ const Nav = props => {
                     {displayMenu()}
                 </ul>
             </nav>
-            <Switch>
-                <Route exact path={'/'}><Home/></Route>
-                {displayRoute()}
-            </Switch>
+            <div className='pad10 margin10'>
+                <Switch>
+                    <Route exact path={'/'}><Home/></Route>
+                    {displayRoute()}
+                </Switch>
+            </div>
         </BrowserRouter>
     </>
 }

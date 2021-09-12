@@ -284,7 +284,7 @@ footer, .bottom {
     padding: 3px;
     bottom: 0;
     left: 0;
-    margin-top: 2em;
+    margin-top: 5em;
     /*position: fixed;*/
     width: 100%;
 }
@@ -350,6 +350,11 @@ section {
 .left {
     float: left;
 }
+
+.height400{
+    min-height: 60vh;
+}
+
 
 .star {
     color: var(--purple-color);
@@ -419,7 +424,10 @@ p {
 }
 
 .pad10 {
-    padding-left: 10px;
+    padding: 10px;
+}
+.margin10 {
+    padding: 10px;
 }
 
 .btn {
@@ -452,7 +460,7 @@ code, kbd, samp {
 }
 
 .flexbox {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     display: grid;
 }
 
@@ -514,6 +522,7 @@ code, kbd, samp {
 
 .bottom a {
     font-size: 10px;
+    color: var(--link-active-color1);
 }
 
 a {

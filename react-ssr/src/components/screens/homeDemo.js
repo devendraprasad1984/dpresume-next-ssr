@@ -9,7 +9,7 @@ const HomeDemo = () => {
             let num = Math.floor(Math.random() * config.colors.length)
             let color = config.colors[num] || 'white'
             return <a class="white pcenter" target="_blank" href="${x.href}" class="mcard">
-                <span style={{color: color}} class="center">${x.name}</span>
+                <span style={{color: color}} class="center">{x.name}</span>
             </a>
         })
 

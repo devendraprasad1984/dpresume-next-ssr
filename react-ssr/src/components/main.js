@@ -8,7 +8,7 @@ const Main = props => {
         <header>
             <HeaderInfo/>
         </header>
-        <section>
+        <section className='height400'>
             <Nav/>
         </section>
         <footer><BottomBar/></footer>

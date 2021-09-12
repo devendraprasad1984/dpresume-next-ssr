@@ -1,0 +1,62 @@
+@media screen and (max-width: 600px) {
+    .flexbox {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        display: grid;
+    }
+
+    .menuicon {
+        font-size: 20px;
+    }
+
+    .content-left {
+        display: none;
+        position: fixed;
+        /*background-image: var(--gradient-image-color);*/
+        background-color: var(--grad-color2);
+        z-index: 10000;
+        height: 100%;
+        width: 70vw;
+        top: 20px;
+    }
+
+    #imgPic, .imgPic {
+        display: none;
+    }
+
+    .topbar {
+        display: inline;
+    }
+
+    .topbar > .name > span, .topbar .name > i, div a > i {
+        font-size: 20px;
+    }
+
+    .overlay .closebtn {
+        font-size: var(--size10px);
+        top: 5px;
+        right: -40px;
+    }
+
+    .togglePanel {
+        font-size: 12px;
+    }
+
+    .pright {
+        margin-bottom: 20px;
+    }
+
+    #idLinks a {
+        font-size: 8px;
+    }
+
+    .btn {
+        padding: .275rem .225rem;
+        line-height: 1;
+    }
+
+    .row {
+        display: inline;
+        clear: both;
+        padding: unset;
+    }
+}

@@ -1,60 +1,52 @@
-body {
-  /*margin: 0.5rem;*/
-  /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',*/
-  /*  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',*/
-  /*  sans-serif;*/
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  height: 100%;
+:root {
+    --purple-color: #7f279e;
+    --gray-color: #797979;
+    --black-color: #222;
+    --grad-color1: #edf5f8;
+    --grad-color2: #f3f0f0;
+    --link-active-color1: #ba7ef3;
+    --link-active-color2: #f6ab91;
+    --gradient-image-color: linear-gradient(to right, var(--link-active-color1), var(--link-active-color2));
+    --body-linear-grad-color: linear-gradient(to right, var(--grad-color2), var(--grad-color1));
+    --medium-violet: #b71d7d;
+    --size10px: 10px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-:root {
-  --purple-color: #7f279e;
-  --gray-color: #797979;
-  --black-color: #222;
-  --grad-color1: #fdefea;
-  --grad-color2: #ddf8dd;
-  --link-active-color1: #ba7ef3;
-  --link-active-color2: #f6ab91;
-  --gradient-image-color: linear-gradient(to right, var(--link-active-color1), var(--link-active-color2));
-  --body-linear-grad-color: linear-gradient(to bottom, var(--grad-color1), var(--grad-color2));
-  --medium-violet: #b71d7d;
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100%;
 }
 
 body, iframe {
-  /*background-image: var(--body-linear-grad-color);*/
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+    background-image: var(--body-linear-grad-color);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./css/gstaticFont.woff2) format('woff2');
 }
 
 
 @font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url(./css/gstaticFont.woff2) format('woff2');
-}
-
-
-@font-face {
-  font-family: "Gotham Rounded";
-  font-style: normal;
-  font-weight: 450;
-  font-display: swap;
-  src: url(./css/GothamRounded-Medium.woff2) format('woff2');
+    font-family: "Gotham Rounded";
+    font-style: normal;
+    font-weight: 450;
+    font-display: swap;
+    src: url(./css/GothamRounded-Medium.woff2) format('woff2');
 }
 
 @-ms-viewport {
-  width: 100vw;
-  height: 100vh;
+    width: 100vw;
+    height: 100vh;
 }
 
 *, :after, :before {
-  box-sizing: border-box;
-  font-family: 'Gotham Rounded', monospace;
-  font-size: 1rem;
+    box-sizing: border-box;
+    font-family: 'Gotham Rounded', monospace;
+    font-size: 1rem;
 }

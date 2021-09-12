@@ -10,7 +10,7 @@ const BasicDisplay = ({list, tag, className}) => {
         })
     }
     return <div className={className}>
-        <div className='xblue size20'>{tag||''}</div>
+        <div className='bl size20'>{tag||''}</div>
         {display()}
     </div>
 }

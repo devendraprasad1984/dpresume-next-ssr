@@ -36,7 +36,7 @@ const Nav = props => {
                 </nav>}
                 <div className='content-right'>
                     <Switch>
-                        <Route exact path={'/'}><Home/></Route>
+                        <Route exact path={'/'}><Home title={config.pageTitles.home}/></Route>
                         {displayRoute()}
                     </Switch>
                 </div>

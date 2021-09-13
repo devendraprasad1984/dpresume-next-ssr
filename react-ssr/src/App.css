@@ -12,7 +12,7 @@ span.link:has(a.active) {
     /*background-image: var(--gradient-image-color);*/
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .nav {

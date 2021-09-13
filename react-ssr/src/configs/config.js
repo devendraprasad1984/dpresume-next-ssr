@@ -6,6 +6,7 @@ import messages from "./messages";
 import localdata from "./localdata";
 import colors from "./colors";
 import chars from "./chars";
+import pageTitles from "./pageTitles";
 
 
 export const config = {
@@ -13,14 +14,9 @@ export const config = {
     rightTitle: 'Tech Lead Software Engineer',
     info: 'technophile . dynamic . motivated . inquisitive',
     contactline: `devendraprasad1984@gmail.com, ${chars.phone} +91-958 279 7772`,
-    menu,
     cvLink: 'https://dpresume.com/docs/pdf/dpresume.pdf#view=FitH',
     header: (method = 'GET') => BaseHeader(method),
-    endpoints,
-    messages,
-    localdata,
-    colors,
-    chars
+    menu, endpoints, messages, localdata, colors, chars, pageTitles
 }
 
 

@@ -7,16 +7,17 @@ import Certificate from "../components/screens/certificate";
 import Experience from "../components/screens/experience";
 import Projects from "../components/screens/projects";
 import Skills from "../components/screens/skills";
+import pageTitles from "./pageTitles";
 
 
 const menu = [
-    {name: 'Home', action: '', uri: '', icon: '', component: <Home title={'Home'}/>},
-    {name: 'Education', action: '', uri: '', icon: '', component: <Education title={'Education'}/>},
-    {name: 'Achievement', action: '', uri: '', icon: '', component: <Achievement title={'Achievement'}/>},
-    {name: 'Certification', action: '', uri: '', icon: '', component: <Certificate title={'Certificate'}/>},
-    {name: 'Experience', action: '', uri: '', icon: '', component: <Experience title={'Experience'}/>},
-    {name: 'Projects', action: '', uri: '', icon: '', component: <Projects title={'Projects'}/>},
-    {name: 'Skills', action: '', uri: '', icon: '', component: <Skills title={'Skills'}/>},
+    {name: 'Home', action: '', uri: '', icon: '', component: <Home title={pageTitles.home}/>},
+    {name: 'Education', action: '', uri: '', icon: '', component: <Education title={pageTitles.education}/>},
+    {name: 'Achievement', action: '', uri: '', icon: '', component: <Achievement title={pageTitles.achievement}/>},
+    {name: 'Certification', action: '', uri: '', icon: '', component: <Certificate title={pageTitles.certification}/>},
+    {name: 'Experience', action: '', uri: '', icon: '', component: <Experience title={pageTitles.experience}/>},
+    {name: 'Projects', action: '', uri: '', icon: '', component: <Projects title={pageTitles.projects}/>},
+    {name: 'Skills', action: '', uri: '', icon: '', component: <Skills title={pageTitles.skills}/>},
     {name: 'SomeJs', action: '', uri: '', icon: ''},
     {name: 'Notes', action: '', uri: '', icon: ''},
     // {name: 'Code', action: '', uri: '', icon: ''},

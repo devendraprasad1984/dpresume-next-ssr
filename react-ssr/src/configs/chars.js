@@ -1,6 +1,25 @@
 const chars = {
     hamburger: '☰',
     pointArrow: '➤',
-    close: '✖'
+    close: '✖',
+    phone: '☏',
+    check: '☑',
+    cross: '☒',
+    coffee: '☕',
+    spade: '☘',
+    leftFinger: '☜',
+    upFinger: '☝',
+    rightFinger: '☞',
+    downFinger: '☟',
+    sun: '☀',
+    cloud: '☁',
+    umbrella: '☂',
+    snowMan: '☃',
+    starFilled: '★',
+    star: '☆',
+    pathology:'☤',
+    yang:'☯',
+    menu:'☳',
+    tick:'✔'
 }
 export default chars

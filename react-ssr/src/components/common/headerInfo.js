@@ -9,7 +9,7 @@ const HeaderInfo = props => {
         </div>
         <div className='row xviolet'>
             <p className='size10'>{config.info}</p>
-            <p className='size10'>{config.contactline}</p>
+            <p className='size10'>{config.contactline}/>}</p>
         </div>
     </div>
 }

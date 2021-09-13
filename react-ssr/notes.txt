@@ -7,3 +7,15 @@ you may fix this in restart mac in safe mode
 
 JEST and Enzyme
 https://www.toptal.com/react/tdd-react-unit-testing-enzyme-jest
+
+The first step is to create a failing test which will try to render a React.js Component using the enzyme’s shallow function.
+// MyComponent.test.js
+import React from 'react';
+import { shallow } from 'enzyme';
+import MyComponent from './MyComponent';
+describe("MyComponent", () => {
+  it("should render my component", () => {
+    const wrapper = shallow(<MyComponent />);
+  });
+});
+

@@ -1,5 +1,6 @@
 import React from 'react'
 import {config} from "../../configs/config";
+import OneLinerHeader from "../common/oneLinerHeader";
 
 
 const Projects = props => {
@@ -30,6 +31,9 @@ const Projects = props => {
             </div>
         })
     }
-    return <div className={'margin-ud'}>{display()}</div>
+    return <div className={'margin-ud'}>
+        <OneLinerHeader title={props.title}/>
+        {display()}
+    </div>
 }
 export default Projects

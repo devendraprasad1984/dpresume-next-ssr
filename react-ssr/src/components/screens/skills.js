@@ -1,6 +1,7 @@
 import React from 'react'
 import {config} from "../../configs/config";
 import BasicDisplay from "../common/basicDisplay";
+import OneLinerHeader from "../common/oneLinerHeader";
 
 
 const Skills = props => {
@@ -15,6 +16,9 @@ const Skills = props => {
             </div>
         })
     }
-    return <div>{display()} < /div>
+    return <div>
+        <OneLinerHeader title={props.title}/>
+        {display()}
+    < /div>
 }
 export default Skills

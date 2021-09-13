@@ -1,6 +1,7 @@
 import {config} from "../../configs/config";
 import React from 'react'
 import BasicDisplay from "../common/basicDisplay";
+import OneLinerHeader from "../common/oneLinerHeader";
 
 
 const Experience = props => {
@@ -17,6 +18,9 @@ const Experience = props => {
             </div>
         })
     }
-    return <div className={'margin-ud'}>{display()}</div>
+    return <div className={'margin-ud'}>
+        <OneLinerHeader title={props.title}/>
+        {display()}
+    </div>
 }
 export default Experience

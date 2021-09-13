@@ -10,13 +10,13 @@ import Skills from "../components/screens/skills";
 
 
 const menu = [
-    {name: 'Home', action: '', uri: '', icon: '', component: <Home/>},
-    {name: 'Education', action: '', uri: '', icon: '', component: <Education/>},
-    {name: 'Achievement', action: '', uri: '', icon: '', component: <Achievement/>},
-    {name: 'Certification', action: '', uri: '', icon: '', component: <Certificate/>},
-    {name: 'Experience', action: '', uri: '', icon: '', component: <Experience/>},
-    {name: 'Projects', action: '', uri: '', icon: '', component: <Projects/>},
-    {name: 'Skills', action: '', uri: '', icon: '', component: <Skills/>},
+    {name: 'Home', action: '', uri: '', icon: '', component: <Home title={'Home'}/>},
+    {name: 'Education', action: '', uri: '', icon: '', component: <Education title={'Education'}/>},
+    {name: 'Achievement', action: '', uri: '', icon: '', component: <Achievement title={'Achievement'}/>},
+    {name: 'Certification', action: '', uri: '', icon: '', component: <Certificate title={'Certificate'}/>},
+    {name: 'Experience', action: '', uri: '', icon: '', component: <Experience title={'Experience'}/>},
+    {name: 'Projects', action: '', uri: '', icon: '', component: <Projects title={'Projects'}/>},
+    {name: 'Skills', action: '', uri: '', icon: '', component: <Skills title={'Skills'}/>},
     {name: 'SomeJs', action: '', uri: '', icon: ''},
     {name: 'Notes', action: '', uri: '', icon: ''},
     // {name: 'Code', action: '', uri: '', icon: ''},

@@ -18,10 +18,7 @@ const useAPI = (url) => {
                 setLoading(false)
             }
         })
-        return () => {
-            //unmounting
-            setLoading(false)
-        }
+        //return annonymous function here to be called at unmounting
     },[])
     return {data, loading, error}
 }

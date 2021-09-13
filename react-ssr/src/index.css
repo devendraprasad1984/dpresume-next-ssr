@@ -3,6 +3,7 @@
     --gray-color: #797979;
     --default-text-color: #4d4a4a;
     --black-color: #222;
+    --white: white;
     --grad-color1: #f8decc;
     --grad-color2: #d4f8d4;
     --grad-color3: white;
@@ -50,6 +51,6 @@ body, iframe {
 *, :after, :before {
     box-sizing: border-box;
     font-family: 'Gotham Rounded', monospace;
-    font-size: 1rem;
+    /*font-size: 1rem;*/
     color: var(--default-text-color);
 }

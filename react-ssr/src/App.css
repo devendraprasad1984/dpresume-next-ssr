@@ -123,10 +123,12 @@ h1 {
 }
 
 .center {
-    display: flex;
+    /*display: flex;*/
     justify-content: center;
     align-items: center;
     text-align: center;
+    word-break: break-all;
+    align-content: center;
 }
 
 .notfound .notfound-404 {
@@ -442,6 +444,7 @@ p {
     line-height: 1.1;
     border-radius: .25rem;
     cursor: pointer;
+    color: var(--white);
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
 }
 
@@ -633,7 +636,7 @@ a {
 }
 
 .danger {
-    background-color: #dc3545
+    background-color: #f15d6a
 }
 
 .xprimary {

@@ -1,6 +1,6 @@
 import React from "react";
 
-import {mount, shallow} from 'enzyme'
+import {mount, render, shallow} from 'enzyme'
 import App from "./App";
 import Home from "./components/screens/home";
 import OneLinerHeader from "./components/common/oneLinerHeader";
@@ -8,6 +8,11 @@ import Education from "./components/screens/education";
 import Experience from "./components/screens/experience";
 import HomeDemo from "./components/screens/homeDemo";
 import BasicDisplay from "./components/common/basicDisplay";
+import pageTitles from "./configs/pageTitles";
+import Achievement from "./components/screens/achievement";
+import Skills from "./components/screens/skills";
+import Certificate from "./components/screens/certificate";
+import Projects from "./components/screens/projects";
 
 
 //mount: mounts component DOM including child component
@@ -25,14 +30,27 @@ describe('testing rendering of components without crashing', () => {
     it('testing experience', () => {
         shallow(<Experience/>)
     })
+    it('testing projects', () => {
+        shallow(<Projects/>)
+    })
+    it('testing certifications', () => {
+        shallow(<Certificate/>)
+    })
+    it('testing skills', () => {
+        shallow(<Skills/>)
+    })
+    it('achievement skills', () => {
+        shallow(<Achievement/>)
+    })
 })
 
 describe('testing Home Component', () => {
     it('testing home contains header', () => {
-        const home = shallow(<Home/>)
-        const oneliner = shallow(<OneLinerHeader title={'hello'}/>)
-        const onelineHeader = <h1 className='active size25'>{'hello'}</h1>
-        expect(home.contains(oneliner)).toEqual(true)
+        const home = mount(<Home/>)
+        const oneliner = shallow(<OneLinerHeader title={pageTitles.home}/>)
+        const onelinerRef = render(<OneLinerHeader title={pageTitles.home}/>)
+        const onelineHeader = <h1 className='active size25'>{pageTitles.home}</h1>
+        // expect(home).toContainInstanceOf(onelinerRef)
         expect(oneliner.contains(onelineHeader)).toEqual(true)
     })
 })

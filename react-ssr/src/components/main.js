@@ -1,3 +1,4 @@
+import React from "react";
 import Nav from "./common/nav";
 import HeaderInfo from "./common/headerInfo";
 import BottomBar from "./common/bottomBar";

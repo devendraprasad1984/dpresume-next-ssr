@@ -1,3 +1,4 @@
+import React from 'react'
 import {config} from "../../configs/config";
 
 
@@ -12,9 +13,7 @@ export default function NoData({text, type}) {
             <span>Page Not Found</span>
         </div>
     }
-    return <>
-        <div>
-            {type === '404' ? display404() : displayNoData()}
-        </div>
-    </>
+    return <div>
+        {type === '404' ? display404() : displayNoData()}
+    </div>
 }

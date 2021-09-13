@@ -1,4 +1,5 @@
 import {config} from "../../configs/config";
+import React from 'react'
 import BasicDisplay from "../common/basicDisplay";
 
 

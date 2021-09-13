@@ -1,3 +1,4 @@
+import React from 'react'
 import {config} from "../../configs/config";
 import {useState} from "react";
 
@@ -11,7 +12,7 @@ const HomeDemo = () => {
         let printLinks = () => links.map((x, i) => {
             let num = Math.floor(Math.random() * config.colors.length)
             let color = config.colors[num] || 'white'
-            return <a key={'link-demo' + i} className="white pcenter mcard" target="_blank" href="${x.href}">
+            return <a key={'link-demo' + i} className="white pcenter mcard" target="_blank" href={x.href}>
                 <span style={{color: color}} className="center">{x.name}</span>
             </a>
         })
@@ -20,7 +21,7 @@ const HomeDemo = () => {
             if (!videoMode) return null
             return <span key={'link-video-demo' + i}>
                 <h2>{x.name}</h2>
-                <iframe width="100%" height="80%" src={x.src} frameBorder="0" allowFullScreen="allowfullscreen"/>
+                <iframe title={'my_vid_demo_'+i} width="100%" height="80%" src={x.src} frameBorder="0" allowFullScreen="allowfullscreen"/>
             </span>
         })
 

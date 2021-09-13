@@ -1,3 +1,4 @@
+import React from 'react'
 import {config, mobileCheck} from "../../configs/config";
 import {HashRouter, NavLink, Route, Switch} from 'react-router-dom'
 import Home from "../screens/home";
@@ -24,7 +25,7 @@ const Nav = props => {
             return <Route key={routekey} path={path}>{item.component}</Route>
         })
     }
-    return <>
+    return <div>
         <HashRouter>
             <div className='right'>
                 <a className='right bl size20' onClick={() => setOpen(!open)}>{open ? `${config.chars.close}` : `${config.chars.hamburger}`}</a>
@@ -41,7 +42,7 @@ const Nav = props => {
                 </div>
             </div>
         </HashRouter>
-    </>
+    </div>
 }
 
 export default Nav

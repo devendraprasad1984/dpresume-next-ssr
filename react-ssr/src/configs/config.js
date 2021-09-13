@@ -1,5 +1,5 @@
 import BaseHeader from "./baseHeader";
-import Menu from "./menu";
+import menu from "./menu";
 import endpoints from "./endpoints";
 import messages from "./messages";
 import localdata from "./localdata";
@@ -12,7 +12,7 @@ export const config = {
     rightTitle: 'Tech Lead Software Engineer',
     info: 'technophile . dynamic . motivated . inquisitive',
     contactline: `devendraprasad1984@gmail.com, ${chars.phone} +91-958 279 7772`,
-    menu: Menu(),
+    menu,
     cvLink: 'https://dpresume.com/docs/pdf/dpresume.pdf#view=FitH',
     header: (method = 'GET') => BaseHeader(method),
     endpoints,

@@ -1,3 +1,4 @@
+import React from 'react'
 import {config} from "../../configs/config";
 import NoData from "./nodata";
 
@@ -14,10 +15,8 @@ const BottomBar = props => {
         })
     }
     if (linkData.length === 0) return <NoData/>
-    return <>
-        <div className='bottom right margin-ud'>
-            {displayLinks()}
-        </div>
-    </>
+    return <div className='bottom right margin-ud'>
+        {displayLinks()}
+    </div>
 }
 export default BottomBar

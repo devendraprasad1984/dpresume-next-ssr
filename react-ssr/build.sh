@@ -3,6 +3,8 @@ echo "cleaning up older build"
 rm -rf build/
 echo "building..."
 npm run build
-echo "deploying to server"
-cp build/* /Volumes/dpresume.com/httpdocs
+#echo "deploying to server"
+#cp -R build/ /Volumes/dpresume.com/httpdocs
+#echo "cleaning up"
+#rm -rf build/
 echo "success. completed"

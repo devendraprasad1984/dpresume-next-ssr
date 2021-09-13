@@ -1,0 +1,6 @@
+file->menu->go connect to server: ftp://dpresume.com->dlrgvkes->rbs1984#
+sudo mount -o remount,rw '/Volumes/httpdocs'
+sudo chown -R $(whoami) $(brew --prefix)/*
+you may fix this in restart mac in safe mode
+    csrutil status, csrutil disable, csrutil enable
+    restart->changed permissions in folder->get info->change or add users and restart again

@@ -8,7 +8,7 @@ import chars from "./chars";
 
 
 export const config = {
-    name: 'Devendra Prasad',
+    name: 'Devendra Prasad - TEST',
     rightTitle: 'Tech Lead Software Engineer',
     info: 'technophile . dynamic . motivated . inquisitive',
     contactline: `devendraprasad1984@gmail.com, ${chars.phone} +91-958 279 7772`,

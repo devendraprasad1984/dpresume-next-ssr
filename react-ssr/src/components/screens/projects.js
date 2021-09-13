@@ -24,12 +24,8 @@ const Projects = props => {
             if (!isLen) return null
             return <div key={'proj_' + i}>
                 <h1>{name}</h1>
-                {isString === true
-                    ? <p>{obj}</p>
-                    : isObject && isLen
-                        ? displayProjectDetails(obj)
-                        : null
-                }
+                {isString && isLen ? <p>{obj}</p> : null}
+                {isObject && isLen ? displayProjectDetails(obj) : null}
             </div>
         })
     }

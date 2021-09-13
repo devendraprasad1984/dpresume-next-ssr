@@ -7,6 +7,7 @@ import OneLinerHeader from "./components/common/oneLinerHeader";
 import Education from "./components/screens/education";
 import Experience from "./components/screens/experience";
 import HomeDemo from "./components/screens/homeDemo";
+import BasicDisplay from "./components/common/basicDisplay";
 
 
 //mount: mounts component DOM including child component
@@ -46,8 +47,10 @@ describe('testing basic list component props', () => {
 
 describe('testing home component demo video button click', () => {
     const homeDemo = mount(<HomeDemo/>)
-    const label = homeDemo.find('#').text()
+    const label = homeDemo.find('.btn.danger').text()
     it('video button label & click', () => {
         expect(label).toEqual('Click To see Video Demo')
     })
 })
+
+

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react";
 import Home from "../components/screens/home";
 import Education from "../components/screens/education";

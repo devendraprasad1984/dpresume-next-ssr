@@ -1,3 +1,4 @@
+/* eslint-disable */
 import BaseHeader from "./baseHeader";
 import menu from "./menu";
 import endpoints from "./endpoints";

@@ -1,20 +1,24 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {config, mobileCheck} from "../../configs/config";
 import {HashRouter, NavLink, Route, Switch} from 'react-router-dom'
 import Home from "../screens/home";
 import NoData from "./nodata";
-import {useState} from "react";
 
 
 const Nav = props => {
-    const [open, setOpen] = useState(!mobileCheck())
+    const ismobile = mobileCheck()
+    const [open, setOpen] = useState(!ismobile)
 
+    const linkClickPreHandler = () => {
+        if (!ismobile) return
+        setOpen(!open)
+    }
     const displayMenu = () => {
         return config.menu.map((item, index) => {
             return <span key={'menu-item-' + index} className='link size15 margin-ud'>
                 <NavLink exact={true} activeClassName='active'
-                         to={'/' + item.name.toLowerCase()}>{item.name}</NavLink>
-            </span>
+                         to={'/' + item.name.toLowerCase()} onClick={linkClickPreHandler}>{item.name}</NavLink>
+        </span>
         })
     }
     const displayRoute = () => {

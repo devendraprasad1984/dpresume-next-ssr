@@ -11,6 +11,7 @@ export const config = {
     name: 'Devendra Prasad',
     rightTitle: 'Tech Lead Software Engineer',
     info: 'technophile . dynamic . motivated . inquisitive',
+    contactline: 'devendraprasad1984@gmail.com, +91-958 279 7772',
     menu: Menu(),
     header: (method = 'GET') => BaseHeader(method),
     endpoints,

@@ -3,12 +3,16 @@
     color: var(--black-color);
 }
 
+span.link:has(a.active){
+    border-bottom: 2px solid var(--gray-color);
+}
+
 .active {
-    /*background: -webkit-linear-gradient(var(--link-active-color1), var(--link-active-color2));*/
-    background-image: var(--gradient-image-color);
-    /*-webkit-background-clip: text;*/
-    /*-webkit-text-fill-color: transparent;*/
-    /*font-size: 1.5rem;*/
+    background: var(--gradient-image-color);
+    /*background-image: var(--gradient-image-color);*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
 }
 
 .nav {

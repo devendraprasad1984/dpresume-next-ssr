@@ -4,3 +4,6 @@ sudo chown -R $(whoami) $(brew --prefix)/*
 you may fix this in restart mac in safe mode
     csrutil status, csrutil disable, csrutil enable
     restart->changed permissions in folder->get info->change or add users and restart again
+
+JEST and Enzyme
+https://www.toptal.com/react/tdd-react-unit-testing-enzyme-jest

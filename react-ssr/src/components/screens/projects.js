@@ -8,7 +8,7 @@ const Projects = props => {
         return arr.map((row, i) => {
             let {name, desc} = row
             return <div key={'inside-proj-row' + i} className='margin-rl'>
-                <h3>{name}</h3>
+                <h3 className='xprimary'>{name}</h3>
                 <p className='margin-rl'>{desc}</p>
             </div>
         })

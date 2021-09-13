@@ -1,4 +1,4 @@
-import {config} from "../../configs/config";
+import {config, mobileCheck} from "../../configs/config";
 import {HashRouter, NavLink, Route, Switch} from 'react-router-dom'
 import Home from "../screens/home";
 import NoData from "./nodata";
@@ -6,7 +6,7 @@ import {useState} from "react";
 
 
 const Nav = props => {
-    const [open, setOpen] = useState(true)
+    const [open, setOpen] = useState(!mobileCheck())
 
     const displayMenu = () => {
         return config.menu.map((item, index) => {

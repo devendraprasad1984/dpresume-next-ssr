@@ -17,9 +17,13 @@ const chars = {
     snowMan: '☃',
     starFilled: '★',
     star: '☆',
-    pathology:'☤',
-    yang:'☯',
-    menu:'☳',
-    tick:'✔'
+    pathology: '☤',
+    yang: '☯',
+    menu: '☳',
+    tick: '✔',
+    down: '↓',
+    up: '↑',
+    left: '←',
+    right: '→'
 }
 export default chars

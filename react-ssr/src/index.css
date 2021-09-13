@@ -1,6 +1,7 @@
 :root {
     --purple-color: #7f279e;
     --gray-color: #797979;
+    --default-text-color: #4d4a4a;
     --black-color: #222;
     --grad-color1: #f8decc;
     --grad-color2: #d4f8d4;
@@ -50,4 +51,5 @@ body, iframe {
     box-sizing: border-box;
     font-family: 'Gotham Rounded', monospace;
     font-size: 1rem;
+    color: var(--default-text-color);
 }

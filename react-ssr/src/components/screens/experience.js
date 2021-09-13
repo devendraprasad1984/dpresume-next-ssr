@@ -10,7 +10,7 @@ const Experience = props => {
         return keys.map((x, i) => {
             let {role, time, projects, speek, summary} = values[i]
             return <div key={'proj_exp_' + i}>
-                <h1>{role} - {time}</h1>
+                <h1>{role} - {time} {speek ? `${config.chars.speek}` : ''}</h1>
                 <BasicDisplay list={projects} tag={'Projects'} className={'margin-ud'}/>
                 <BasicDisplay list={summary} tag={'Roles & Responsbilities'} className={'margin-ud'}/>
             </div>

@@ -1,4 +1,4 @@
-import HTML from "./htmlComponent";
+import HtmlComponent from "./htmlComponent";
 
 
 const BasicDisplay = ({list, tag, className}) => {
@@ -6,7 +6,7 @@ const BasicDisplay = ({list, tag, className}) => {
         if (list === undefined) return null
         if (list.length === 0) return null
         return list.map((row, index) => {
-            return <div key={'key-' + index}><HTML text={row}/></div>
+            return <div key={'key-' + index}><HtmlComponent text={row}/></div>
         })
     }
     return <div className={className}>

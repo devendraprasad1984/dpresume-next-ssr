@@ -24,6 +24,7 @@ const chars = {
     down: '↓',
     up: '↑',
     left: '←',
-    right: '→'
+    right: '→',
+    speek: '☕'
 }
 export default chars

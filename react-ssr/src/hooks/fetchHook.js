@@ -20,7 +20,7 @@ const useAPI = (url) => {
         })
         return () => {
             //unmounting
-            // setLoading(false)
+            setLoading(false)
         }
     },[])
     return {data, loading, error}

@@ -18,11 +18,10 @@ const HomeDemo = () => {
 
         let printYouTubeVideos = () => youtube.map((x, i) => {
             if (!videoMode) return null
-            let vtag = <span key={'link-video-demo' + i}>
+            return <span key={'link-video-demo' + i}>
                 <h2>{x.name}</h2>
                 <iframe width="100%" height="80%" src={x.src} frameBorder="0" allowFullScreen="allowfullscreen"/>
-                </span>
-            return vtag
+            </span>
         })
 
         return <div className='margin-ud'>

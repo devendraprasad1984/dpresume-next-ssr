@@ -7,6 +7,7 @@
 
 /.scannerwork
 /__snapshots__
+__tests__/__snapshots__
 
 # testing
 /coverage

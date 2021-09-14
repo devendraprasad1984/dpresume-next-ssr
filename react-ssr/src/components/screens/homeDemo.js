@@ -12,8 +12,8 @@ const HomeDemo = () => {
         let printLinks = () => links.map((x, i) => {
             let num = Math.floor(Math.random() * config.colors.length)
             let color = config.colors[num] || 'white'
-            return <a key={'link-demo' + i} className="white pcenter mcard" target="_blank" href={x.href}>
-                <span style={{color: color}} className="center">{x.name}</span>
+            return <a key={'link-demo' + i} className="white mcard" target="_blank" href={x.href}>
+                <span style={{color: color}} className="center pcenter">{x.name}</span>
             </a>
         })
 

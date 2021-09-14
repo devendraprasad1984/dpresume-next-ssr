@@ -1,6 +1,6 @@
 import React from "react";
 
-import {mount, render, shallow} from 'enzyme'
+import {mount, shallow} from 'enzyme'
 import App from "./App";
 import Home from "./components/screens/home";
 import OneLinerHeader from "./components/common/oneLinerHeader";
@@ -46,9 +46,9 @@ describe('testing rendering of components without crashing', () => {
 
 describe('testing Home Component', () => {
     it('testing home contains header', () => {
-        const home = mount(<Home/>)
+        const home = shallow(<Home/>)
         const oneliner = shallow(<OneLinerHeader title={pageTitles.home}/>)
-        const onelinerRef = render(<OneLinerHeader title={pageTitles.home}/>)
+        // const onelinerRef = render(<OneLinerHeader title={pageTitles.home}/>)
         const onelineHeader = <h1 className='active size25'>{pageTitles.home}</h1>
         // expect(home).toContainInstanceOf(onelinerRef)
         expect(oneliner.contains(onelineHeader)).toEqual(true)

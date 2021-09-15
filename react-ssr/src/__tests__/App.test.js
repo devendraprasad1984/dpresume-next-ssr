@@ -16,9 +16,7 @@ describe('testing Home Component', () => {
     it('testing home contains header', () => {
         const home = shallow(<Home title={pageTitles.home}/>)
         const oneliner = shallow(<OneLinerHeader title={pageTitles.home}/>)
-        // const onelinerRef = render(<OneLinerHeader title={pageTitles.home}/>)
         const onelineHeader = <h1 className='active size25'>{pageTitles.home}</h1>
-        // expect(home).toContainInstanceOf(onelinerRef)
         expect(oneliner.contains(onelineHeader)).toEqual(true)
     })
 })

@@ -183,6 +183,11 @@ div {
 /*    color: var(--gray-color);*/
 /*}*/
 
+::selection{
+    background-color: var(--gray-color);
+    color: white;
+}
+
 .ml2 {
     font-weight: 900;
     /*font-size: 3.5em;*/

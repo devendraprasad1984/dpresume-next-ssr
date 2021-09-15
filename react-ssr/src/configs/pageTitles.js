@@ -1,4 +1,5 @@
 const pageTitles={
+    mockTitle: 'dummy title',
     home: 'Summarising myself',
     education: 'Education Summry',
     achievement: 'Achievement',

@@ -1,4 +1,3 @@
-import {shallow} from "enzyme";
 import App from "../App";
 import Home from "../components/screens/home";
 import Education from "../components/screens/education";
@@ -15,52 +14,26 @@ import Nav from "../components/common/nav";
 import NoData from "../components/common/nodata";
 import OneLinerHeader from "../components/common/oneLinerHeader";
 import React from "react";
+import pageTitles from "../configs/pageTitles";
+import {baseChecker} from "./common";
 
 
+const strMsg = ' rendering without crash'
 describe('testing just rendering of components without crashing', () => {
-    it('testing app', () => {
-        shallow(<App/>)
-    })
-    it('testing home', () => {
-        shallow(<Home/>)
-    })
-    it('testing eduction', () => {
-        shallow(<Education/>)
-    })
-    it('testing experience', () => {
-        shallow(<Experience/>)
-    })
-    it('testing projects', () => {
-        shallow(<Projects/>)
-    })
-    it('testing certifications', () => {
-        shallow(<Certificate/>)
-    })
-    it('testing skills', () => {
-        shallow(<Skills/>)
-    })
-    it('achievement skills', () => {
-        shallow(<Achievement/>)
-    })
-    it('basic display component', () => {
-        shallow(<BasicDisplay/>)
-    })
-    it('basic display component', () => {
-        shallow(<BottomBar/>)
-    })
-    it('basic display component', () => {
-        shallow(<HeaderInfo/>)
-    })
-    it('basic display component', () => {
-        shallow(<HtmlComponent/>)
-    })
-    it('basic display component', () => {
-        shallow(<Nav/>)
-    })
-    it('basic display component', () => {
-        shallow(<NoData/>)
-    })
-    it('basic display component', () => {
-        shallow(<OneLinerHeader/>)
-    })
+    baseChecker('app', <App/>)
+    baseChecker('home', <Home title={pageTitles.mockTitle}/>)
+    baseChecker('eduction', <Education title={pageTitles.mockTitle}/>)
+    baseChecker('experience', <Experience title={pageTitles.mockTitle}/>)
+    baseChecker('projects', <Projects title={pageTitles.mockTitle}/>)
+    baseChecker('certificate', <Certificate title={pageTitles.mockTitle}/>)
+    baseChecker('skills', <Skills title={pageTitles.mockTitle}/>)
+    baseChecker('achievement', <Achievement title={pageTitles.mockTitle}/>)
+    baseChecker('basic display', <BasicDisplay list={[]}/>)
+    baseChecker('bottom bar', <BottomBar title={pageTitles.mockTitle}/>)
+    baseChecker('header info', <HeaderInfo title={pageTitles.mockTitle}/>)
+    baseChecker('html component', <HtmlComponent title={pageTitles.mockTitle}/>)
+    baseChecker('nav', <Nav/>)
+    baseChecker('noData ok text', <NoData text={pageTitles.mockTitle} type='200'/>)
+    baseChecker('noData 404', <NoData text={pageTitles.mockTitle} type='404'/>)
+    baseChecker('oneliner', <OneLinerHeader title={pageTitles.mockTitle}/>)
 })

@@ -1,5 +1,6 @@
 import React from 'react'
 import {config} from "../../configs/config";
+import PropTypes from "prop-types";
 
 
 export default function NoData({text, type}) {
@@ -16,4 +17,8 @@ export default function NoData({text, type}) {
     return <div>
         {type === '404' ? display404() : displayNoData()}
     </div>
+}
+NoData.propTypes = {
+    text: PropTypes.string,
+    type: PropTypes.string,
 }

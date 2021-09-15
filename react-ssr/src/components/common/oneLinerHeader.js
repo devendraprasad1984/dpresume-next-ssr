@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 
 const OneLinerHeader = props => {
@@ -6,3 +7,7 @@ const OneLinerHeader = props => {
 }
 
 export default OneLinerHeader
+
+OneLinerHeader.propTypes = {
+    title: PropTypes.string,
+}

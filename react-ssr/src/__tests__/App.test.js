@@ -14,7 +14,7 @@ import pageTitles from "../configs/pageTitles";
 
 describe('testing Home Component', () => {
     it('testing home contains header', () => {
-        const home = shallow(<Home/>)
+        const home = shallow(<Home title={pageTitles.home}/>)
         const oneliner = shallow(<OneLinerHeader title={pageTitles.home}/>)
         // const onelinerRef = render(<OneLinerHeader title={pageTitles.home}/>)
         const onelineHeader = <h1 className='active size25'>{pageTitles.home}</h1>
@@ -33,9 +33,11 @@ describe('testing basic list component props', () => {
 
 describe('testing home component demo video button click', () => {
     const homeDemo = mount(<HomeDemo/>)
-    const label = homeDemo.find('.btn.danger').text()
+    const label = homeDemo.find('.btn.danger')
     it('video button label & click', () => {
-        expect(label).toEqual('Click To see Video Demo')
+        const onVideoButtonClick = label.simulate('click')
+        expect(label.text()).toEqual('Click To see Video Demo')
+        expect(onVideoButtonClick.length).toEqual(1)
     })
 })
 

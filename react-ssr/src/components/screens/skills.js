@@ -2,6 +2,7 @@ import React from 'react'
 import {config} from "../../configs/config";
 import BasicDisplay from "../common/basicDisplay";
 import OneLinerHeader from "../common/oneLinerHeader";
+import PropTypes from "prop-types";
 
 
 const Skills = props => {
@@ -22,3 +23,8 @@ const Skills = props => {
     < /div>
 }
 export default Skills
+
+Skills.propTypes = {
+    title: PropTypes.string.isRequired
+}
+

@@ -2,6 +2,7 @@ import {config} from "../../configs/config";
 import React from 'react'
 import BasicDisplay from "../common/basicDisplay";
 import OneLinerHeader from "../common/oneLinerHeader";
+import PropTypes from "prop-types";
 
 
 const Experience = props => {
@@ -24,3 +25,8 @@ const Experience = props => {
     </div>
 }
 export default Experience
+
+Experience.propTypes = {
+    title: PropTypes.string.isRequired
+}
+

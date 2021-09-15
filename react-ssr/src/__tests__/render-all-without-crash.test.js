@@ -17,7 +17,7 @@ import OneLinerHeader from "../components/common/oneLinerHeader";
 import React from "react";
 
 
-describe('testing rendering of components without crashing', () => {
+describe('testing just rendering of components without crashing', () => {
     it('testing app', () => {
         shallow(<App/>)
     })

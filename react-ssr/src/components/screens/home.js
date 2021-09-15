@@ -3,6 +3,7 @@ import {config} from "../../configs/config";
 import HomeDemo from "./homeDemo";
 import BasicDisplay from "../common/basicDisplay";
 import OneLinerHeader from "../common/oneLinerHeader";
+import PropTypes from "prop-types";
 
 
 const Home = props => {
@@ -13,3 +14,7 @@ const Home = props => {
     </div>
 }
 export default Home
+
+Home.propTypes = {
+    title: PropTypes.string.isRequired
+}

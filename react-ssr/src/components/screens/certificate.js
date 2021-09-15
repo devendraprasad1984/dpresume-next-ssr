@@ -2,6 +2,7 @@ import React from 'react'
 import {config} from "../../configs/config";
 import BasicDisplay from "../common/basicDisplay";
 import OneLinerHeader from "../common/oneLinerHeader";
+import PropTypes from "prop-types";
 
 
 const Certificate = props => {
@@ -11,3 +12,6 @@ const Certificate = props => {
     </div>
 }
 export default Certificate
+Certificate.propTypes = {
+    title: PropTypes.string.isRequired
+}

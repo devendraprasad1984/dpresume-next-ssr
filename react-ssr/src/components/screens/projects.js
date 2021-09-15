@@ -1,6 +1,7 @@
 import React from 'react'
 import {config} from "../../configs/config";
 import OneLinerHeader from "../common/oneLinerHeader";
+import PropTypes from "prop-types";
 
 
 const Projects = props => {
@@ -37,3 +38,7 @@ const Projects = props => {
     </div>
 }
 export default Projects
+
+Projects.propTypes = {
+    title: PropTypes.string.isRequired
+}

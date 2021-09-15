@@ -1,5 +1,6 @@
 import React from 'react'
 import HtmlComponent from "./htmlComponent";
+import PropTypes from 'prop-types'
 
 
 const BasicDisplay = ({list, tag, className}) => {
@@ -14,6 +15,11 @@ const BasicDisplay = ({list, tag, className}) => {
         <div className='bl xprimary'>{tag||''}</div>
         {display()}
     </div>
+}
+BasicDisplay.propTypes={
+    list: PropTypes.array.isRequired,
+    tag: PropTypes.string,
+    className: PropTypes.string
 }
 
 export default BasicDisplay

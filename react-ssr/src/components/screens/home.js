@@ -13,8 +13,8 @@ const Home = props => {
         <HomeDemo/>
     </div>
 }
-export default Home
-
 Home.propTypes = {
     title: PropTypes.string.isRequired
 }
+
+export default Home

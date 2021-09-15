@@ -11,8 +11,8 @@ const Education = props => {
         <BasicDisplay list={config.localdata.EDUCATION}/>
     </div>
 }
-export default Education
-
 Education.propTypes = {
     title: PropTypes.string.isRequired
 }
+export default Education
+

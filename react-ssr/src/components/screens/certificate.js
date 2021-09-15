@@ -11,7 +11,8 @@ const Certificate = props => {
         <BasicDisplay list={config.localdata.CERT_DATA}/>
     </div>
 }
-export default Certificate
 Certificate.propTypes = {
     title: PropTypes.string.isRequired
 }
+
+export default Certificate

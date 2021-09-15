@@ -24,9 +24,10 @@ const Experience = props => {
         {display()}
     </div>
 }
-export default Experience
-
 Experience.propTypes = {
     title: PropTypes.string.isRequired
 }
+export default Experience
+
+
 

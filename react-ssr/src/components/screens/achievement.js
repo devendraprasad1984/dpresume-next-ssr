@@ -11,8 +11,9 @@ const Achievement = props => {
         <BasicDisplay list={config.localdata.ACHIEVMENT}/>
     </div>
 }
-export default Achievement
-
 Achievement.propTypes = {
     title: PropTypes.string.isRequired
 }
+export default Achievement
+
+

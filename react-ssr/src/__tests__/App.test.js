@@ -14,36 +14,15 @@ import Achievement from "../components/screens/achievement";
 import Skills from "../components/screens/skills";
 import Certificate from "../components/screens/certificate";
 import Projects from "../components/screens/projects";
+import BottomBar from "../components/common/bottomBar";
+import HeaderInfo from "../components/common/headerInfo";
+import HtmlComponent from "../components/common/htmlComponent";
+import Nav from "../components/common/nav";
+import NoData from "../components/common/nodata";
 
 
 //mount: mounts component DOM including child component
 //shallow: shallow references to component without rendering child components
-describe('testing rendering of components without crashing', () => {
-    it('testing app', () => {
-        shallow(<App/>)
-    })
-    it('testing home', () => {
-        shallow(<Home/>)
-    })
-    it('testing eduction', () => {
-        shallow(<Education/>)
-    })
-    it('testing experience', () => {
-        shallow(<Experience/>)
-    })
-    it('testing projects', () => {
-        shallow(<Projects/>)
-    })
-    it('testing certifications', () => {
-        shallow(<Certificate/>)
-    })
-    it('testing skills', () => {
-        shallow(<Skills/>)
-    })
-    it('achievement skills', () => {
-        shallow(<Achievement/>)
-    })
-})
 
 describe('testing Home Component', () => {
     it('testing home contains header', () => {

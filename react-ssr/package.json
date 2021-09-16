@@ -12,7 +12,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "lint": "prettier && eslint src",
+    "lint": "prettier --check . && eslint src",
     "testx": "cross-env CI=true react-scripts test --env=jsdom",
     "test": "react-scripts test --env=jsdom",
     "testc": "npm test -- --coverage",

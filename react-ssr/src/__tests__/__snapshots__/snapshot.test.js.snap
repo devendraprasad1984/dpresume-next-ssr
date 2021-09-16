@@ -617,8 +617,8 @@ exports[`snapshot changes of components navigation snapshot 1`] = `
             key="route-item-8"
             path="/notes"
           >
-            <NoData
-              type="404"
+            <Notes
+              title="my self learning and notes"
             />
           </Route>
           <Route

@@ -1,4 +1,3 @@
-// import 'jsdom-global/register';
 import React from "react";
 
 import { mount, shallow } from "enzyme";
@@ -10,10 +9,8 @@ import pageTitles from "../configs/pageTitles";
 
 //mount: mounts component DOM including child component
 //shallow: shallow references to component without rendering child components
-
 describe("testing Home Component", () => {
   it("testing home contains header", () => {
-    const home = shallow(<Home title={pageTitles.home} />);
     const oneliner = shallow(<OneLinerHeader title={pageTitles.home} />);
     const onelineHeader = <h1 className="active size25">{pageTitles.home}</h1>;
     expect(oneliner.contains(onelineHeader)).toEqual(true);

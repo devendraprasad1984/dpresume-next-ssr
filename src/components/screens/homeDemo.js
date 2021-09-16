@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import { config } from "../../configs/config";
-import { useState } from "react";
 
 const HomeDemo = () => {
   const [videoMode, setVideoMode] = useState(false);

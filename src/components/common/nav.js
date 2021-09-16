@@ -58,7 +58,7 @@ const Nav = (props) => {
           {open && (
             <div>
               <div>
-                <img className="imgPic img-animate" src={dp} />
+                <img className="imgPic img-animate" src={dp} alt={"dp"} />
               </div>
               <nav className="content-left flex1">
                 <div className="col">{displayMenu()}</div>

@@ -42,7 +42,6 @@
   width: 100%;
   position: relative;
   user-select: none;
-  position: relative;
   transition-timing-function: ease;
   box-sizing: border-box;
 }

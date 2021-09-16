@@ -71,51 +71,18 @@
     "./docs/scrum/scrum7.png",
     "./docs/scrum/scrum8.png"
   ],
-  "Projects": [
-    "img",
-    "img",
-    "pdf"
-  ],
-  "Skills": [
-    "img",
-    "img",
-    "pdf"
-  ],
+  "Projects": ["img", "img", "pdf"],
+  "Skills": ["img", "img", "pdf"],
   "About": [
-    [
-      "images/dp_lead_nlg.png",
-      "images/oracle_sql.png",
-      "images/open_edg.png"
-    ],
-    [
-      "images/js.png"
-    ],
-    [
-      "images/gitpy.png",
-      "images/linkedin.png",
-      "images/sdlc.png"
-    ]
+    ["images/dp_lead_nlg.png", "images/oracle_sql.png", "images/open_edg.png"],
+    ["images/js.png"],
+    ["images/gitpy.png", "images/linkedin.png", "images/sdlc.png"]
   ],
   "Projects": [
-    [
-      "https://dpresume.com/react-js-python/"
-    ],
-    [
-      "htmlpage.html"
-    ],
-    [
-      "images/mongo.png"
-    ],
-    [
-      "images/dp_lead_nlg.png"
-    ]
+    ["https://dpresume.com/react-js-python/"],
+    ["htmlpage.html"],
+    ["images/mongo.png"],
+    ["images/dp_lead_nlg.png"]
   ],
-  "Code": [
-    [
-      "JS"
-    ],
-    [
-      "PYTHON"
-    ]
-  ]
+  "Code": [["JS"], ["PYTHON"]]
 }

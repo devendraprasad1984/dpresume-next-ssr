@@ -677,6 +677,14 @@ exports[`snapshot changes of components oneliner snapshot 1`] = `
 </h1>
 `;
 
+exports[`snapshot changes of components oneliner_1 snapshot 1`] = `
+<h1
+  className="active size25"
+>
+  Education Summary
+</h1>
+`;
+
 exports[`snapshot changes of components projects snapshot 1`] = `
 <div
   className="margin-ud"

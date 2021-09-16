@@ -4,9 +4,9 @@
     "time": "Oct11-current",
     "projects": [
       "Arria NLG (Natural Language Generation)",
-    "DRA - Disclosure Reporting Automation",
-    "Oracle Analytical Cloud Service",
-    "Cash Nostro Management Systems"
+      "DRA - Disclosure Reporting Automation",
+      "Oracle Analytical Cloud Service",
+      "Cash Nostro Management Systems"
     ],
     "speek": true,
     "summary": [
@@ -40,9 +40,7 @@
   "9dim": {
     "role": "Programmer @ 9 Dimensions",
     "time": "Nov09-Mar11",
-    "projects": [
-      "PRVit (Performance Risk Valuation Investment Technique)"
-    ],
+    "projects": ["PRVit (Performance Risk Valuation Investment Technique)"],
     "speek": true,
     "summary": [
       "i handled all development and support related work in the project"

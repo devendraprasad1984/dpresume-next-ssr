@@ -1,4 +1,5 @@
 import React from "react";
+
 import { config } from "../../configs/config";
 
 const HeaderInfo = (props) => {

@@ -1,7 +1,8 @@
 import React from "react";
-import Nav from "./common/nav";
-import HeaderInfo from "./common/headerInfo";
+
 import BottomBar from "./common/bottomBar";
+import HeaderInfo from "./common/headerInfo";
+import Nav from "./common/nav";
 
 const Main = (props) => {
   return (

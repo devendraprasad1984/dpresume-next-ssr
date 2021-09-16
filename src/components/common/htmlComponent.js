@@ -1,6 +1,7 @@
-import React from "react";
-import { config } from "../../configs/config";
 import PropTypes from "prop-types";
+import React from "react";
+
+import { config } from "../../configs/config";
 
 const HtmlComponent = ({ text }) => {
   return (

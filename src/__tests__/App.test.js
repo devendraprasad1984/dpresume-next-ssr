@@ -1,10 +1,9 @@
+import { mount, shallow } from "enzyme";
 import React from "react";
 
-import { mount, shallow } from "enzyme";
-import Home from "../components/screens/home";
+import BasicDisplay from "../components/common/basicDisplay";
 import OneLinerHeader from "../components/common/oneLinerHeader";
 import HomeDemo from "../components/screens/homeDemo";
-import BasicDisplay from "../components/common/basicDisplay";
 import pageTitles from "../configs/pageTitles";
 
 //mount: mounts component DOM including child component

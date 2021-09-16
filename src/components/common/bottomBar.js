@@ -1,5 +1,7 @@
 import React from "react";
+
 import { config } from "../../configs/config";
+
 import NoData from "./nodata";
 
 const BottomBar = (props) => {

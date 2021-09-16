@@ -1,6 +1,7 @@
-import React from "react";
-import OneLinerHeader from "../common/oneLinerHeader";
 import PropTypes from "prop-types";
+import React from "react";
+
+import OneLinerHeader from "../common/oneLinerHeader";
 
 const Notes = (props) => {
   return (

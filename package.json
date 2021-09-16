@@ -13,17 +13,17 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "lint": "lint-staged",
-    "test": "react-scripts test",
-    "testx": "react-scripts test --env=jsdom",
+    "test": "react-scripts test --env=jsdom",
+    "testx": "CI=true react-scripts test --env=jsdom --watchAll=false --findRelatedTests=**/*test.{js,ts,tsx,jsx} --bail --forceExit -u",
     "testc": "npm run test -- --coverage",
     "eject": "react-scripts eject",
-    "testg": "npm run testx --watchAll=false --findRelatedTests --bail",
+    "testg": "npm run testx",
     "command": "npm lint && npm testg",
     "prepare": "husky install"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
-      "eslint src",
+      "eslint \"**/*.{js,jsx,ts,tsx}\" --fix",
       "prettier --check --write src",
       "git add -A ."
     ]
@@ -49,6 +49,7 @@
     "cross-env": "^7.0.3",
     "enzyme": "^3.11.0",
     "enzyme-to-json": "^3.6.2",
+    "eslint-plugin-import": "^2.24.2",
     "husky": "^7.0.0",
     "lint-staged": "^11.1.2",
     "prettier": "^2.4.0",

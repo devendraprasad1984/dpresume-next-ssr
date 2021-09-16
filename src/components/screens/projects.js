@@ -1,7 +1,8 @@
+import PropTypes from "prop-types";
 import React from "react";
+
 import { config } from "../../configs/config";
 import OneLinerHeader from "../common/oneLinerHeader";
-import PropTypes from "prop-types";
 
 const Projects = (props) => {
   let data = config.localdata.PROJECTS;

@@ -1,5 +1,5 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 
 const OneLinerHeader = (props) => {
   return <h1 className="active size25">{props.title}</h1>;

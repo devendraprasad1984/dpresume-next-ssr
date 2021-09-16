@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { config, mobileCheck } from "../../configs/config";
 import { HashRouter, NavLink, Route, Switch } from "react-router-dom";
-import Home from "../screens/home";
-import NoData from "./nodata";
+
 import dp from "../../assets/images/dp.png";
+import { config, mobileCheck } from "../../configs/config";
+import Home from "../screens/home";
+
+import NoData from "./nodata";
 
 const Nav = (props) => {
   const ismobile = mobileCheck();

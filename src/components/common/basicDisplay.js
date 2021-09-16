@@ -1,6 +1,7 @@
-import React from "react";
-import HtmlComponent from "./htmlComponent";
 import PropTypes from "prop-types";
+import React from "react";
+
+import HtmlComponent from "./htmlComponent";
 
 const BasicDisplay = ({ list, tag, className }) => {
   const display = () => {

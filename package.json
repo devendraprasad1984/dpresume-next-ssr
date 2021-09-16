@@ -17,7 +17,8 @@
     "testx": "react-scripts test --env=jsdom",
     "testc": "npm run test -- --coverage",
     "eject": "react-scripts eject",
-    "command": "lint-staged && npm run testx --watchAll=false --findRelatedTests --bail",
+    "testg": "npm run testx --watchAll=false --findRelatedTests --bail",
+    "command": "npm lint && npm testg",
     "prepare": "husky install"
   },
   "lint-staged": {

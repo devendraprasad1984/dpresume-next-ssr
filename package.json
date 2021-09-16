@@ -1,5 +1,5 @@
 {
-  "name": "react-ssr",
+  "name": "dpresume.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,12 +12,20 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "lint": "prettier --check --write . && eslint src",
-    "testci": "cross-env CI=true react-scripts test --env=jsdom",
-    "test": "react-scripts test --env=jsdom",
-    "testc": "npm test -- --coverage",
+    "lint": "lint-staged",
+    "test": "react-scripts test",
+    "testx": "react-scripts test --env=jsdom",
+    "testc": "npm run test -- --coverage",
     "eject": "react-scripts eject",
-    "command": "npm run lint && git add -A . && npm run testci -- -u"
+    "command": "lint-staged && npm run testx --watchAll=false --findRelatedTests --bail",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint src",
+      "prettier --check --write src",
+      "git add -A ."
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -40,16 +48,10 @@
     "cross-env": "^7.0.3",
     "enzyme": "^3.11.0",
     "enzyme-to-json": "^3.6.2",
-    "husky": "^7.0.2",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.1.2",
     "prettier": "^2.4.0",
     "prop-types": "^15.7.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm command",
-      "post-commit": "echo \"[Husky] applying post commit\"",
-      "pre-push": "npm run command"
-    }
   },
   "jest": {
     "snapshotSerializers": [

@@ -1,7 +1,6 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/react-ssr/node_modules
 /node_modules
 /.pnp
 .pnp.js
@@ -9,6 +8,7 @@
 /out
 /.next
 /build
+
 
 # testing
 /coverage
@@ -19,6 +19,8 @@
 
 # production
 /build
+
+.scannerwork
 
 # misc
 .DS_Store

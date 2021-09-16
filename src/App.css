@@ -730,9 +730,8 @@ i,
 
 .imgPic,
 #imgPic {
-  width: 250px;
-  height: 250px;
-  padding: 5px;
+  width: 200px;
+  height: 200px;
 }
 
 .runbar {

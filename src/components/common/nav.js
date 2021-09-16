@@ -3,6 +3,7 @@ import { config, mobileCheck } from "../../configs/config";
 import { HashRouter, NavLink, Route, Switch } from "react-router-dom";
 import Home from "../screens/home";
 import NoData from "./nodata";
+import dp from "../../assets/images/dp.png";
 
 const Nav = (props) => {
   const ismobile = mobileCheck();
@@ -55,9 +56,14 @@ const Nav = (props) => {
         </div>
         <div className="row">
           {open && (
-            <nav className="content-left flex1">
-              <div className="col">{displayMenu()}</div>
-            </nav>
+            <div>
+              <div>
+                <img className="imgPic img-animate" src={dp} />
+              </div>
+              <nav className="content-left flex1">
+                <div className="col">{displayMenu()}</div>
+              </nav>
+            </div>
           )}
           <div className="content-right">
             <Switch>

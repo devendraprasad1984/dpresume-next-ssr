@@ -4,6 +4,7 @@ import "./App.css";
 import Main from "./components/main";
 
 function App() {
+  //this is main entry point
   return <Main />;
 }
 

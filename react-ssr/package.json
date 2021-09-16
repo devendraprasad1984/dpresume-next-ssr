@@ -48,7 +48,7 @@
     "hooks": {
       "pre-commit": "npm command",
       "post-commit": "echo \"[Husky] applying post commit\"",
-      "pre-push": "npm run command",
+      "pre-push": "npm run command"
     }
   },
   "jest": {

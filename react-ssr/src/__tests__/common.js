@@ -37,7 +37,8 @@ export const appComponents = [
     {name: Enums.nav, desc: 'navigation', component: <Nav/>},
     {name: Enums.nodata_ok, desc: 'noData ok text', component: <NoData text={pageTitles.mockTitle} type='200'/>},
     {name: Enums.nodata_404, desc: 'noData 404', component: <NoData text={pageTitles.mockTitle} type='404'/>},
-    {name: Enums.onelinerHeader, desc: 'oneliner', component: <OneLinerHeader title={pageTitles.mockTitle}/>}
+    {name: Enums.onelinerHeader, desc: 'oneliner', component: <OneLinerHeader title={pageTitles.mockTitle}/>},
+    {name: Enums.onelinerHeader+'_1', desc: 'oneliner_1', component: <OneLinerHeader title={pageTitles.education}/>}
 ]
 
 export const getComponentByName = (name) => {

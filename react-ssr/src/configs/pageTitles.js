@@ -7,5 +7,6 @@ const pageTitles = {
   experience: "Overall Experience",
   projects: "few Project details ",
   skills: "Skills I know or can do",
+  notes: "my self learning and notes",
 };
 export default pageTitles;

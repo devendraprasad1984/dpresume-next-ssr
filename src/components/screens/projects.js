@@ -2,10 +2,12 @@ import PropTypes from "prop-types";
 import React from "react";
 
 import { config } from "../../configs/config";
+import useAPI from "../../hooks/useAPI";
+import NoData from "../common/nodata";
 import OneLinerHeader from "../common/oneLinerHeader";
 
 const Projects = (props) => {
-  let data = config.localdata.PROJECTS;
+  const { data, loading, error } = useAPI(config.endpoints.PROJECTS);
 
   const displayProjectDetails = (arr) => {
     return arr.map((row, i) => {
@@ -19,6 +21,8 @@ const Projects = (props) => {
     });
   };
   const display = () => {
+    if (data.length === 0) return null;
+
     let keys = Object.keys(data);
     let values = Object.values(data);
     return keys.map((name, i) => {
@@ -36,6 +40,9 @@ const Projects = (props) => {
       );
     });
   };
+
+  if (loading) return <NoData text={config.messages.PLZ_WAIT} />;
+  if (error) return <NoData text={config.messages.ERROR} />;
   return (
     <div className={"margin-ud"}>
       <OneLinerHeader title={props.title} />

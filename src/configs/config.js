@@ -3,7 +3,6 @@ import BaseHeader from "./baseHeader";
 import menu from "./menu";
 import endpoints from "./endpoints";
 import messages from "./messages";
-import localdata from "./localdata";
 import colors from "./colors";
 import chars from "./chars";
 import pageTitles from "./pageTitles";
@@ -18,7 +17,6 @@ export const config = {
   menu,
   endpoints,
   messages,
-  localdata,
   colors,
   chars,
   pageTitles,

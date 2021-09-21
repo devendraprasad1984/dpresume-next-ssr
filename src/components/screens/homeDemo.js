@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 
 import { config } from "../../configs/config";
+import useAPI from "../../hooks/useAPI";
+import NoData from "../common/nodata";
 
 const HomeDemo = () => {
   const [videoMode, setVideoMode] = useState(false);
+  const { data, loading, error } = useAPI(config.endpoints.HOME_DEMO);
 
   const demoPageContent = () => {
-    let res = config.localdata.HOME_DEMO;
-    let { links, youtube } = res;
+    if (data.length === 0) return;
+
+    const { links, youtube } = data;
     let printLinks = () =>
       links.map((x, i) => {
         let num = Math.floor(Math.random() * config.colors.length);
@@ -44,6 +48,8 @@ const HomeDemo = () => {
         );
       });
 
+    if (loading) return <NoData text={config.messages.PLZ_WAIT} />;
+    if (error) return <NoData text={config.messages.ERROR} />;
     return (
       <div className="margin-ud">
         <h1>Demo Examples</h1>

@@ -4,10 +4,8 @@ import React from "react";
 import HtmlComponent from "./htmlComponent";
 
 const BasicDisplay = ({ list, tag, className }) => {
-  const display = () => {
-    if (list === undefined) return null;
-    if (list.length === 0) return null;
-    return list.map((row, index) => {
+  const display = (data) => {
+    return data.map((row, index) => {
       return (
         <div key={"key-" + index}>
           <HtmlComponent text={row} />
@@ -15,10 +13,16 @@ const BasicDisplay = ({ list, tag, className }) => {
       );
     });
   };
+
+  const displayByList = () => {
+    if (list === undefined) return null;
+    if (list.length === 0) return null;
+    return display(list);
+  };
   return (
     <div className={className}>
       <div className="bl xprimary">{tag || ""}</div>
-      {display()}
+      {displayByList()}
     </div>
   );
 };

@@ -356,13 +356,14 @@ exports[`snapshot changes of components home snapshot 1`] = `
   <BasicDisplay
     list={
       Array [
-        "I am lead developer practicing on frontend mainly React.js, python, django, code quality, git hooks, CI/CD, postgres and REST APIs",
-        "I design secure api calls through django+flask+tornado built in auth tokens, RS256 / HS256 JWT, crypto signer, csrf, cookies, white-listing and short lived tokens",
+        "I practice TDD based frontend mainly React.js, html and vanila Js and backend mainly python, django, postgres and devops CI/CD",
+        "I maintain code quality using sonarqube, git hooks and constant review cycle",
+        "I design secure api calls through django+flask+tornado built in auth tokens, RS256 (public-private keys) / HS256 (secret key & certificate) JWT, crypto signer, csrf, cookies, white-listing and short lived tokens",
         "I do Code . Collaborate . Build . Change . Incident . Release . Triage",
         "I help in recruiting, grow team and work on enabling team",
         "I am a code reviewer,mentor and face to dev team",
-        "I use JIRA & Leankit for agility, bug tracking and backlog grooming",
-        "I know SDLC, Incident | Change | Release management",
+        "I use JIRA | Leankit | Trello for agility, bug tracking and backlog grooming",
+        "I know SDLC, Incident | Change | Release management life cycles",
       ]
     }
   />

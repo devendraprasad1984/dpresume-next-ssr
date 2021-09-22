@@ -12,6 +12,7 @@ const Enums = {
   headerInfo: "headerInfo",
   htmlComponent: "htmlComponent",
   nav: "nav",
+  input: "input",
   nodata_ok: "nodata_ok",
   nodata_404: "nodata_404",
   onelinerHeader: "onelinerHeader",

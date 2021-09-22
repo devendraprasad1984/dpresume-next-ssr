@@ -97,6 +97,12 @@ exports[`snapshot changes of components header snapshot 1`] = `
       devendraprasad1984@gmail.com, ☏ +91-958 279 7772
     </p>
   </div>
+  <div>
+    <Input
+      label="search"
+      placeholder="dummy search..."
+    />
+  </div>
 </div>
 `;
 

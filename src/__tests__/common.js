@@ -7,6 +7,7 @@ import BasicDisplay from "../components/common/basicDisplay";
 import BottomBar from "../components/common/bottomBar";
 import HeaderInfo from "../components/common/headerInfo";
 import HtmlComponent from "../components/common/htmlComponent";
+import Input from "../components/common/input";
 import Nav from "../components/common/nav";
 import NoData from "../components/common/nodata";
 import OneLinerHeader from "../components/common/oneLinerHeader";
@@ -90,6 +91,11 @@ export const appComponents = [
     name: Enums.onelinerHeader + "_1",
     desc: "oneliner_1",
     component: <OneLinerHeader title={pageTitles.education} />,
+  },
+  {
+    name: Enums.input,
+    desc: "input box",
+    component: <Input label={"dummy"} />,
   },
 ];
 

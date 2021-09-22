@@ -2,6 +2,8 @@ import React from "react";
 
 import { config } from "../../configs/config";
 
+import Input from "./input";
+
 const HeaderInfo = (props) => {
   return (
     <div className="margin-ud">
@@ -17,6 +19,9 @@ const HeaderInfo = (props) => {
       <div className="row xviolet">
         <p className="size10">{config.info}</p>
         <p className="size10">{config.contactline}</p>
+      </div>
+      <div>
+        <Input label="search" placeholder="dummy search..." />
       </div>
     </div>
   );

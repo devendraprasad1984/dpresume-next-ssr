@@ -334,6 +334,7 @@ section {
   flex: 50%;
   height: 300px;
 }
+
 .right-flex {
   display: flex;
   align-content: flex-end;
@@ -978,7 +979,7 @@ select {
   text-align: center;
   width: 30px;
   height: 30px;
-  border-radius: 100%;
+  border-radius: 10px;
   background: #000;
   border: 3px solid #fff;
   box-shadow: -3px 3px 5px #000;
@@ -987,4 +988,51 @@ select {
   top: -15px;
   right: -15px;
   z-index: 1002;
+}
+
+.input-wrapper {
+  position: relative;
+  margin: 20px auto;
+}
+.form-control {
+  display: block;
+  line-height: 1.4em;
+  margin: 0;
+  padding-left: 10px;
+  width: 100%;
+  font-size: medium;
+  color: var(--purple-color);
+  border: 1px solid var(--black-color);
+  background-color: var(--white);
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: 500;
+}
+.form-control:focus {
+  border: 1px solid var(--black-color);
+}
+.control-label {
+  display: block;
+  position: absolute;
+  opacity: 0;
+  bottom: 1.9rem;
+  font-weight: bold;
+  color: var(--purple-color);
+  transition: 0.3s ease-in-out transform;
+  font-size: 13px;
+}
+.form-control:placeholder-shown + .control-label {
+  visibility: hidden;
+  z-index: -1;
+  transition: 0.2s ease-in-out;
+}
+.form-control:not(:placeholder-shown) + .control-label,
+.form-control:focus:not(:placeholder-shown) + .control-label {
+  visibility: visible;
+  z-index: 1;
+  opacity: 1;
+  transform: translateY(-10px);
+  transition: 0.2s ease-in-out transform;
 }

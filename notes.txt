@@ -20,3 +20,6 @@ describe("MyComponent", () => {
   });
 });
 
+
+
+php -S localhost:6201, serve files in server folder

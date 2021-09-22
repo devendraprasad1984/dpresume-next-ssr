@@ -3,6 +3,7 @@ import React from "react";
 
 import { config } from "../../configs/config";
 import useAPI from "../../hooks/useAPI";
+import AppGlobalActions from "../common/appGlobalActions";
 import BasicDisplay from "../common/basicDisplay";
 import NoData from "../common/nodata";
 import OneLinerHeader from "../common/oneLinerHeader";
@@ -17,6 +18,7 @@ const Home = (props) => {
     <div>
       <OneLinerHeader title={props.title} />
       <BasicDisplay list={data} />
+      <AppGlobalActions />
       <HomeDemo />
     </div>
   );

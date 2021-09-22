@@ -9,7 +9,7 @@ const HeaderInfo = (props) => {
     <div className="margin-ud">
       <div className="row">
         <h1 className="size30">
-          {config.name}{" "}
+          {config.name + " "}
           <a href={config.cvLink} target="_blank" className="bl size30 xred">
             {config.chars.down}
           </a>
@@ -20,9 +20,9 @@ const HeaderInfo = (props) => {
         <p className="size10">{config.info}</p>
         <p className="size10">{config.contactline}</p>
       </div>
-      <div>
-        <Input label="search" placeholder="dummy search..." />
-      </div>
+      {/*<div>*/}
+      {/*    <Input label="search" placeholder="dummy search..."/>*/}
+      {/*</div>*/}
     </div>
   );
 };

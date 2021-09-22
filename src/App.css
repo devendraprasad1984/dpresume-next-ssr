@@ -106,6 +106,16 @@ h1 {
   font-weight: bolder;
 }
 
+div > button,
+div > .btn {
+  margin: 2px;
+}
+
+h1::first-letter {
+  font-weight: bolder;
+  color: var(--purple-color);
+}
+
 .size35 {
   font-size: 35px !important;
   font-weight: bolder;
@@ -418,7 +428,8 @@ p {
   margin-bottom: 1rem;
 }
 
-.pad10 {
+.pad10,
+.pad10 > .btn {
   padding: var(--size10px);
 }
 
@@ -426,7 +437,8 @@ p {
   padding: var(--size10px);
 }
 
-.btn {
+.btn,
+button {
   display: inline-block;
   font-weight: bold;
   text-align: center;
@@ -437,12 +449,12 @@ p {
   -ms-user-select: none;
   user-select: none;
   /*border: 1px solid transparent;*/
-  padding: 5px 5px;
+  padding: 10px 10px;
   /*font-size: 1rem;*/
   line-height: 1.1;
   border-radius: 0.25rem;
   cursor: pointer;
-  color: var(--white);
+  color: var(--white) !important;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -610,7 +622,7 @@ i,
 }
 
 .primary {
-  background-color: #329bbb;
+  background-color: #82c3da;
 }
 
 .secondary {
@@ -1035,4 +1047,45 @@ select {
   opacity: 1;
   transform: translateY(-10px);
   transition: 0.2s ease-in-out transform;
+}
+
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+
+.modal-wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 0.4s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 100;
+}
+
+.modal-content {
+  padding: 20px;
+  max-width: 50%;
+  width: 100%;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 10;
+  background-color: var(--white);
+  border-radius: 5px;
+  color: var(--gray-color);
+}
+
+.modal-opened {
+  opacity: 1;
+  visibility: visible;
 }

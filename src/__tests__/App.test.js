@@ -3,7 +3,6 @@ import React from "react";
 
 import BasicDisplay from "../components/common/basicDisplay";
 import OneLinerHeader from "../components/common/oneLinerHeader";
-import HomeDemo from "../components/screens/homeDemo";
 import pageTitles from "../configs/pageTitles";
 
 //mount: mounts component DOM including child component

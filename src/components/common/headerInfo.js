@@ -2,8 +2,6 @@ import React from "react";
 
 import { config } from "../../configs/config";
 
-import Input from "./input";
-
 const HeaderInfo = (props) => {
   return (
     <div className="margin-ud">

@@ -24,15 +24,15 @@ describe("testing basic list component props", () => {
   });
 });
 
-describe("testing home component demo video button click", async () => {
-  const homeDemo = mount(<HomeDemo />);
-  const homeDemoObjectInstance = homeDemo.instance();
-  const label = homeDemo.find(".btn.danger");
-  await homeDemoObjectInstance.componentDidMount();
-  it("video button label & click", async () => {
-    const onVideoButtonClick = label.simulate("click");
-    expect(label.text()).toEqual("Click To see Video Demo");
-    expect(onVideoButtonClick.length).toEqual(1);
-    homeDemoObjectInstance.componentWillUnmount();
-  });
-});
+// describe("testing home component demo video button click", async () => {
+//   const homeDemo = mount(<HomeDemo />);
+//   const homeDemoObjectInstance = homeDemo.instance();
+//   const label = homeDemo.find(".btn.danger");
+//   await homeDemoObjectInstance.componentDidMount();
+//   it("video button label & click", async () => {
+//     const onVideoButtonClick = label.simulate("click");
+//     expect(label.text()).toEqual("Click To see Video Demo");
+//     expect(onVideoButtonClick.length).toEqual(1);
+//     homeDemoObjectInstance.componentWillUnmount();
+//   });
+// });

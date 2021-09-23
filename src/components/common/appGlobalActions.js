@@ -11,6 +11,9 @@ import useAPI from "../../hooks/useAPI";
 
 import Modalify from "./modal";
 
+const themeBgColor = "black";
+const themeColor = "#4d4a4a";
+
 const AppGlobalActions = (props) => {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [longlat, setLonglat] = useState(null);
@@ -50,8 +53,22 @@ const AppGlobalActions = (props) => {
     };
   }, []);
 
+  const handleSwitchTheme = () => {
+    let all = document.querySelector("*");
+    let _all = document.querySelectorAll(["div", "a", "h1", "h2", "li"]);
+    let curtheme = all.style.backgroundColor;
+    all.style.backgroundColor = curtheme === themeBgColor ? "" : themeBgColor;
+    // console.log(_all)
+    _all.forEach((elm) => {
+      elm.style.color = elm.style.color === "white" ? themeColor : "white";
+    });
+  };
+
   return (
     <div className="">
+      <button className={"primary"} onClick={handleSwitchTheme}>
+        dark theme
+      </button>
       <div className="xinfo">usage of few web apis</div>
       <button
         className={!isFullscreen ? "primary" : "danger"}

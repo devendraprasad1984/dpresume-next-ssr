@@ -61,7 +61,7 @@ exports[`snapshot changes of components experience snapshot 1`] = `
 
 exports[`snapshot changes of components header snapshot 1`] = `
 <div
-  className="margin-ud"
+  className=""
 >
   <div
     className="row"

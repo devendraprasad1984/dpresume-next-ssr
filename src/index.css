@@ -75,7 +75,6 @@ body {
   box-sizing: border-box;
   font-family: "Gotham Rounded", monospace;
   color: var(--default-text-color);
-  background-color: white;
 }
 
 div {
@@ -106,7 +105,17 @@ div {
   background-color: var(--purple-color);
   color: white;
 }
+input {
+  width: 100%;
+  border: 2px solid var(--black-color);
+  padding: 5px;
+  margin-top: 4px;
+}
 
+::placeholder {
+  color: var(--black-color);
+  opacity: 0.8;
+}
 select {
   margin: 2px;
   padding: 2px;

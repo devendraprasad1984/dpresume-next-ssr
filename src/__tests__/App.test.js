@@ -10,9 +10,7 @@ import pageTitles from "../configs/pageTitles";
 describe("testing Home Component", () => {
   it("testing home contains header", () => {
     const oneliner = shallow(<OneLinerHeader title={pageTitles.home} />);
-    const onelineHeader = (
-      <h1 className="size30 handwritting">{pageTitles.home}</h1>
-    );
+    const onelineHeader = <h1>{pageTitles.home}</h1>;
     expect(oneliner.contains(onelineHeader)).toEqual(true);
   });
 });

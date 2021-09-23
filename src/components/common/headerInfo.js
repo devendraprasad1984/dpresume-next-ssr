@@ -12,7 +12,7 @@ const HeaderInfo = (props) => {
             {config.chars.down}
           </a>
         </h1>
-        <h2 className="size30   handwritting">{config.rightTitle}</h2>
+        <h2 className="size30 handwritting">{config.rightTitle}</h2>
       </div>
       <div className="row xviolet">
         <p className="size10">{config.info}</p>

@@ -52,7 +52,7 @@ const HomeDemo = () => {
     if (error) return <NoData text={config.messages.ERROR} />;
     return (
       <div className="margin-ud">
-        <h1>Demo Examples</h1>
+        <h1>Demo Apps</h1>
         <div className="flexbox cards">{printLinks()}</div>
         <br />
         <div className="row">

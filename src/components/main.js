@@ -7,9 +7,10 @@ import Nav from "./common/nav";
 const Main = (props) => {
   return (
     <div>
-      <header>
+      <header className="blur topbar fixed">
         <HeaderInfo />
       </header>
+      <div style={{ marginTop: "5rem" }}></div>
       <section className="height400">
         <Nav />
       </section>

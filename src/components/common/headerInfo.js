@@ -4,7 +4,7 @@ import { config } from "../../configs/config";
 
 const HeaderInfo = (props) => {
   return (
-    <div className="margin-ud">
+    <div className="">
       <div className="row">
         <h1 className="size30 handwritting">
           {config.name + " "}

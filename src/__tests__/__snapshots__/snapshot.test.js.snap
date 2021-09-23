@@ -79,7 +79,7 @@ exports[`snapshot changes of components header snapshot 1`] = `
       </a>
     </h1>
     <h2
-      className="size30   handwritting"
+      className="size30 handwritting"
     >
       Lead Application Developer
     </h2>
@@ -438,17 +438,13 @@ exports[`snapshot changes of components noData ok text snapshot 1`] = `
 `;
 
 exports[`snapshot changes of components oneliner snapshot 1`] = `
-<h1
-  className=""
->
+<h1>
   dummy title
 </h1>
 `;
 
 exports[`snapshot changes of components oneliner_1 snapshot 1`] = `
-<h1
-  className=""
->
+<h1>
   Education Summary
 </h1>
 `;

@@ -8,20 +8,27 @@
     font-size: 20px;
   }
 
+  .fixed {
+    position: relative;
+  }
+
   .content-left {
-    /*display: none;*/
     position: fixed;
-    /*background-image: var(--body-linear-grad-color);*/
-    background-color: var(--grad-color1);
     z-index: 10000;
+    opacity: 0.95;
     height: 100%;
     width: 70vw;
-    top: 10px;
+    top: 0;
+    left: 0;
   }
 
   #imgPic,
   .imgPic {
-    display: none;
+    /*display: inline-block;*/
+    margin-top: 5rem;
+    position: fixed;
+    z-index: 100001;
+    left: 2rem;
   }
 
   .topbar {

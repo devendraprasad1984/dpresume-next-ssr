@@ -67,7 +67,7 @@ exports[`snapshot changes of components header snapshot 1`] = `
     className="row"
   >
     <h1
-      className="size30"
+      className="size30 handwritting"
     >
       Devendra Prasad 
       <a
@@ -78,8 +78,10 @@ exports[`snapshot changes of components header snapshot 1`] = `
         ↓
       </a>
     </h1>
-    <h2>
-      Tech Lead Software Engineer
+    <h2
+      className="size30   handwritting"
+    >
+      Lead Application Developer
     </h2>
   </div>
   <div
@@ -437,7 +439,7 @@ exports[`snapshot changes of components noData ok text snapshot 1`] = `
 
 exports[`snapshot changes of components oneliner snapshot 1`] = `
 <h1
-  className="active size25"
+  className=""
 >
   dummy title
 </h1>
@@ -445,7 +447,7 @@ exports[`snapshot changes of components oneliner snapshot 1`] = `
 
 exports[`snapshot changes of components oneliner_1 snapshot 1`] = `
 <h1
-  className="active size25"
+  className=""
 >
   Education Summary
 </h1>

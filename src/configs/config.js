@@ -9,7 +9,7 @@ import pageTitles from "./pageTitles";
 
 export const config = {
   name: "Devendra Prasad",
-  rightTitle: "Tech Lead Software Engineer",
+  rightTitle: "Lead Application Developer",
   info: "technophile . dynamic . motivated . inquisitive",
   contactline: `devendraprasad1984@gmail.com, ${chars.phone} +91-958 279 7772`,
   cvLink: "https://dpresume.com/docs/pdf/dpresume.pdf#view=FitH",
@@ -85,4 +85,105 @@ export const modal = function (selectorById) {
       };
     },
   };
+};
+
+export const TTS = () => {
+  const synthesis =
+    "speechSynthesis" in window ? window.speechSynthesis : undefined;
+  let isSpeaking = false;
+
+  function speechUtteranceChunker(utt, settings, callback) {
+    if (!settings.isSpeaking || !isSpeaking) return;
+    let newUtt;
+    let txt =
+      settings && settings.offset !== undefined
+        ? utt.text.substring(settings.offset)
+        : utt.text;
+    if (utt.voice && utt.voice.voiceURI === "native") {
+      // Not part of the spec
+      newUtt = utt;
+      newUtt.text = txt;
+      newUtt.addEventListener("end", function () {
+        if (speechUtteranceChunker.cancel) {
+          speechUtteranceChunker.cancel = false;
+        }
+        if (callback !== undefined) {
+          callback();
+        }
+      });
+    } else {
+      let chunkLength = (settings && settings.chunkLength) || 160;
+      let pattRegex = new RegExp(
+        "^[\\s\\S]{" +
+          Math.floor(chunkLength / 2) +
+          "," +
+          chunkLength +
+          "}[.!?,]{1}|^[\\s\\S]{1," +
+          chunkLength +
+          "}$|^[\\s\\S]{1," +
+          chunkLength +
+          "} "
+      );
+      let chunkArr = txt.match(pattRegex);
+
+      if (chunkArr[0] === undefined || chunkArr[0].length <= 2) {
+        //call once all text has been spoken...
+        if (callback !== undefined) {
+          callback();
+        }
+        return;
+      }
+      let chunk = chunkArr[0];
+      newUtt = new window.SpeechSynthesisUtterance(chunk);
+      for (let x in utt) {
+        if (utt.hasOwnProperty(x) && x !== "text") {
+          newUtt[x] = utt[x];
+        }
+      }
+      newUtt.addEventListener("end", function () {
+        if (speechUtteranceChunker.cancel) {
+          speechUtteranceChunker.cancel = false;
+          return;
+        }
+        settings.offset = settings.offset || 0;
+        settings.offset += chunk.length - 1;
+        speechUtteranceChunker(utt, settings, callback);
+      });
+    }
+
+    if (settings.modifier) {
+      settings.modifier(newUtt);
+    }
+    setTimeout(function () {
+      if (!settings.isSpeaking || !isSpeaking) return;
+      synthesis.speak(newUtt);
+    }, 0);
+  }
+
+  let objtts = {};
+  objtts = {
+    speakOut: (text = "") => {
+      if (text === "") return;
+      isSpeaking = true;
+      let utterance = new window.SpeechSynthesisUtterance(text);
+      speechUtteranceChunker(
+        utterance,
+        {
+          chunkLength: 120,
+          isSpeaking,
+        },
+        () => {}
+      );
+      return objtts;
+    },
+    stopSpeaking: () => {
+      isSpeaking = false;
+      if (synthesis === undefined) {
+        alert("no voice assistant present");
+        return;
+      }
+      synthesis.cancel();
+    },
+  };
+  return objtts;
 };

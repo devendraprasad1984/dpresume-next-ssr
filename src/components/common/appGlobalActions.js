@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-import { getLocation, modal, toggleFullScreen } from "../../configs/config";
+import {
+  config,
+  getLocation,
+  modal,
+  toggleFullScreen,
+  TTS,
+} from "../../configs/config";
+import useAPI from "../../hooks/useAPI";
 
 import Modalify from "./modal";
 
@@ -8,6 +15,8 @@ const AppGlobalActions = (props) => {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [longlat, setLonglat] = useState(null);
   const [showLongLat, setShowLongLat] = useState(false);
+  const [isBioSpeaking, setIsBioSpeaking] = useState(false);
+  let _tts = new TTS();
 
   const handleFullScreen = () => {
     toggleFullScreen();
@@ -19,11 +28,26 @@ const AppGlobalActions = (props) => {
       setShowLongLat(true);
     });
   };
+  const { data, loading } = useAPI(config.endpoints.SUMMARY);
+  const handleSpeak = () => {
+    if (loading) return;
+    if (isBioSpeaking) {
+      setIsBioSpeaking(false);
+      _tts.stopSpeaking();
+      return;
+    }
+    _tts.speakOut(data);
+    setIsBioSpeaking(true);
+  };
 
   useEffect(() => {
     modal("modallocation").init();
     modal("testmodal").init();
-    handleLocation();
+    if (longlat === null) handleLocation();
+    return () => {
+      setLonglat(null);
+      setShowLongLat(false);
+    };
   }, []);
 
   return (
@@ -48,6 +72,13 @@ const AppGlobalActions = (props) => {
       <Modalify id="testmodal" show={true}>
         screenshot taken
       </Modalify>
+
+      <button
+        className={"primary " + (isBioSpeaking ? "danger" : "")}
+        onClick={handleSpeak}
+      >
+        {isBioSpeaking ? "Stop Speaking" : "Speak Bio"}
+      </button>
     </div>
   );
 };

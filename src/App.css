@@ -111,11 +111,6 @@ div > .btn {
   margin: 2px;
 }
 
-h1::first-letter {
-  font-weight: bolder;
-  color: var(--purple-color);
-}
-
 .size35 {
   font-size: 35px !important;
   font-weight: bolder;
@@ -451,7 +446,7 @@ button {
   /*border: 1px solid transparent;*/
   padding: 10px 10px;
   /*font-size: 1rem;*/
-  line-height: 1.1;
+  line-height: 1.2;
   border-radius: 0.25rem;
   cursor: pointer;
   color: var(--white) !important;
@@ -622,11 +617,11 @@ i,
 }
 
 .primary {
-  background-color: #82c3da;
+  background-color: #a4a0a0;
 }
 
 .secondary {
-  background-color: #6c757d;
+  background-color: #4b5054;
 }
 
 .success {

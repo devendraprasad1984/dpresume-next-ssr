@@ -19,7 +19,7 @@ const BottomBar = (props) => {
     return linksKey.map((link, index) => {
       return (
         <a
-          className="btn"
+          className="btn secondary"
           href={linksValues[index]}
           target="_blank"
           key={"link-key-" + index}

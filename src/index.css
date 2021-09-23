@@ -52,9 +52,23 @@ iframe {
   src: url(./css/GothamRounded-Medium.woff2) format("woff2");
 }
 
+@font-face {
+  font-family: "Ephesis";
+  font-style: normal;
+  font-weight: 550;
+  font-display: swap;
+  /*src: url(https://fonts.gstatic.com/s/ephesis/v1/uU9PCBUS8IerL2VG3xTR396EilM.woff2) format('woff2');*/
+  src: url(./css/uU9PCBUS8IerL2VG3xTR396EilM.woff2) format("woff2");
+}
+
 @-ms-viewport {
   width: 100vw;
   height: 100vh;
+}
+
+.handwritting {
+  box-sizing: border-box;
+  font-family: "Ephesis", cursive;
 }
 
 *,
@@ -62,6 +76,5 @@ iframe {
 :before {
   box-sizing: border-box;
   font-family: "Gotham Rounded", monospace;
-  /*font-size: 1rem;*/
   color: var(--default-text-color);
 }

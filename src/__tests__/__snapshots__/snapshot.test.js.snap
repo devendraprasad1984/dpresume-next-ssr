@@ -69,8 +69,7 @@ exports[`snapshot changes of components header snapshot 1`] = `
     <h1
       className="size30"
     >
-      Devendra Prasad
-       
+      Devendra Prasad 
       <a
         className="bl size30 xred"
         href="https://dpresume.com/docs/pdf/dpresume.pdf#view=FitH"
@@ -97,12 +96,6 @@ exports[`snapshot changes of components header snapshot 1`] = `
       devendraprasad1984@gmail.com, ☏ +91-958 279 7772
     </p>
   </div>
-  <div>
-    <Input
-      label="search"
-      placeholder="dummy search..."
-    />
-  </div>
 </div>
 `;
 
@@ -114,6 +107,7 @@ exports[`snapshot changes of components home snapshot 1`] = `
   <BasicDisplay
     list={Array []}
   />
+  <AppGlobalActions />
   <HomeDemo />
 </div>
 `;

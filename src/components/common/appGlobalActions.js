@@ -16,6 +16,7 @@ const themeColor = "#4d4a4a";
 
 const AppGlobalActions = (props) => {
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [longlat, setLonglat] = useState(null);
   const [showLongLat, setShowLongLat] = useState(false);
   const [isBioSpeaking, setIsBioSpeaking] = useState(false);
@@ -62,14 +63,17 @@ const AppGlobalActions = (props) => {
     _all.forEach((elm) => {
       elm.style.color = elm.style.color === "white" ? themeColor : "white";
     });
+    setIsDarkMode(!isDarkMode);
   };
 
   return (
     <div className="">
-      <button className={"primary"} onClick={handleSwitchTheme}>
-        dark theme
+      <button
+        className={!isDarkMode ? "primary" : "danger"}
+        onClick={handleSwitchTheme}
+      >
+        {isDarkMode ? "light theme" : "dark theme"}
       </button>
-      <div className="xinfo">usage of few web apis</div>
       <button
         className={!isFullscreen ? "primary" : "danger"}
         onClick={handleFullScreen}

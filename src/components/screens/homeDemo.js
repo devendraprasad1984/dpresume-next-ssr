@@ -52,14 +52,16 @@ const HomeDemo = () => {
     if (error) return <NoData text={config.messages.ERROR} />;
     return (
       <div className="margin-ud">
-        <h1>Demo Apps</h1>
-        <div className="flexbox cards">{printLinks()}</div>
-        <br />
-        <div className="row">
+        <h1 className="row">
+          <span>Demo Apps</span>
           <span className="btn danger" onClick={() => setVideoMode(!videoMode)}>
             Click To see Video Demo
           </span>
-        </div>
+        </h1>
+        <div className="flexbox cards">{printLinks()}</div>
+        <h1 className="margin-ud">
+          <span>{videoMode ? "Video Demo" : ""}</span>
+        </h1>
         <div className="flexbox-video video-cards">{printYouTubeVideos()}</div>
       </div>
     );

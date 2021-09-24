@@ -2,6 +2,8 @@ import React from "react";
 
 import { config } from "../../configs/config";
 
+import AppGlobalActions from "./appGlobalActions";
+
 const HeaderInfo = (props) => {
   return (
     <div className="">
@@ -18,6 +20,7 @@ const HeaderInfo = (props) => {
         <p className="size10">{config.info}</p>
         <p className="size10">{config.contactline}</p>
       </div>
+      <AppGlobalActions />
       {/*<div>*/}
       {/*    <Input label="search" placeholder="dummy search..."/>*/}
       {/*</div>*/}

@@ -18,7 +18,6 @@ const Home = (props) => {
     <div>
       <OneLinerHeader title={props.title} />
       <BasicDisplay list={data} />
-      <AppGlobalActions />
       <HomeDemo />
     </div>
   );

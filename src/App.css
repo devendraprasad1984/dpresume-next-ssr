@@ -336,8 +336,12 @@ section {
 }
 
 .content-left {
-  display: flex;
   padding-left: 5px;
+  width: var(--left-panel-width);
+}
+
+.gapSwitchMobile {
+  margin-top: 10rem;
 }
 
 .link {
@@ -350,9 +354,8 @@ section {
   margin: 5px;
 }
 
-.content-right,
-.content-right-subdiv {
-  width: inherit;
+.content-right {
+  width: var(--right-panel-width);
   padding-left: var(--size10px);
   padding-right: var(--size10px);
   float: left;
@@ -476,12 +479,14 @@ samp {
   justify-content: space-between;
   flex-direction: row;
 }
+
 .row * {
   margin: 2px;
 }
 
 .flex1 {
   flex: 1;
+  flex-basis: auto;
 }
 
 .col {

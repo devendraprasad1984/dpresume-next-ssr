@@ -149,7 +149,7 @@ exports[`snapshot changes of components navigation snapshot 1`] = `
       className="right"
     >
       <a
-        className="right bl size20"
+        className="right bl size35 padding-rl"
         onClick={[Function]}
       >
         ✖

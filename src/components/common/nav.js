@@ -59,13 +59,15 @@ const Nav = (props) => {
             {open ? `${config.chars.close}` : `${config.chars.hamburger}`}
           </a>
         </div>
-        <div className="row padding-rl margin-rl">
+        <div className="row">
           {open && (
-            <div className="box">
-              <div>
-                <img className="imgPic img-animate" src={dp} alt={"dp"} />
-              </div>
-              <nav className="content-left flex1">
+            <div className="flex1">
+              {!ismobile && (
+                <div>
+                  <img className="imgPic img-animate" src={dp} alt={"dp"} />
+                </div>
+              )}
+              <nav className="content-left">
                 <div className="col">{displayMenu()}</div>
               </nav>
             </div>

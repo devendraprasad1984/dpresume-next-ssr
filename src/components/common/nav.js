@@ -56,9 +56,9 @@ const Nav = (props) => {
             {open ? `${config.chars.close}` : `${config.chars.hamburger}`}
           </a>
         </div>
-        <div className="row">
+        <div className="row padding-rl margin-rl">
           {open && (
-            <div>
+            <div className="box">
               <div>
                 <img className="imgPic img-animate" src={dp} alt={"dp"} />
               </div>
@@ -67,7 +67,7 @@ const Nav = (props) => {
               </nav>
             </div>
           )}
-          <div className="content-right">
+          <div className="content-right box">
             <Switch>
               <Route exact path={"/"}>
                 <Home title={config.pageTitles.home} />

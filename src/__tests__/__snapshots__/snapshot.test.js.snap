@@ -156,10 +156,10 @@ exports[`snapshot changes of components navigation snapshot 1`] = `
       </a>
     </div>
     <div
-      className="row padding-rl margin-rl"
+      className="row"
     >
       <div
-        className="box"
+        className="flex1"
       >
         <div>
           <img
@@ -169,7 +169,7 @@ exports[`snapshot changes of components navigation snapshot 1`] = `
           />
         </div>
         <nav
-          className="content-left flex1"
+          className="content-left"
         >
           <div
             className="col"

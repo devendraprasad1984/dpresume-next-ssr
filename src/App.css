@@ -352,7 +352,7 @@ section {
 
 .content-right,
 .content-right-subdiv {
-  width: 100vw;
+  width: inherit;
   padding-left: var(--size10px);
   padding-right: var(--size10px);
   float: left;

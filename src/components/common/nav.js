@@ -52,7 +52,10 @@ const Nav = (props) => {
     <div>
       <HashRouter>
         <div className="right">
-          <a className="right bl size20" onClick={() => setOpen(!open)}>
+          <a
+            className="right bl size35 padding-rl"
+            onClick={() => setOpen(!open)}
+          >
             {open ? `${config.chars.close}` : `${config.chars.hamburger}`}
           </a>
         </div>

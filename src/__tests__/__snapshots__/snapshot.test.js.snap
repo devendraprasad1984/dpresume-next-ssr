@@ -156,9 +156,11 @@ exports[`snapshot changes of components navigation snapshot 1`] = `
       </a>
     </div>
     <div
-      className="row"
+      className="row padding-rl margin-rl"
     >
-      <div>
+      <div
+        className="box"
+      >
         <div>
           <img
             alt="dp"
@@ -306,7 +308,7 @@ exports[`snapshot changes of components navigation snapshot 1`] = `
         </nav>
       </div>
       <div
-        className="content-right"
+        className="content-right box"
       >
         <Switch>
           <Route

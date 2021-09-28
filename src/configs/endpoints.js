@@ -1,3 +1,5 @@
+// php -d error_reporting=E_ALL -d error_log=./server/error.log -S 0.0.0.0:6201
+
 const islocal = window.location.href.indexOf("localhost") !== -1;
 const serverPrefix = islocal ? "http://localhost:6201" : "https://dpresume.com";
 const urlResourceHandler = `${serverPrefix}/server/api/get-resource-handler.php`;

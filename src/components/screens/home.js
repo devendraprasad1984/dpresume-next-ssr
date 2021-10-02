@@ -3,12 +3,11 @@ import React from "react";
 
 import { config } from "../../configs/config";
 import useAPI from "../../hooks/useAPI";
-import AppGlobalActions from "../common/appGlobalActions";
 import BasicDisplay from "../common/basicDisplay";
 import NoData from "../common/nodata";
 import OneLinerHeader from "../common/oneLinerHeader";
-
 import HomeDemo from "./homeDemo";
+import Article from "./articles";
 
 const Home = (props) => {
   const { data, loading, error } = useAPI(config.endpoints.SUMMARY);
@@ -16,6 +15,7 @@ const Home = (props) => {
   if (error) return <NoData text={config.messages.ERROR} />;
   return (
     <div>
+        <Article/>
       <OneLinerHeader title={props.title} />
       <BasicDisplay list={data} />
       <HomeDemo />

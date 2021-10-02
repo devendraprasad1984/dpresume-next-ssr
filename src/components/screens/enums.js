@@ -16,5 +16,6 @@ const Enums = {
   nodata_ok: "nodata_ok",
   nodata_404: "nodata_404",
   onelinerHeader: "onelinerHeader",
+  articles: "articles",
 };
 export default Enums;

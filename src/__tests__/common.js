@@ -20,6 +20,7 @@ import Home from "../components/screens/home";
 import Projects from "../components/screens/projects";
 import Skills from "../components/screens/skills";
 import pageTitles from "../configs/pageTitles";
+import Article from "../components/screens/articles";
 
 const strMsg = " rendering without crash";
 export const appComponents = [
@@ -96,6 +97,11 @@ export const appComponents = [
     name: Enums.input,
     desc: "input box",
     component: <Input label={"dummy"} />,
+  },
+  {
+    name: Enums.articles,
+    desc: "articles test component array prop and types check",
+    component: <Article />,
   },
 ];
 

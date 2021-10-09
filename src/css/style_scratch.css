@@ -499,8 +499,8 @@ input[type="search"]::-webkit-search-decoration {
   border: none;
   text-transform: uppercase;
   border-radius: 0px;
-  color: #fff;
-  background-color: #0375b4;
+  /*color: #fff !important;*/
+  /*background-color: #0375b4;*/
   letter-spacing: 1.5px;
   font-family: "Montserrat", sans-serif;
 }

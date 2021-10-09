@@ -13,6 +13,8 @@ exports[`snapshot changes of components achievement snapshot 1`] = `
 
 exports[`snapshot changes of components app snapshot 1`] = `<Main />`;
 
+exports[`snapshot changes of components articles test component array prop and types check snapshot 1`] = `""`;
+
 exports[`snapshot changes of components basic display snapshot 1`] = `
 <div>
   <div
@@ -129,7 +131,8 @@ exports[`snapshot changes of components input box snapshot 1`] = `
   className="input-wrapper"
 >
   <input
-    className="form-control"
+    className="form-control undefined"
+    label="dummy"
     placeholder=""
     type="text"
   />

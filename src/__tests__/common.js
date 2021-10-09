@@ -12,6 +12,7 @@ import Nav from "../components/common/nav";
 import NoData from "../components/common/nodata";
 import OneLinerHeader from "../components/common/oneLinerHeader";
 import Achievement from "../components/screens/achievement";
+import Article from "../components/screens/articles";
 import Certificate from "../components/screens/certificate";
 import Education from "../components/screens/education";
 import Enums from "../components/screens/enums";
@@ -20,7 +21,6 @@ import Home from "../components/screens/home";
 import Projects from "../components/screens/projects";
 import Skills from "../components/screens/skills";
 import pageTitles from "../configs/pageTitles";
-import Article from "../components/screens/articles";
 
 const strMsg = " rendering without crash";
 export const appComponents = [
@@ -105,6 +105,14 @@ export const appComponents = [
   },
 ];
 
+export const snapshotChecker = (desc, component) => {
+  it(`${desc} snapshot`, () => {
+    const tree = shallow(component);
+    expect(toJson(tree)).toMatchSnapshot();
+    tree.unmount();
+  });
+};
+
 export const getComponentByName = (name) => {
   return appComponents.filter((comp) => comp.name === name)[0];
 };
@@ -112,14 +120,6 @@ export const getComponentByName = (name) => {
 export const baseChecker = (desc, component) => {
   it(`testing ${desc} - ${strMsg}`, () => {
     shallow(component);
-  });
-};
-
-export const snapshotChecker = (desc, component) => {
-  it(`${desc} snapshot`, () => {
-    const tree = shallow(component);
-    expect(toJson(tree)).toMatchSnapshot();
-    tree.unmount();
   });
 };
 

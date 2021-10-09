@@ -1,8 +1,10 @@
 import { mount, shallow } from "enzyme";
+import PropTypes from "prop-types";
 import React from "react";
 
 import BasicDisplay from "../components/common/basicDisplay";
 import OneLinerHeader from "../components/common/oneLinerHeader";
+import Article from "../components/screens/articles";
 import pageTitles from "../configs/pageTitles";
 
 //mount: mounts component DOM including child component
@@ -20,6 +22,22 @@ describe("testing basic list component props", () => {
   const basicDisplay = mount(<BasicDisplay list={basicList} />);
   it("checking basic display accepts prop", () => {
     expect(basicDisplay.props().list).toEqual(basicList);
+  });
+});
+
+describe("article test", () => {
+  let wrapper;
+  const article = [
+    {
+      title: "title1",
+      upvotes: "12",
+      date: "2020-09-01",
+    },
+  ];
+  beforeEach(() => (wrapper = shallow(<Article article={article} />)));
+  it("checking data", () => {
+    console.log("article object", articleWrapper);
+    expect(wrapper.props().inclu).toEqual("Success!");
   });
 });
 

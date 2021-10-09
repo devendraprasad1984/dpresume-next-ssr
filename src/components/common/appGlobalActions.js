@@ -9,6 +9,7 @@ import {
 } from "../../configs/config";
 import useAPI from "../../hooks/useAPI";
 
+import Input from "./input";
 import Modalify from "./modal";
 
 const themeBgColor = "black";
@@ -20,6 +21,10 @@ const AppGlobalActions = (props) => {
   const [longlat, setLonglat] = useState(null);
   const [showLongLat, setShowLongLat] = useState(false);
   const [isBioSpeaking, setIsBioSpeaking] = useState(false);
+  const [showWhatsappMsgWindow, setshowWhatsappMsgWindow] = useState(false);
+  const [showscreenshot, setshowscreenshot] = useState(false);
+  const [whereAmI, setWhereAmI] = useState(false);
+  const [msgText, setMsgText] = useState("");
   let _tts = new TTS();
 
   const handleFullScreen = () => {
@@ -80,17 +85,33 @@ const AppGlobalActions = (props) => {
       >
         {!isFullscreen ? "fullscreen" : "exit fullscreen"}
       </button>
-      <button id="modallocation" className={"primary"}>
+      <button
+        id="modallocation"
+        className={"primary"}
+        onClick={() => setWhereAmI(!whereAmI)}
+      >
         where am I?
       </button>
-      <Modalify id="modallocation" show={showLongLat}>
+      <Modalify
+        id="modallocation"
+        show={showLongLat}
+        close={() => setWhereAmI(!whereAmI)}
+      >
         long lat: {JSON.stringify(longlat)}
       </Modalify>
 
-      <button id="testmodal" className={"primary"}>
+      <button
+        id="testmodal"
+        className={"primary"}
+        onClick={() => setshowscreenshot(!showscreenshot)}
+      >
         take screenshot
       </button>
-      <Modalify id="testmodal" show={true}>
+      <Modalify
+        id="testmodal"
+        show={showscreenshot}
+        close={() => setshowscreenshot(!showscreenshot)}
+      >
         screenshot taken
       </Modalify>
 
@@ -100,6 +121,47 @@ const AppGlobalActions = (props) => {
       >
         {isBioSpeaking ? "Stop Speaking" : "Speak Bio"}
       </button>
+
+      <button
+        className="xwhite green"
+        onClick={() => window.open("tel:+919582797772")}
+      >
+        call
+      </button>
+      <button
+        id="btnwhatsapp"
+        className="danger xwhite"
+        onClick={() => setshowWhatsappMsgWindow(!showWhatsappMsgWindow)}
+      >
+        whatsapp
+      </button>
+      <Modalify
+        id="btnwhatsapp"
+        show={showWhatsappMsgWindow}
+        close={() => setshowWhatsappMsgWindow(!showWhatsappMsgWindow)}
+      >
+        <h3>whatsapp message</h3>
+        <Input
+          label="send me whatsapp note, i will connect back"
+          placeholder="enter your message eg"
+          value={msgText}
+          onChange={(e) => {
+            setMsgText(e.target.value);
+          }}
+        />
+        <button
+          className="success"
+          onClick={() => {
+            window.open(
+              `https://wa.me/+919582797772?text=${msgText}`,
+              "_blank"
+            );
+            setshowWhatsappMsgWindow(!showWhatsappMsgWindow);
+          }}
+        >
+          send
+        </button>
+      </Modalify>
     </div>
   );
 };

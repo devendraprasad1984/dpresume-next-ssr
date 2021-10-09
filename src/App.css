@@ -407,7 +407,7 @@ button {
   line-height: 1.2;
   border-radius: 0.25rem;
   cursor: pointer;
-  color: var(--white) !important;
+  /*color: var(--white) !important;*/
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -575,27 +575,32 @@ i,
 }
 
 .primary {
-  background-color: #a4a0a0;
+  background-color: #a4a0a0 !important;
+  color: var(--white) !important;
 }
 
 .secondary {
-  background-color: #4b5054;
+  background-color: #4b5054 !important;
+  color: var(--white) !important;
 }
 
 .success {
-  background-color: #28a745;
+  background-color: #28a745 !important;
+  color: var(--white) !important;
 }
 
 .info {
-  background-color: #7055c6;
+  background-color: #7055c6 !important;
+  color: var(--white) !important;
 }
 
 .warning {
-  background-color: #ffc107;
+  background-color: #ffc107 !important;
+  color: var(--white) !important;
 }
 
 .white {
-  background-color: white;
+  background-color: var(--white) !important;
 }
 
 .xprimary {
@@ -603,7 +608,7 @@ i,
 }
 
 .xwhite {
-  color: white !important;
+  color: var(--white) !important;
 }
 
 .xsecondary {
@@ -630,6 +635,10 @@ i,
   color: red !important;
 }
 
+.xwhite {
+  color: white !important;
+}
+
 .xblue {
   color: #3e9fe9 !important;
 }
@@ -643,15 +652,24 @@ i,
 }
 
 .danger {
-  background-color: #ee5664;
+  background-color: #ee5664 !important;
+  color: var(--white) !important;
+}
+
+.white {
+  background-color: white !important;
 }
 
 .light {
-  background-color: #f8f9fa;
+  background-color: #f8f9fa !important;
+}
+
+.green {
+  background-color: #49ec49 !important;
 }
 
 .dark {
-  background-color: #343a40;
+  background-color: #343a40 !important;
 }
 
 .dp {
@@ -990,17 +1008,17 @@ i,
 }
 
 .modal-wrapper {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   min-height: 100%;
-  position: fixed;
+  /*position: fixed;*/
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.7);
   transition: 0.4s;
-  visibility: hidden;
-  opacity: 0;
-  z-index: 100;
+  /*visibility: hidden;*/
+  opacity: 0.9;
+  z-index: 12002;
 }
 
 .modal-content {

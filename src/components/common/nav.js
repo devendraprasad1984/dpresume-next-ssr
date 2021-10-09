@@ -61,13 +61,19 @@ const Nav = (props) => {
         </div>
         <div className="row">
           {open && (
-            <div className="flex1">
+            <div className="flex1 content-left">
               {!ismobile && (
                 <div>
                   <img className="imgPic img-animate" src={dp} alt={"dp"} />
                 </div>
               )}
-              <nav className="content-left">
+              <h4 className='handwritting size20'>
+                created with
+                <span className='success'>patience</span>
+                <span className='danger'>love</span>
+                <span className='info'>passion</span>
+              </h4>
+              <nav className="">
                 <div className="col">{displayMenu()}</div>
               </nav>
             </div>

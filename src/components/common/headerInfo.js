@@ -10,8 +10,8 @@ const HeaderInfo = (props) => {
       <div className="row">
         <h1 className="size30 handwritting">
           {config.name + " "}
-          <a href={config.cvLink} target="_blank" className="bl size30 xred">
-            {config.chars.down}
+          &nbsp; <a href={config.cvLink} target="_blank" className="bl size15 xred">
+            CV
           </a>
         </h1>
         <h2 className="size30 handwritting">{config.rightTitle}</h2>

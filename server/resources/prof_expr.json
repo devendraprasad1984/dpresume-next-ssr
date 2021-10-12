@@ -1,7 +1,25 @@
 {
+  "Thoughtworks via Geektrust": {
+    "role": "Lead Appplication Developer @ Thoughtworks",
+    "time": "Sep21-current",
+    "projects": [
+      "Colleague Experience @ FAB (First Abu Dhabi Bank)"
+    ],
+    "speek": true,
+    "summary": [
+      "working on powerapps, MS dynamics 360, vanilla HTML, webapis, react.js",
+      "I practice TDD based frontend mainly React.js, html and vanila Js and backend mainly python, django, postgres and devops CI/CD",
+      "I maintain code quality using sonarqube, git hooks and constant review cycle",
+      "I do Code . Collaborate . Build . Change . Incident . Release . Triage",
+      "I help in recruiting, grow team and work on enabling team",
+      "I am a code reviewer,mentor and face to dev team",
+      "I use JIRA | Leankit | Trello for agility, bug tracking and backlog grooming",
+      "I know SDLC, Incident | Change | Release management life cycles"
+    ]
+  },
   "RBS": {
     "role": "Tech Lead @ Royal Bank Of Scotland",
-    "time": "Oct11-current",
+    "time": "Oct11-Sep21",
     "projects": [
       "Arria NLG (Natural Language Generation)",
       "DRA - Disclosure Reporting Automation",

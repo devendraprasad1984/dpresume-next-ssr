@@ -316,7 +316,11 @@ section {
 
 .right {
   /*float: right;*/
+ display: flex;
   text-align: right;
+  justify-content: flex-end;
+  align-content: flex-end;
+  align-items: flex-end;
 }
 
 .left {
@@ -603,6 +607,10 @@ i,
 .warning {
   background-color: #ffc107 !important;
   color: var(--white) !important;
+}
+
+.wid60{
+  width: 60%;
 }
 
 .white {

@@ -1,5 +1,5 @@
 const islocal = window.location.href.indexOf("localhost") !== -1;
-const serverPrefix = islocal ? "http://localhost:6201" : "https://dpresume.com";
+const serverPrefix = islocal ? "http://localhost:6204" : "https://dpresume.com";
 const urlResourceHandler = `${serverPrefix}/server/api/get-resource-handler.php`;
 const endpoints = {
   SUMMARY: `${urlResourceHandler}?name=summary`,

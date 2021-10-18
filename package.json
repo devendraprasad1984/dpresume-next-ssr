@@ -10,7 +10,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "PORT=6200 react-scripts start",
+    "start": "PORT=3004 react-scripts start",
     "build": "react-scripts build",
     "lint": "lint-staged",
     "test": "CI=false react-scripts test --verbose --env=jsdom --findRelatedTests=**/*test.{js,ts,tsx,jsx} -u",

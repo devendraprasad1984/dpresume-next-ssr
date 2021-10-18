@@ -73,6 +73,7 @@ const AppGlobalActions = (props) => {
 
   return (
     <div className="">
+        <p className='size10'>demoing web apis</p>
       <button
         className={!isDarkMode ? "primary" : "danger"}
         onClick={handleSwitchTheme}

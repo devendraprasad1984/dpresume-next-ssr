@@ -1,5 +1,6 @@
 [
   "I practice TDD based frontend mainly React.js, html and vanila Js and backend mainly python, django, postgres and devops CI/CD",
+  "I wear multiple hats during various phases of software development and most act as a bridge between junior and senior members in the team",
   "I maintain code quality using sonarqube, git hooks and constant review cycle",
   "I design secure api calls through django+flask+tornado built in auth tokens, RS256 (public-private keys) / HS256 (secret key & certificate) JWT, crypto signer, csrf, cookies, white-listing and short lived tokens",
   "I do Code . Collaborate . Build . Change . Incident . Release . Triage",

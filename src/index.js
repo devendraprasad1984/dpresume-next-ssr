@@ -5,7 +5,9 @@ import "./index.css";
 import App from "./App";
 import "./app.media.css";
 import reportWebVitals from "./reportWebVitals";
+// import {watchNetworkConnection} from "./configs/config";
 
+// watchNetworkConnection()
 ReactDOM.render(
   <React.StrictMode>
     <App />

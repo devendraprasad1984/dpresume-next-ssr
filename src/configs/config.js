@@ -60,32 +60,40 @@ export const toggleFullScreen = () => {
     }
 };
 export const modal = function (selectorById) {
-    let thisModal = document.getElementById(selectorById);
-    let modalClose = document.getElementById(selectorById + "-close");
-    let modalWrapper = document.getElementById(selectorById + "-wrapper");
+    const modalClass = "modal-opened"
+    const wrap = () => {
+        let thisModal = document.getElementById(selectorById);
+        let modalClose = document.getElementById(selectorById + "-close");
+        let modalWrapper = document.getElementById(selectorById + "-wrapper");
+        return {thisModal, modalClose, modalWrapper}
+    }
+
+    const that = wrap()
+
+    function openModel() {
+        that.thisModal.onclick = function (e) {
+            e.preventDefault();
+            that.modalWrapper.classList.add(modalClass);
+        };
+    }
+
+    function closeModel() {
+        that.modalClose.onclick = function (e) {
+            e.preventDefault();
+            that.modalWrapper.classList.remove(modalClass);
+        };
+    }
 
     return {
-        init: function () {
-            this.onopen();
-            this.onclose();
-            return thisModal;
-        },
-
-        onopen: function () {
-            thisModal.onclick = function (e) {
-                e.preventDefault;
-                modalWrapper.classList.add("modal-opened");
-            };
-        },
-
-        onclose: function () {
-            modalClose.onclick = function (e) {
-                e.preventDefault;
-                modalWrapper.classList.remove("modal-opened");
-            };
-        },
-    };
-};
+        openModel,
+        closeModel,
+        initModel: function () {
+            this.openModel();
+            this.closeModel();
+            return wrap()
+        }
+    }
+}
 
 export const TTS = () => {
     const synthesis =
@@ -190,7 +198,7 @@ export const TTS = () => {
 };
 
 
-export const consoleText = (words, id='text', colors=['mediumslateblue']) => {
+export const consoleText = (words, id = 'text', colors = ['mediumslateblue']) => {
     if (colors === undefined) colors = ['#fff'];
     let visible = true;
     let con = document.getElementById('console');
@@ -236,4 +244,26 @@ export const consoleText = (words, id='text', colors=['mediumslateblue']) => {
             visible = true;
         }
     }, 200)
+}
+
+export const checkNetworkConnection = (watch = false) => {
+    const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+
+    function updateConnectionStatus() {
+        let arr = []
+        arr.push('<div class="flex col">')
+        arr.push('<span>type: ' + connection.type + '</span>')
+        arr.push('<span>downlink: ' + connection.downlink + ' Mb/s' + '</span>');
+        arr.push('<span>rtt: ' + connection.rtt + ' ms' + '</span>');
+        arr.push('<span>downlinkMax: ' + connection.downlinkMax + ' Mb/s' + '</span>');
+        arr.push('<span>effectiveType: ' + connection.effectiveType + '</span>');
+        arr.push('<span>saveData: ' + connection.saveData + '</span>');
+        arr.push('</div>')
+        console.log(arr)
+        return arr
+    }
+
+    if (watch)
+        connection.addEventListener('change', updateConnectionStatus)
+    return updateConnectionStatus()
 }

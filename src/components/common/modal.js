@@ -1,17 +1,17 @@
 import React from "react";
 
 const Modalify = (props) => {
-  const { children, header, id, show, close } = props;
+  const { children, header, tagid, show, close } = props;
   return (
     <div
       className={"modal-wrapper " + (show ? "show" : "hide")}
-      id={id + "-wrapper"}
+      id={tagid + "-wrapper"}
     >
       <div className="modal-content">
         <div className="right">
           <button
             className="btn danger margin-ud"
-            id={id + "-close"}
+            id={tagid + "-close"}
             onClick={close}
           >
             close

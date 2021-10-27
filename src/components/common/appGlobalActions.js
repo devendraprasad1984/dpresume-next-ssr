@@ -1,31 +1,35 @@
 import React, {useEffect, useState} from "react";
 
 import {
+    checkNetworkConnection,
     config,
     getLocation,
     modal,
     toggleFullScreen,
-    TTS,
+    TTS, watchNetworkConnection,
 } from "../../configs/config";
 import useAPI from "../../hooks/useAPI";
 
 import Input from "./input";
 import Modalify from "./modal";
 import Dropdown from "./dropdown";
+import HtmlComponent from "./htmlComponent";
 
 const themeBgColor = "black";
 const themeColor = "#4d4a4a";
 
 const AppGlobalActions = (props) => {
-    const [isFullscreen, setIsFullscreen] = useState(false);
-    const [isDarkMode, setIsDarkMode] = useState(false);
-    const [longlat, setLonglat] = useState(null);
-    const [showLongLat, setShowLongLat] = useState(false);
-    const [isBioSpeaking, setIsBioSpeaking] = useState(false);
-    const [showWhatsappMsgWindow, setshowWhatsappMsgWindow] = useState(false);
-    const [showscreenshot, setshowscreenshot] = useState(false);
-    const [whereAmI, setWhereAmI] = useState(false);
-    const [msgText, setMsgText] = useState("");
+    const [isFullscreen, setIsFullscreen] = useState(false)
+    const [isDarkMode, setIsDarkMode] = useState(false)
+    const [longlat, setLonglat] = useState(null)
+    const [showLongLat, setShowLongLat] = useState(false)
+    const [isBioSpeaking, setIsBioSpeaking] = useState(false)
+    const [showWhatsappMsgWindow, setshowWhatsappMsgWindow] = useState(false)
+    const [showscreenshot, setshowscreenshot] = useState(false)
+    const [whereAmI, setWhereAmI] = useState(false)
+    const [shownetwork, setShownetwork] = useState(false)
+    const [networkMsg, setNetworkMsg] = useState('')
+    const [msgText, setMsgText] = useState("")
     let _tts = new TTS();
 
     const handleFullScreen = () => {
@@ -51,12 +55,16 @@ const AppGlobalActions = (props) => {
     };
 
     useEffect(() => {
-        modal("modallocation").init();
-        modal("testmodal").init();
+        modal("modallocation").initModel();
+        modal("testmodal").initModel();
+        modal("checknetwork").initModel();
+
         if (longlat === null) handleLocation();
+        //unmount
         return () => {
             setLonglat(null);
             setShowLongLat(false);
+            setShownetwork(false)
         };
     }, []);
 
@@ -73,7 +81,9 @@ const AppGlobalActions = (props) => {
     };
 
     const handleNetworkCheck=()=>{
-
+        let msg=checkNetworkConnection()
+        setNetworkMsg(msg.join(''))
+        setShownetwork(!shownetwork)
     }
 
     return (
@@ -111,13 +121,6 @@ const AppGlobalActions = (props) => {
                 >
                     where am I?
                 </button>
-                <Modalify
-                    id="modallocation"
-                    show={showLongLat}
-                    close={() => setWhereAmI(!whereAmI)}
-                >
-                    long lat: {JSON.stringify(longlat)}
-                </Modalify>
 
                 <button
                     id="testmodal"
@@ -126,14 +129,6 @@ const AppGlobalActions = (props) => {
                 >
                     take screenshot
                 </button>
-                <Modalify
-                    id="testmodal"
-                    show={showscreenshot}
-                    close={() => setshowscreenshot(!showscreenshot)}
-                >
-                    screenshot taken
-                </Modalify>
-
                 <button
                     className={"primary " + (isBioSpeaking ? "danger" : "")}
                     onClick={handleSpeak}
@@ -141,13 +136,36 @@ const AppGlobalActions = (props) => {
                     {isBioSpeaking ? "Stop Speaking" : "Speak Bio"}
                 </button>
                 <span className="custom-option" data-value="network">
-                    <button onClick={handleNetworkCheck}>Check Network Availability</button>
+                    <button id="checknetwork" onClick={()=>handleNetworkCheck()}>Check Network Availability</button>
                 </span>
             </Dropdown>
 
+            <Modalify
+                tagid="modallocation"
+                show={showLongLat}
+                close={() => setWhereAmI(!whereAmI)}
+            >
+                long lat: {JSON.stringify(longlat)}
+            </Modalify>
+            <Modalify
+                tagid="checknetwork"
+                show={shownetwork}
+                close={() => setShownetwork(!shownetwork)}
+            >
+                <h2 className='danger'>network details</h2>
+                <HtmlComponent>{networkMsg}</HtmlComponent>
+            </Modalify>
+            <Modalify
+                tagid="testmodal"
+                show={showscreenshot}
+                close={() => setshowscreenshot(!showscreenshot)}
+            >
+                screenshot taken
+            </Modalify>
+
 
             <Modalify
-                id="btnwhatsapp"
+                tagid="btnwhatsapp"
                 show={showWhatsappMsgWindow}
                 close={() => setshowWhatsappMsgWindow(!showWhatsappMsgWindow)}
             >

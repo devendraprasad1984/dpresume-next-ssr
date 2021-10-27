@@ -19,7 +19,7 @@ const Modalify = (props) => {
         </div>
         <h2>{header}</h2>
         <div className="text">
-          <p>{children}</p>
+          {children}
         </div>
       </div>
     </div>

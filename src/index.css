@@ -1,6 +1,6 @@
 :root {
   --purple-color: #7f279e;
-  --gray-color: #797979;
+  --gray-color: #c2bebe;
   --default-text-color: #4d4a4a;
   --black-color: #222;
   --white: white;
@@ -24,6 +24,15 @@
   );
   --medium-violet: #b71d7d;
   --size10px: 10px;
+}
+
+/*box-model where width = element width + padding + borders = https://www.w3schools.com/css/css_boxmodel.asp*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
 /*html,*/
@@ -104,7 +113,12 @@ div {
   color: white;
 }
 
-input {
+select{
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+input,select {
   width: 100%;
   border: 2px solid var(--black-color);
   padding: 5px;

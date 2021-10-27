@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import '../../dropdown.css'
 
-const Dropdown = ({id, placeholder, children}) => {
+const DropDownGroupIcons = ({id, placeholder, children}) => {
     useEffect(() => {
         for (const dropdown of document.querySelectorAll(".select-wrapper")) {
             dropdown.addEventListener('click', function () {
@@ -31,4 +31,4 @@ const Dropdown = ({id, placeholder, children}) => {
         </div>
     )
 }
-export default Dropdown
+export default DropDownGroupIcons

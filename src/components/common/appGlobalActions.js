@@ -12,7 +12,7 @@ import useAPI from "../../hooks/useAPI";
 
 import Input from "./input";
 import Modalify from "./modal";
-import Dropdown from "./dropdown";
+import DropDownGroupIcons from "./dropDownGroupIcons";
 import HtmlComponent from "./htmlComponent";
 
 const themeBgColor = "black";
@@ -101,7 +101,7 @@ const AppGlobalActions = (props) => {
             >
                 whatsapp me
             </button>
-            <Dropdown id='idActionGlobalDropdown' placeholder='click to see demo web api...'>
+            <DropDownGroupIcons id='idActionGlobalDropdown' placeholder='click to see demo web api...'>
                 <button
                     className={!isDarkMode ? "primary" : "danger"}
                     onClick={handleSwitchTheme}
@@ -138,7 +138,7 @@ const AppGlobalActions = (props) => {
                 <span className="custom-option" data-value="network">
                     <button id="checknetwork" className='success' onClick={()=>handleNetworkCheck()}>Check Network Availability</button>
                 </span>
-            </Dropdown>
+            </DropDownGroupIcons>
 
             <Modalify
                 tagid="modallocation"

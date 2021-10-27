@@ -119,7 +119,7 @@ const AppGlobalActions = (props) => {
                     className={"primary"}
                     onClick={() => setWhereAmI(!whereAmI)}
                 >
-                    where am I?
+                    my location
                 </button>
 
                 <button
@@ -136,7 +136,7 @@ const AppGlobalActions = (props) => {
                     {isBioSpeaking ? "Stop Speaking" : "Speak Bio"}
                 </button>
                 <span className="custom-option" data-value="network">
-                    <button id="checknetwork" onClick={()=>handleNetworkCheck()}>Check Network Availability</button>
+                    <button id="checknetwork" className='success' onClick={()=>handleNetworkCheck()}>Check Network Availability</button>
                 </span>
             </Dropdown>
 

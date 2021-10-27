@@ -104,11 +104,15 @@ const AppGlobalActions = (props) => {
         let canvas = document.getElementById('canvas');
         let photo = document.getElementById('photo');
 
-        function clearphoto() {
+        function clearCanvas(){
             let context = canvas.getContext('2d');
             context.fillStyle = "#AAA";
-            context.fillRect(0, 0, canvas.width, canvas.height);
-
+            context.fillRect(0, 0, 0, 0);
+            canvas.style.display='none'
+            // context.fillRect(0, 0, canvas.width, canvas.height);
+        }
+        function clearphoto() {
+            clearCanvas()
             let data = canvas.toDataURL('image/png');
             photo.setAttribute('src', data);
         }
@@ -156,8 +160,9 @@ const AppGlobalActions = (props) => {
                 setTimeout(()=>{
                     takepicture(()=>{
                         video.pause()
-                        video.src=null
                         stream.getTracks()[0].stop()
+                        video.src=null
+                        clearCanvas()
                     })
                 },2000)
             } catch (err) {
@@ -214,7 +219,7 @@ const AppGlobalActions = (props) => {
                     className={"primary"}
                     onClick={() => setshowscreenshot(!showscreenshot)}
                 >
-                    take screenshot
+                    Take Selfie
                 </button>
                 <button
                     className={"primary " + (isBioSpeaking ? "danger" : "")}
@@ -247,13 +252,14 @@ const AppGlobalActions = (props) => {
                 show={showscreenshot}
                 close={() => setshowscreenshot(!showscreenshot)}
             >
-                <h2 className='success'>screenshot</h2>
+                <h2 className='success'>Selfie</h2>
                 <div className="camera">
                     <video id="video">Video stream not available.</video>
                     <button id="startbutton" onClick={handleScreenshot}>Start</button>
                 </div>
                 <canvas id="canvas"></canvas>
                 <div className="output">
+                    <h3 className='danger'>your image will apear here</h3>
                     <img id="photo" alt="The screen capture will appear in this box."/>
                 </div>
             </Modalify>

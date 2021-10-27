@@ -2,6 +2,9 @@ import React from "react";
 
 const Modalify = (props) => {
   const { children, header, tagid, show, close } = props;
+  const handleClose=()=>{
+    close()
+  }
   return (
     <div
       className={"modal-wrapper " + (show ? "show" : "hide")}
@@ -12,7 +15,7 @@ const Modalify = (props) => {
           <button
             className="btn danger margin-ud"
             id={tagid + "-close"}
-            onClick={close}
+            onClick={handleClose}
           >
             close
           </button>

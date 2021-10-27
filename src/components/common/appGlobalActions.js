@@ -55,8 +55,8 @@ const AppGlobalActions = (props) => {
         modal("testmodal").init();
         if (longlat === null) handleLocation();
         return () => {
-          setLonglat(null);
-          setShowLongLat(false);
+            setLonglat(null);
+            setShowLongLat(false);
         };
     }, []);
 
@@ -71,6 +71,10 @@ const AppGlobalActions = (props) => {
         });
         setIsDarkMode(!isDarkMode);
     };
+
+    const handleNetworkCheck=()=>{
+
+    }
 
     return (
         <div className="row center">
@@ -136,6 +140,9 @@ const AppGlobalActions = (props) => {
                 >
                     {isBioSpeaking ? "Stop Speaking" : "Speak Bio"}
                 </button>
+                <span className="custom-option" data-value="network">
+                    <button onClick={handleNetworkCheck}>Check Network Availability</button>
+                </span>
             </Dropdown>
 
 

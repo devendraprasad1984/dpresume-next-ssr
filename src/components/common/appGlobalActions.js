@@ -22,7 +22,6 @@ const AppGlobalActions = (props) => {
     const [isFullscreen, setIsFullscreen] = useState(false)
     const [isDarkMode, setIsDarkMode] = useState(false)
     const [longlat, setLonglat] = useState(null)
-    const [showLongLat, setShowLongLat] = useState(false)
     const [isBioSpeaking, setIsBioSpeaking] = useState(false)
     const [showWhatsappMsgWindow, setshowWhatsappMsgWindow] = useState(false)
     const [showscreenshot, setshowscreenshot] = useState(false)
@@ -39,7 +38,7 @@ const AppGlobalActions = (props) => {
     const handleLocation = () => {
         getLocation((data) => {
             setLonglat(data);
-            setShowLongLat(true);
+            setWhereAmI(true);
         });
     };
     const {data, loading} = useAPI(config.endpoints.SUMMARY);
@@ -59,11 +58,10 @@ const AppGlobalActions = (props) => {
         modal("testmodal").initModel();
         modal("checknetwork").initModel();
 
-        if (longlat === null) handleLocation();
         //unmount
         return () => {
             setLonglat(null);
-            setShowLongLat(false);
+            setWhereAmI(false);
             setShownetwork(false)
         };
     }, []);
@@ -80,8 +78,97 @@ const AppGlobalActions = (props) => {
         setIsDarkMode(!isDarkMode);
     };
 
-    const handleNetworkCheck=()=>{
-        let msg=checkNetworkConnection()
+    const handleScreenshot2 = () => {
+        if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
+            console.log("enumerateDevices() not supported.");
+            return;
+        }
+
+        navigator.mediaDevices.enumerateDevices()
+            .then(function (devices) {
+                devices.forEach(function (device) {
+                    console.log(device.kind + ": " + device.label +
+                        " id = " + device.deviceId);
+                });
+            })
+            .catch(function (err) {
+                console.log(err.name + ": " + err.message);
+            });
+    }
+
+    const handleScreenshot = (ev) => {
+        let width = 320
+        let height = 200
+        let streaming = false
+        let video = document.getElementById('video');
+        let canvas = document.getElementById('canvas');
+        let photo = document.getElementById('photo');
+
+        function clearphoto() {
+            let context = canvas.getContext('2d');
+            context.fillStyle = "#AAA";
+            context.fillRect(0, 0, canvas.width, canvas.height);
+
+            let data = canvas.toDataURL('image/png');
+            photo.setAttribute('src', data);
+        }
+
+        function takepicture(callback) {
+            let context = canvas.getContext('2d');
+            if (width !== 0 && height !== 0) {
+                canvas.width = width;
+                canvas.height = height;
+                context.drawImage(video, 0, 0, width, height);
+
+                let data = canvas.toDataURL('image/png');
+                // console.log('canvas', canvas, 'video', video, 'photo', photo, data)
+                photo.setAttribute('src', data);
+                callback()
+            } else {
+                clearphoto();
+            }
+        }
+
+        function startup(callback) {
+            navigator.mediaDevices.getUserMedia({video: true, audio: false})
+                .then(function (stream) {
+                    video.srcObject = stream;
+                    video.play();
+                    callback(stream)
+                })
+                .catch(function (err) {
+                    console.log("An error occurred: " + err);
+                });
+            video.addEventListener('canplay', function (ev) {
+                if (!streaming) {
+                    height = video.videoHeight / (video.videoWidth / width);
+                    video.setAttribute('width', width);
+                    video.setAttribute('height', height);
+                    canvas.setAttribute('width', width);
+                    canvas.setAttribute('height', height);
+                    streaming = true;
+                }
+            }, false);
+            clearphoto();
+        }
+        startup(stream=>{
+            try {
+                setTimeout(()=>{
+                    takepicture(()=>{
+                        video.pause()
+                        video.src=null
+                        stream.getTracks()[0].stop()
+                    })
+                },2000)
+            } catch (err) {
+                console.log("An error occurred: " + err);
+            }
+        })
+
+    }
+
+    const handleNetworkCheck = () => {
+        let msg = checkNetworkConnection()
         setNetworkMsg(msg.join(''))
         setShownetwork(!shownetwork)
     }
@@ -117,7 +204,7 @@ const AppGlobalActions = (props) => {
                 <button
                     id="modallocation"
                     className={"primary"}
-                    onClick={() => setWhereAmI(!whereAmI)}
+                    onClick={() => handleLocation()}
                 >
                     my location
                 </button>
@@ -136,14 +223,14 @@ const AppGlobalActions = (props) => {
                     {isBioSpeaking ? "Stop Speaking" : "Speak Bio"}
                 </button>
                 <span className="custom-option" data-value="network">
-                    <button id="checknetwork" className='success' onClick={()=>handleNetworkCheck()}>Check Network Availability</button>
+                    <button id="checknetwork" className='success' onClick={() => handleNetworkCheck()}>Check Network Availability</button>
                 </span>
             </DropDownGroupIcons>
 
             <Modalify
                 tagid="modallocation"
-                show={showLongLat}
-                close={() => setWhereAmI(!whereAmI)}
+                show={whereAmI}
+                close={() => setWhereAmI(false)}
             >
                 long lat: {JSON.stringify(longlat)}
             </Modalify>
@@ -160,7 +247,15 @@ const AppGlobalActions = (props) => {
                 show={showscreenshot}
                 close={() => setshowscreenshot(!showscreenshot)}
             >
-                screenshot taken
+                <h2 className='success'>screenshot</h2>
+                <div className="camera">
+                    <video id="video">Video stream not available.</video>
+                    <button id="startbutton" onClick={handleScreenshot}>Start</button>
+                </div>
+                <canvas id="canvas"></canvas>
+                <div className="output">
+                    <img id="photo" alt="The screen capture will appear in this box."/>
+                </div>
             </Modalify>
 
 

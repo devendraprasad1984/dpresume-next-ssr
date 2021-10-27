@@ -8,10 +8,10 @@ const HtmlComponent = ({text, children}) => {
         <div
             dangerouslySetInnerHTML={{__html: `${config.chars.pointArrow} ${text || children}`}}
         />
-    );
-};
+    )
+}
 HtmlComponent.propTypes = {
-    text: PropTypes.string.isRequired,
-};
+    text: PropTypes.string,
+}
 
 export default HtmlComponent;

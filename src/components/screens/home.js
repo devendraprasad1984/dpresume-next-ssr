@@ -8,6 +8,7 @@ import NoData from "../common/nodata";
 import OneLinerHeader from "../common/oneLinerHeader";
 import HomeDemo from "./homeDemo";
 import CurrentlyWorkingAt from "./currentlyWorkingAt";
+// import '../../webcomponents/counter'
 
 const Home = (props) => {
     const article = [
@@ -29,7 +30,7 @@ const Home = (props) => {
     return (
         <div>
             {/*<Article article={article}/>*/}
-            <h1>web component example</h1>
+            {/*<my-counter count={10}/>*/}
             <CurrentlyWorkingAt/>
             <OneLinerHeader title={props.title}/>
             <BasicDisplay list={data}/>

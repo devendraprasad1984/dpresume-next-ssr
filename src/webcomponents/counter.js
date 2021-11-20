@@ -40,12 +40,15 @@ class MyCounter extends HTMLElement {
 
     render() {
         this.shadow.innerHTML = `
-            <h1>dp Counter</h1>
+            <h1>dp Counter - ${this.getAttribute(names.count)}</h1>
             <h3>${this.count}</h3>
             <button id='btnincrement'>Increment</button>
             <button id='btndecrement'>Decrement</button>
         `
     }
+    static get tag(){
+        return 'my-counter'
+    }
 }
 
-customElements.define('my-counter', MyCounter)
+window.customElements.define(MyCounter.tag, MyCounter)

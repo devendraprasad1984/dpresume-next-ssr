@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 
 import { config } from "../../configs/config";
-import useAPI from "../../hooks/useAPI";
 
 import NoData from "./nodata";
+import useAPI from "../../hooks/useAPI";
 
 const BottomBar = (props) => {
   const [links, setLinks] = useState([]);

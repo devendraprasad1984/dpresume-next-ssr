@@ -29,6 +29,7 @@ const Home = (props) => {
     return (
         <div>
             {/*<Article article={article}/>*/}
+            <h1>web component example</h1>
             <CurrentlyWorkingAt/>
             <OneLinerHeader title={props.title}/>
             <BasicDisplay list={data}/>

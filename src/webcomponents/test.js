@@ -23,11 +23,13 @@ elm.push('</div>')
 class Test extends HTMLElement {
     constructor() {
         super();
-        this.innerHTML = elm.join('')
-        this.querySelector('#btn1').addEventListener('click', () => {
+        this.attachShadow({mode: 'open'})
+        const root = this.shadowRoot
+        root.innerHTML = elm.join('')
+        root.querySelector('#btn1').addEventListener('click', () => {
             alert('ohh, i am clicked')
         })
-        this.querySelector('#btn2').addEventListener('click', () => {
+        root.querySelector('#btn2').addEventListener('click', () => {
             alert('ohh, i am clicked - its dangerous')
         })
     }

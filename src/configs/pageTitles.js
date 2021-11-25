@@ -8,5 +8,6 @@ const pageTitles = {
   projects: "few Project details ",
   skills: "Skills I know or can do",
   notes: "my self learning and notes",
+  canada: "my express entry details for Canada"
 };
 export default pageTitles;

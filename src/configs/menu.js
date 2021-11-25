@@ -9,6 +9,7 @@ import Projects from "../components/screens/projects";
 import Skills from "../components/screens/skills";
 import pageTitles from "./pageTitles";
 import Notes from "../components/screens/notes";
+import Canada from "../components/screens/canda";
 
 const menu = [
   {
@@ -17,6 +18,7 @@ const menu = [
     uri: "",
     icon: "",
     component: <Home title={pageTitles.home} />,
+    show: true
   },
   {
     name: "Education",
@@ -24,6 +26,7 @@ const menu = [
     uri: "",
     icon: "",
     component: <Education title={pageTitles.education} />,
+    show: true
   },
   {
     name: "Achievement",
@@ -31,6 +34,7 @@ const menu = [
     uri: "",
     icon: "",
     component: <Achievement title={pageTitles.achievement} />,
+    show: true
   },
   {
     name: "Certification",
@@ -38,6 +42,7 @@ const menu = [
     uri: "",
     icon: "",
     component: <Certificate title={pageTitles.certification} />,
+    show: true
   },
   {
     name: "Experience",
@@ -45,6 +50,7 @@ const menu = [
     uri: "",
     icon: "",
     component: <Experience title={pageTitles.experience} />,
+    show: true
   },
   {
     name: "Projects",
@@ -52,6 +58,7 @@ const menu = [
     uri: "",
     icon: "",
     component: <Projects title={pageTitles.projects} />,
+    show: true
   },
   {
     name: "Skills",
@@ -59,16 +66,18 @@ const menu = [
     uri: "",
     icon: "",
     component: <Skills title={pageTitles.skills} />,
+    show: true
   },
-  { name: "SomeJs", action: "", uri: "", icon: "" },
+  { name: "SomeJs", action: "", uri: "", icon: "", show: true},
   {
     name: "Notes",
     action: "",
     uri: "",
     icon: "",
     component: <Notes title={pageTitles.notes} />,
+    show: true
   },
-  // {name: 'Code', action: '', uri: '', icon: ''},
-  { name: "Blogs", action: "", uri: "", icon: "" },
+  { name: "Blogs", action: "", uri: "", icon: "",show: true },
+  { name: "Ca", action: "", uri: "", icon: "",show: false,component: <Canada title={pageTitles.canada} />, },
 ];
 export default menu;

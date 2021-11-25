@@ -220,19 +220,19 @@ export const consoleText = (words, id = 'text', colors = ['mediumslateblue']) =>
                 target.setAttribute('style', 'color:' + colors[0])
                 letterCount += x;
                 waiting = false;
-            }, 700)
+            }, 800)
         } else if (letterCount === words[0].length + 1 && waiting === false) {
             waiting = true;
             window.setTimeout(function () {
                 x = -1;
                 letterCount += x;
                 waiting = false;
-            }, 700)
+            }, 800)
         } else if (waiting === false) {
             target.innerHTML = words[0].substring(0, letterCount)
             letterCount += x;
         }
-    }, 50)
+    }, 70)
     window.setInterval(function () {
         if (visible === true) {
             con.className = 'console-underscore hidden'

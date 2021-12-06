@@ -199,6 +199,9 @@ export const TTS = () => {
 
 
 export const consoleText = (words, id = 'text', colors = ['mediumslateblue']) => {
+    if(words[0]===undefined) return
+    if(words[0].length===0) return
+
     if (colors === undefined) colors = ['#fff'];
     let visible = true;
     let con = document.getElementById('console');

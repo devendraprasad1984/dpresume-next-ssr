@@ -17,7 +17,7 @@ const menu = [
     action: "",
     uri: "",
     icon: "",
-    component: <Home title={pageTitles.home} />,
+    component: <Home />,
     show: true
   },
   {
@@ -50,7 +50,7 @@ const menu = [
     uri: "",
     icon: "",
     component: <Experience title={pageTitles.experience} />,
-    show: true
+    show: false
   },
   {
     name: "Projects",

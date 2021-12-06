@@ -31,7 +31,7 @@ const Home = (props) => {
         <div>
             {/*<Article article={article}/>*/}
             {/*<my-counter count={10}/>*/}
-            <CurrentlyWorkingAt/>
+            {/*<CurrentlyWorkingAt/>*/}
             <OneLinerHeader title={props.title}/>
             <BasicDisplay list={data}/>
             <HomeDemo/>
@@ -41,5 +41,8 @@ const Home = (props) => {
 Home.propTypes = {
     title: PropTypes.string.isRequired,
 };
+Home.defaultProps={
+    title: 'home'
+}
 
 export default Home;

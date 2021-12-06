@@ -37,7 +37,7 @@ describe("article test", () => {
   beforeEach(() => (wrapper = shallow(<Article article={article} />)));
   it("checking data", () => {
     console.log("article object", articleWrapper);
-    expect(wrapper.props().inclu).toEqual("Success!");
+    expect(wrapper.props()).toEqual("Success!");
   });
 });
 

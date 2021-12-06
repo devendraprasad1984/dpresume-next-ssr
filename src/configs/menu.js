@@ -17,7 +17,7 @@ const menu = [
     action: "",
     uri: "",
     icon: "",
-    component: <Home />,
+    component: <Home title={pageTitles.home} />,
     show: true
   },
   {

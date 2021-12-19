@@ -23,7 +23,9 @@ export default function _index() {
                 <Link to={'/posts/new'} className='btn'>New Post</Link>
             </div>
             <ul className={'posts-list'}>
-                {posts.map(_ => <li key={_.id}>{_.id} - {_.title} - {_.body}</li>)}
+                {posts.map(_ => <li key={_.id}>
+                    <span style={{color: 'gray'}}>{_.id} - {_.title}</span> - <span style={{color: 'tomato'}}>{_.createdAt}</span>
+                </li>)}
             </ul>
         </>
     }

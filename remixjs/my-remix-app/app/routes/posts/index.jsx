@@ -1,8 +1,13 @@
 import {Link, useLoaderData} from "remix";
+import {db} from '~/utils/db.server'
 
-export const loader = () => {
+export const loader = async () => {
     const data = {
-        posts: [{id: 1, title: 'title1', body: 'body'}, {id: 2, title: 'title2', body: 'body2'}, {id: 3, title: 'title3', body: 'body3'}]
+        posts: await db.post.findMany({
+            take: 100,
+            select: {id: true, title: true, createdAt: true},
+            orderBy: {createdAt: 'desc'}
+        })
     }
     // console.log('server loader test', data)
     return data

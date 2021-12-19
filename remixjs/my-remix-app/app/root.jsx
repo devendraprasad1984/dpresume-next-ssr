@@ -52,9 +52,9 @@ function Layout({children}) {
 export function ErrorBoundary({error}) {
     console.log(error)
     return (<Document>
-            <Layout>
-                <h1>Error</h1>
-                <p>{error.message}</p>
-            </Layout>
-        </Document>)
+        <Layout>
+            <h1>Error</h1>
+            <p>{error.message}</p>
+        </Layout>
+    </Document>)
 }

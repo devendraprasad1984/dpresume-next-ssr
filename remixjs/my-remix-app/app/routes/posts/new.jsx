@@ -1,4 +1,5 @@
 import {Link, redirect} from "remix";
+import {db} from '~/utils/db.server'
 
 export const action = async ({request}) => {
     const form = await request.formData()
@@ -7,7 +8,8 @@ export const action = async ({request}) => {
     const fields = {title, body}
     console.log('action from remix request', fields)
     //@submit to db
-    return redirect('/posts')
+    const post = await db.post.create({data: fields})
+    return redirect(`/posts/${post.id}`)
 }
 const backBtn = <Link to='/posts' className='btn btn-reverse'>Back</Link>
 

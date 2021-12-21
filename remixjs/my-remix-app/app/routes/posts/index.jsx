@@ -24,7 +24,9 @@ export default function _index() {
             </div>
             <ul className={'posts-list'}>
                 {posts.map(_ => <li key={_.id}>
-                    <span style={{color: 'gray'}}>{_.id} - {_.title}</span> - <span style={{color: 'tomato'}}>{_.createdAt}</span>
+                    <Link to={`/posts/${_.id}`}>
+                        <span style={{color: 'gray'}}>{_.id} - {_.title}</span> <span style={{color: 'tomato'}}>{_.createdAt}</span>
+                    </Link>
                 </li>)}
             </ul>
         </>

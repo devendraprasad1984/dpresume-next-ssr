@@ -9,7 +9,8 @@ export const action = async ({request}) => {
     console.log('action from remix request', fields)
     //@submit to db
     const post = await db.post.create({data: fields})
-    return redirect(`/posts/${post.id}`)
+    // return redirect(`/posts/${post.id}`)
+    return redirect(`/posts`)
 }
 const backBtn = <Link to='/posts' className='btn btn-reverse'>Back</Link>
 

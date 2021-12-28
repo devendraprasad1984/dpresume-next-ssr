@@ -14,7 +14,7 @@ const Main = (props) => {
             <section className="height400 gapSwitchMobile">
                 <Nav/>
             </section>
-            <NoPropDrilling/>
+            {/*<NoPropDrilling/>*/}
             <footer>
                 <BottomBar/>
             </footer>

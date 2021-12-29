@@ -1,18 +1,19 @@
 import React, {useState} from 'react'
 
+//this is composition technique for passing data to parent-child component without having prop drilling or state management triggeredx
 const NoPropDrilling = () => {
     const [number, setNumber] = useState(0)
     const addNumber = () => {
         setNumber(v => v + 1)
     }
     return <div style={{marginTop: '40px'}}>
-        <button onClick={addNumber}>Add</button>
         <MainContainer>
             <Main>
+                <PostBtn addNumbers={addNumber}/>
                 <Post number={number}/>
                 <Post1 number={number}>
-                    {(props)=>{
-                        return <h2 style={{color:'red'}}>{props.number}</h2>
+                    {(props) => {
+                        return <h2 style={{color: 'red'}}>{props.number}</h2>
                     }
                     }
                 </Post1>
@@ -48,6 +49,9 @@ const Post1 = (props) => {
         <p>in post1: {props.children({...props})}</p>
         <h1>POST_1: {props.number}</h1>
     </div>
+}
+const PostBtn = ({addNumbers}) => {
+    return <button onClick={addNumbers}>Add Post</button>
 }
 
 export default NoPropDrilling

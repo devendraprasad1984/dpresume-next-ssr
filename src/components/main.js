@@ -3,7 +3,7 @@ import React from "react";
 import BottomBar from "./common/bottomBar";
 import HeaderInfo from "./common/headerInfo";
 import Nav from "./common/nav";
-import NoPropDrilling from "./noPropDrilling";
+// import NoPropDrilling from "./noPropDrilling";
 
 const Main = (props) => {
     return (

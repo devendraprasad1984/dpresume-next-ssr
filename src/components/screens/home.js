@@ -7,7 +7,7 @@ import BasicDisplay from "../common/basicDisplay";
 import NoData from "../common/nodata";
 import OneLinerHeader from "../common/oneLinerHeader";
 import HomeDemo from "./homeDemo";
-import CurrentlyWorkingAt from "./currentlyWorkingAt";
+// import CurrentlyWorkingAt from "./currentlyWorkingAt";
 // import '../../webcomponents/counter'
 
 const Home = (props) => {

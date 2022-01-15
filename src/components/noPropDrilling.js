@@ -22,7 +22,7 @@ const NoPropDrilling = () => {
     </div>
 }
 const MainContainer = ({children}) => {
-    console.log('main container children', children.props)
+    console.log('main container children', children.props.children.map(_=>_.props))
     return <div>
         <p>main container</p>
         {children}
@@ -31,7 +31,7 @@ const MainContainer = ({children}) => {
 }
 
 const Main = ({children}) => {
-    console.log('main children', children.props)
+    // console.log('main children', children)
     return <div>
         <p>main component stuff</p>
         {children}

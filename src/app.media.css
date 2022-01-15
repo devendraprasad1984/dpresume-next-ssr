@@ -1,80 +1,82 @@
 @media screen and (max-width: 600px) {
-  .flexbox {
-    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
-    display: grid;
-  }
+    .flexbox {
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+        display: grid;
+    }
 
-  .menuicon {
-    font-size: 20px;
-  }
+    .menuicon {
+        font-size: 20px;
+    }
 
-  .fixed {
-    position: relative;
-  }
+    .fixed {
+        position: fixed;
+    }
 
-  .content-left {
-    position: fixed;
-    z-index: 10000;
-    opacity: 0.98;
-    height: 100%;
-    width: 70vw;
-    top: 0;
-    left: 0;
-    background-color: var(--white);
-  }
-  .content-right {
-    width: inherit;
-  }
+    .content-left {
+        position: fixed;
+        z-index: 10000;
+        opacity: 0.98;
+        height: 100%;
+        width: 70vw;
+        top: 0;
+        left: 0;
+        background-color: var(--white);
+    }
 
-  .gapSwitchMobile {
-    margin-top: 0;
-  }
+    .content-right {
+        width: inherit;
+    }
 
-  #imgPic,
-  .imgPic {
-    /*display: inline-block;*/
-    margin-top: 5rem;
-    position: fixed;
-    z-index: 100001;
-    left: 2rem;
-  }
+    .gapSwitchMobile {
+        margin-top: 12em;
+    }
 
-  .topbar {
-    display: inline;
-  }
+    #imgPic,
+    .imgPic {
+        /*display: inline-block;*/
+        margin-top: 5rem;
+        position: fixed;
+        z-index: 100001;
+        left: 2rem;
+    }
 
-  .topbar > .name > span,
-  .topbar .name > i,
-  div a > i {
-    font-size: 20px;
-  }
+    .topbar {
+        display: inline;
+    }
 
-  .overlay .closebtn {
-    font-size: var(--size10px);
-    top: 5px;
-    right: -40px;
-  }
+    .topbar > .name > span,
+    .topbar .name > i,
+    div a > i {
+        font-size: 20px;
+    }
 
-  .togglePanel {
-    font-size: 12px;
-  }
+    .overlay .closebtn {
+        font-size: var(--size10px);
+        top: 5px;
+        right: -40px;
+    }
 
-  .pright {
-    margin-bottom: 20px;
-  }
+    .togglePanel {
+        font-size: 12px;
+    }
 
-  #idLinks a {
-    font-size: 8px;
-  }
+    .pright {
+        margin-bottom: 20px;
+    }
 
-  .btn {
-    padding: 0.275rem 0.225rem;
-    line-height: 1;
-  }
 
-  .row {
-    display: inline;
-    clear: both;
-    padding: unset;
-  }
+    #idLinks a {
+        font-size: 8px;
+    }
+
+    .btn {
+        padding: 0.275rem 0.225rem;
+        line-height: 1;
+    }
+
+    .row {
+        display: inline;
+        clear: both;
+        padding: unset;
+    }
 }

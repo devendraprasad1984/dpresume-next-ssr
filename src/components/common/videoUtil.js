@@ -34,12 +34,12 @@ export function startup(canvas,photo,video,callback) {
         });
     video.addEventListener('canplay', function (ev) {
         if (!streaming) {
-            height = video.videoHeight / (video.videoWidth / width);
+            let height = video.videoHeight / (video.videoWidth / width);
             video.setAttribute('width', width);
             video.setAttribute('height', height);
             canvas.setAttribute('width', width);
             canvas.setAttribute('height', height);
-            streaming = true;
+            let streaming = true;
         }
     }, false);
     // clearphoto();

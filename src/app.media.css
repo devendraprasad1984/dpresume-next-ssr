@@ -1,4 +1,7 @@
 @media screen and (max-width: 600px) {
+    /*.size30, .size10{*/
+    /*    font-size: 80% !important;*/
+    /*}*/
     .flexbox {
         grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
         display: grid;
@@ -47,7 +50,7 @@
     .topbar > .name > span,
     .topbar .name > i,
     div a > i {
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .overlay .closebtn {
@@ -56,9 +59,9 @@
         right: -40px;
     }
 
-    .togglePanel {
-        font-size: 12px;
-    }
+    /*.togglePanel {*/
+    /*    font-size: 12px;*/
+    /*}*/
 
     .pright {
         margin-bottom: 20px;

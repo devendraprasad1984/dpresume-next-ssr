@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 const Welcome = (props) => {
     const [isWelcome, setIsWelcome] = useState(true)
-    const [counter, setCounter] = useState(5)
+    const [counter, setCounter] = useState(15)
     let welcomeTimerRef
 
     const onClose = () => {
@@ -36,7 +36,7 @@ const Welcome = (props) => {
         }
     }, [])
 
-    return <div className='center size30 parent-center'>
+    return <div className='center parent-center'>
         <Modalify
             tagid="modalwelcome"
             show={isWelcome}
@@ -45,7 +45,13 @@ const Welcome = (props) => {
             <div className='child-center'>
                 <h2>Welcome mate, How are you doing...</h2>
                 <h4>We will go to Home page in </h4>
-                <h1 className='xred size35 center'>{counter}</h1>
+                <h1 className='xred size45 center'>{counter}</h1>
+                <div>
+                    <h2>personalise your visit, again!!!</h2>
+                    <span className='xred'>its not saved anywhere but your session only</span>
+                    <input type="text" placeholder="what's you name, skip if you dont want it"/>
+                    <button className='btn purple xwhite' onClick={()=>onClose()}>proceed now</button>
+                </div>
             </div>
         </Modalify>
     </div>

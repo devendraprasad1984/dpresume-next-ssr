@@ -1,7 +1,5 @@
 @media screen and (max-width: 600px) {
-    /*.size30, .size10{*/
-    /*    font-size: 80% !important;*/
-    /*}*/
+
     .flexbox {
         grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
         display: grid;
@@ -45,6 +43,7 @@
 
     .topbar {
         display: inline;
+        font-size: 15px !important;
     }
 
     .topbar > .name > span,
@@ -62,7 +61,6 @@
     /*.togglePanel {*/
     /*    font-size: 12px;*/
     /*}*/
-
     .pright {
         margin-bottom: 20px;
     }

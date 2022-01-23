@@ -102,7 +102,10 @@ div > .btn {
     font-size: 35px !important;
     font-weight: bolder;
 }
-
+.size45 {
+    font-size: 45px !important;
+    font-weight: bolder;
+}
 .pcenter {
     display: flex;
     justify-content: center;
@@ -692,7 +695,9 @@ i,
 .green {
     background-color: #49ec49 !important;
 }
-
+.purple {
+    background-color: #8549ec !important;
+}
 .dark {
     background-color: #343a40 !important;
 }

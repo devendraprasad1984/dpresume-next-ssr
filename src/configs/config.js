@@ -71,6 +71,7 @@ export const modal = function (selectorById) {
     const that = wrap()
 
     function openModel() {
+        if (that.thisModal === null || that.thisModal === undefined) return
         that.thisModal.onclick = function (e) {
             e.preventDefault();
             that.modalWrapper.classList.add(modalClass);
@@ -199,8 +200,8 @@ export const TTS = () => {
 
 
 export const consoleText = (words, id = 'text', colors = ['mediumslateblue']) => {
-    if(words[0]===undefined) return
-    if(words[0].length===0) return
+    if (words[0] === undefined) return
+    if (words[0].length === 0) return
 
     if (colors === undefined) colors = ['#fff'];
     let visible = true;

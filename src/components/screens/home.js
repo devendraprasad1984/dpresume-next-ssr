@@ -13,7 +13,7 @@ import HomeDemo from "./homeDemo";
 const Home = (props) => {
     const article = [
         {
-            title: "hello",
+            title: "helloF",
             upvotes: 12,
             date: "2021-01-02",
         },
@@ -23,10 +23,10 @@ const Home = (props) => {
             date: "2020-08-10",
         },
     ];
-
     const {data, loading, error} = useAPI(config.endpoints.SUMMARY);
     if (loading) return <NoData text={config.messages.PLZ_WAIT}/>;
     if (error) return <NoData text={config.messages.ERROR}/>;
+
     return (
         <div>
             {/*<Article article={article}/>*/}
@@ -41,7 +41,7 @@ const Home = (props) => {
 Home.propTypes = {
     title: PropTypes.string.isRequired,
 };
-Home.defaultProps={
+Home.defaultProps = {
     title: 'home'
 }
 

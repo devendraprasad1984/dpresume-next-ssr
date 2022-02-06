@@ -6,12 +6,13 @@ import PropTypes from "prop-types";
 const Welcome = (props) => {
     const [isWelcome, setIsWelcome] = useState(true)
     const [counter, setCounter] = useState(15)
+    const [name, setName] = useState('mate')
     let welcomeTimerRef
 
     const onClose = () => {
         clearInterval(welcomeTimerRef)
         setIsWelcome(false)
-        props.onClose()
+        props.onClose(name)
     }
 
     const handleTimer = () => {
@@ -49,7 +50,7 @@ const Welcome = (props) => {
                 <div>
                     <h2>personalise your visit, again!!!</h2>
                     <span className='xred'>its not saved anywhere but your session only</span>
-                    <input type="text" placeholder="what's you name, skip if you dont want it"/>
+                    <input type="text" placeholder="what's you name, skip if you dont want it" onChange={(e)=>setName(e.target.value)}/>
                     <button className='btn purple xwhite' onClick={()=>onClose()}>proceed now</button>
                 </div>
             </div>
@@ -59,4 +60,4 @@ const Welcome = (props) => {
 Welcome.propTypes = {
     onClose: PropTypes.func
 }
-export default Welcome
+export default React.memo(Welcome)

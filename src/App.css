@@ -16,6 +16,10 @@ span.link:has(a.active) {
     font-size: 25px;
 }
 
+div{
+    text-align: justify !important;
+}
+
 .nav {
     background-color: var(--black-color);
 }
@@ -328,12 +332,12 @@ section {
 }
 
 .right {
-    /*float: right;*/
     display: flex;
+    flex: 1;
     text-align: right;
     justify-content: flex-end;
-    align-content: flex-end;
-    align-items: flex-end;
+    align-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -469,7 +473,7 @@ samp {
     box-sizing: border-box;
     border-radius: 5px;
     box-shadow: 0 4px 4px 0 var(--gray-color);
-    opacity: 0.7;
+    /*opacity: 0.7;*/
 }
 
 .cards span:hover,
@@ -480,15 +484,16 @@ samp {
 
 .video-cards > span,
 .video-cards > a {
-    padding: var(--size10px);
-    margin: var(--size10px);
-    height: 350px;
-    vertical-align: middle;
-    text-align: center;
-    box-sizing: border-box;
-    border-radius: 5px;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
-    opacity: 0.7;
+    /*padding: var(--size10px);*/
+    margin-bottom: var(--size10px);
+    color: var(--default-text-color);
+    /*height: 300px;*/
+    /*vertical-align: middle;*/
+    /*text-align: center;*/
+    /*box-sizing: border-box;*/
+    /*border-radius: 5px;*/
+    /*box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);*/
+    /*opacity: 0.7;*/
 }
 
 .mcard {
@@ -625,6 +630,9 @@ i,
 
 .wid60 {
     width: 60%;
+}
+.wid100 {
+    width: 100%;
 }
 
 .white {

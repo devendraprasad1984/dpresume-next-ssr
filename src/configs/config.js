@@ -14,6 +14,11 @@ export const config = {
     contactline: `devendraprasad1984@gmail.com, ${chars.phone} +91-958 279 7772`,
     cvLink: "https://dpresume.com/docs/pdf/dpresume.pdf#view=FitH",
     header: (method = "GET") => BaseHeader(method),
+    enums:{
+        localStorage:{
+            name:'dpresume_name'
+        }
+    },
     menu,
     endpoints,
     messages,

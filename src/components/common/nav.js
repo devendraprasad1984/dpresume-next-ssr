@@ -51,15 +51,13 @@ const Nav = (props) => {
     };
     return (
         <div>
+            <div className='row'>
+                <span className='xprimary size25'>Welcome, {localStorage.getItem(config.enums.localStorage.name)}!</span>
+                <a className="right-flex bl size35 padding-rl" onClick={() => setOpen(!open)}>
+                    {open ? `${config.chars.close}` : `${config.chars.hamburger}`}
+                </a>
+            </div>
             <HashRouter>
-                <div className="right">
-                    <a
-                        className="right bl size35 padding-rl"
-                        onClick={() => setOpen(!open)}
-                    >
-                        {open ? `${config.chars.close}` : `${config.chars.hamburger}`}
-                    </a>
-                </div>
                 <div className="row">
                     {open && (
                         <div className="flex1 content-left">
@@ -79,7 +77,7 @@ const Nav = (props) => {
                             </nav>
                         </div>
                     )}
-                    <div className="content-right box">
+                    <div className="content-right">
                         <Switch>
                             <Route exact path={"/"}>
                                 <Home title={config.pageTitles.home}/>

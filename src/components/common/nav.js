@@ -53,19 +53,27 @@ const Nav = (props) => {
         <div>
             <div className='row'>
                 <span className='xprimary size25'>Welcome, {localStorage.getItem(config.enums.localStorage.name)}!</span>
-                <a className="right-flex bl size35 padding-rl" onClick={() => setOpen(!open)}>
+                {(!ismobile || !open) ? <a className="right bl size35 padding-rl" onClick={() => setOpen(!open)}>
                     {open ? `${config.chars.close}` : `${config.chars.hamburger}`}
-                </a>
+                </a>:null}
             </div>
             <HashRouter>
                 <div className="row">
                     {open && (
                         <div className="flex1 content-left">
-                            {!ismobile && (
-                                <div>
-                                    <img className="imgPic img-animate" src={dp} alt={"dp"}/>
-                                </div>
-                            )}
+                            {ismobile && <div className='row'>
+                                <a className="right  bl size35 padding-rl" onClick={() => setOpen(!open)}>
+                                    {open ? `${config.chars.close}` : `${config.chars.hamburger}`}
+                                </a>
+                            </div>}
+
+                            <img className="imgPic img-animate" src={dp} alt={"dp"}/>
+
+                            {/*{!ismobile && (*/}
+                            {/*    <div>*/}
+                            {/*        <img className="imgPic img-animate" src={dp} alt={"dp"}/>*/}
+                            {/*    </div>*/}
+                            {/*)}*/}
                             <h4 className='handwritting size20'>
                                 created with
                                 <span className='success'>patience</span>

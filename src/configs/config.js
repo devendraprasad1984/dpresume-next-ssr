@@ -14,9 +14,9 @@ export const config = {
     contactline: `devendraprasad1984@gmail.com, ${chars.phone} +91-958 279 7772`,
     cvLink: "https://dpresume.com/docs/pdf/dpresume.pdf#view=FitH",
     header: (method = "GET") => BaseHeader(method),
-    enums:{
-        localStorage:{
-            name:'dpresume_name'
+    enums: {
+        localStorage: {
+            name: 'dpresume_name'
         }
     },
     menu,
@@ -215,8 +215,11 @@ export const consoleText = (words, id = 'text', colors = ['mediumslateblue']) =>
     let x = 1;
     let waiting = false;
     let target = document.getElementById(id)
+    let runCountLimit = 2
+    let runCount = 0
+    let timerInterval = null
     target.setAttribute('style', 'color:' + colors[0])
-    setInterval(function () {
+    timerInterval = setInterval(function () {
         if (letterCount === 0 && waiting === false) {
             waiting = true;
             target.innerHTML = words[0].substring(0, letterCount)
@@ -236,20 +239,25 @@ export const consoleText = (words, id = 'text', colors = ['mediumslateblue']) =>
                 x = -1;
                 letterCount += x;
                 waiting = false;
+                runCount++
             }, 800)
         } else if (waiting === false) {
             target.innerHTML = words[0].substring(0, letterCount)
             letterCount += x;
         }
-    }, 70)
+
+    }, 80)
     window.setInterval(function () {
+        if (runCount > runCountLimit - 1) {
+            clearInterval(timerInterval)
+            return
+        }
         if (visible === true) {
             con.className = 'console-underscore hidden'
             visible = false;
 
         } else {
             con.className = 'console-underscore'
-
             visible = true;
         }
     }, 200)

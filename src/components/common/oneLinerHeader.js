@@ -6,8 +6,9 @@ const OneLinerHeader = ({title}) => {
     useEffect(() => {
         consoleText([title])
     }, [])
-    return <div className='console-container'><span id='text'>{title}</span>
-        <div className='console-underscore' id='console'>&#95;</div>
+    return <div className='console-container'>
+        <span id='text'></span>
+        <div className='console-underscore' id='console'></div>
     </div>
 };
 

@@ -1,4 +1,14 @@
 {
+  "thoughtworks via geektrust": [
+    {
+      "name": "Kroger Customers Tech - Checkout – Flash Sale and Analytics, Jan2022 – current",
+      "desc": "This project is about the flash sale items alongside checkout while shopping.\nWe present flash sales to users on discounts, and they can order it. The nodebased rest apis are same serving iOS, Android, Web (react based) platforms."
+    },
+    {
+      "name": "FAB (First Abu Dhabi Bank, Colleague Experience Portal), Oct2021 – Jan2022",
+      "desc": "The client FAB has various distributed systems in various legacy tech stack\nand has a need to have a single collaborative colleagues’ platform to access\nall such systems under one roof for better management of clients, accounts,\nand their banking interactions. They are using MS Dynamics and PowerApp\nplatform to achieve the system output at segregated level. We have used the\nstack with a mix of vanilla web + react components to make a single\ncollaborative platform to simplify workflows."
+    }
+  ],
   "RBS-Natwest": [
     {
       "name": "CeX / RfX, Natwest Group, Mar2021 - Sep2021",

@@ -1,0 +1,5 @@
+const ENUMS={
+    INCREMENT: 'INCREMENT',
+    DECREMENT: 'DECREMENT'
+}
+export default ENUMS

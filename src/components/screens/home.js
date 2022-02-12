@@ -11,6 +11,7 @@ import Article from "./articles";
 // import CurrentlyWorkingAt from "./currentlyWorkingAt";
 // import '../../webcomponents/counter'
 import {Validator} from "jsonschema";
+import TestUpDownComponentRedux from "./testUpDownComponentRedux";
 
 const validator = new Validator()
 const articleSchema = {
@@ -36,7 +37,7 @@ const article = [
 ];
 // validator.addSchema(articleSchema, '/article-schema')
 const isArticlesValid = validator.validate(article, articleSchema).valid
-console.log('article valid', isArticlesValid)
+// console.log('article valid', isArticlesValid)
 
 const Home = (props) => {
     const {data, loading, error} = useAPI(config.endpoints.SUMMARY);
@@ -48,6 +49,7 @@ const Home = (props) => {
             {/*<Article article={article}/>*/}
             {/*<my-counter count={10}/>*/}
             {/*<CurrentlyWorkingAt/>*/}
+            {/*<TestUpDownComponentRedux/>*/}
             <OneLinerHeader title={props.title}/>
             <BasicDisplay list={data}/>
             <HomeDemo/>

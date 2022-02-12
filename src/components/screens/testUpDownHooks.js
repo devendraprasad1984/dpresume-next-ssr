@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {Decrement, Increment} from "../../_redux/actions/testUpDown";
 
 
-const TestUpDownComponentRedux = props => {
+const TestUpDownHooks = props => {
     const counterState = useSelector(_ => _.TestUpDown)
     const dispatch = useDispatch()
     return <div>
@@ -13,4 +13,4 @@ const TestUpDownComponentRedux = props => {
     </div>
 }
 
-export default TestUpDownComponentRedux
+export default TestUpDownHooks

@@ -11,7 +11,8 @@ import Article from "./articles";
 // import CurrentlyWorkingAt from "./currentlyWorkingAt";
 // import '../../webcomponents/counter'
 import {Validator} from "jsonschema";
-import TestUpDownComponentRedux from "./testUpDownComponentRedux";
+import TestUpDownHooks from "./testUpDownHooks";
+import TestUpDownConnect from "./testUpDownConnect";
 
 const validator = new Validator()
 const articleSchema = {
@@ -49,7 +50,8 @@ const Home = (props) => {
             {/*<Article article={article}/>*/}
             {/*<my-counter count={10}/>*/}
             {/*<CurrentlyWorkingAt/>*/}
-            {/*<TestUpDownComponentRedux/>*/}
+            {/*<TestUpDownHooks/>*/}
+            {/*<TestUpDownConnect/>*/}
             <OneLinerHeader title={props.title}/>
             <BasicDisplay list={data}/>
             <HomeDemo/>

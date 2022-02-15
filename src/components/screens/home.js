@@ -50,8 +50,8 @@ const Home = (props) => {
             {/*<Article article={article}/>*/}
             {/*<my-counter count={10}/>*/}
             {/*<CurrentlyWorkingAt/>*/}
-            {/*<TestUpDownHooks/>*/}
-            {/*<TestUpDownConnect/>*/}
+            <TestUpDownHooks/>
+            <TestUpDownConnect/>
             <OneLinerHeader title={props.title}/>
             <BasicDisplay list={data}/>
             <HomeDemo/>

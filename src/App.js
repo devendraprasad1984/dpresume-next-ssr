@@ -4,12 +4,14 @@ import "./console.css";
 import Main from "./components/main";
 import Welcome from "./components/screens/welcome";
 import {config} from "./configs/config";
+import Logger from "./hoc/logger";
 
 const nameFromLocalStorage = localStorage.getItem(config.enums.localStorage.name)
 const isNameSet = nameFromLocalStorage !== '' && nameFromLocalStorage !== null && nameFromLocalStorage !== undefined
 console.log('nameFromLocalStorage',nameFromLocalStorage, isNameSet)
 
-function App() {
+function App(props) {
+    console.log('app from hoc', props.getFromLocalStore())
     const [canWeShowWelcome, setCanWeShowWelcome] = useState(!isNameSet)
     const handleCloseWelcome = (name) => {
         console.log('closing in main app. found', name)
@@ -19,4 +21,4 @@ function App() {
     return canWeShowWelcome ? (<Welcome onClose={handleCloseWelcome}/>) : <Main/>
 }
 
-export default App;
+export default Logger(App);

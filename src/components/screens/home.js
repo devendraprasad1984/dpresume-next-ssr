@@ -13,6 +13,7 @@ import Article from "./articles";
 import {Validator} from "jsonschema";
 import TestUpDownHooks from "./testUpDownHooks";
 import TestUpDownConnect from "./testUpDownConnect";
+import Logger from "../../hoc/logger";
 
 const validator = new Validator()
 const articleSchema = {
@@ -44,7 +45,7 @@ const Home = (props) => {
     const {data, loading, error} = useAPI(config.endpoints.SUMMARY);
     if (loading) return <NoData text={config.messages.PLZ_WAIT}/>;
     if (error) return <NoData text={config.messages.ERROR}/>;
-
+    console.log('prop from HOC logger', props)
     return (
         <div>
             {/*<Article article={article}/>*/}
@@ -65,4 +66,4 @@ Home.defaultProps = {
     title: 'home'
 }
 
-export default Home;
+export default Logger(Home)

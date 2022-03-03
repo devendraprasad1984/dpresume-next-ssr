@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "sideEffects": false,
+  "type": "module",
   "dependencies": {
     "jsonschema": "^1.4.0",
     "react": "^17.0.2",

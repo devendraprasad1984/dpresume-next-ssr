@@ -4,6 +4,12 @@
   "private": true,
   "sideEffects": false,
   "type": "module",
+  "workspaces": {
+    "packages": [
+      "src/**",
+      "packages/**"
+    ]
+  },
   "dependencies": {
     "jsonschema": "^1.4.0",
     "react": "^17.0.2",
@@ -16,6 +22,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "start:lerna-app1": "lerna exec --scope @dp1/app1 -- yarn start1",
     "start": "PORT=3004 react-scripts start",
     "build": "react-scripts build",
     "lint": "lint-staged",
@@ -33,6 +40,12 @@
       "prettier --check --write src",
       "git add -A ."
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "if [ $(git rev-parse --abbrev-ref HEAD) = master ]; then echo \"\n❌ Don't push to the master branch!\n\"; exit 1; fi"
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -52,11 +65,13 @@
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^26.6.0",
+    "craco": "^0.0.3",
     "cross-env": "^7.0.3",
     "enzyme": "^3.11.0",
     "enzyme-to-json": "^3.6.2",
     "eslint-plugin-import": "^2.24.2",
     "husky": "^7.0.0",
+    "lerna": "^4.0.0",
     "lint-staged": "^11.1.2",
     "prettier": "^2.4.0",
     "prop-types": "^15.7.2"

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-import { config } from "../../configs/config";
+import {config} from "../../configs/config";
 import useAPI from "../../hooks/useAPI";
 import NoData from "../common/nodata";
 import OneLinerHeader from "../common/oneLinerHeader";

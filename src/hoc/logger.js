@@ -1,5 +1,4 @@
 import React from 'react'
-import Enums from "../components/screens/enums";
 import {config} from "../configs/config";
 
 const Logger = (Component) => {

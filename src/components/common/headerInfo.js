@@ -1,6 +1,6 @@
 import React from "react";
 
-import { config } from "../../configs/config";
+import {config} from "../../configs/config";
 
 import AppGlobalActions from "./appGlobalActions";
 

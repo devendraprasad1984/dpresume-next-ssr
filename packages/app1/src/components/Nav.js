@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect, useState} from "react";
 
 const Nav = (props) => {
     let pageLength = props.pages || 0;

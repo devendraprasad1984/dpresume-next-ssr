@@ -1,4 +1,4 @@
-import {combineReducers, createStore, applyMiddleware, compose} from "redux";
+import {applyMiddleware, combineReducers, compose, createStore} from "redux";
 import thunk from "redux-thunk";
 import TestUpDown from "./reducers/testUpDown";
 import ToDo from "./reducers/todo";

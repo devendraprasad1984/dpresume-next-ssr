@@ -1,5 +1,4 @@
-import { mount, shallow } from "enzyme";
-import PropTypes from "prop-types";
+import {mount, shallow} from "enzyme";
 import React from "react";
 
 import BasicDisplay from "../components/common/basicDisplay";

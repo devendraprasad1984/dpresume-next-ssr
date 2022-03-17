@@ -1,4 +1,4 @@
-import PropTypes, {string} from "prop-types";
+import PropTypes from "prop-types";
 import React from "react";
 
 import {config} from "../../configs/config";
@@ -7,12 +7,9 @@ import BasicDisplay from "../common/basicDisplay";
 import NoData from "../common/nodata";
 import OneLinerHeader from "../common/oneLinerHeader";
 import HomeDemo from "./homeDemo";
-import Article from "./articles";
 // import CurrentlyWorkingAt from "./currentlyWorkingAt";
 // import '../../webcomponents/counter'
 import {Validator} from "jsonschema";
-import TestUpDownHooks from "./testUpDownHooks";
-import TestUpDownConnect from "./testUpDownConnect";
 import Logger from "../../hoc/logger";
 
 const validator = new Validator()

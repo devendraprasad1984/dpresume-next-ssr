@@ -1,6 +1,6 @@
 import React from "react";
 
-import { appComponents, snapshotChecker } from "./common";
+import {appComponents, snapshotChecker} from "./common";
 
 //checks for the unexpected changes in component tree
 //one of the importatn checks

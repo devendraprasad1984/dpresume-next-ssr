@@ -1,13 +1,6 @@
 import React, {useEffect, useState} from "react";
 
-import {
-    checkNetworkConnection,
-    config,
-    getLocation,
-    modal,
-    toggleFullScreen,
-    TTS, watchNetworkConnection,
-} from "../../configs/config";
+import {checkNetworkConnection, config, getLocation, modal, toggleFullScreen, TTS,} from "../../configs/config";
 
 import Input from "./input";
 import Modalify from "./modal";

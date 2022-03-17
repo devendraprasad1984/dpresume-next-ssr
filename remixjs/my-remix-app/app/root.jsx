@@ -1,4 +1,4 @@
-import {Outlet, LiveReload, Link, Links, Meta} from 'remix'
+import {Link, Links, LiveReload, Meta, Outlet} from 'remix'
 import globalStyleUrl from '~/styles/global.css'
 
 export const links = () => {

@@ -20,4 +20,4 @@ const Notes = (props) => {
 Notes.propTypes = {
   title: PropTypes.string.isRequired,
 };
-export default Notes;
+export default React.memo(Notes);

@@ -32,7 +32,7 @@ const Skills = (props) => {
     </div>
   );
 };
-export default Skills;
+export default React.memo(Skills);
 
 Skills.propTypes = {
   title: PropTypes.string.isRequired,

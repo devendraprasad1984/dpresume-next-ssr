@@ -289,4 +289,4 @@ const AppGlobalActions = (props) => {
     );
 };
 
-export default AppGlobalActions;
+export default React.memo(AppGlobalActions);

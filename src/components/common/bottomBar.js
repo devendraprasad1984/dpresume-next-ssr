@@ -34,4 +34,4 @@ const BottomBar = (props) => {
   if (error) return <NoData text={config.messages.ERROR} />;
   return <div className="bottom right margin-ud">{displayLinks()}</div>;
 };
-export default BottomBar;
+export default React.memo(BottomBar);

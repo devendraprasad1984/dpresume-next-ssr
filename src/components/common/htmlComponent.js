@@ -17,4 +17,4 @@ HtmlComponent.propTypes = {
     text: PropTypes.string,
 }
 
-export default HtmlComponent;
+export default React.memo(HtmlComponent);

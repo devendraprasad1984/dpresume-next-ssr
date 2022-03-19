@@ -31,4 +31,4 @@ const DropDownGroupIcons = ({id, placeholder, children}) => {
         </div>
     )
 }
-export default DropDownGroupIcons
+export default React.memo(DropDownGroupIcons)

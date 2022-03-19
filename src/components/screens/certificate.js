@@ -23,4 +23,4 @@ Certificate.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-export default Certificate;
+export default React.memo(Certificate);

@@ -22,4 +22,4 @@ const Achievement = (props) => {
 Achievement.propTypes = {
   title: PropTypes.string.isRequired,
 };
-export default Achievement;
+export default React.memo(Achievement);

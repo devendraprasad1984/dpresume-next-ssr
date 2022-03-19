@@ -29,4 +29,4 @@ const Modalify = (props) => {
   );
 };
 Modalify.prototype = {};
-export default Modalify;
+export default React.memo(Modalify);

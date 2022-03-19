@@ -19,4 +19,4 @@ const Canada = (props) => {
 Canada.propTypes = {
     title: PropTypes.string.isRequired,
 };
-export default Canada;
+export default React.memo(Canada);

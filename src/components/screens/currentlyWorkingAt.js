@@ -13,4 +13,4 @@ const CurrentlyWorkingAt = (props) => {
     </div>
 }
 
-export default CurrentlyWorkingAt
+export default React.memo(CurrentlyWorkingAt)

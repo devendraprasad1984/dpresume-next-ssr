@@ -12,7 +12,7 @@ const OneLinerHeader = ({title}) => {
     </div>
 };
 
-export default OneLinerHeader;
+export default React.memo(OneLinerHeader);
 
 OneLinerHeader.propTypes = {
     title: PropTypes.string,

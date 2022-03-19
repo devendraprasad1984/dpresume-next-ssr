@@ -22,4 +22,4 @@ const Education = (props) => {
 Education.propTypes = {
   title: PropTypes.string.isRequired,
 };
-export default Education;
+export default React.memo(Education);

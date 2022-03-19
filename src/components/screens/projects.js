@@ -50,7 +50,7 @@ const Projects = (props) => {
     </div>
   );
 };
-export default Projects;
+export default React.memo(Projects);
 
 Projects.propTypes = {
   title: PropTypes.string.isRequired,

@@ -18,4 +18,4 @@ const TestUpDownHooks = props => {
     </div>
 }
 
-export default TestUpDownHooks
+export default React.memo(TestUpDownHooks)

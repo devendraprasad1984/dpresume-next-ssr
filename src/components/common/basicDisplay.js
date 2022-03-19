@@ -32,4 +32,4 @@ BasicDisplay.propTypes = {
   className: PropTypes.string,
 };
 
-export default BasicDisplay;
+export default React.memo(BasicDisplay);

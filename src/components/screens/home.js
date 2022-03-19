@@ -63,4 +63,4 @@ Home.defaultProps = {
     title: 'home'
 }
 
-export default Logger(Home)
+export default React.memo(Logger(Home))

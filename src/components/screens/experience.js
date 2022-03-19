@@ -47,4 +47,4 @@ const Experience = (props) => {
 Experience.propTypes = {
   title: PropTypes.string.isRequired,
 };
-export default Experience;
+export default React.memo(Experience);

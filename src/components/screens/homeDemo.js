@@ -70,4 +70,4 @@ const HomeDemo = () => {
 
     return <div>{demoPageContent()}</div>;
 };
-export default HomeDemo;
+export default React.memo(HomeDemo);

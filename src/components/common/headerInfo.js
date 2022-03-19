@@ -26,4 +26,4 @@ const HeaderInfo = (props) => {
     </div>
   );
 };
-export default HeaderInfo;
+export default React.memo(HeaderInfo);

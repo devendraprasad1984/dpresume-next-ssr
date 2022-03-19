@@ -67,7 +67,7 @@ const Nav = (props) => {
                                 </a>
                             </div>}
 
-                            <img className="imgPic img-animate" src={dp} alt={"dp"}/>
+                            <img className="aspect-ratio-box imgPic img-animate" src={dp} alt={"dp"}/>
 
                             {/*{!ismobile && (*/}
                             {/*    <div>*/}

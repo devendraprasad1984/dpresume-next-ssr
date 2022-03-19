@@ -16,7 +16,7 @@ span.link:has(a.active) {
     font-size: 25px;
 }
 
-div{
+div {
     text-align: justify !important;
 }
 
@@ -106,10 +106,12 @@ div > .btn {
     font-size: 35px !important;
     font-weight: bolder;
 }
+
 .size45 {
     font-size: 45px !important;
     font-weight: bolder;
 }
+
 .pcenter {
     display: flex;
     justify-content: center;
@@ -131,10 +133,11 @@ div > .btn {
     align-content: center;
 }
 
-.parent-center{
+.parent-center {
     position: relative;
 }
-.child-center{
+
+.child-center {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -631,6 +634,7 @@ i,
 .wid60 {
     width: 60%;
 }
+
 .wid100 {
     width: 100%;
 }
@@ -703,9 +707,11 @@ i,
 .green {
     background-color: #49ec49 !important;
 }
+
 .purple {
     background-color: #8549ec !important;
 }
+
 .dark {
     background-color: #343a40 !important;
 }
@@ -750,10 +756,28 @@ i,
     border-radius: 0.25rem;
 }
 
-.imgPic,
-#imgPic {
-    width: 200px;
-    height: 200px;
+.imgPic, #imgPic {
+    width: 200px !important;
+    height: 200px !important;
+    display: block;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.aspect-ratio-box {
+    height: 0;
+    overflow: hidden;
+    /*padding-top: 591.44px / 1127.34px * 100%;*/
+    background: white;
+    position: relative;
+}
+
+.aspect-ratio-box-inside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .runbar {

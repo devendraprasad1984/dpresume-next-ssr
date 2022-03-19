@@ -53,18 +53,18 @@ const Nav = (props) => {
         <div>
             <div className='row'>
                 <span className='xprimary size25'>Welcome, {localStorage.getItem(config.enums.localStorage.name)}!</span>
-                {(!ismobile || !open) ? <a className="right bl size35 padding-rl" onClick={() => setOpen(!open)}>
+                {(!ismobile || !open) ? <span href='#' className="right bl size35 padding-rl" onClick={() => setOpen(!open)}>
                     {open ? `${config.chars.close}` : `${config.chars.hamburger}`}
-                </a>:null}
+                </span>:null}
             </div>
             <HashRouter>
                 <div className="row">
                     {open && (
                         <div className="flex1 content-left">
                             {ismobile && <div className='row'>
-                                <a className="right  bl size35 padding-rl" onClick={() => setOpen(!open)}>
+                                <span className="right  bl size35 padding-rl" onClick={() => setOpen(!open)}>
                                     {open ? `${config.chars.close}` : `${config.chars.hamburger}`}
-                                </a>
+                                </span>
                             </div>}
 
                             <img className="aspect-ratio-box imgPic img-animate" src={dp} alt={"dp"}/>
@@ -74,12 +74,12 @@ const Nav = (props) => {
                             {/*        <img className="imgPic img-animate" src={dp} alt={"dp"}/>*/}
                             {/*    </div>*/}
                             {/*)}*/}
-                            <h4 className='handwritting size20'>
+                            <div className='handwritting size20'>
                                 created with
                                 <span className='success'>patience</span>
                                 <span className='danger'>love</span>
                                 <span className='info'>passion</span>
-                            </h4>
+                            </div>
                             <nav className="">
                                 <div className="col">{displayMenu()}</div>
                             </nav>

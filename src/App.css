@@ -760,8 +760,9 @@ i,
     width: 200px !important;
     height: 200px !important;
     display: block;
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 200px !important;
+    max-height: 200px !important;
+    object-fit: cover;
 }
 
 .aspect-ratio-box {

@@ -9,7 +9,8 @@ import OneLinerHeader from "../common/oneLinerHeader";
 
 const Education = (props) => {
   const { data, loading, error } = useAPI(config.endpoints.EDUCATION);
-  if (loading) return <NoData text={config.messages.PLZ_WAIT} />;
+
+  if (loading) return <NoData text={config.messages.PLZ_WAIT+', '+data.length} />;
   if (error) return <NoData text={config.messages.ERROR} />;
 
   return (

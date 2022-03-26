@@ -9,8 +9,9 @@ import OneLinerHeader from "../common/oneLinerHeader";
 import HomeDemo from "./homeDemo";
 // import CurrentlyWorkingAt from "./currentlyWorkingAt";
 // import '../../webcomponents/counter'
-import {Validator} from "jsonschema";
+// import {Validator} from "jsonschema";
 import Logger from "../../hoc/logger";
+import useAPIWebWorker from "../../hooks/useAPIWebWorker";
 
 // const validator = new Validator()
 // const articleSchema = {
@@ -39,7 +40,7 @@ import Logger from "../../hoc/logger";
 // console.log('article valid', isArticlesValid)
 
 const Home = (props) => {
-    const {data, loading, error} = useAPI(config.endpoints.SUMMARY);
+    const {data, loading, error} = useAPIWebWorker(config.endpoints.SUMMARY);
     if (loading) return <NoData text={config.messages.PLZ_WAIT}/>;
     if (error) return <NoData text={config.messages.ERROR}/>;
     // console.log('prop from HOC logger', props)

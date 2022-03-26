@@ -7,7 +7,7 @@ const useAPI = (url) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   useEffect(() => {
-    //mouting
+    //mounting
     setLoading(true);
     get(url, (res) => {
       if (res.error !== undefined) setError({ error: res.error });

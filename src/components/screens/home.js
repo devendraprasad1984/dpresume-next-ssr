@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 
 import {config} from "../../configs/config";
-import useAPI from "../../hooks/useAPI";
+// import useAPI from "../../hooks/useAPI";
 import BasicDisplay from "../common/basicDisplay";
 import NoData from "../common/nodata";
 import OneLinerHeader from "../common/oneLinerHeader";
@@ -10,7 +10,7 @@ import HomeDemo from "./homeDemo";
 // import CurrentlyWorkingAt from "./currentlyWorkingAt";
 // import '../../webcomponents/counter'
 // import {Validator} from "jsonschema";
-import Logger from "../../hoc/logger";
+// import Logger from "../../hoc/logger";
 import useAPIWebWorker from "../../hooks/useAPIWebWorker";
 
 // const validator = new Validator()
@@ -52,7 +52,7 @@ const Home = (props) => {
             {/*<TestUpDownHooks/>*/}
             {/*<TestUpDownConnect/>*/}
             <OneLinerHeader title={props.title}/>
-            <BasicDisplay list={data}/>
+            {data && <BasicDisplay list={data}/>}
             <HomeDemo/>
         </div>
     );
@@ -64,4 +64,4 @@ Home.defaultProps = {
     title: 'home'
 }
 
-export default React.memo(Logger(Home))
+export default React.memo(Home)

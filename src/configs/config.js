@@ -104,7 +104,7 @@ export const modal = function (selectorById) {
     }
 }
 
-export const TTS = () => {
+export function TTS() {
     const synthesis =
         "speechSynthesis" in window ? window.speechSynthesis : undefined;
     let isSpeaking = false;

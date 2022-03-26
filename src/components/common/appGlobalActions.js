@@ -6,7 +6,7 @@ import Input from "./input";
 import Modalify from "./modal";
 import DropDownGroupIcons from "./dropDownGroupIcons";
 import HtmlComponent from "./htmlComponent";
-import useAPI from "../../hooks/useAPI";
+// import useAPI from "../../hooks/useAPI";
 
 const themeBgColor = "black";
 const themeColor = "#4d4a4a";
@@ -22,7 +22,7 @@ const AppGlobalActions = (props) => {
     const [shownetwork, setShownetwork] = useState(false)
     const [networkMsg, setNetworkMsg] = useState('')
     const [msgText, setMsgText] = useState("")
-    let _tts = new TTS();
+    // let _tts = new TTS();
 
     const handleFullScreen = () => {
         toggleFullScreen();
@@ -34,17 +34,17 @@ const AppGlobalActions = (props) => {
             setWhereAmI(true);
         });
     };
-    const {data, loading} = useAPI(config.endpoints.SUMMARY);
-    const handleSpeak = () => {
-        if (loading) return;
-        if (isBioSpeaking) {
-            setIsBioSpeaking(false);
-            _tts.stopSpeaking();
-            return;
-        }
-        _tts.speakOut(data);
-        setIsBioSpeaking(true);
-    };
+    // const {data, loading} = useAPI(config.endpoints.SUMMARY);
+    // const handleSpeak = () => {
+    //     if (loading) return;
+    //     if (isBioSpeaking) {
+    //         setIsBioSpeaking(false);
+    //         _tts.stopSpeaking();
+    //         return;
+    //     }
+    //     _tts.speakOut(data);
+    //     setIsBioSpeaking(true);
+    // };
 
     useEffect(() => {
         modal("modallocation").initModel();
@@ -214,12 +214,12 @@ const AppGlobalActions = (props) => {
                 >
                     Take Selfie
                 </button>
-                <button
-                    className={"primary " + (isBioSpeaking ? "danger" : "")}
-                    onClick={handleSpeak}
-                >
-                    {isBioSpeaking ? "Stop Speaking" : "Speak Bio"}
-                </button>
+                {/*<button*/}
+                {/*    className={"primary " + (isBioSpeaking ? "danger" : "")}*/}
+                {/*    onClick={handleSpeak}*/}
+                {/*>*/}
+                {/*    {isBioSpeaking ? "Stop Speaking" : "Speak Bio"}*/}
+                {/*</button>*/}
                 <span className="custom-option" data-value="network">
                     <button id="checknetwork" className='success' onClick={() => handleNetworkCheck()}>Check Network Availability</button>
                 </span>

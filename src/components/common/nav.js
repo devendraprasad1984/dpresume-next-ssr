@@ -55,7 +55,7 @@ const Nav = (props) => {
                 <span className='xprimary size25'>Welcome, {localStorage.getItem(config.enums.localStorage.name)}!</span>
                 {(!ismobile || !open) ? <span href='#' className="right bl size35 padding-rl" onClick={() => setOpen(!open)}>
                     {open ? `${config.chars.close}` : `${config.chars.hamburger}`}
-                </span>:null}
+                </span> : null}
             </div>
             <HashRouter>
                 <div className="row">

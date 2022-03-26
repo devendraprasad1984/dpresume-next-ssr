@@ -8,13 +8,13 @@ import Logger from "./hoc/logger";
 
 const nameFromLocalStorage = localStorage.getItem(config.enums.localStorage.name)
 const isNameSet = nameFromLocalStorage !== '' && nameFromLocalStorage !== null && nameFromLocalStorage !== undefined
-console.log('nameFromLocalStorage',nameFromLocalStorage, isNameSet)
+// console.log('nameFromLocalStorage',nameFromLocalStorage, isNameSet)
 
 function App(props) {
-    console.log('app from hoc', props.getFromLocalStore())
+    // console.log('app from hoc', props.getFromLocalStore())
     const [canWeShowWelcome, setCanWeShowWelcome] = useState(!isNameSet)
     const handleCloseWelcome = (name) => {
-        console.log('closing in main app. found', name)
+        // console.log('closing in main app. found', name)
         localStorage.setItem(config.enums.localStorage.name, name)
         setCanWeShowWelcome(false)
     }

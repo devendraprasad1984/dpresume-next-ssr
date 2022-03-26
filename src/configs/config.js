@@ -6,6 +6,8 @@ import messages from "./messages";
 import colors from "./colors";
 import chars from "./chars";
 import pageTitles from "./pageTitles";
+import AppEnums from "./appEnums";
+
 
 export const config = {
     name: "Devendra Prasad",
@@ -17,7 +19,8 @@ export const config = {
     enums: {
         localStorage: {
             name: 'dpresume_name'
-        }
+        },
+        ...AppEnums
     },
     menu,
     endpoints,

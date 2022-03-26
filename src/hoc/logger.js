@@ -5,10 +5,10 @@ const Logger = (Component) => {
     const otherInjectedProps = {
         appName: 'dpresume.com',
         getFromLocalStore: () => {
-            return 'data from localStore - ' + localStorage.getItem(config.enums.localStorage.name)
+            return 'data from localStore - ' + localStorage.getItem(config.enums.localStorage.name) || 'mate'
         }
     }
-    console.log('logging', Component.name, Component.prototype)
+    // console.log('logging', Component.name, Component.prototype)
     return props => <Component {...otherInjectedProps} {...props}/>
     // return Component
 }

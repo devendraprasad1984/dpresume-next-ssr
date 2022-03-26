@@ -15,7 +15,7 @@ import Achievement from "../components/screens/achievement";
 import Article from "../components/screens/articles";
 import Certificate from "../components/screens/certificate";
 import Education from "../components/screens/education";
-import Enums from "../components/screens/enums";
+import AppEnums from "../configs/appEnums";
 import Experience from "../components/screens/experience";
 import Home from "../components/screens/home";
 import Projects from "../components/screens/projects";
@@ -24,82 +24,82 @@ import pageTitles from "../configs/pageTitles";
 
 const strMsg = " rendering without crash";
 export const appComponents = [
-  { name: Enums.app, desc: "app", component: <App /> },
+  { name: AppEnums.app, desc: "app", component: <App /> },
   {
-    name: Enums.home,
+    name: AppEnums.home,
     desc: "home",
     component: <Home title={pageTitles.home} />,
   },
   {
-    name: Enums.education,
+    name: AppEnums.education,
     desc: "education",
     component: <Education title={pageTitles.education} />,
   },
   {
-    name: Enums.experience,
+    name: AppEnums.experience,
     desc: "experience",
     component: <Experience title={pageTitles.experience} />,
   },
   {
-    name: Enums.projects,
+    name: AppEnums.projects,
     desc: "projects",
     component: <Projects title={pageTitles.projects} />,
   },
   {
-    name: Enums.certificate,
+    name: AppEnums.certificate,
     desc: "certificate",
     component: <Certificate title={pageTitles.certification} />,
   },
   {
-    name: Enums.skills,
+    name: AppEnums.skills,
     desc: "skills",
     component: <Skills title={pageTitles.skills} />,
   },
   {
-    name: Enums.achievement,
+    name: AppEnums.achievement,
     desc: "achievement",
     component: <Achievement title={pageTitles.achievement} />,
   },
   {
-    name: Enums.basicDisplay,
+    name: AppEnums.basicDisplay,
     desc: "basic display",
     component: <BasicDisplay list={[]} />,
   },
-  { name: Enums.bottomBar, desc: "bottom bar", component: <BottomBar /> },
-  { name: Enums.headerInfo, desc: "header", component: <HeaderInfo /> },
+  { name: AppEnums.bottomBar, desc: "bottom bar", component: <BottomBar /> },
+  { name: AppEnums.headerInfo, desc: "header", component: <HeaderInfo /> },
   {
-    name: Enums.htmlComponent,
+    name: AppEnums.htmlComponent,
     desc: "html component",
     component: <HtmlComponent text={pageTitles.mockTitle} />,
   },
-  { name: Enums.nav, desc: "navigation", component: <Nav /> },
+  { name: AppEnums.nav, desc: "navigation", component: <Nav /> },
   {
-    name: Enums.nodata_ok,
+    name: AppEnums.nodata_ok,
     desc: "noData ok text",
     component: <NoData text={pageTitles.mockTitle} type="200" />,
   },
   {
-    name: Enums.nodata_404,
+    name: AppEnums.nodata_404,
     desc: "noData 404",
     component: <NoData text={pageTitles.mockTitle} type="404" />,
   },
   {
-    name: Enums.onelinerHeader,
+    name: AppEnums.onelinerHeader,
     desc: "oneliner",
     component: <OneLinerHeader title={pageTitles.mockTitle} />,
   },
   {
-    name: Enums.onelinerHeader + "_1",
+    name: AppEnums.onelinerHeader + "_1",
     desc: "oneliner_1",
     component: <OneLinerHeader title={pageTitles.education} />,
   },
   {
-    name: Enums.input,
+    name: AppEnums.input,
     desc: "input box",
     component: <Input label={"dummy"} />,
   },
   {
-    name: Enums.articles,
+    name: AppEnums.articles,
     desc: "articles test component array prop and types check",
     component: <Article />,
   },

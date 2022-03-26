@@ -44,9 +44,9 @@ const Welcome = (props) => {
             close={onClose}
         >
             <div className='child-center'>
-                <h2>Welcome mate, How are you doing...</h2>
-                <h4>We will go to Home page in </h4>
-                <h1 className='xred size45 center'>{counter}</h1>
+                <div>Welcome mate, How are you doing...</div>
+                <div>We will go to Home page in </div>
+                <div className='xred size45 center'>{counter}</div>
                 <div>
                     <h2>personalise your visit, again!!!</h2>
                     <span className='xred'>its not saved anywhere but your session only</span>

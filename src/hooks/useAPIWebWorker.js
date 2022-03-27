@@ -6,6 +6,7 @@ const pullFromApiWorker = workerFactory()() //for UI performance, moving some ap
 
 const useAPIWebWorker = (url) => {
     const [data, setData] = useState([]);
+    const [time, setTime] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     useEffect(() => {
@@ -15,10 +16,14 @@ const useAPIWebWorker = (url) => {
         pullFromApiWorker.postMessage({uri: url})
         pullFromApiWorker.onmessage = (res) => {
             let apiData= res.data
-            if (apiData.error !== undefined) setError({error: apiData.error});
+            if (apiData.error !== undefined) {
+                setError({error: apiData.error});
+                setTime(t=>apiData.time)
+            }
             else {
                 setData(apiData.data === null ? [] : apiData.data);
                 setLoading(false);
+                setTime(t=>apiData.time)
             }
         }
         return () => {
@@ -26,6 +31,6 @@ const useAPIWebWorker = (url) => {
             setLoading(false);
         };
     }, []);
-    return {data, loading, error};
+    return {data, loading, error, time};
 };
 export default useAPIWebWorker;

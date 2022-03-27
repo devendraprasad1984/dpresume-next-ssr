@@ -40,7 +40,7 @@ import useAPIWebWorker from "../../hooks/useAPIWebWorker";
 // console.log('article valid', isArticlesValid)
 
 const Home = (props) => {
-    const {data, loading, error} = useAPIWebWorker(config.endpoints.SUMMARY);
+    const {data, loading, error, time} = useAPIWebWorker(config.endpoints.SUMMARY);
     if (loading) return <NoData text={config.messages.PLZ_WAIT}/>;
     if (error) return <NoData text={config.messages.ERROR}/>;
     // console.log('prop from HOC logger', props)
@@ -52,7 +52,7 @@ const Home = (props) => {
             {/*<TestUpDownHooks/>*/}
             {/*<TestUpDownConnect/>*/}
             <OneLinerHeader title={props.title}/>
-            {data && <BasicDisplay list={data}/>}
+            {data && <BasicDisplay list={data} time={time}/>}
             <HomeDemo/>
         </div>
     );

@@ -757,8 +757,8 @@ i,
 }
 
 .imgPic, #imgPic {
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 220px;
     display: block;
     object-fit: fill;
 }

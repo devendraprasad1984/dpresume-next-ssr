@@ -19,7 +19,7 @@ const Nav = (props) => {
         return config.menu.map((item, index) => {
             if (item.show === false) return null
             return (
-                <span key={"menu-item-" + index} className="link size15 margin-ud">
+                <span key={"menu-item-" + index} className={"size15 margin-ud "+(ismobile?"xwhite":"")}>
           <NavLink
               exact={true}
               activeClassName="active"
@@ -67,22 +67,16 @@ const Nav = (props) => {
                                 </span>
                             </div>}
 
-                            <img className="aspect-ratio-box imgPic img-animate" src={dp} alt={"dp"}/>
-
-                            {/*{!ismobile && (*/}
-                            {/*    <div>*/}
-                            {/*        <img className="imgPic img-animate" src={dp} alt={"dp"}/>*/}
-                            {/*    </div>*/}
-                            {/*)}*/}
-                            <div className='handwritting size20'>
-                                created with
-                                <span className='success'>patience</span>
-                                <span className='danger'>love</span>
-                                <span className='info'>passion</span>
+                            <div className='col'>
+                                <img className="imgPic img-animate" src={dp} alt={"dp"}/>
+                                <span>created with...</span>
+                                <div className='handwritting size15 row'>
+                                    <span className='success'>patience</span>
+                                    <span className='danger'>love</span>
+                                    <span className='info'>passion</span>
+                                </div>
                             </div>
-                            <nav className="">
-                                <div className="col">{displayMenu()}</div>
-                            </nav>
+                            <div className="col">{displayMenu()}</div>
                         </div>
                     )}
                     <div className="content-right">

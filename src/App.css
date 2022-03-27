@@ -757,12 +757,10 @@ i,
 }
 
 .imgPic, #imgPic {
-    width: 200px !important;
-    height: 200px !important;
+    width: 200px;
+    height: 200px;
     display: block;
-    max-width: 200px !important;
-    max-height: 200px !important;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .aspect-ratio-box {
@@ -771,6 +769,7 @@ i,
     /*padding-top: 591.44px / 1127.34px * 100%;*/
     background: white;
     position: relative;
+    /*margin-bottom: 10px;*/
 }
 
 .aspect-ratio-box-inside {

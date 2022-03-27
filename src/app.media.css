@@ -33,12 +33,13 @@
     }
 
     #imgPic, .imgPic {
-        margin-top: -15%;
+        bottom: 0;
+        margin-bottom: 10%;
         position: fixed;
         z-index: 100001;
-        left: 2rem;
-        width: 70px;
-        height: 70px;
+        /*left: 2rem;*/
+        /*object-fit: cover;*/
+        /*object-fit: fill;*/
     }
 
     .topbar {

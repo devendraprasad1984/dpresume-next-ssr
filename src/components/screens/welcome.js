@@ -21,7 +21,7 @@ const Welcome = (props) => {
                 if (oldVal === 0) onClose()
                 return oldVal - 1
             })
-            console.log('updated', p1)
+            // console.log('updated', p1)
         }, 1000, counter)
     }
 

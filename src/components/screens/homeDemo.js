@@ -6,7 +6,7 @@ import NoData from "../common/nodata";
 
 const HomeDemo = () => {
     const [videoMode, setVideoMode] = useState(false);
-    const {data, loading, error} = useAPI(config.endpoints.HOME_DEMO);
+    const {data, loading, error, time} = useAPI(config.endpoints.HOME_DEMO);
 
     const demoPageContent = () => {
         if (data.length === 0) return;

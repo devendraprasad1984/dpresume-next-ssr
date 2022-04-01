@@ -5,9 +5,10 @@ import {config} from "../../configs/config";
 import useAPI from "../../hooks/useAPI";
 import NoData from "../common/nodata";
 import OneLinerHeader from "../common/oneLinerHeader";
+import ShowCompute from "../common/showCompute";
 
 const Projects = (props) => {
-  const { data, loading, error } = useAPI(config.endpoints.PROJECTS);
+  const { data, loading, error, time } = useAPI(config.endpoints.PROJECTS);
 
   const displayProjectDetails = (arr) => {
     return arr.map((row, i) => {
@@ -45,6 +46,7 @@ const Projects = (props) => {
   if (error) return <NoData text={config.messages.ERROR} />;
   return (
     <div className={"margin-ud"}>
+      <ShowCompute time={time}/>
       <OneLinerHeader title={props.title} />
       {display()}
     </div>

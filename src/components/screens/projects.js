@@ -5,6 +5,7 @@ import {config} from "../../configs/config";
 import useAPI from "../../hooks/useAPI";
 import NoData from "../common/nodata";
 import OneLinerHeader from "../common/oneLinerHeader";
+import ShowCompute from "../common/showCompute";
 
 const Projects = (props) => {
   const { data, loading, error, time } = useAPI(config.endpoints.PROJECTS);
@@ -45,10 +46,7 @@ const Projects = (props) => {
   if (error) return <NoData text={config.messages.ERROR} />;
   return (
     <div className={"margin-ud"}>
-      <div className='right'>
-        fetched in {time && <span className='xprimary'>{time}ms</span>}
-      </div>
-
+      <ShowCompute time={time}/>
       <OneLinerHeader title={props.title} />
       {display()}
     </div>

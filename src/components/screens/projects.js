@@ -45,6 +45,10 @@ const Projects = (props) => {
   if (error) return <NoData text={config.messages.ERROR} />;
   return (
     <div className={"margin-ud"}>
+      <div className='right'>
+        fetched in {time && <span className='xprimary'>{time}ms</span>}
+      </div>
+
       <OneLinerHeader title={props.title} />
       {display()}
     </div>

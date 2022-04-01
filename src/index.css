@@ -1,0 +1,150 @@
+:root {
+    --purple-color: #7f279e;
+    --gray-color: #c2bebe;
+    --default-text-color: #4f4e4e;
+    --black-color: #222;
+    --white: white;
+    --grad-color1: #f8decc;
+    --grad-color2: #d4f8d4;
+    --grad-color3: white;
+    --link-active-color1: #8a1fc0;
+    --link-active-color2: #4d72c0;
+    --gradient-image-color: linear-gradient(
+            115deg,
+            var(--link-active-color1) 20%,
+            var(--link-active-color2) 60%
+    );
+    --left-panel-width: 20%;
+    --right-panel-width: 100%;
+    --body-linear-grad-color: linear-gradient(
+            115deg,
+            var(--grad-color1) 0%,
+            var(--grad-color3) 40%,
+            var(--grad-color2) 100%
+    );
+    --medium-violet: #b71d7d;
+    --size10px: 10px;
+}
+
+/*box-model where width = element width + padding + borders = https://www.w3schools.com/css/css_boxmodel.asp*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/*box-sizing: border-box is most important to understand for a web developer*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*disables extra height width due to margin/padding*/
+}
+
+@font-face {
+    font-family: "Material Icons";
+    font-style: normal;
+    font-weight: 400;
+    src: url(./css/gstaticFont.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "Gotham Rounded";
+    font-style: normal;
+    font-weight: 450;
+    font-display: swap;
+    src: url(./css/GothamRounded-Medium.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "Ephesis";
+    font-style: normal;
+    font-weight: 550;
+    font-display: swap;
+    /*src: url(https://fonts.gstatic.com/s/ephesis/v1/uU9PCBUS8IerL2VG3xTR396EilM.woff2) format('woff2');*/
+    src: url(./css/uU9PCBUS8IerL2VG3xTR396EilM.woff2) format("woff2");
+}
+
+.handwritting {
+    box-sizing: border-box;
+    font-family: "Ephesis", cursive;
+}
+
+/*body, iframe {*/
+/*  background-image: var(--body-linear-grad-color);*/
+/*  background-repeat: no-repeat;*/
+/*  background-size: 100% 100%;*/
+/*}*/
+
+* {
+    box-sizing: border-box;
+    font-family: "Gotham Rounded", monospace;
+    color: var(--default-text-color);
+}
+
+div {
+    margin-top: 2px;
+}
+
+.topbar {
+    z-index: 1002;
+    width: 98vw;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    margin: 0 auto;
+}
+
+.mainabs {
+    position: absolute;
+    width: 98vw;
+}
+
+.blur {
+    backdrop-filter: blur(12px);
+}
+
+::selection {
+    background-color: var(--purple-color);
+    color: white;
+}
+
+select {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+input, select {
+    width: 100%;
+    border: 2px solid var(--black-color);
+    padding: 5px;
+    margin-top: 4px;
+}
+
+::placeholder {
+    color: var(--black-color);
+    opacity: 0.8;
+}
+
+select {
+    margin: 2px;
+    padding: 2px;
+    background-color: white;
+}
+
+::-webkit-scrollbar {
+    width: var(--size10px);
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--black-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e9e8ec;
+}

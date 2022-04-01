@@ -7,6 +7,8 @@
 /.idea
 /out
 /.next
+/build
+/.scannerwork
 
 # testing
 /coverage
@@ -17,6 +19,8 @@
 
 # production
 /build
+
+.scannerwork
 
 # misc
 .DS_Store

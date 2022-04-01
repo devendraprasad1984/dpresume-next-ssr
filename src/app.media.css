@@ -1,0 +1,84 @@
+@media screen and (max-width: 600px) {
+
+    .flexbox {
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+        display: grid;
+    }
+
+    .menuicon {
+        font-size: 20px;
+    }
+
+    .fixed {
+        position: fixed;
+    }
+
+    .content-left {
+        position: fixed;
+        z-index: 10000;
+        opacity: 0.98;
+        height: 100%;
+        width: 70vw;
+        top: 0;
+        left: 0;
+        background-color: var(--white);
+    }
+
+    .content-right {
+        width: inherit;
+    }
+
+    .gapSwitchMobile {
+        margin-top: 12em;
+    }
+
+    #imgPic, .imgPic {
+        bottom: 0;
+        margin-bottom: 10%;
+        position: fixed;
+        z-index: 100001;
+        /*left: 2rem;*/
+        /*object-fit: cover;*/
+        /*object-fit: fill;*/
+    }
+
+    .topbar {
+        display: inline;
+        font-size: 15px !important;
+    }
+
+    .topbar > .name > span,
+    .topbar .name > i,
+    div a > i {
+        font-size: 15px;
+    }
+
+    .overlay .closebtn {
+        font-size: var(--size10px);
+        top: 5px;
+        right: -40px;
+    }
+
+    /*.togglePanel {*/
+    /*    font-size: 12px;*/
+    /*}*/
+    .pright {
+        margin-bottom: 20px;
+    }
+
+
+    #idLinks a {
+        font-size: 8px;
+    }
+
+    .btn {
+        padding: 0.275rem 0.225rem;
+        line-height: 1;
+    }
+
+    .row {
+        display: inline;
+        clear: both;
+        padding: unset;
+    }
+}

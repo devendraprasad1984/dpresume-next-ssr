@@ -7,7 +7,7 @@ import NoData from "../common/nodata";
 import OneLinerHeader from "../common/oneLinerHeader";
 
 const Projects = (props) => {
-  const { data, loading, error } = useAPI(config.endpoints.PROJECTS);
+  const { data, loading, error, time } = useAPI(config.endpoints.PROJECTS);
 
   const displayProjectDetails = (arr) => {
     return arr.map((row, i) => {

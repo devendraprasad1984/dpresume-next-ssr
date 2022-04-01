@@ -8,7 +8,7 @@ import NoData from "../common/nodata";
 import OneLinerHeader from "../common/oneLinerHeader";
 
 const Skills = (props) => {
-  const { data, loading, error } = useAPI(config.endpoints.SKILLS);
+  const { data, loading, error,time } = useAPI(config.endpoints.SKILLS);
 
   const display = () => {
     let keys = Object.keys(data);
@@ -17,7 +17,7 @@ const Skills = (props) => {
       return (
         <div key={"skill-" + i}>
           <h2 className="xprimary">{name}</h2>
-          <BasicDisplay className="padding-rl" list={values[i]} />
+          <BasicDisplay className="padding-rl" list={values[i]}  time={time}/>
         </div>
       );
     });

@@ -35,7 +35,11 @@ const BasicDisplay = ({ list, tag, className, time, loadTime }) => {
   }
 
   return (<React.Fragment>
-    <div className='right'>Computed: fetched in <span className='xprimary'>{time}ms</span>, rendered in: <span className='xprimary'>{loadTime}ms</span></div>
+    <div className='right'>
+      fetched in {time && <span className='xprimary'>{time}ms</span>}
+      {loadTime && "rendered in"}
+      {loadTime && <span className='xprimary'>{loadTime}ms</span>}
+    </div>
     <div className={className}>
       <button className='btn xwhite primary' onClick={()=>handleSpeak()}>{!isSpeaking ? 'Speak' : 'Stop Speaking'}</button>
       <div className="bl xprimary">{tag || ""}</div>

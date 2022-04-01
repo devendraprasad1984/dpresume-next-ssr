@@ -1,11 +1,11 @@
 import {useEffect, useState} from "react";
 import workerFactory from "../webworkers/webWorkerFactory_Builder";
+import {calculatePerformance} from "../configs/utils";
 
 const pullFromApiWorker = workerFactory()() //for UI performance, moving some api handling running in parallel other than main thread and
 // syncing up via event onmessage and postMessage of web worker
 
 const perfData = window.performance.timing;
-const _win = window
 const useAPIWebWorker = (url) => {
     const [data, setData] = useState([]);
     const [time, setTime] = useState('');
@@ -16,12 +16,12 @@ const useAPIWebWorker = (url) => {
         if (!data) return
         //mounting
         setLoading(true);
-        let start = _win.performance.now()
+        let _perf = calculatePerformance()
         pullFromApiWorker.postMessage({uri: url})
         pullFromApiWorker.onmessage = (res) => {
             const pageLoadTime = Math.floor(perfData.loadEventEnd - perfData.navigationStart)
             let apiData = res.data
-            let timeTaken = Math.floor(_win.performance.now() - start)
+            let timeTaken = Math.floor(_perf())
             if (apiData.error !== undefined) {
                 setError({error: apiData.error});
                 setTime(t => timeTaken)

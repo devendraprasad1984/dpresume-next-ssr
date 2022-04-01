@@ -8,14 +8,14 @@ import NoData from "../common/nodata";
 import OneLinerHeader from "../common/oneLinerHeader";
 
 const Achievement = (props) => {
-  const { data, loading, error } = useAPI(config.endpoints.ACHIEVMENT);
+  const { data, loading, error, time } = useAPI(config.endpoints.ACHIEVMENT);
 
   if (loading) return <NoData text={config.messages.PLZ_WAIT} />;
   if (error) return <NoData text={config.messages.ERROR} />;
   return (
     <div>
       <OneLinerHeader title={props.title} />
-      <BasicDisplay list={data} />
+      <BasicDisplay list={data}  time={time}/>
     </div>
   );
 };

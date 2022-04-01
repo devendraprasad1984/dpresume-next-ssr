@@ -5,8 +5,8 @@ import {calculatePerformance} from "../configs/utils";
 const pullFromApiWorker = workerFactory()() //for UI performance, moving some api handling running in parallel other than main thread and
 // syncing up via event onmessage and postMessage of web worker
 
-const perfData = window.performance.timing;
 const useAPIWebWorker = (url) => {
+    let {runtime, perftime} = calculatePerformance() //closure
     const [data, setData] = useState([]);
     const [time, setTime] = useState('');
     const [loadTime, setLoadtime] = useState('');
@@ -16,21 +16,18 @@ const useAPIWebWorker = (url) => {
         if (!data) return
         //mounting
         setLoading(true);
-        let _perf = calculatePerformance()
         pullFromApiWorker.postMessage({uri: url})
         pullFromApiWorker.onmessage = (res) => {
-            const pageLoadTime = Math.floor(perfData.loadEventEnd - perfData.navigationStart)
             let apiData = res.data
-            let timeTaken = Math.floor(_perf())
             if (apiData.error !== undefined) {
                 setError({error: apiData.error});
-                setTime(t => timeTaken)
-                setLoadtime(t => pageLoadTime)
+                setTime(t => runtime())
+                setLoadtime(t => perftime())
             } else {
                 setData(apiData.data === null ? [] : apiData.data);
                 setLoading(false);
-                setTime(t => timeTaken)
-                setLoadtime(t => pageLoadTime)
+                setTime(t => runtime())
+                setLoadtime(t => perftime())
             }
         }
         return () => {

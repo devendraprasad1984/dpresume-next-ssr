@@ -6,6 +6,7 @@ import useAPI from "../../hooks/useAPI";
 import BasicDisplay from "../common/basicDisplay";
 import NoData from "../common/nodata";
 import OneLinerHeader from "../common/oneLinerHeader";
+import ShowCompute from "../common/showCompute";
 
 const Skills = (props) => {
   const { data, loading, error,time } = useAPI(config.endpoints.SKILLS);
@@ -17,7 +18,7 @@ const Skills = (props) => {
       return (
         <div key={"skill-" + i}>
           <h2 className="xprimary">{name}</h2>
-          <BasicDisplay className="padding-rl" list={values[i]}  time={time}/>
+          <BasicDisplay className="padding-rl" list={values[i]}/>
         </div>
       );
     });
@@ -27,6 +28,7 @@ const Skills = (props) => {
   if (error) return <NoData text={config.messages.ERROR} />;
   return (
     <div>
+      <ShowCompute time={time}/>
       <OneLinerHeader title={props.title} />
       {display()}
     </div>

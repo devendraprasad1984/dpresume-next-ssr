@@ -315,7 +315,7 @@ section {
     position: absolute;
     padding: 4px;
     display: none;
-    opacity: 0.7;
+    /*opacity: 0.7;*/
 }
 
 .text-black {
@@ -482,8 +482,10 @@ samp {
 
 .cards span:hover,
 .cards a:hover {
-    background-image: var(--gradient-image-color);
-    color: var(--black-color) !important;
+    /*background-image: var(--gradient-image-color);*/
+    background-color: var(--black-color);
+    opacity: 0.8;
+    color: var(--white) !important;
 }
 
 .video-cards > span,
@@ -504,7 +506,7 @@ samp {
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
-    letter-spacing: 1px;
+    /*letter-spacing: 1px;*/
 }
 
 .row {
@@ -515,6 +517,7 @@ samp {
 
 .row * {
     margin: 2px;
+    line-height: 1.5rem;
 }
 
 .flex1 {
@@ -557,7 +560,7 @@ a {
     background-color: var(--grad-color2);
     overflow-x: hidden;
     display: none;
-    opacity: 0.85;
+    /*opacity: 0.85;*/
     /*transition: 0.5s;*/
 }
 

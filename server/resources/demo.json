@@ -1,6 +1,10 @@
 {
   "links": [
     {
+      "href": "https://dpresume.herokuapp.com/",
+      "name": "dpresume.com SSR"
+    },
+    {
       "href": "https://dpresume.com/bmi",
       "name": "BMI Calculator NodeJs App"
     },
@@ -11,6 +15,10 @@
     {
       "href": "https://dpresume.com/dragd3",
       "name": "Draggable D3"
+    },
+    {
+      "href": "https://dpresume.com/bets",
+      "name": "Bets Easy Demo"
     },
     {
       "href": "https://dpresume.com/react-js-python/#/",

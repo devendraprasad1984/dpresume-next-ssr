@@ -1,7 +1,7 @@
 :root {
     --purple-color: #7f279e;
     --gray-color: #c2bebe;
-    --default-text-color: #4f4e4e;
+    --default-text-color: #797777;
     --black-color: #222;
     --white: white;
     --grad-color1: #f8decc;
@@ -77,7 +77,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 * {
     box-sizing: border-box;
-    font-family: "Gotham Rounded", monospace;
+    font-family: "Gotham Rounded", arial;
     color: var(--default-text-color);
 }
 
@@ -124,7 +124,7 @@ input, select {
 
 ::placeholder {
     color: var(--black-color);
-    opacity: 0.8;
+    /*opacity: 0.8;*/
 }
 
 select {

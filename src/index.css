@@ -52,7 +52,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 .bg{
-    background-image: url("/bg.gif");
+    background-image: url("/assets/bg.gif");
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;

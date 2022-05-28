@@ -25,7 +25,7 @@ store.subscribe(() => {
 const changeBg = () => {
     let bodyBg = document.getElementById('body')
     let imgNum = Math.floor(Math.random() * 8 + 1)
-    bodyBg.style.backgroundImage = `url("/bg${imgNum}.gif")`
+    bodyBg.style.backgroundImage = `url("/assets/bg${imgNum}.gif")`
 }
 
 const IndexApp = (<React.StrictMode>

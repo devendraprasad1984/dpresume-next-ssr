@@ -20,14 +20,29 @@ import store from "./_redux/store";
 store.subscribe(() => {
     console.log('state object via subscribe', store)
 })
-ReactDOM.render(
-    <React.StrictMode>
-        <Provider store={store}>
-            <App/>
-        </Provider>
-    </React.StrictMode>,
-    document.getElementById("root")
-);
+
+//change background image setinterval
+const changeBg = () => {
+    let bodyBg = document.getElementById('body')
+    let imgNum = Math.floor(Math.random() * 8 + 1)
+    bodyBg.style.backgroundImage = `url("/assets/bg${imgNum}.gif")`
+}
+
+const IndexApp = (<React.StrictMode>
+        <div className='main-container'>
+            <Provider store={store}>
+                <App/>
+            </Provider>
+        </div>
+    </React.StrictMode>
+)
+
+const root = document.getElementById("root")
+const isSSR = process.env.IS_SSR
+const renderMethod = isSSR ? ReactDOM.hydrate : ReactDOM.render
+renderMethod(IndexApp, root)
+
+setInterval(changeBg, 5000)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

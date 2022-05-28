@@ -4,7 +4,6 @@ import "./console.css";
 import Main from "./components/main";
 import Welcome from "./components/screens/welcome";
 import {config} from "./configs/config";
-import Logger from "./hoc/logger";
 
 const nameFromLocalStorage = localStorage.getItem(config.enums.localStorage.name)
 const isNameSet = nameFromLocalStorage !== '' && nameFromLocalStorage !== null && nameFromLocalStorage !== undefined
@@ -21,4 +20,4 @@ function App(props) {
     return canWeShowWelcome ? (<Welcome onClose={handleCloseWelcome}/>) : <Main/>
 }
 
-export default Logger(App);
+export default App;

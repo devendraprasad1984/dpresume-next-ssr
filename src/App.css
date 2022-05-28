@@ -1,8 +1,4 @@
-span, div, p {
-    font-family: inherit;
-    padding-left: 3px;
-    padding-right: 3px;
-}
+
 
 span.link:has(a.active) {
     border-bottom: 2px solid var(--gray-color);
@@ -457,12 +453,12 @@ samp {
 }
 
 .flexbox {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     display: grid;
 }
 
 .flexbox-video {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     display: grid;
 }
 

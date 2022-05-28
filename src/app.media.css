@@ -24,6 +24,20 @@
         background-color: var(--white);
     }
 
+    .main-container {
+        width: 100%;
+        opacity: 0.92;
+    }
+
+    .topbar{
+        width: 95%;
+    }
+
+
+    .bg{
+        background-size: auto;
+    }
+
     .content-right {
         width: inherit;
     }

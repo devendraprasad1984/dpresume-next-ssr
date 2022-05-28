@@ -32,13 +32,32 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-size: 100%;
     vertical-align: baseline;
 }
-
-/*box-sizing: border-box is most important to understand for a web developer*/
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box; /*disables extra height width due to margin/padding*/
+    font-family: "Gotham Rounded", arial;
+    color: var(--black-color);
 }
+
+
+
+.main-container {
+    margin: auto;
+    width: 90%;
+    z-index: 2;
+    background-color: white;
+    opacity: 0.92;
+    padding: 10px 10px 10px 10px;
+}
+
+.bg{
+    background-image: url("/bg.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
 
 @font-face {
     font-family: "Material Icons";
@@ -69,25 +88,13 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-family: "Ephesis", cursive;
 }
 
-/*body, iframe {*/
-/*  background-image: var(--body-linear-grad-color);*/
-/*  background-repeat: no-repeat;*/
-/*  background-size: 100% 100%;*/
-/*}*/
-
-* {
-    box-sizing: border-box;
-    font-family: "Gotham Rounded", arial;
-    color: var(--default-text-color);
-}
-
 div {
     margin-top: 2px;
 }
 
 .topbar {
     z-index: 1002;
-    width: 98vw;
+    width: calc(100% - 180px);
 }
 
 .fixed {

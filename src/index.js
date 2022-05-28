@@ -21,17 +21,29 @@ store.subscribe(() => {
     console.log('state object via subscribe', store)
 })
 
+//change background image setinterval
+const changeBg = () => {
+    let bodyBg = document.getElementById('body')
+    let imgNum = Math.floor(Math.random() * 8 + 1)
+    bodyBg.style.backgroundImage = `url("/bg${imgNum}.gif")`
+}
+
 const IndexApp = (<React.StrictMode>
-        <Provider store={store}>
-            <App/>
-        </Provider>
+        <div className='main-container'>
+            <Provider store={store}>
+                <App/>
+            </Provider>
+        </div>
     </React.StrictMode>
 )
 
 const root = document.getElementById("root")
 const isSSR = process.env.IS_SSR
-const renderMethod = isSSR ? ReactDOM.hydrate: ReactDOM.render
+const renderMethod = isSSR ? ReactDOM.hydrate : ReactDOM.render
 renderMethod(IndexApp, root)
+
+setInterval(changeBg, 5000)
+
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

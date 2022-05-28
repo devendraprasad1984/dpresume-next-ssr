@@ -1,8 +1,4 @@
-span, div, p {
-    font-family: inherit;
-    padding-left: 3px;
-    padding-right: 3px;
-}
+
 
 span.link:has(a.active) {
     border-bottom: 2px solid var(--gray-color);

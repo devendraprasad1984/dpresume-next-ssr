@@ -1,6 +1,0 @@
-const ENUMS={
-    INCREMENT: 'INCREMENT',
-    DECREMENT: 'DECREMENT',
-    FETCH_TODO: 'FETCH_TODO'
-}
-export default ENUMS

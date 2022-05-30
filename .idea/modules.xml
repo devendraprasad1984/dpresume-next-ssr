@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/dpresume-next-ssr.iml" filepath="$PROJECT_DIR$/dpresume-next-ssr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dpresume.iml" filepath="$PROJECT_DIR$/dpresume.iml" />
     </modules>
   </component>
 </project>

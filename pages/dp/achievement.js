@@ -1,10 +1,13 @@
 import React from 'react'
+import PageHeader from "../../core/PageHeader";
 
 const Achievement = (props) => {
 
     return (
         <div>
-            Achievement
+            <PageHeader>
+                Achievement
+            </PageHeader>
         </div>
     )
 }

@@ -1,0 +1,39 @@
+
+.page-container {
+  padding: 0 2rem;
+}
+
+
+.pageHeader {
+  justify-content: start;
+  align-items: center;
+  grid-gap: toRem(40);
+  padding: toRem(40) toRem(40) 0;
+  margin-bottom: toRem(40);
+}
+
+
+.rowGrid{
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto;
+}
+
+.colGrid{
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+

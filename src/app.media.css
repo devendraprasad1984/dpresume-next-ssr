@@ -24,6 +24,10 @@
         background-color: var(--white);
     }
 
+    .sidePicLeft{
+        width: 100%;
+    }
+
     .main-container {
         width: 100%;
         opacity: 0.92;

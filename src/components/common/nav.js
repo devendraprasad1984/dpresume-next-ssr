@@ -19,16 +19,16 @@ const Nav = (props) => {
         return config.menu.map((item, index) => {
             if (item.show === false) return null
             return (
-                <span key={"menu-item-" + index} className={"size15 margin-ud "+(ismobile?"xwhite":"")}>
-          <NavLink
-              exact={true}
-              activeClassName="active"
-              to={"/" + item.name.toLowerCase()}
-              onClick={linkClickPreHandler}
-          >
-            {item.name}
-          </NavLink>
-        </span>
+                <span key={"menu-item-" + index} className={"pad10 size15 margin-ud " + (ismobile ? "xwhite" : "")}>
+                  <NavLink
+                      exact={true}
+                      activeClassName="active"
+                      to={"/" + item.name.toLowerCase()}
+                      onClick={linkClickPreHandler}
+                  >
+                    {item.name}
+                  </NavLink>
+                </span>
             );
         });
     };
@@ -68,24 +68,28 @@ const Nav = (props) => {
                             </div>}
 
                             <div className='col'>
-                                <img className="imgPic img-animate" src={dp} alt={"dp"}/>
+                                {/*<img className="imgPic img-animate" src={dp} alt={"dp"}/>*/}
                                 <span>created with...</span>
-                                <div className='handwritting size15 row'>
-                                    <span className='success'>patience</span>
-                                    <span className='danger'>love</span>
-                                    <span className='info'>passion</span>
+                                <div className='size10'>
+                                    <span className='pad5 roundCorner success'>patience</span>
+                                    <span className='pad5 roundCorner danger'>love</span>
+                                    <span className='pad5 roundCorner info'>passion</span>
                                 </div>
                             </div>
-                            <div className="col">{displayMenu()}</div>
+                            <div className="sidePicRight">
+                                <div className='front col whiteLeftPanel h100'>{displayMenu()}</div>
+                            </div>
                         </div>
                     )}
-                    <div className="content-right">
-                        <Switch>
-                            <Route exact path={"/"}>
-                                <Home title={config.pageTitles.home}/>
-                            </Route>
-                            {displayRoute()}
-                        </Switch>
+                    <div id='sidePicLeft' className="content-right sidePicLeft">
+                        <div className='whiteRightPanel front h100'>
+                            <Switch>
+                                <Route exact path={"/"}>
+                                    <Home title={config.pageTitles.home}/>
+                                </Route>
+                                {displayRoute()}
+                            </Switch>
+                        </div>
                     </div>
                 </div>
             </HashRouter>

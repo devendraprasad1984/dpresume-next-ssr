@@ -7,11 +7,11 @@
     --grad-color1: #f8decc;
     --grad-color2: #d4f8d4;
     --grad-color3: white;
-    --link-active-color1: #8a1fc0;
-    --link-active-color2: #4d72c0;
+    --link-active-color1: #e32089;
+    --link-active-color2: #2c8d55;
     --gradient-image-color: linear-gradient(
-            115deg,
-            var(--link-active-color1) 20%,
+            150deg,
+            var(--link-active-color1) 40%,
             var(--link-active-color2) 60%
     );
     --left-panel-width: 20%;
@@ -24,6 +24,8 @@
     );
     --medium-violet: #b71d7d;
     --size10px: 10px;
+    --size15px: 15px;
+    --size20px: 20px;
 }
 
 /*box-model where width = element width + padding + borders = https://www.w3schools.com/css/css_boxmodel.asp*/
@@ -52,10 +54,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 .bg{
-    background-image: url("/assets/bg.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
+    /*background-image: url("/assets/bg.gif");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*z-index: -1;*/
 }
 
 

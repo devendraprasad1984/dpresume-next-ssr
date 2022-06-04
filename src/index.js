@@ -23,7 +23,7 @@ store.subscribe(() => {
 
 //change background image setinterval
 const changeBg = () => {
-    let bodyBg = document.getElementById('body')
+    let bodyBg = document.getElementById('sidePicLeft')
     let imgNum = Math.floor(Math.random() * 8 + 1)
     bodyBg.style.backgroundImage = `url("/assets/bg${imgNum}.gif")`
 }

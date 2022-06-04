@@ -1,6 +1,0 @@
-npx prisma init --datasource-provider sqlite
-https://pris.ly/d/getting-started
-npx prisma db push
-node prisma/seed
-npx prisma studio
-http://localhost:5555

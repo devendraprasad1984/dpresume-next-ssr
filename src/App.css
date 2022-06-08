@@ -403,8 +403,8 @@ section {
 
 .content-right {
     width: var(--right-panel-width);
-    padding-left: var(--size10px);
-    padding-right: var(--size10px);
+    /*padding-left: var(--size10px);*/
+    /*padding-right: var(--size10px);*/
     float: left;
 }
 

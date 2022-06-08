@@ -10,8 +10,13 @@ import NoData from "./nodata";
 const Nav = (props) => {
     const ismobile = mobileCheck();
     const [open, setOpen] = useState(!ismobile);
+    const [bgColor, setBgColor] = useState('black');
 
     const linkClickPreHandler = () => {
+        let num = Math.floor(Math.random() * config.colors.length);
+        let _bgcolor = config.colors[num] || "white";
+        setBgColor(_=>_bgcolor)
+
         if (!ismobile) return;
         setOpen(!open);
     };
@@ -19,7 +24,9 @@ const Nav = (props) => {
         return config.menu.map((item, index) => {
             if (item.show === false) return null
             return (
-                <span key={"menu-item-" + index} className={"pad10 size15 margin-ud " + (ismobile ? "xwhite" : "")}>
+                <span key={"menu-item-" + index}
+                      className={"pad10 size15 margin-ud " + (ismobile ? "xwhite" : "")}
+                >
                   <NavLink
                       exact={true}
                       activeClassName="active"
@@ -60,7 +67,7 @@ const Nav = (props) => {
             <HashRouter>
                 <div className="row">
                     {open && (
-                        <div className="flex1 content-left">
+                        <div className="flex1 content-left"   style={{backgroundColor: bgColor, color:'white'}}>
                             {ismobile && <div className='row'>
                                 <span className="right  bl size35 padding-rl" onClick={() => setOpen(!open)}>
                                     {open ? `${config.chars.close}` : `${config.chars.hamburger}`}
@@ -82,7 +89,7 @@ const Nav = (props) => {
                         </div>
                     )}
                     <div id='sidePicLeft' className="content-right sidePicLeft">
-                        <div className='whiteRightPanel front h100'>
+                        <div className='whiteRightPanel front h100' style={{backgroundColor: bgColor, color:'white'}}>
                             <Switch>
                                 <Route exact path={"/"}>
                                     <Home title={config.pageTitles.home}/>

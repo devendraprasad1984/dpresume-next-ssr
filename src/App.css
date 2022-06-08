@@ -4,10 +4,11 @@ span.link:has(a.active) {
 }
 
 .active {
-    background: var(--gradient-image-color);
+    /*background: var(--gradient-image-color);*/
     /*background-image: var(--gradient-image-color);*/
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    /*background-color: aquamarine;*/
     font-size: 25px;
     text-decoration: underline;
 }
@@ -186,7 +187,8 @@ div > .btn {
 }
 
 b {
-    color: var(--purple-color) !important;
+    /*color: var(--purple-color);*/
+    text-decoration: underline;
 }
 
 .pright {
@@ -383,7 +385,7 @@ section {
 }
 
 .content-left {
-    padding-left: 5px;
+    padding: 10px;
     width: var(--left-panel-width);
 }
 
@@ -492,6 +494,7 @@ samp {
     box-sizing: border-box;
     border-radius: 5px;
     box-shadow: 0 4px 4px 0 var(--gray-color);
+    background-color: #d3f8f8;
     /*opacity: 0.7;*/
 }
 
@@ -631,11 +634,11 @@ i,
 }
 
 .whiteLeftPanel {
-    background-color: var(--white) !important;
+    background-color: var(--white);
     opacity: 0.65;
 }
 .whiteRightPanel {
-    background-color: var(--white) !important;
+    background-color: var(--white);
     opacity: 0.92;
 }
 

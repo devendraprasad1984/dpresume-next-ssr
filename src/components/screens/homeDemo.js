@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useCallback} from "react";
 
 import {config} from "../../configs/config";
 import useAPI from "../../hooks/useAPI";
@@ -14,8 +14,8 @@ const HomeDemo = () => {
         const {links, youtube} = data;
         let printLinks = () =>
             links.map((x, i) => {
-                let num = Math.floor(Math.random() * config.colors.length);
-                let color = config.colors[num] || "white";
+                // let num = Math.floor(Math.random() * config.colors.length);
+                // let color = config.colors[num] || "white";
                 return (
                     <a
                         key={"link-demo" + i}
@@ -23,9 +23,7 @@ const HomeDemo = () => {
                         target="_blank"
                         href={x.href}
                     >
-            <span style={{color: color}} className="center pcenter">
-              {x.name}
-            </span>
+                        <span className="center pcenter">{x.name}</span>
                     </a>
                 );
             });
@@ -35,16 +33,16 @@ const HomeDemo = () => {
             return youtube.map((x, i) => {
                 return (
                     <span key={"link-video-demo" + i}>
-            <h2>{x.name}</h2>
-            <iframe
-                title={"my_vid_demo_" + i}
-                width="100%"
-                height="90%"
-                src={x.src}
-                frameBorder="0"
-                allowFullScreen="allowfullscreen"
-            />
-          </span>
+                        <h2>{x.name}</h2>
+                        <iframe
+                            title={"my_vid_demo_" + i}
+                            width="100%"
+                            height="90%"
+                            src={x.src}
+                            frameBorder="0"
+                            allowFullScreen="allowfullscreen"
+                        />
+                     </span>
                 );
             });
         }

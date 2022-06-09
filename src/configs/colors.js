@@ -37,4 +37,13 @@ export const colors = [
     "#9388d7",
     "#9b42d2",
 ];
-export default colors;
+
+export const bgColors = [
+    "#F7EEEE",
+    "#F9F2EB",
+    "#FFF4E5",
+    "#F0ECEC",
+    "#F8F8FF",
+    "#C0C0C0",
+    "#E6E6FA"
+];

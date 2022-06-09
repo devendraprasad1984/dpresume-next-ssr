@@ -690,7 +690,7 @@ i,
 
 .h100 {
     /*height: calc(100% - 100px);*/
-    height: 100% !important;
+    height: 100%;
 }
 
 .wid60 {

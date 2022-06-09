@@ -4,11 +4,12 @@ span.link:has(a.active) {
 }
 
 .active {
-    background: var(--gradient-image-color);
+    /*background: var(--gradient-image-color);*/
     /*background-image: var(--gradient-image-color);*/
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 25px;
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    font-size: 18px;
+    color: #181515 !important;
     text-decoration: underline;
 }
 
@@ -186,7 +187,8 @@ div > .btn {
 }
 
 b {
-    color: var(--purple-color) !important;
+    /*color: var(--purple-color);*/
+    text-decoration: underline;
 }
 
 .pright {
@@ -383,12 +385,12 @@ section {
 }
 
 .content-left {
-    padding-left: 5px;
+    padding: 10px;
     width: var(--left-panel-width);
 }
 
 .gapSwitchMobile {
-    margin-top: 10rem;
+    /*margin-top: 10rem;*/
 }
 
 .link {
@@ -403,8 +405,8 @@ section {
 
 .content-right {
     width: var(--right-panel-width);
-    padding-left: var(--size10px);
-    padding-right: var(--size10px);
+    /*padding-left: var(--size10px);*/
+    /*padding-right: var(--size10px);*/
     float: left;
 }
 
@@ -492,6 +494,7 @@ samp {
     box-sizing: border-box;
     border-radius: 5px;
     box-shadow: 0 4px 4px 0 var(--gray-color);
+    background-color: #d3f8f8;
     /*opacity: 0.7;*/
 }
 
@@ -631,12 +634,14 @@ i,
 }
 
 .whiteLeftPanel {
-    background-color: var(--white) !important;
-    opacity: 0.65;
+    /*background-color: var(--white);*/
+    /*opacity: 0.65;*/
+    z-index: 10;
 }
 .whiteRightPanel {
-    background-color: var(--white) !important;
-    opacity: 0.92;
+    z-index: 10;
+    background-color: var(--white);
+    opacity: 0.9;
 }
 
 .secondary {
@@ -660,8 +665,9 @@ i,
 }
 
 .sidePicLeft {
-    min-height: 100vh;
+    min-height: 500px;
     width: 100%;
+    /*height: 100%;*/
     background-image: url("/assets/bg.gif");
     background-repeat: no-repeat;
     background-position: center;
@@ -673,17 +679,18 @@ i,
     z-index: 99;
 }
 .sidePicRight {
-    width: 100%;
+    /*width: 100%;*/
     min-height: 100vh;
-    height: 100%;
+    /*height: 100%;*/
     background-image: url("/assets/dp.png");
     background-repeat: no-repeat;
-    background-size: contain;
-    /*opacity: 0.6;*/
+    background-size: cover;
+    opacity: 0.9;
 }
 
 .h100 {
-    height: 100%;
+    /*height: calc(100% - 100px);*/
+    height: 100% !important;
 }
 
 .wid60 {

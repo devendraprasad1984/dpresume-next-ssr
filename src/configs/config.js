@@ -3,7 +3,7 @@ import BaseHeader from "./baseHeader";
 import menu from "./menu";
 import endpoints from "./endpoints";
 import messages from "./messages";
-import colors from "./colors";
+import {colors, bgColors} from "./colors";
 import chars from "./chars";
 import pageTitles from "./pageTitles";
 import AppEnums from "./appEnums";
@@ -26,6 +26,7 @@ export const config = {
     endpoints,
     messages,
     colors,
+    bgColors,
     chars,
     pageTitles,
 };
@@ -207,7 +208,7 @@ export function TTS() {
 };
 
 
-export const consoleText = (words, id = 'text', colors = ['mediumslateblue']) => {
+export const consoleText = (words, id = 'text', colors = ['white']) => {
     if (words[0] === undefined) return
     if (words[0].length === 0) return
 

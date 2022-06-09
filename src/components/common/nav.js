@@ -7,11 +7,18 @@ import Home from "../screens/home";
 
 import NoData from "./nodata";
 
+let initRandomColorNum = Math.floor(Math.random() * config.bgColors.length);
+
 const Nav = (props) => {
     const ismobile = mobileCheck();
     const [open, setOpen] = useState(!ismobile);
+    const [bgColor, setBgColor] = useState(config.bgColors[initRandomColorNum]);
 
     const linkClickPreHandler = () => {
+        let num = Math.floor(Math.random() * config.bgColors.length);
+        let _bgcolor = config.bgColors[num] || "white";
+        setBgColor(_=>_bgcolor)
+
         if (!ismobile) return;
         setOpen(!open);
     };
@@ -19,7 +26,9 @@ const Nav = (props) => {
         return config.menu.map((item, index) => {
             if (item.show === false) return null
             return (
-                <span key={"menu-item-" + index} className={"pad10 size15 margin-ud " + (ismobile ? "xwhite" : "")}>
+                <span key={"menu-item-" + index}
+                      className={"pad10 size15 margin-ud " + (ismobile ? "xwhite" : "")}
+                >
                   <NavLink
                       exact={true}
                       activeClassName="active"
@@ -60,7 +69,7 @@ const Nav = (props) => {
             <HashRouter>
                 <div className="row">
                     {open && (
-                        <div className="flex1 content-left">
+                        <div className="sidePicRight flex1 content-left"   style={{backgroundColor: bgColor}}>
                             {ismobile && <div className='row'>
                                 <span className="right  bl size35 padding-rl" onClick={() => setOpen(!open)}>
                                     {open ? `${config.chars.close}` : `${config.chars.hamburger}`}
@@ -76,13 +85,11 @@ const Nav = (props) => {
                                     <span className='pad5 roundCorner info'>passion</span>
                                 </div>
                             </div>
-                            <div className="sidePicRight">
-                                <div className='front col whiteLeftPanel h100'>{displayMenu()}</div>
-                            </div>
+                            <div className='front col whiteLeftPanel h100'>{displayMenu()}</div>
                         </div>
                     )}
                     <div id='sidePicLeft' className="content-right sidePicLeft">
-                        <div className='whiteRightPanel front h100'>
+                        <div className='whiteRightPanel front h100' style={{backgroundColor: bgColor}}>
                             <Switch>
                                 <Route exact path={"/"}>
                                     <Home title={config.pageTitles.home}/>

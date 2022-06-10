@@ -30,6 +30,7 @@
     "bootstrap:hoistapp": "yarn lerna bootstrap",
     "start:lerna-app1": "lerna exec --scope @dp1/app1 -- yarn start1",
     "start:lerna-app": "lerna exec --scope @dp1/app1 -- yarn start",
+    "dev": "NODE_ENV=development PORT=3004 react-scripts start",
     "start": "NODE_ENV=development PORT=3004 react-scripts start & node ./SSRExpress/bootstrap.js",
     "local": "PORT=3004 react-scripts start",
     "dev:server": "NODE_ENV=development nodemon ./SSRExpress/bootstrap.js",

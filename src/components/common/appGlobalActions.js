@@ -46,18 +46,21 @@ const AppGlobalActions = (props) => {
     //     setIsBioSpeaking(true);
     // };
 
-    useEffect(() => {
-        modal("modallocation").initModel();
-        modal("testmodal").initModel();
-        modal("checknetwork").initModel();
-
-        //unmount
-        return () => {
-            setLonglat(null);
-            setWhereAmI(false);
-            setShownetwork(false)
-        };
-    }, []);
+    // useEffect(() => {
+    //     if(whereAmI)
+    //         modal("modallocation").initModel();
+    //     if(showscreenshot)
+    //         modal("testmodal").initModel();
+    //     if(shownetwork)
+    //         modal("checknetwork").initModel();
+    //
+    //     //unmount
+    //     return () => {
+    //         setLonglat(null);
+    //         setWhereAmI(false);
+    //         setShownetwork(false)
+    //     };
+    // }, []);
 
     const handleSwitchTheme = () => {
         let all = document.querySelector("*");
@@ -97,13 +100,14 @@ const AppGlobalActions = (props) => {
         let canvas = document.getElementById('canvas');
         let photo = document.getElementById('photo');
 
-        function clearCanvas(){
+        function clearCanvas() {
             let context = canvas.getContext('2d');
             context.fillStyle = "#AAA";
             context.fillRect(0, 0, 0, 0);
-            canvas.style.display='none'
+            canvas.style.display = 'none'
             // context.fillRect(0, 0, canvas.width, canvas.height);
         }
+
         function clearphoto() {
             clearCanvas()
             let data = canvas.toDataURL('image/png');
@@ -148,16 +152,17 @@ const AppGlobalActions = (props) => {
             }, false);
             clearphoto();
         }
-        startup(stream=>{
+
+        startup(stream => {
             try {
-                setTimeout(()=>{
-                    takepicture(()=>{
+                setTimeout(() => {
+                    takepicture(() => {
                         video.pause()
                         stream.getTracks()[0].stop()
-                        video.src=null
+                        video.src = null
                         clearCanvas()
                     })
-                },2000)
+                }, 2000)
             } catch (err) {
                 console.log("An error occurred: " + err);
             }
@@ -172,7 +177,7 @@ const AppGlobalActions = (props) => {
     }
 
     return (
-        <div className="row center">
+        <div className="row wid30">
             <button
                 className="xwhite green"
                 onClick={() => window.open("tel:+919582797772")}
@@ -186,61 +191,63 @@ const AppGlobalActions = (props) => {
             >
                 whatsapp me
             </button>
-            <DropDownGroupIcons id='idActionGlobalDropdown' placeholder='click to see demo web api...'>
-                <button
-                    className={!isDarkMode ? "primary" : "danger"}
-                    onClick={handleSwitchTheme}
-                >
-                    {isDarkMode ? "light theme" : "dark theme"}
-                </button>
-                <button
-                    className={!isFullscreen ? "primary" : "danger"}
-                    onClick={handleFullScreen}
-                >
-                    {!isFullscreen ? "fullscreen" : "exit fullscreen"}
-                </button>
-                <button
-                    id="modallocation"
-                    className={"primary"}
-                    onClick={() => handleLocation()}
-                >
-                    my location
-                </button>
 
-                <button
-                    id="testmodal"
-                    className={"primary"}
-                    onClick={() => setshowscreenshot(!showscreenshot)}
-                >
-                    Take Selfie
-                </button>
-                {/*<button*/}
-                {/*    className={"primary " + (isBioSpeaking ? "danger" : "")}*/}
-                {/*    onClick={handleSpeak}*/}
-                {/*>*/}
-                {/*    {isBioSpeaking ? "Stop Speaking" : "Speak Bio"}*/}
-                {/*</button>*/}
-                <span className="custom-option" data-value="network">
-                    <button id="checknetwork" className='success' onClick={() => handleNetworkCheck()}>Check Network Availability</button>
-                </span>
-            </DropDownGroupIcons>
+            <button
+                className={!isFullscreen ? "primary" : "danger"}
+                onClick={handleFullScreen}
+            >
+                {!isFullscreen ? "fullscreen" : "exit fullscreen"}
+            </button>
+            <button
+                id="modallocation"
+                className={"primary"}
+                onClick={() => handleLocation()}
+            >
+                my location
+            </button>
 
-            <Modalify
+            <button
+                id="testmodal"
+                className={"primary"}
+                onClick={() => setshowscreenshot(!showscreenshot)}
+            >
+                Take Selfie
+            </button>
+            <button id="checknetwork" className='success' onClick={() => handleNetworkCheck()}>Check Network Availability</button>
+            {/*<button*/}
+            {/*    className={"primary " + (isBioSpeaking ? "danger" : "")}*/}
+            {/*    onClick={handleSpeak}*/}
+            {/*>*/}
+            {/*    {isBioSpeaking ? "Stop Speaking" : "Speak Bio"}*/}
+            {/*</button>*/}
+            {/*<DropDownGroupIcons id='idActionGlobalDropdown' placeholder='click to see demo web api...'>*/}
+            {/*    /!*<button*!/*/}
+            {/*    /!*    className={!isDarkMode ? "primary" : "danger"}*!/*/}
+            {/*    /!*    onClick={handleSwitchTheme}*!/*/}
+            {/*    /!*>*!/*/}
+            {/*    /!*    {isDarkMode ? "light theme" : "dark theme"}*!/*/}
+            {/*    /!*</button>*!/*/}
+
+            {/*</DropDownGroupIcons>*/}
+
+            {whereAmI && <Modalify
                 tagid="modallocation"
                 show={whereAmI}
                 close={() => setWhereAmI(false)}
             >
                 long lat: {JSON.stringify(longlat)}
-            </Modalify>
-            <Modalify
+            </Modalify>}
+
+            {shownetwork && <Modalify
                 tagid="checknetwork"
                 show={shownetwork}
                 close={() => setShownetwork(!shownetwork)}
             >
                 <h2 className='danger'>network details</h2>
                 <HtmlComponent>{networkMsg}</HtmlComponent>
-            </Modalify>
-            <Modalify
+            </Modalify>}
+
+            {showscreenshot && <Modalify
                 tagid="testmodal"
                 show={showscreenshot}
                 close={() => setshowscreenshot(!showscreenshot)}
@@ -255,10 +262,10 @@ const AppGlobalActions = (props) => {
                     <h3 className='danger'>your image will apear here</h3>
                     <img id="photo" alt="The screen capture will appear in this box."/>
                 </div>
-            </Modalify>
+            </Modalify>}
 
 
-            <Modalify
+            {showWhatsappMsgWindow && <Modalify
                 tagid="btnwhatsapp"
                 show={showWhatsappMsgWindow}
                 close={() => setshowWhatsappMsgWindow(!showWhatsappMsgWindow)}
@@ -284,7 +291,7 @@ const AppGlobalActions = (props) => {
                 >
                     send
                 </button>
-            </Modalify>
+            </Modalify>}
         </div>
     );
 };

@@ -13,6 +13,11 @@ span.link:has(a.active) {
     text-decoration: underline;
 }
 
+.active-parent{
+    background-color: #e3dfdf;
+    opacity: 0.8;
+}
+
 div {
     text-align: justify !important;
 }
@@ -1147,8 +1152,8 @@ i,
 
 .modal-content {
     padding: 10px;
-    max-width: 100vw;
-    width: 90vw;
+    max-width: 100%;
+    width: 60%;
     position: relative;
     top: 10%;
     left: 0;

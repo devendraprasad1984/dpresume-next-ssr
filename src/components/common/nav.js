@@ -17,7 +17,7 @@ const Nav = (props) => {
     const linkClickPreHandler = () => {
         let num = Math.floor(Math.random() * config.bgColors.length);
         let _bgcolor = config.bgColors[num] || "white";
-        setBgColor(_=>_bgcolor)
+        setBgColor(_ => _bgcolor)
 
         if (!ismobile) return;
         setOpen(!open);
@@ -25,9 +25,12 @@ const Nav = (props) => {
     const displayMenu = () => {
         return config.menu.map((item, index) => {
             if (item.show === false) return null
+            // let isHome = window.location.hash === '#/' && item.name.toLowerCase() === 'home'
+            let isItemCurrent = window.location.hash.indexOf(item.name.toLowerCase()) !== -1
+            let activeParentClass = isItemCurrent ? 'active-parent' : ""
             return (
                 <span key={"menu-item-" + index}
-                      className={"pad10 size15 margin-ud " + (ismobile ? "xwhite" : "")}
+                      className={"pad10 size15 margin-ud " + activeParentClass + " " + (ismobile ? "xwhite" : "")}
                 >
                   <NavLink
                       exact={true}
@@ -69,7 +72,7 @@ const Nav = (props) => {
             <HashRouter>
                 <div className="row">
                     {open && (
-                        <div className="sidePicRight flex1 content-left"   style={{backgroundColor: bgColor}}>
+                        <div className="sidePicRight flex1 content-left" style={{backgroundColor: bgColor}}>
                             {ismobile && <div className='row'>
                                 <span className="right  bl size35 padding-rl" onClick={() => setOpen(!open)}>
                                     {open ? `${config.chars.close}` : `${config.chars.hamburger}`}

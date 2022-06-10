@@ -19,7 +19,7 @@ const HeaderInfo = (props) => {
         <p className="size10">{config.info}</p>
         <p className="size10">{config.contactline}</p>
       </div>
-      <AppGlobalActions />
+      {/*<AppGlobalActions />*/}
       {/*<div>*/}
       {/*    <Input label="search" placeholder="dummy search..."/>*/}
       {/*</div>*/}

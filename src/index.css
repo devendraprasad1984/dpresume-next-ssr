@@ -7,12 +7,12 @@
     --grad-color1: #f8decc;
     --grad-color2: #d4f8d4;
     --grad-color3: white;
-    --link-active-color1: #e32089;
-    --link-active-color2: #2c8d55;
+    --main-color1: #DECBA4;
+    --main-color2: #3E5151;
     --gradient-image-color: linear-gradient(
             150deg,
-            var(--link-active-color1) 40%,
-            var(--link-active-color2) 60%
+            var(--main-color1) 40%,
+            var(--main-color2) 60%
     );
     --left-panel-width: 20%;
     --right-panel-width: 100%;
@@ -39,7 +39,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     margin: 0;
     box-sizing: border-box; /*disables extra height width due to margin/padding*/
     font-family: "Gotham Rounded", arial;
-    color: var(--black-color) !important;
+    color: var(--main-color2);
 }
 
 
@@ -49,7 +49,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     width: 90%;
     z-index: 2;
     /*background-color: white;*/
-    opacity: 0.92;
+    /*opacity: 0.92;*/
     /*padding: 10px 10px 10px 10px;*/
 }
 
@@ -66,7 +66,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     /*background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);*/
 
     /*background-color: #3E5151;*/
-    background-image: linear-gradient(to right, #DECBA4, #3E5151);
+    background-image: linear-gradient(to right, var(--main-color1), var(--main-color2));
     /*background-image: linear-gradient(to right, #fc5c7d, #6a82fb);*/
     /*background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);*/
     /*background-image: linear-gradient(to right, #fffbd5, #b20a2c);*/

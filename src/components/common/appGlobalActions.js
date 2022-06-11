@@ -178,7 +178,7 @@ const AppGlobalActions = (props) => {
     }
 
     return (
-        <div className="row wid30">
+        <div className="row wrap">
             <button
                 className="xwhite green"
                 onClick={() => window.open("tel:+919582797772")}

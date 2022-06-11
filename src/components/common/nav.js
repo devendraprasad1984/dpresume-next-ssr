@@ -62,9 +62,11 @@ const Nav = (props) => {
     return (
         <div>
             <div className='row center'>
-                <span className='react-loading-icon'></span>
+                <span className='row'>
+                    <span className='circle'>v18.1</span>
+                    <span className='circle secondary react-loading-icon'></span>
+                </span>
                 <span className='size20'>Welcome, {localStorage.getItem(config.enums.localStorage.name)}!</span>
-                <span className='size10 bl'>React18</span>
                 {(!ismobile || !open) ? <span href='#' className="right bl xwhite size35 padding-rl" onClick={() => setOpen(!open)}>
                     {open ? `${config.chars.close}` : `${config.chars.hamburger}`}
                 </span> : null}
@@ -82,7 +84,7 @@ const Nav = (props) => {
                             <div className='col'>
                                 {/*<img className="imgPic img-animate" src={dp} alt={"dp"}/>*/}
                                 <span>created with...</span>
-                                <div className='size10'>
+                                <div className='size10 row wrap'>
                                     <span className='pad5 roundCorner success'>patience</span>
                                     <span className='pad5 roundCorner danger'>love</span>
                                     <span className='pad5 roundCorner info'>passion</span>

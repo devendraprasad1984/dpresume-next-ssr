@@ -196,6 +196,16 @@ b {
     text-decoration: underline;
 }
 
+.circle{
+    display: grid;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: var(--main-color2);
+    color: var(--main-color1);
+}
+
 .pright {
     display: flex;
     flex-direction: row;
@@ -312,15 +322,10 @@ pre {
     background-color: white;
 }
 
-/*footer,*/
-/*.bottom {*/
-/*    padding: 3px;*/
-/*    bottom: 0;*/
-/*    left: 0;*/
-/*    margin-top: 5em;*/
-/*    position: fixed;*/
-/*    width: 100%;*/
-/*}*/
+
+.bottom{
+    margin: 5rem 0 5rem 0;
+}
 
 section {
     /*padding: 4px;*/
@@ -498,17 +503,14 @@ samp {
     text-align: center;
     box-sizing: border-box;
     border-radius: 5px;
-    box-shadow: 0 4px 4px 0 var(--gray-color);
-    background-color: #d3f8f8;
-    /*opacity: 0.7;*/
+    background-color: var(--main-color1);
+    color: var(--main-color2);
 }
 
 .cards span:hover,
 .cards a:hover {
-    /*background-image: var(--gradient-image-color);*/
-    background-color: var(--black-color);
-    opacity: 0.8;
-    color: var(--white) !important;
+    background-color: var(--main-color2);
+    color: var(--main-color1);
 }
 
 .video-cards > span,
@@ -536,6 +538,11 @@ samp {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+}
+
+.wrap{
+    flex: auto;
+    flex-wrap: wrap;
 }
 
 .row * {
@@ -650,8 +657,8 @@ i,
 }
 
 .secondary {
-    background-color: #4b5054 !important;
-    color: var(--white) !important;
+    background-color: var(--main-color2) !important;
+    color: var(--main-color1) !important;
 }
 
 .success {
@@ -755,7 +762,7 @@ i,
 }
 
 .xred {
-    color: red !important;
+    color: #f3937f !important;
 }
 
 .xwhite {

@@ -3,7 +3,7 @@ import BaseHeader from "./baseHeader";
 import menu from "./menu";
 import endpoints from "./endpoints";
 import messages from "./messages";
-import {colors, bgColors} from "./colors";
+import {bgColors, colors} from "./colors";
 import chars from "./chars";
 import pageTitles from "./pageTitles";
 import AppEnums from "./appEnums";

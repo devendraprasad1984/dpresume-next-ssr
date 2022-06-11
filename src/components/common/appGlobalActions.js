@@ -9,12 +9,12 @@ import HtmlComponent from "./htmlComponent";
 // import useAPI from "../../hooks/useAPI";
 
 
-const themeBgColor = "black";
-const themeColor = "#4d4a4a";
+// const themeBgColor = "black";
+// const themeColor = "#4d4a4a";
 
 const AppGlobalActions = (props) => {
     const [isFullscreen, setIsFullscreen] = useState(false)
-    const [isDarkMode, setIsDarkMode] = useState(false)
+    // const [isDarkMode, setIsDarkMode] = useState(false)
     const [longlat, setLonglat] = useState(null)
     // const [isBioSpeaking, setIsBioSpeaking] = useState(false)
     const [showWhatsappMsgWindow, setshowWhatsappMsgWindow] = useState(false)
@@ -63,17 +63,17 @@ const AppGlobalActions = (props) => {
     //     };
     // }, []);
 
-    const handleSwitchTheme = () => {
-        let all = document.querySelector("*");
-        let _all = document.querySelectorAll(["div", "a", "h1", "h2", "li"]);
-        let curtheme = all.style.backgroundColor;
-        all.style.backgroundColor = curtheme === themeBgColor ? "" : themeBgColor;
-        // console.log(_all)
-        _all.forEach((elm) => {
-            elm.style.color = elm.style.color === "white" ? themeColor : "white";
-        });
-        setIsDarkMode(!isDarkMode);
-    };
+    // const handleSwitchTheme = () => {
+    //     let all = document.querySelector("*");
+    //     let _all = document.querySelectorAll(["div", "a", "h1", "h2", "li"]);
+    //     let curtheme = all.style.backgroundColor;
+    //     all.style.backgroundColor = curtheme === themeBgColor ? "" : themeBgColor;
+    //     // console.log(_all)
+    //     _all.forEach((elm) => {
+    //         elm.style.color = elm.style.color === "white" ? themeColor : "white";
+    //     });
+    //     setIsDarkMode(!isDarkMode);
+    // };
 
     // const handleScreenshot2 = () => {
     //     if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {

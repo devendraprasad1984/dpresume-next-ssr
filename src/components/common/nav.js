@@ -63,7 +63,8 @@ const Nav = (props) => {
         <div>
             <div className='row'>
                 <span className='xprimary size25'>Welcome, {localStorage.getItem(config.enums.localStorage.name)}!</span>
-                {(!ismobile || !open) ? <span href='#' className="right bl size35 padding-rl" onClick={() => setOpen(!open)}>
+                <span className='size10 bl'>React18</span>
+                {(!ismobile || !open) ? <span href='#' className="right bl xwhite size35 padding-rl" onClick={() => setOpen(!open)}>
                     {open ? `${config.chars.close}` : `${config.chars.hamburger}`}
                 </span> : null}
             </div>

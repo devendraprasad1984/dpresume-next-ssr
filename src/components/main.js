@@ -8,17 +8,16 @@ import Nav from "./common/nav";
 const Main = (props) => {
     return (
         <div>
-
-            <header className="blur topbar fixed">
+            <header className="">
                 <HeaderInfo/>
             </header>
-            <section className="height400 gapSwitchMobile">
+            <section className="">
                 <Nav/>
             </section>
             {/*<NoPropDrilling/>*/}
-            <footer>
+            <section>
                 <BottomBar/>
-            </footer>
+            </section>
         </div>
     );
 };

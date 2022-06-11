@@ -8,7 +8,7 @@ import NoData from "../common/nodata";
 import OneLinerHeader from "../common/oneLinerHeader";
 
 const Experience = (props) => {
-  const { data, loading, error, time } = useAPI(config.endpoints.EXPERIENCE);
+  const { data, loading, error } = useAPI(config.endpoints.EXPERIENCE);
 
   const display = () => {
     let keys = Object.keys(data);

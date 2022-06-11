@@ -2,8 +2,6 @@ import React from "react";
 
 import {config} from "../../configs/config";
 
-import AppGlobalActions from "./appGlobalActions";
-
 const HeaderInfo = (props) => {
   return (
     <div className="">

@@ -1,7 +1,5 @@
 import React, {useState} from "react";
 import {HashRouter, NavLink, Route, Switch} from "react-router-dom";
-
-import dp from "../../assets/images/dp.png";
 import {config, mobileCheck} from "../../configs/config";
 import Home from "../screens/home";
 

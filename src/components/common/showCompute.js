@@ -14,6 +14,6 @@ export default function ShowCompute(props) {
     )
 }
 ShowCompute.propTypes = {
-    time: PropTypes.number,
-    loadTime: PropTypes.number
+    time: PropTypes.any,
+    loadTime: PropTypes.any
 }

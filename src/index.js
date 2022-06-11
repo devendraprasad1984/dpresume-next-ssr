@@ -1,5 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
+import {createRoot, hydrateRoot} from "react-dom/client";
 
 import "./index.css";
 import App from "./App";
@@ -39,7 +40,7 @@ const IndexApp = (<React.StrictMode>
 
 const isSSR = process.env.IS_SSR
 const container = document.getElementById("root")
-const root = isSSR ? ReactDOM.hydrateRoot(container) : ReactDOM.createRoot(container)
+const root = isSSR ? hydrateRoot(container) : createRoot(container)
 // const renderMethod = isSSR ? ReactDOM.hydrate : ReactDOM.render
 // renderMethod(IndexApp, root)
 root.render(IndexApp)

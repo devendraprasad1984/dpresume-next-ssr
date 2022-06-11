@@ -5,7 +5,7 @@ export default (message) => {
     // console.time('pullapi'), console.timeEnd('pullapi')
     // var start = window.performance.now()
     // var end = window.performance.now()
-    let start=console.time('pullapi')
+    // let start=console.time('pullapi')
     let endTime=()=>(console.timeEnd('pullapi'))
     // const {uri, callback, msg, msgType} = message.data
     // console.log('message from worker', message.data)

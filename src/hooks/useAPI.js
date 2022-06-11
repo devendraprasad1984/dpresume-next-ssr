@@ -4,7 +4,7 @@ import get from "../apis";
 import {calculatePerformance} from "../configs/utils";
 
 const useAPI = (url) => {
-    let {runtime, perftime} = calculatePerformance() //closure
+    let {runtime} = calculatePerformance() //closure
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);

@@ -701,8 +701,8 @@ i,
     /*height: 100%;*/
     background-image: url("/assets/dp.png");
     background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.9;
+    background-size: contain;
+    /*opacity: 0.9;*/
 }
 
 .h100 {

@@ -37,12 +37,14 @@ const IndexApp = (<React.StrictMode>
     </React.StrictMode>
 )
 
-const root = document.getElementById("root")
 const isSSR = process.env.IS_SSR
-const renderMethod = isSSR ? ReactDOM.hydrate : ReactDOM.render
-renderMethod(IndexApp, root)
+const container = document.getElementById("root")
+const root = isSSR ? ReactDOM.hydrateRoot(container) : ReactDOM.createRoot(container)
+// const renderMethod = isSSR ? ReactDOM.hydrate : ReactDOM.render
+// renderMethod(IndexApp, root)
+root.render(IndexApp)
 
-setInterval(changeBg, 5000)
+setInterval(changeBg, 7000)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

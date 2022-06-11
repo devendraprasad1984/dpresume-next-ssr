@@ -1,12 +1,13 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 
-import {checkNetworkConnection, getLocation, modal, toggleFullScreen,} from "../../configs/config";
+import {checkNetworkConnection, getLocation, toggleFullScreen,} from "../../configs/config";
 
 import Input from "./input";
 import Modalify from "./modal";
-import DropDownGroupIcons from "./dropDownGroupIcons";
+// import DropDownGroupIcons from "./dropDownGroupIcons";
 import HtmlComponent from "./htmlComponent";
 // import useAPI from "../../hooks/useAPI";
+
 
 const themeBgColor = "black";
 const themeColor = "#4d4a4a";
@@ -15,7 +16,7 @@ const AppGlobalActions = (props) => {
     const [isFullscreen, setIsFullscreen] = useState(false)
     const [isDarkMode, setIsDarkMode] = useState(false)
     const [longlat, setLonglat] = useState(null)
-    const [isBioSpeaking, setIsBioSpeaking] = useState(false)
+    // const [isBioSpeaking, setIsBioSpeaking] = useState(false)
     const [showWhatsappMsgWindow, setshowWhatsappMsgWindow] = useState(false)
     const [showscreenshot, setshowscreenshot] = useState(false)
     const [whereAmI, setWhereAmI] = useState(false)
@@ -229,6 +230,7 @@ const AppGlobalActions = (props) => {
             {/*    /!*</button>*!/*/}
 
             {/*</DropDownGroupIcons>*/}
+
 
             {whereAmI && <Modalify
                 tagid="modallocation"

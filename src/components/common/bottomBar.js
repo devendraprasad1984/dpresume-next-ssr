@@ -32,6 +32,6 @@ const BottomBar = (props) => {
 
   if (loading) return <NoData text={config.messages.PLZ_WAIT} />;
   if (error) return <NoData text={config.messages.ERROR} />;
-  return <div className="bottom right margin-ud">{displayLinks()}</div>;
+  return <div className="">{displayLinks()}</div>;
 };
 export default React.memo(BottomBar);

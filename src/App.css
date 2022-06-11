@@ -312,15 +312,15 @@ pre {
     background-color: white;
 }
 
-footer,
-.bottom {
-    padding: 3px;
-    bottom: 0;
-    left: 0;
-    margin-top: 5em;
-    /*position: fixed;*/
-    width: 100%;
-}
+/*footer,*/
+/*.bottom {*/
+/*    padding: 3px;*/
+/*    bottom: 0;*/
+/*    left: 0;*/
+/*    margin-top: 5em;*/
+/*    position: fixed;*/
+/*    width: 100%;*/
+/*}*/
 
 section {
     /*padding: 4px;*/
@@ -680,6 +680,18 @@ i,
     /*background-attachment: fixed;*/
     /*opacity: 0.3;*/
 }
+
+.react-loading-icon {
+    min-height: 50px;
+    min-width: 50px;
+    height: 50px;
+    width: 50px;
+    background-image: url("/assets/react-loading4.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
 .front{
     z-index: 99;
 }
@@ -689,8 +701,8 @@ i,
     /*height: 100%;*/
     background-image: url("/assets/dp.png");
     background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.9;
+    background-size: contain;
+    /*opacity: 0.9;*/
 }
 
 .h100 {

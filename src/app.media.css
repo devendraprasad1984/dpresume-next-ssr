@@ -1,7 +1,7 @@
 @media screen and (max-width: 600px) {
 
     .flexbox {
-        grid-template-columns: repeat(auto, minmax(70px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         display: grid;
     }
 
@@ -9,9 +9,9 @@
         font-size: 20px;
     }
 
-    .fixed {
-        position: fixed;
-    }
+    /*.fixed {*/
+    /*    position: fixed;*/
+    /*}*/
 
     .content-left {
         position: fixed;
@@ -28,9 +28,6 @@
         width: 100%;
     }
 
-    .h100{
-        height: 100vh;
-    }
 
     .main-container {
         width: 100%;
@@ -50,9 +47,9 @@
         width: 100%;
     }
 
-    .gapSwitchMobile {
-        margin-top: 12em;
-    }
+    /*.gapSwitchMobile {*/
+    /*    margin-top: 12em;*/
+    /*}*/
 
     #imgPic, .imgPic {
         bottom: 0;
@@ -98,9 +95,9 @@
         line-height: 1;
     }
 
-    .row {
-        display: inline;
-        clear: both;
-        padding: unset;
-    }
+    /*.row {*/
+    /*    display: inline;*/
+    /*    clear: both;*/
+    /*    padding: unset;*/
+    /*}*/
 }

@@ -61,9 +61,11 @@ const Nav = (props) => {
     };
     return (
         <div>
-            <div className='row'>
-                <span className='xprimary size25'>Welcome, {localStorage.getItem(config.enums.localStorage.name)}!</span>
-                {(!ismobile || !open) ? <span href='#' className="right bl size35 padding-rl" onClick={() => setOpen(!open)}>
+            <div className='row center'>
+                <span className='react-loading-icon'></span>
+                <span className='size20'>Welcome, {localStorage.getItem(config.enums.localStorage.name)}!</span>
+                <span className='size10 bl'>React18</span>
+                {(!ismobile || !open) ? <span href='#' className="right bl xwhite size35 padding-rl" onClick={() => setOpen(!open)}>
                     {open ? `${config.chars.close}` : `${config.chars.hamburger}`}
                 </span> : null}
             </div>

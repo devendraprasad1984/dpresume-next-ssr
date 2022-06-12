@@ -8,6 +8,7 @@ import "./app.media.css";
 import reportWebVitals from "./reportWebVitals";
 import {Provider} from "react-redux";
 import store from "./_redux/store";
+import {Auth0Provider} from '@auth0/auth0-react'
 // import {watchNetworkConnection} from "./configs/config";
 // watchNetworkConnection()
 
@@ -18,9 +19,16 @@ import store from "./_redux/store";
 
 //contexts for state & prop management are pub-sub/context-consumer pattern
 //prop drilling - uni directional, top to bottom, parent to child way of data passing
-store.subscribe(() => {
-    console.log('state object via subscribe', store)
-})
+// store.subscribe(() => {
+//     console.log('state object via subscribe', store.getState())
+// })
+
+
+//getting vars from env file
+const isSSR = process.env.REACT_APP_IS_SSR === "false" ? false : true
+const auth0Domain = process.env.REACT_APP_AUTH0_DOMAIN
+const auth0Client = process.env.REACT_APP_AUTH0_ClIENT
+
 
 //change background image setinterval
 const changeBg = () => {
@@ -30,15 +38,20 @@ const changeBg = () => {
 }
 
 const IndexApp = (<React.StrictMode>
-        <div className='main-container'>
-            <Provider store={store}>
-                <App/>
-            </Provider>
-        </div>
+        <Auth0Provider
+            domain={auth0Domain}
+            clientId={auth0Client}
+            redirectUri={window.location.origin}
+        >
+            <div className='main-container'>
+                <Provider store={store}>
+                    <App/>
+                </Provider>
+            </div>
+        </Auth0Provider>
     </React.StrictMode>
 )
 
-const isSSR = process.env.IS_SSR
 const container = document.getElementById("root")
 const root = isSSR ? hydrateRoot(container) : createRoot(container)
 // const renderMethod = isSSR ? ReactDOM.hydrate : ReactDOM.render

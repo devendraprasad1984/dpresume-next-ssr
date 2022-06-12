@@ -4,6 +4,7 @@ import {config, mobileCheck} from "../../configs/config";
 import Home from "../screens/home";
 
 import NoData from "./nodata";
+import LoginWithAuth0 from "./loginAuth0";
 
 let initRandomColorNum = Math.floor(Math.random() * config.bgColors.length);
 
@@ -74,15 +75,18 @@ const Nav = (props) => {
             <HashRouter>
                 <div className="row">
                     {open && (
-                        <div className="sidePicRight flex1 content-left" style={{backgroundColor: bgColor}}>
+                        <div className="sidePicRight flex1 content-left">
                             {ismobile && <div className='row'>
                                 <span className="right  bl size35 padding-rl" onClick={() => setOpen(!open)}>
                                     {open ? `${config.chars.close}` : `${config.chars.hamburger}`}
                                 </span>
                             </div>}
 
-                            <div className='col'>
+                            <div className='col' >
                                 {/*<img className="imgPic img-animate" src={dp} alt={"dp"}/>*/}
+                                <div>
+                                    <LoginWithAuth0/>
+                                </div>
                                 <span>created with...</span>
                                 <div className='size10 row wrap'>
                                     <span className='pad5 roundCorner success'>patience</span>
@@ -90,7 +94,7 @@ const Nav = (props) => {
                                     <span className='pad5 roundCorner info'>passion</span>
                                 </div>
                             </div>
-                            <div className='front col whiteLeftPanel h100'>{displayMenu()}</div>
+                            <div className='front col whiteLeftPanel h100' style={{backgroundColor: bgColor}}>{displayMenu()}</div>
                         </div>
                     )}
                     <div id='sidePicLeft' className="content-right sidePicLeft">

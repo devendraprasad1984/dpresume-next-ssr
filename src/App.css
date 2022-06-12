@@ -646,8 +646,7 @@ i,
 }
 
 .whiteLeftPanel {
-    /*background-color: var(--white);*/
-    /*opacity: 0.65;*/
+    opacity: 0.85;
     z-index: 10;
 }
 .whiteRightPanel {
@@ -762,7 +761,7 @@ i,
 }
 
 .xred {
-    color: #f3937f !important;
+    color: #c0300f !important;
 }
 
 .xwhite {

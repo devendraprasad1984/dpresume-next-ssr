@@ -11,6 +11,7 @@ import pageTitles from "./pageTitles";
 import Notes from "../components/screens/notes";
 import Canada from "../components/screens/canda";
 import AppGlobalActions from "../components/common/appGlobalActions";
+import ShowAuth0Info from "../components/screens/showAuth0Info";
 
 const menu = [
     {
@@ -83,6 +84,14 @@ const menu = [
         uri: "",
         icon: "",
         component: <Notes title={pageTitles.notes}/>,
+        show: true
+    },
+    {
+        name: "User Auth0 Info",
+        action: "",
+        uri: "",
+        icon: "",
+        component: <ShowAuth0Info title={pageTitles.auth0Title}/>,
         show: true
     },
     {name: "Blogs", action: "", uri: "", icon: "", show: true},

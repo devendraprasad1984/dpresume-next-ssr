@@ -7,6 +7,7 @@ const pageTitles = {
   experience: "Overall Experience",
   projects: "few Project details ",
   skills: "Skills I know or can do",
+  auth0Title: "Logged In User Info",
   notes: "my self learning and notes",
   canada: "my express entry details for Canada"
 };

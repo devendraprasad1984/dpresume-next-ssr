@@ -39,11 +39,15 @@ export const colors = [
 ];
 
 export const bgColors = [
-    "#F7EEEE",
-    "#F9F2EB",
-    "#FFF4E5",
-    "#F0ECEC",
-    "#F8F8FF",
-    "#C0C0C0",
-    "#E6E6FA"
+    "#ACDDDE",
+    "#CAF1DE",
+    "#E1F8DC",
+    "#FEF8DD",
+    "#FFE7C7",
+    "#F7D8BA",
+    "#FBFFD5",
+    "#FFEFFF",
+    "#EDE5FF",
+    "#EAFFF4",
+    "#FFE8F4"
 ];

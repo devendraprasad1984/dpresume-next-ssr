@@ -94,7 +94,7 @@ const Nav = (props) => {
                                     <span className='pad5 roundCorner info'>passion</span>
                                 </div>
                             </div>
-                            <div className='front col whiteLeftPanel h100' style={{backgroundColor: bgColor}}>{displayMenu()}</div>
+                            <div className='front col whiteLeftPanel' style={{backgroundColor: bgColor}}>{displayMenu()}</div>
                         </div>
                     )}
                     <div id='sidePicLeft' className="content-right sidePicLeft">

@@ -73,16 +73,16 @@ const Nav = (props) => {
                 </span> : null}
             </div>
             <HashRouter>
-                <div className="row">
+                <div id='bggif' className="row h100 bggif">
                     {open && (
-                        <div className="sidePicRight flex1 content-left">
+                        <div className="flex1 content-left">
                             {ismobile && <div className='row'>
                                 <span className="right  bl size35 padding-rl" onClick={() => setOpen(!open)}>
                                     {open ? `${config.chars.close}` : `${config.chars.hamburger}`}
                                 </span>
                             </div>}
 
-                            <div className='col' >
+                            <div className='col'>
                                 {/*<img className="imgPic img-animate" src={dp} alt={"dp"}/>*/}
                                 <div>
                                     <LoginWithAuth0/>
@@ -94,18 +94,17 @@ const Nav = (props) => {
                                     <span className='pad5 roundCorner info'>passion</span>
                                 </div>
                             </div>
-                            <div className='front col whiteLeftPanel' style={{backgroundColor: bgColor}}>{displayMenu()}</div>
+                            <div className='front col whiteLeftPanel'>{displayMenu()}</div>
+                            <div className='sidePicLeft'></div>
                         </div>
                     )}
-                    <div id='sidePicLeft' className="content-right sidePicLeft">
-                        <div className='whiteRightPanel front h100' style={{backgroundColor: bgColor}}>
-                            <Switch>
-                                <Route exact path={"/"}>
-                                    <Home title={config.pageTitles.home}/>
-                                </Route>
-                                {displayRoute()}
-                            </Switch>
-                        </div>
+                    <div className="content-right whiteRightPanel front" style={{backgroundColor: bgColor}}>
+                        <Switch>
+                            <Route exact path={"/"}>
+                                <Home title={config.pageTitles.home}/>
+                            </Route>
+                            {displayRoute()}
+                        </Switch>
                     </div>
                 </div>
             </HashRouter>

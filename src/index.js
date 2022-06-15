@@ -32,9 +32,13 @@ const auth0Client = process.env.REACT_APP_AUTH0_ClIENT
 
 //change background image setinterval
 const changeBg = () => {
-    let bodyBg = document.getElementById('sidePicLeft')
-    let imgNum = Math.floor(Math.random() * 8 + 1)
-    bodyBg.style.backgroundImage = `url("/assets/bg${imgNum}.gif")`
+    let bodyBg = document.getElementById('bggif')
+    let imgNum = Math.floor(Math.random() * 9)
+    try{
+        bodyBg.style.backgroundImage = `url("/assets/bg${imgNum}.gif")`
+    }catch(err){
+
+    }
 }
 
 const IndexApp = (<React.StrictMode>

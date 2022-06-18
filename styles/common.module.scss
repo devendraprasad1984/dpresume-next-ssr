@@ -1,3 +1,4 @@
+@import "functions";
 
 .page-container {
   padding: 0 2rem;
@@ -7,8 +8,6 @@
 .pageHeader {
   justify-content: start;
   align-items: center;
-  grid-gap: toRem(40);
-  padding: toRem(40) toRem(40) 0;
   margin-bottom: toRem(40);
 }
 
@@ -17,6 +16,15 @@
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: auto;
+}
+
+.pad40{
+  padding: toRem(40) toRem(40) 0;
+}
+
+.marginUD{
+  margin-top: toRem(20);
+  margin-bottom: toRem(20);
 }
 
 .colGrid{
@@ -36,4 +44,8 @@
   flex-direction: column;
 }
 
+.footer{
+  position: relative;
+  bottom: 0;
+}
 

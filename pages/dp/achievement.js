@@ -1,15 +1,10 @@
 import React from 'react'
-import PageHeader from "../../core/PageHeader";
+import MainApp from "../mainApp";
 
 const Achievement = (props) => {
-
-    return (
-        <div>
-            <PageHeader>
-                Achievement
-            </PageHeader>
-        </div>
-    )
+    return <MainApp>
+        Achievement
+    </MainApp>
 }
 
 export default Achievement

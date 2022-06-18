@@ -1,13 +1,7 @@
-import commonStyles from '../styles/common.module.scss'
-import PageHeader from "../core/PageHeader";
+import MainApp from "./mainApp";
 
-export default function() {
-    return (
-        <div className={commonStyles.pageContainer}>
-            <PageHeader />
-            <footer>
-                footer
-            </footer>
-        </div>
-    )
+export default function () {
+    return <MainApp>
+        <div>Home Content</div>
+    </MainApp>
 }

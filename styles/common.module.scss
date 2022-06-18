@@ -353,3 +353,19 @@
 .size35 {
   font-size: toRem(35);
 }
+
+.nextjsLogo{
+  background: url('/static/images/nextjs-gif.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 120px
+}
+.reactjsLogo{
+  color: #222;
+  background: url('/static/images/react-gif.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 120px
+}

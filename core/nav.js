@@ -10,7 +10,10 @@ const btnNav = [
 
 const Nav = () => {
     const router = useRouter()
-    const activeColor = (menuRef) => router.pathname.indexOf(menuRef) !== -1 ? {color: "tomato"} : null
+    const activeColor = (menuRef) => {
+        let match = router.pathname.indexOf(menuRef) !== -1 || router.pathname === menuRef
+        return match ? {color: "tomato"} : null
+    }
 
     return <div className={[
         commonStyles.marginUD
@@ -41,6 +44,13 @@ const Nav = () => {
                         </a>
                     })
                 }
+            </div>
+            <div className={[
+                commonStyles.rowGrid,
+                commonStyles.marginUD
+            ].join(' ')}>
+                <span className={commonStyles.nextjsLogo}>NextJs</span>
+                <span className={commonStyles.reactjsLogo}>React18</span>
             </div>
         </div>
     </div>;

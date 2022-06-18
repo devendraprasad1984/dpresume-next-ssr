@@ -1,4 +1,5 @@
 const menus = [
+    {href: '/', name: 'Home'},
     {href: '/dp/achievement', name: 'Achievement'},
     {href: '/dp/blogs', name: 'Blogs'},
     {href: '/dp/certification', name: 'Certifications'},

@@ -8,11 +8,16 @@ const btnNav = [
     commonStyles.button32
 ].join(' ')
 
+const colorValue = {color: "tomato"}
+
 const Nav = () => {
     const router = useRouter()
     const activeColor = (menuRef) => {
-        let match = router.pathname.indexOf(menuRef) !== -1 || router.pathname === menuRef
-        return match ? {color: "tomato"} : null
+        let isHome = router.asPath === '/' && menuRef === '/'
+        let match = menuRef !== '/' && router.pathname.indexOf(menuRef) !== -1 && !isHome
+        if (isHome)
+            return colorValue
+        return match ? colorValue : null
     }
 
     return <div className={[

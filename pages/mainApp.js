@@ -1,21 +1,24 @@
 import commonStyles from '../styles/common.module.scss'
 import PageHeader from "../core/PageHeader";
 import PageFooter from "../core/PageFooter";
+import Nav from "../core/nav";
 
 export default function MainApp({children}) {
     return (
         <div className={[
             commonStyles.pageContainer,
-            commonStyles.pad40
         ].join(' ')}>
-            <PageHeader/>
-            <div className={[
-                commonStyles.marginUD,
-                commonStyles.mainAppContainer
-            ].join(' ')}>
-                {children}
+            <Nav/>
+            <div className={commonStyles.rightPanel}>
+                <PageHeader/>
+                <div className={[
+                    commonStyles.marginUD,
+                    commonStyles.mainAppContainer
+                ].join(' ')}>
+                    {children}
+                </div>
+                <PageFooter/>
             </div>
-            <PageFooter/>
         </div>
     )
 }

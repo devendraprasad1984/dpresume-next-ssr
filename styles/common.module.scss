@@ -9,9 +9,8 @@
   justify-content: start;
   align-items: center;
   margin-bottom: toRem(40);
-  background-color: #9139d9;
   padding: 10px;
-  color: white;
+  background-color: var(--colorAquaHaze);
 }
 
 .pageNav {
@@ -37,6 +36,11 @@
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: auto;
+}
+
+.gridContentAtCorners{
+  justify-content: space-between;
+  align-content: space-between;
 }
 
 .pad40 {
@@ -80,19 +84,17 @@
 .footer {
   position: relative;
   bottom: 0;
-  background-color: #1ebeba;
   padding: 10px;
-  color: white;
+  background-color: var(--colorAquaHaze);
 }
 
 .mainAppContainer {
   min-height: 700px;
   height: 700px;
-  background-color: #e5e1f8;
   padding: 10px;
-  color: #575454;
   position: relative;
   overflow: auto;
+  background-color: #edfafc;
 }
 
 .button45 {
@@ -326,4 +328,28 @@
   background-color: #c85000;
   box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
   transform: translateY(0);
+}
+
+.size10 {
+  font-size: toRem(10);
+}
+
+.size15 {
+  font-size: toRem(15);
+}
+
+.size20 {
+  font-size: toRem(20);
+}
+
+.size25 {
+  font-size: toRem(25);
+}
+
+.size30 {
+  font-size: toRem(30);
+}
+
+.size35 {
+  font-size: toRem(35);
 }

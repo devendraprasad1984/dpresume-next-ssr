@@ -1,6 +1,7 @@
 import React from "react";
-
+import {useRouter} from "next/router";
 import commonStyles from "../styles/common.module.scss";
+import config from '../config'
 
 const btnNav = [
     commonStyles.navBtn,
@@ -8,6 +9,9 @@ const btnNav = [
 ].join(' ')
 
 const Nav = () => {
+    const router = useRouter()
+    const activeColor = (menuRef) => router.pathname.indexOf(menuRef) !== -1 ? {color: "tomato"} : null
+
     return <div className={[
         commonStyles.marginUD
     ].join(' ')}>
@@ -25,14 +29,18 @@ const Nav = () => {
                 </div>
             </div>
             <div className={commonStyles.column}>
-                <a className={btnNav} href='/dp/achievement'>Achievement</a>
-                <a className={btnNav} href='/dp/blogs'>Blogs</a>
-                <a className={btnNav} href='/dp/certification'>Certifications</a>
-                <a className={btnNav} href='/dp/projects'>Projects</a>
-                <a className={btnNav} href='/dp/education'>Education</a>
-                <a className={btnNav} href='/dp/notes'>Notes</a>
-                <a className={btnNav} href='/dp/skills'>Skills</a>
-                <a className={btnNav} href='/dp/somejs'>Some JS + Auth0</a>
+                {
+                    config.menus.map(menu => {
+                        return <a
+                            key={'id' + menu.name}
+                            className={btnNav}
+                            href={menu.href}
+                            style={activeColor(menu.href)}
+                        >
+                            {menu.name}
+                        </a>
+                    })
+                }
             </div>
         </div>
     </div>;

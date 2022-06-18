@@ -8,9 +8,17 @@ const btnNav = [
     commonStyles.button32
 ].join(' ')
 
+const colorValue = {color: "tomato"}
+
 const Nav = () => {
     const router = useRouter()
-    const activeColor = (menuRef) => router.pathname.indexOf(menuRef) !== -1 ? {color: "tomato"} : null
+    const activeColor = (menuRef) => {
+        let isHome = router.asPath === '/' && menuRef === '/'
+        let match = menuRef !== '/' && router.pathname.indexOf(menuRef) !== -1 && !isHome
+        if (isHome)
+            return colorValue
+        return match ? colorValue : null
+    }
 
     return <div className={[
         commonStyles.marginUD
@@ -41,6 +49,13 @@ const Nav = () => {
                         </a>
                     })
                 }
+            </div>
+            <div className={[
+                commonStyles.rowGrid,
+                commonStyles.marginUD
+            ].join(' ')}>
+                <span className={commonStyles.nextjsLogo}>NextJs</span>
+                <span className={commonStyles.reactjsLogo}>React18</span>
             </div>
         </div>
     </div>;

@@ -1,5 +1,5 @@
 import React, {ReactNode} from "react";
-
+import config from '../config'
 import commonStyles from "../styles/common.module.scss";
 
 interface Props {
@@ -7,6 +7,8 @@ interface Props {
 }
 
 const PageHeader = ({children}: Props) => {
+    const {name, title, headline, email, phone} = config.base
+
     return <div className={[
         commonStyles.marginUD
     ].join(' ')}>
@@ -14,10 +16,10 @@ const PageHeader = ({children}: Props) => {
             commonStyles.pageHeader,
             commonStyles.colGrid,
         ].join(' ')}>
-            <span>Devendra Prasad</span>
-            <span>Technophile . Inquisitive . Motivated . Self-Learner</span>
-            <span>Tech Lead UI Developer</span>
-            <span>devendraprasad1984@gmail.com, +91 9582797772</span>
+            <span>{name}</span>
+            <span>{headline}</span>
+            <span>{title}</span>
+            <span>{email}, {phone}</span>
         </div>
         <div>{children}</div>
     </div>;

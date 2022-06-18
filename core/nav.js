@@ -1,22 +1,12 @@
 import React from "react";
 import {useRouter} from "next/router";
 import commonStyles from "../styles/common.module.scss";
+import config from '../config'
 
 const btnNav = [
     commonStyles.navBtn,
     commonStyles.button32
 ].join(' ')
-
-const menus = [
-    {href: '/dp/achievement', name: 'Achievement'},
-    {href: '/dp/blogs', name: 'Blogs'},
-    {href: '/dp/certification', name: 'Certifications'},
-    {href: '/dp/projects', name: 'Projects'},
-    {href: '/dp/education', name: 'Education'},
-    {href: '/dp/notes', name: 'Notes'},
-    {href: '/dp/skills', name: 'Skills'},
-    {href: '/dp/somejs', name: 'Some JS + Auth0'},
-]
 
 const Nav = () => {
     const router = useRouter()
@@ -40,7 +30,7 @@ const Nav = () => {
             </div>
             <div className={commonStyles.column}>
                 {
-                    menus.map(menu => {
+                    config.menus.map(menu => {
                         return <a
                             key={'id' + menu.name}
                             className={btnNav}

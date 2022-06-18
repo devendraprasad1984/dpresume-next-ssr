@@ -14,12 +14,20 @@ const PageHeader = ({children}: Props) => {
     ].join(' ')}>
         <div className={[
             commonStyles.pageHeader,
-            commonStyles.colGrid,
+            commonStyles.rowGrid,
+            commonStyles.gridContentAtCorners
         ].join(' ')}>
-            <span>{name}</span>
-            <span>{headline}</span>
-            <span>{title}</span>
-            <span>{email}, {phone}</span>
+            <div className={commonStyles.colGrid}>
+                <span className={commonStyles.size25}>{name}</span>
+                <span className={commonStyles.size10}>{headline}</span>
+            </div>
+            <div className={[
+                commonStyles.colGrid,
+                commonStyles.right
+            ].join(' ')}>
+                <span className={commonStyles.size25}>{title}</span>
+                <span className={commonStyles.size10}>{email}, {phone}</span>
+            </div>
         </div>
         <div>{children}</div>
     </div>;

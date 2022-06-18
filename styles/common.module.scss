@@ -39,6 +39,11 @@
   grid-template-columns: auto;
 }
 
+.gridContentAtCorners{
+  justify-content: space-between;
+  align-content: space-between;
+}
+
 .pad40 {
   padding: toRem(40) toRem(40) 0;
 }
@@ -326,4 +331,28 @@
   background-color: #c85000;
   box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
   transform: translateY(0);
+}
+
+.size10 {
+  font-size: toRem(10);
+}
+
+.size15 {
+  font-size: toRem(15);
+}
+
+.size20 {
+  font-size: toRem(20);
+}
+
+.size25 {
+  font-size: toRem(25);
+}
+
+.size30 {
+  font-size: toRem(30);
+}
+
+.size35 {
+  font-size: toRem(35);
 }

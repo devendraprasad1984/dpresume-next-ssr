@@ -1,12 +1,11 @@
 import React from 'react'
+import MainApp from "../mainApp";
 
 const Projects = (props) => {
+    return <MainApp>
+        Projects
+    </MainApp>
 
-    return (
-        <div>
-            Projects
-        </div>
-    )
 }
 
 export default Projects

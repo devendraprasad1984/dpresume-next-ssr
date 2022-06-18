@@ -1,12 +1,11 @@
 import React from 'react'
+import MainApp from "../mainApp";
 
 const Blogs = (props) => {
+    return <MainApp>
+        Blogs
+    </MainApp>
 
-    return (
-        <div>
-            Blogs
-        </div>
-    )
 }
 
 export default Blogs

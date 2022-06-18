@@ -10,7 +10,8 @@ export default function MainApp({children}) {
         ].join(' ')}>
             <PageHeader/>
             <div className={[
-                commonStyles.marginUD
+                commonStyles.marginUD,
+                commonStyles.mainAppContainer
             ].join(' ')}>
                 {children}
             </div>

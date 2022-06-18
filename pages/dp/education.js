@@ -1,12 +1,11 @@
 import React from 'react'
+import MainApp from "../mainApp";
 
 const Education = (props) => {
+    return <MainApp>
+        Education
+    </MainApp>
 
-    return (
-        <div>
-            Education
-        </div>
-    )
 }
 
 export default Education

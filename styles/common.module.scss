@@ -1,4 +1,4 @@
-@import "functions";
+@import "styles/functions";
 
 .page-container {
   padding: 0 2rem;
@@ -9,6 +9,9 @@
   justify-content: start;
   align-items: center;
   margin-bottom: toRem(40);
+  background-color: #9139d9;
+  padding: 10px;
+  color: white;
 }
 
 
@@ -47,5 +50,14 @@
 .footer{
   position: relative;
   bottom: 0;
+  background-color: #1ebeba;
+  padding: 10px;
+  color: white;
 }
 
+.mainAppContainer{
+  min-height: 700px;
+  background-color: #5d52b1;
+  padding: 10px;
+  color: white;
+}

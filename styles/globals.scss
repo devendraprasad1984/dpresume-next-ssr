@@ -1,6 +1,6 @@
 @import "functions";
 @import "variables";
-@import "typography";
+//@import "typography";
 @import "form";
 
 /* dm-sans-regular - latin */
@@ -65,15 +65,11 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+.body {
   min-height: 100vh;
   overscroll-behavior-y: none;
-  padding: 0;
-  margin: 0;
-  font-family: $baseFontFamily;
-  font-weight: $fontWeightRegular;
+  background-color: #c5eede;
   color: var(--colorSteelGrey);
-  text-align: left;
 }
 
 [tabindex="-1"]:focus {
@@ -149,24 +145,24 @@ select {
   border: 0;
 }
 
-textarea,
-input {
-  appearance: none;
-  -webkit-appearance: none;
-}
+//textarea,
+//input {
+//  appearance: none;
+//  -webkit-appearance: none;
+//}
 
 textarea {
   overflow: auto;
   resize: vertical;
 }
 
-input {
-  @extend %textInput;
-}
-
-textarea {
-  @extend %textArea;
-}
+//input {
+//  @extend %textInput;
+//}
+//
+//textarea {
+//  @extend %textArea;
+//}
 
 table {
   border-collapse: collapse;
@@ -222,9 +218,9 @@ pre {
   min-height: 100vh;
 }
 
-.header {
-  @extend %header;
-}
+//.header {
+//  @extend %header;
+//}
 
 .smallHeader {
   @extend %smallHeader;
@@ -242,9 +238,9 @@ pre {
   @extend %body;
 }
 
-.headerText {
-  @extend %headerText;
-}
+//.headerText {
+//  @extend %headerText;
+//}
 
 .smallBodyMedium {
   @extend %smallBodyMedium;

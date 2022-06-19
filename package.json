@@ -6,11 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "prepare": "husky install",
+    "lint": "next lint --fix"
   },
   "lint-staged": {
     "*.ts*": "eslint --fix",
-    "*.scss": "prettier --write"
+    "*.js": "eslint --fix",
+    "*.scss": "prettier --write",
+    "*.css": "prettier --write"
   },
   "dependencies": {
     "next": "12.1.6",

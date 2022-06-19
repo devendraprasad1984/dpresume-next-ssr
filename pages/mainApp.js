@@ -6,7 +6,7 @@ import Nav from "../core/nav";
 export default function MainApp({children}) {
     return (
         <div className={[
-            commonStyles.pageContainer,
+            commonStyles.textColor
         ].join(' ')}>
             <Nav/>
             <div className={commonStyles.rightPanel}>

@@ -16,17 +16,16 @@ const ShowProjects = () => {
     if (!projects) return null
     const projectKeys = Object.keys(projects)
     return <>
-        {projectKeys.filter(key=>projects[key].length!==0).map((line, id) => {
+        {projectKeys.filter(key => projects[key].length !== 0).map((line, id) => {
             return <div>
-                <h3 key={`line-${id}`}>
-                    {line}
-                </h3>
-                {typeof projects[line]==='object' && projects[line].map(d=>{
-                    return <ul>
-                        <li>{d.name}</li>
-                    </ul>
+                <div className={styles.size30} key={`line-${id}`}>{line}</div>
+                {typeof projects[line] === 'object' && projects[line].map(d => {
+                    return <div className={[styles.column, styles.marginUD].join(' ')}>
+                        <div className={styles.size20}>{d.name}</div>
+                        <div className={styles.size15}>{d.desc}</div>
+                    </div>
                 })}
-                {typeof projects[line]==='string' && projects[line]}
+                {typeof projects[line] === 'string' && projects[line]}
             </div>
         })}
     </>

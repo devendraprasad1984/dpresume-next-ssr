@@ -3,7 +3,7 @@ import MainApp from "../mainApp";
 
 const Blogs = (props) => {
     return <MainApp>
-        Blogs
+        <h2>Blogs</h2>
     </MainApp>
 
 }

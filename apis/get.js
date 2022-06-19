@@ -1,4 +1,4 @@
-const getFromApi = async (url, callback) => {
+const getFromApi = (url, callback) => {
     // let res = await fetch(url)
     // let data = await res.json()
     // // console.log('DATA',data)

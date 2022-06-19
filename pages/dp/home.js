@@ -1,41 +1,13 @@
 import React from 'react'
-import getFromApi from "../../apis/get";
-
-// export async function getStaticProps(context) {
-//     return {
-//         props: {
-//             data: 'home content fetched'
-//         }
-//     }
-// }
+import config from "../../config";
+import ListDisplay from "../../components/listDisplay";
 
 
-function Home({data}) {
-    console.log(data)
-    const handleClick = () => {
-        getFromApi('/resources/summary.json', (res) => {
-            console.log('data summary', res
-            )
-        })
-    }
-
+function Home(props) {
     return <div>
-        Home Content
-        <button onClick={handleClick}>Pull Data Test</button>
+        <h2>Home</h2>
+        <ListDisplay url={config.endpoints.summary}/>
     </div>
 }
 
 export default Home
-
-
-export async function getServerSideProps(context) {
-    context.res.setHeader(
-        'Cache-Control',
-        'public, s-maxage=10, stale-while-revalidate=59'
-    )
-    return {
-        props: {
-            data: 'home content fetched'
-        }
-    }
-}

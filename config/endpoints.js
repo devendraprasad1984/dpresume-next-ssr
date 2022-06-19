@@ -3,6 +3,7 @@ const endpoints = {
     summary: `${resources}/summary.json`,
     achievements: `${resources}/achievements.json`,
     blogs: `${resources}/blogs.json`,
+    demo: `${resources}/demo.json`,
     certifications: `${resources}/certifications.json`,
     education: `${resources}/education.json`,
     links: `${resources}/links.json`,

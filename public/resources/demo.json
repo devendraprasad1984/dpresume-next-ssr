@@ -73,23 +73,6 @@
       "name": "Loan Ledger Python Django API App"
     }
   ],
-  "videos": [
-    {
-      "src": "https://dpresume.com/bmi/demo.webm",
-      "type": "video/webm",
-      "name": "NodeJs BMI App"
-    },
-    {
-      "src": "https://dpresume.com/docs/bdfdemojan21.webm",
-      "type": "video/webm",
-      "name": "BDF React-Native App"
-    },
-    {
-      "src": "https://dpresume.com/docs/supply-chain.webm",
-      "type": "video/webm",
-      "name": "Supply Chain React-Native App"
-    }
-  ],
   "youtube": [
     {
       "src": "https://www.youtube.com/embed/6-v_vIxyB4g",

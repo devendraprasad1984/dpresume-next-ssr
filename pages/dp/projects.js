@@ -1,9 +1,12 @@
 import React from 'react'
 import MainApp from "../mainApp";
+import ShowProjects from "../../components/showProjects";
+import style from "../../styles/common.module.scss";
 
 const Projects = (props) => {
     return <MainApp>
-        Projects
+        <h2 className={style.pageHeading}>Projects</h2>
+        <ShowProjects/>
     </MainApp>
 
 }

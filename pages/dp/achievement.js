@@ -2,10 +2,11 @@ import React from 'react'
 import MainApp from "../mainApp";
 import config from "../../config";
 import ListDisplay from "../../components/listDisplay";
+import style  from '../../styles/common.module.scss'
 
 const Achievement = (props) => {
     return <MainApp>
-        <h2>Achievements</h2>
+        <h2 className={style.pageHeading}>Achievements</h2>
         <ListDisplay url={config.endpoints.achievements}/>
     </MainApp>
 }

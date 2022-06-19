@@ -2,6 +2,7 @@ import React, {useEffect, ReactElement} from "react";
 import { AppContext, AppInitialProps, AppProps } from "next/app";
 import Head from "next/head";
 import {NextComponentType} from "next";
+import '../styles/app.css'
 
 interface Props {
     Component: any;

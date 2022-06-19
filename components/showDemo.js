@@ -25,7 +25,7 @@ const ShowDemo = () => {
 
     return <>
         <div className={[demoRowStyle, styles.button5].join(' ')} onClick={()=>setShowDemoSection(!showDemoSection)}>Apps Demo</div>
-        {showDemoSection && <div className={demoRowStyle}>
+        {showDemoSection && <div className={[demoRowStyle, styles.card].join(' ')}>
             {links.map((line, id) => {
                 return <a key={`line-${id}`} href={line.href} target={'_blank'}>
                     {line.name}
@@ -35,7 +35,7 @@ const ShowDemo = () => {
 
 
         <div className={[demoRowStyle, styles.button53].join(' ')} onClick={()=>setShowYoutubeSection(!showYoutubeSection)}>Demo on Youtube</div>
-        {showYoutubeSection && <div className={demoRowStyle}>
+        {showYoutubeSection && <div className={[demoRowStyle, styles.card].join(' ')}>
             {youtube.map((line, id) => {
                 return <a key={`line-${id}`} href={line.src} target={'_blank'}>
                     {line.name}

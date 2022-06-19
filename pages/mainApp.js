@@ -1,7 +1,7 @@
-import commonStyles from '../styles/common.module.scss'
 import PageHeader from "../core/PageHeader";
 import PageFooter from "../core/PageFooter";
 import Nav from "../core/nav";
+import commonStyles from '../styles/common.module.scss'
 
 export default function MainApp({children}) {
     return (

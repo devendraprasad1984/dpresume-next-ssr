@@ -15,7 +15,7 @@ const ListDisplay = ({url}) => {
 
     return <ul className={styles.ul}>
         {pageData.map((line, id) => {
-            return <li key={`line-${id}`}>{line}</li>
+            return <li key={`line-${id}`} dangerouslySetInnerHTML={ {__html: line} }></li>
         })}
     </ul>
 }

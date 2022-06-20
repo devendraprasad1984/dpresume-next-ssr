@@ -51,6 +51,12 @@ html {
     color: var(--colorSteelGrey);
 }
 
+a {
+    text-decoration: none;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
 [tabindex="-1"]:focus {
     outline: none !important;
 }
@@ -198,4 +204,24 @@ pre {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #5d52b1;
+}
+
+
+.navBtn {
+    padding: 10px;
+    text-decoration: none;
+    color: var(--main-color);
+    margin: 3px;
+    text-align: left;
+    background-color: #FFE7E7;
+    border: 1px solid #FEE0E0;
+    transition: border .2s ease-in-out, box-shadow .2s ease-in-out;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+.active, .navBtn:hover {
+    background-color: #f8a39b;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
+    color: #222;
+    font-weight: bolder;
 }

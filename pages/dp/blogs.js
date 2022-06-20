@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MainApp from "../mainApp";
 import style from "../../styles/common.module.scss";
 

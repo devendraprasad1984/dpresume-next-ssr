@@ -218,6 +218,7 @@ pre {
     transition: border .2s ease-in-out, box-shadow .2s ease-in-out;
     font-size: 1rem;
     border-radius: 10px;
+    cursor: pointer;
 }
 .active, .navBtn:hover {
     background-color: #f8a39b;

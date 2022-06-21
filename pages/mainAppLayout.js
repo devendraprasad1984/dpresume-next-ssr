@@ -3,7 +3,7 @@ import PageFooter from "../core/PageFooter";
 import Nav from "../core/nav";
 import style from "../styles/common.module.scss";
 
-export default function MainApp({ children }) {
+export default function MainAppLayout({ children }) {
   return (
     <div className={[style.textColor].join(" ")}>
       <Nav />

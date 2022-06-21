@@ -6,11 +6,11 @@ import style from "../../styles/common.module.scss";
 
 function Home() {
   return (
-    <div>
+    <>
       <h2 className={style.pageHeading}>Home</h2>
       <ListDisplay url={config.endpoints.summary} />
       <ShowDemo />
-    </div>
+    </>
   );
 }
 

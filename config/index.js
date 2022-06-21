@@ -3,9 +3,9 @@ import base from "./base";
 import endpoints from "./endpoints";
 
 const config = {
-    menus,
-    base,
-    endpoints
-}
+  menus,
+  base,
+  endpoints,
+};
 
-export default config
+export default config;

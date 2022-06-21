@@ -1,13 +1,8 @@
-import React, { useEffect, useState } from "react";
-import MainApp from "../mainApp";
+import React from "react";
 import style from "../../styles/common.module.scss";
 
 const Blogs = () => {
-  return (
-    <MainApp>
-      <h2 className={style.pageHeading}>Blogs</h2>
-    </MainApp>
-  );
+  return <h2 className={style.pageHeading}>Blogs</h2>;
 };
 
 export default Blogs;

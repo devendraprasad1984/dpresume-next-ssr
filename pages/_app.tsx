@@ -3,6 +3,7 @@ import { AppContext, AppInitialProps, AppProps } from "next/app";
 import Head from "next/head";
 import { NextComponentType } from "next";
 import "../styles/app.css";
+import MainAppLayout from "./mainAppLayout";
 
 const MyApp: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
   Component,
@@ -36,7 +37,10 @@ const MyApp: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
         <meta name="theme-color" content="#ffffff" />
         <title>Devendra Prasad</title>
       </Head>
-      <Component {...pageProps} />
+      {/*this is out root component, and all pages will applies with changes here*/}
+      <MainAppLayout>
+        <Component {...pageProps} />
+      </MainAppLayout>
     </>
   );
 };

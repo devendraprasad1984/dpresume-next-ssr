@@ -1,12 +1,11 @@
-import MainApp from "./mainApp";
 import Home from "./dp/home";
 
 export default function ({ data }) {
   return (
-    <MainApp>
+    <>
       <div>{data}</div>
       <Home />
-    </MainApp>
+    </>
   );
 }
 

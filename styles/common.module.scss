@@ -1,5 +1,6 @@
 @import "styles/functions";
 
+//become local/scoped to the components they are imported in
 .pageHeader {
   justify-content: start;
   align-items: center;

@@ -6,6 +6,7 @@ const config = {
   menus,
   base,
   endpoints,
+  revalidateTime: 24 * 60 * 60,
 };
 
 export default config;

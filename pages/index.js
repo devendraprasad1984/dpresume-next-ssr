@@ -1,12 +1,17 @@
-import Home from "./dp/home";
 import { getFromApiAsync } from "../apis/get";
 import config from "../config";
+import style from "../styles/common.module.scss";
+import ListDisplay from "../components/listDisplay";
+import ShowDemo from "../components/showDemo";
+import React from "react";
 
 export default function ({ data, ssr_title }) {
   return (
     <>
       <div>{ssr_title}</div>
-      <Home data={data} />
+      <h2 className={style.pageHeading}>Home</h2>
+      <ListDisplay list={data} />
+      <ShowDemo />
     </>
   );
 }

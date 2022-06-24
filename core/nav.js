@@ -34,7 +34,7 @@ const activeColor = (menuRef) => {
 const Nav = () => {
   return (
     <Fragment>
-      <div className={[style.marginUD].join(" ")}>
+      <div className={[].join(" ")}>
         <div className={[style.pageNav, style.column].join(" ")}>
           <div className={[style.rowGrid, style.marginUD].join(" ")}>
             <span className={style.nextjsLogo}></span>

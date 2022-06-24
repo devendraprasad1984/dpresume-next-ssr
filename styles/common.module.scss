@@ -23,6 +23,12 @@
   overflow-y: auto;
 }
 
+.bottomLine{
+  border-bottom: 2px solid var(--app-color2);
+  padding: 8px;
+  font-size: 80%;
+}
+
 .rightPanel {
   margin-left: 17%;
   top: 0;
@@ -425,6 +431,7 @@
   height: 100%;
   position: absolute;
   width: 100%;
+  display: inline-block;
 }
 
 .badge {

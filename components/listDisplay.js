@@ -16,7 +16,11 @@ const ListDisplay = ({ url, list }) => {
 
   const displayLines = (line, id) => {
     return (
-      <li key={`line-${id}`} dangerouslySetInnerHTML={{ __html: line }}></li>
+      <li
+        className={styles.bottomLine}
+        key={`line-${id}`}
+        dangerouslySetInnerHTML={{ __html: line }}
+      ></li>
     );
   };
 

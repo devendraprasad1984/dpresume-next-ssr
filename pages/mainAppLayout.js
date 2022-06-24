@@ -9,13 +9,7 @@ export default function MainAppLayout({ children }) {
       <Nav />
       <div className={style.rightPanel}>
         <PageHeader />
-        <div
-          className={[
-            style.marginUD,
-            style.mainAppContainer,
-            style.devsLogo,
-          ].join(" ")}
-        >
+        <div className={[style.mainAppContainer, style.devsLogo].join(" ")}>
           <div className={style.mainAppContainerOverlay}>{children}</div>
         </div>
         <PageFooter />

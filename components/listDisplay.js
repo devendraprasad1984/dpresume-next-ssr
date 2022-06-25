@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import styles from "../styles/common.module.scss";
 import getFromApi from "../apis/get";
 
 const ListDisplay = ({ url, list }) => {
@@ -17,7 +16,7 @@ const ListDisplay = ({ url, list }) => {
   const displayLines = (line, id) => {
     return (
       <li
-        className={styles.bottomLine}
+        className={"bottomLine"}
         key={`line-${id}`}
         dangerouslySetInnerHTML={{ __html: line }}
       ></li>
@@ -25,7 +24,7 @@ const ListDisplay = ({ url, list }) => {
   };
 
   return (
-    <ul className={styles.ul}>
+    <ul className={"ul"}>
       {pageData.map((line, id) => {
         return displayLines(line, id);
       })}

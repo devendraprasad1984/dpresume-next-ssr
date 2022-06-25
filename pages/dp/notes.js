@@ -1,10 +1,10 @@
 import React from "react";
-import style from "../../styles/common.module.scss";
+import HeaderLine from "../../core/headeline";
 
 const Notes = () => {
   return (
     <>
-      <h2 className={style.pageHeading}>Notes</h2>
+      <HeaderLine title={"Notes"} />
     </>
   );
 };

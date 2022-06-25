@@ -1,8 +1,8 @@
 import React from "react";
-import style from "../../styles/common.module.scss";
+import HeaderLine from "../../core/headeline";
 
 const Blogs = () => {
-  return <h2 className={style.pageHeading}>Blogs</h2>;
+  return <HeaderLine title={"Blogs"} />;
 };
 
 export default Blogs;

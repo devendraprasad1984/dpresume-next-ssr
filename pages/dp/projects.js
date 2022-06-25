@@ -1,11 +1,11 @@
 import React from "react";
 import ShowProjects from "../../components/showProjects";
-import style from "../../styles/common.module.scss";
+import HeaderLine from "../../core/headeline";
 
 const Projects = () => {
   return (
     <>
-      <h2 className={style.pageHeading}>Projects</h2>
+      <HeaderLine title={"Projects"} />
       <ShowProjects />
     </>
   );

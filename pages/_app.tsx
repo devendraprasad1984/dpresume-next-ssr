@@ -5,6 +5,7 @@ import { NextComponentType } from "next";
 import MainAppLayout from "./mainAppLayout";
 
 import "../styles/app.css";
+import "../styles/common.css";
 import "../styles/app.media.css";
 
 const MyApp: NextComponentType<AppContext, AppInitialProps, AppProps> = ({

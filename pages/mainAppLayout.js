@@ -1,16 +1,15 @@
 import PageHeader from "../core/PageHeader";
 import PageFooter from "../core/PageFooter";
 import Nav from "../core/nav";
-import style from "../styles/common.module.scss";
 
 export default function MainAppLayout({ children }) {
   return (
-    <div className={[style.textColor].join(" ")}>
+    <div className={["textColor"].join(" ")}>
       <Nav />
-      <div className={style.rightPanel}>
+      <div className={"rightPanel"}>
         <PageHeader />
-        <div className={[style.mainAppContainer, style.devsLogo].join(" ")}>
-          <div className={style.mainAppContainerOverlay}>{children}</div>
+        <div className={["mainAppContainer", "devsLogo"].join(" ")}>
+          <div className={"mainAppContainerOverlay"}>{children}</div>
         </div>
         <PageFooter />
       </div>

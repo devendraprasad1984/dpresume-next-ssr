@@ -1,15 +1,15 @@
 import { getFromApiAsync } from "../apis/get";
 import config from "../config";
-import style from "../styles/common.module.scss";
 import ListDisplay from "../components/listDisplay";
 import ShowDemo from "../components/showDemo";
 import React from "react";
+import HeaderLine from "../core/headeline";
 
 export default function ({ data, ssr_title }) {
   return (
     <>
       <div>{ssr_title}</div>
-      <h2 className={style.pageHeading}>Home</h2>
+      <HeaderLine title={"home"} />
       <ListDisplay list={data} />
       <ShowDemo />
     </>

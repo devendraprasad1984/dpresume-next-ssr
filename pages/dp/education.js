@@ -1,12 +1,12 @@
 import React from "react";
 import config from "../../config";
 import ListDisplay from "../../components/listDisplay";
-import style from "../../styles/common.module.scss";
+import HeaderLine from "../../core/headeline";
 
 const Education = () => {
   return (
     <>
-      <h2 className={style.pageHeading}>Education</h2>
+      <HeaderLine title={"Education"} />
       <ListDisplay url={config.endpoints.education} />
     </>
   );

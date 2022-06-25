@@ -1,10 +1,9 @@
 import React, { Fragment } from "react";
 import { useRouter } from "next/router";
-import style from "../styles/common.module.scss";
 import config from "../config";
 import Link from "next/link";
 
-const btnNav = [style.navBtn].join(" ");
+const btnNav = ["navBtn"].join(" ");
 
 // const colorValue = { color: "#7936de" };
 const activeClassName = "active";
@@ -34,37 +33,29 @@ const activeColor = (menuRef) => {
 const Nav = () => {
   return (
     <Fragment>
-      <div className={[].join(" ")}>
-        <div className={[style.pageNav, style.column].join(" ")}>
-          <div className={[style.rowGrid, style.marginUD].join(" ")}>
-            <span className={style.nextjsLogo}></span>
-            <span className={style.reactjsLogo}></span>
+      <div>
+        <div className={["pageNav", "column"].join(" ")}>
+          <div className={["rowGrid", "marginUD"].join(" ")}>
+            <span className={"nextjsLogo"}>&nbsp;</span>
+            <span className={"reactjsLogo"}>&nbsp;</span>
           </div>
 
-          <span className={[style.marginUD, style.purple].join(" ")}>
+          <span className={["marginUD", "purple"].join(" ")}>
             Welcome to my portfolio
           </span>
 
-          <div className={style.colGrid}>
-            <span className={[style.badge, style.bgnavy].join(" ")}>
-              Created with
-            </span>
-            <div className={style.rowGrid}>
-              <span className={[style.badge, style.bgred].join(" ")}>Love</span>
-              <span className={[style.badge, style.bggreen].join(" ")}>
-                Patience
-              </span>
-              <span className={[style.badge, style.bgpurple].join(" ")}>
-                Passion
-              </span>
-              <span className={[style.badge, style.bgnavy].join(" ")}>
-                Care
-              </span>
+          <div className={"colGrid"}>
+            <span className={["badge", "bgnavy"].join(" ")}>Created with</span>
+            <div className={"rowGrid"}>
+              <span className={["badge", "bgred"].join(" ")}>Love</span>
+              <span className={["badge", "bggreen"].join(" ")}>Patience</span>
+              <span className={["badge", "bgpurple"].join(" ")}>Passion</span>
+              <span className={["badge", "bgnavy"].join(" ")}>Care</span>
             </div>
           </div>
           {/*using a for nav/route, it send new request to get new page, means all states will be lost and purpose of SPA will be lost, So use Link
          from next*/}
-          <div className={style.column}>
+          <div className={"column"}>
             {config.menus.map((menu) => {
               return (
                 <Link
@@ -82,7 +73,7 @@ const Nav = () => {
             })}
           </div>
           <a
-            className={[style.marginUD].join(" ")}
+            className={"marginUD"}
             target="_blank"
             href={"https://dpresume.com"}
           >

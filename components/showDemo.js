@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import getFromApi from "../apis/get";
-import styles from "../styles/common.module.scss";
 import config from "../config";
 
-const demoRowStyle = [styles.row, styles.marginUD].join(" ");
+const demoRowStyle = ["row", "marginUD"].join(" ");
 const ShowDemo = () => {
   const [demoData, setDemoData] = useState([]);
   const [showDemoSection, setShowDemoSection] = useState(false);
@@ -23,13 +22,13 @@ const ShowDemo = () => {
   return (
     <>
       <div
-        className={[demoRowStyle, styles.button5].join(" ")}
+        className={["demoRowStyle", "button5"].join(" ")}
         onClick={() => setShowDemoSection(!showDemoSection)}
       >
         Apps Demo
       </div>
       {showDemoSection && (
-        <div className={[demoRowStyle, styles.card].join(" ")}>
+        <div className={["demoRowStyle", "card"].join(" ")}>
           {links.map((line, id) => {
             return (
               <a
@@ -46,13 +45,13 @@ const ShowDemo = () => {
       )}
 
       <div
-        className={[demoRowStyle, styles.button53].join(" ")}
+        className={["demoRowStyle", "button53"].join(" ")}
         onClick={() => setShowYoutubeSection(!showYoutubeSection)}
       >
         Demo on Youtube
       </div>
       {showYoutubeSection && (
-        <div className={[demoRowStyle, styles.card].join(" ")}>
+        <div className={["demoRowStyle", "card"].join(" ")}>
           {youtube.map((line, id) => {
             return (
               <a

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import getFromApi from "../apis/get";
-import styles from "../styles/common.module.scss";
 import config from "../config";
 
 const ShowProjects = () => {
@@ -21,7 +20,7 @@ const ShowProjects = () => {
         .map((line, id) => {
           return (
             <div key={"id" + id}>
-              <div className={styles.size30} key={`line-${id}`}>
+              <div className={"size30"} key={`line-${id}`}>
                 {line}
               </div>
               {typeof projects[line] === "object" &&
@@ -29,10 +28,10 @@ const ShowProjects = () => {
                   return (
                     <div
                       key={"id" + d.name}
-                      className={[styles.column, styles.marginUD].join(" ")}
+                      className={["column", "marginUD"].join(" ")}
                     >
-                      <div className={styles.size20}>{d.name}</div>
-                      <div className={styles.size15}>{d.desc}</div>
+                      <div className={"size20"}>{d.name}</div>
+                      <div className={("size15", "para")}>{d.desc}</div>
                     </div>
                   );
                 })}

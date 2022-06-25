@@ -1,13 +1,13 @@
 import React from "react";
 import config from "../../config";
 import ListDisplay from "../../components/listDisplay";
-import style from "../../styles/common.module.scss";
 import { getFromApiAsync } from "../../apis/get";
+import HeaderLine from "../../core/headeline";
 
 const Achievement = (props) => {
   return (
     <>
-      <h2 className={style.pageHeading}>Achievements</h2>
+      <HeaderLine title={"Achievements"} />
       {/*<ListDisplay url={config.endpoints.achievements} />*/}
 
       <ListDisplay list={props.data} />

@@ -8,10 +8,13 @@ import "../styles/app.css";
 import "../styles/common.css";
 import "../styles/app.media.css";
 
+import ReactAppContext, { initAppData } from "../context/appContext";
+
 const MyApp: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
   Component,
   pageProps,
 }) => {
+  const appLevelData = initAppData();
   return (
     <>
       <Head>
@@ -41,9 +44,11 @@ const MyApp: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
         <title>Devendra Prasad</title>
       </Head>
       {/*this is out root component, and all pages will applies with changes here*/}
-      <MainAppLayout>
-        <Component {...pageProps} />
-      </MainAppLayout>
+      <ReactAppContext.Provider value={appLevelData}>
+        <MainAppLayout>
+          <Component {...pageProps} />
+        </MainAppLayout>
+      </ReactAppContext.Provider>
     </>
   );
 };

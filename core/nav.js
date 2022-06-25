@@ -1,7 +1,8 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { useRouter } from "next/router";
 import config from "../config";
 import Link from "next/link";
+import { useReactAppContext } from "../context/appContext";
 
 const btnNav = ["navBtn"].join(" ");
 
@@ -31,9 +32,17 @@ const activeColor = (menuRef) => {
 // });
 
 const Nav = () => {
+  const { isMobile } = useReactAppContext();
+  const [show, setShow] = useState(isMobile);
+
+  console.log("ismobile", isMobile, show);
+  const handleOpenCloseNav = () => {
+    setShow(!show);
+  };
+
   return (
     <Fragment>
-      <div>
+      <div className={[`${show ? "hide" : "show"}`].join(" ")}>
         <div className={["pageNav", "column"].join(" ")}>
           <div className={["rowGrid", "marginUD"].join(" ")}>
             <span className={"nextjsLogo"}>&nbsp;</span>

@@ -1,6 +1,5 @@
-import React, { ReactNode, useContext } from "react";
+import React, { ReactNode } from "react";
 import config from "../config";
-import { useReactAppContext } from "../context/appContext";
 
 interface Props {
   children?: ReactNode;
@@ -8,15 +7,8 @@ interface Props {
 
 const PageHeader = ({ children }: Props) => {
   const { name, title, headline, email, phone } = config.base;
-
-  const { isMobile } = useReactAppContext();
-
-  const handleOpenCloseNav = () => {
-    alert("hello" + isMobile);
-  };
-
   return (
-    <div className={[].join(" ")}>
+    <div>
       <div
         className={[
           "pageHeader",
@@ -40,9 +32,7 @@ const PageHeader = ({ children }: Props) => {
         <a href="https://dpresume.com/docs/pdf/dpresume.pdf#view=FitH">
           Download CV
         </a>
-        <span className="button5" onClick={handleOpenCloseNav}>
-          Open/Close
-        </span>
+        <span className="button5">Open/Close</span>
       </div>
       <div>{children}</div>
     </div>

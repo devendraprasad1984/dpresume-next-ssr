@@ -61,6 +61,10 @@
   grid-auto-flow: column;
   grid-template-columns: auto;
 }
+.wrap{
+  flex-wrap: wrap;
+  display: flex;
+}
 
 .gridContentAtCorners {
   justify-content: space-between;
@@ -113,9 +117,10 @@
 
 .mainAppContainer {
   min-height: 700px;
-  //height: 700px;
   position: relative;
-  overflow: auto;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .button45 {

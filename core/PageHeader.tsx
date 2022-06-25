@@ -11,7 +11,12 @@ const PageHeader = ({ children }: Props) => {
   return (
     <div className={[].join(" ")}>
       <div
-        className={["pageHeader", "rowGrid", "gridContentAtCorners"].join(" ")}
+        className={[
+          "pageHeader",
+          "wrap",
+          "rowGrid",
+          "gridContentAtCorners",
+        ].join(" ")}
       >
         <div className={"colGrid"}>
           <span className={"size30"}>{name}</span>

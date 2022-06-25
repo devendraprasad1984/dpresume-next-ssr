@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function HeaderLine(props){
-  return <h2 className={"pageHeading"}>{props.title}</h2>;
-} 
+export default function HeaderLine(props) {
+  return <div className={"size20 pageHeading"}>{props.title}</div>;
+}

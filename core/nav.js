@@ -46,7 +46,7 @@ const Nav = () => {
 
           <div className={"colGrid"}>
             <span className={["badge", "bgnavy"].join(" ")}>Created with</span>
-            <div className={"rowGrid"}>
+            <div className={"rowGrid wrap"}>
               <span className={["badge", "bgred"].join(" ")}>Love</span>
               <span className={["badge", "bggreen"].join(" ")}>Patience</span>
               <span className={["badge", "bgpurple"].join(" ")}>Passion</span>

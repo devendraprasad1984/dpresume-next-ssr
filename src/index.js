@@ -1,14 +1,14 @@
 import React from "react";
 // import ReactDOM from "react-dom";
-import {createRoot, hydrateRoot} from "react-dom/client";
+import { createRoot, hydrateRoot } from "react-dom/client";
 
 import "./index.css";
 import App from "./App";
 import "./app.media.css";
 import reportWebVitals from "./reportWebVitals";
-import {Provider} from "react-redux";
+import { Provider } from "react-redux";
 import store from "./_redux/store";
-import {Auth0Provider} from '@auth0/auth0-react'
+import { Auth0Provider } from "@auth0/auth0-react";
 // import {watchNetworkConnection} from "./configs/config";
 // watchNetworkConnection()
 
@@ -23,46 +23,43 @@ import {Auth0Provider} from '@auth0/auth0-react'
 //     console.log('state object via subscribe', store.getState())
 // })
 
-
 //getting vars from env file
-const isSSR = process.env.REACT_APP_IS_SSR === "false" ? false : true
-const auth0Domain = process.env.REACT_APP_AUTH0_DOMAIN
-const auth0Client = process.env.REACT_APP_AUTH0_ClIENT
-
+const isSSR = process.env.REACT_APP_IS_SSR !== "false";
+const auth0Domain = process.env.REACT_APP_AUTH0_DOMAIN;
+const auth0Client = process.env.REACT_APP_AUTH0_ClIENT;
 
 //change background image setinterval
 const changeBg = () => {
-    let bodyBg = document.getElementById('bggif')
-    let imgNum = Math.floor(Math.random() * 9)
-    try{
-        bodyBg.style.backgroundImage = `url("/assets/bg${imgNum}.gif")`
-    }catch(err){
+  let bodyBg = document.getElementById("bggif");
+  let imgNum = Math.floor(Math.random() * 9);
+  try {
+    bodyBg.style.backgroundImage = `url("/assets/bg${imgNum}.gif")`;
+  } catch (err) {}
+};
 
-    }
-}
+const IndexApp = (
+  <React.StrictMode>
+    <Auth0Provider
+      domain={auth0Domain}
+      clientId={auth0Client}
+      redirectUri={window.location.origin}
+    >
+      <div className="main-container">
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </div>
+    </Auth0Provider>
+  </React.StrictMode>
+);
 
-const IndexApp = (<React.StrictMode>
-        <Auth0Provider
-            domain={auth0Domain}
-            clientId={auth0Client}
-            redirectUri={window.location.origin}
-        >
-            <div className='main-container'>
-                <Provider store={store}>
-                    <App/>
-                </Provider>
-            </div>
-        </Auth0Provider>
-    </React.StrictMode>
-)
-
-const container = document.getElementById("root")
-const root = isSSR ? hydrateRoot(container) : createRoot(container)
+const container = document.getElementById("root");
+const root = isSSR ? hydrateRoot(container) : createRoot(container);
 // const renderMethod = isSSR ? ReactDOM.hydrate : ReactDOM.render
 // renderMethod(IndexApp, root)
-root.render(IndexApp)
+root.render(IndexApp);
 
-setInterval(changeBg, 7000)
+setInterval(changeBg, 7000);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

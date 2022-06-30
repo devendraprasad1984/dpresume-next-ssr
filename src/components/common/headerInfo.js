@@ -20,7 +20,7 @@ const HeaderInfo = (props) => {
         <p className="size10 xwhite">{config.info}</p>
         <p className="size10 xwhite">{config.contactline}</p>
       </div>
-      <div className="wid70">
+      <div className="wid100">
         <Badges
           list={[
             "ReactJs",
@@ -36,6 +36,8 @@ const HeaderInfo = (props) => {
             "ELK",
             "Argon / Kafka",
             "Cloud Computing",
+            "Stream-Chat-React / Twilio",
+            "Php7",
           ]}
         />
       </div>

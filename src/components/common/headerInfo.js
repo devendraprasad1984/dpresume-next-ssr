@@ -1,6 +1,7 @@
 import React from "react";
 
-import {config} from "../../configs/config";
+import { config } from "../../configs/config";
+import Badges from "./badges";
 
 const HeaderInfo = (props) => {
   return (
@@ -9,13 +10,34 @@ const HeaderInfo = (props) => {
         <div className="size30 xwhite handwritting">
           {config.name + " "}
           &nbsp;
-            <a href={config.cvLink} target="_blank" className="bl size15 xred">download CV</a>
+          <a href={config.cvLink} target="_blank" className="bl size15 xred">
+            download CV
+          </a>
         </div>
         <div className="size30 handwritting xwhite">{config.rightTitle}</div>
       </div>
       <div className="row">
         <p className="size10 xwhite">{config.info}</p>
         <p className="size10 xwhite">{config.contactline}</p>
+      </div>
+      <div className="wid70">
+        <Badges
+          list={[
+            "ReactJs",
+            "Html5",
+            "Javascript",
+            "Python",
+            "Django",
+            "NodeJs",
+            "RDBMS",
+            "CICD",
+            "JWT",
+            "DevOps",
+            "ELK",
+            "Argon / Kafka",
+            "Cloud Computing",
+          ]}
+        />
       </div>
       {/*<AppGlobalActions />*/}
       {/*<div>*/}

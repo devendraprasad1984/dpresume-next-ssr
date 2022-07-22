@@ -15,6 +15,10 @@ const endpoints = {
   DONATE: `${urlResourceHandler}?name=donate`,
   BLOGS: `${urlResourceHandler}?name=blogs`,
   GETIPAddress: `https://api.db-ip.com/v2/free/self`,
+  GetCityDetails: ` http://gd.geobytes.com/GetCityDetails`,
+  GeoPlugin: `http://www.geoplugin.net/json.gp`,
+  ipApi: `https://ipapi.co/json/`,
+  ipApi1: `http://ip-api.com/json`,
 
   justDB: `${urlResourceDB}`,
   FEEDBACK: `${urlResourceDB}?getDpFeedback=1`,

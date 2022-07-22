@@ -9,6 +9,7 @@ const pageTitles = {
   skills: "Skills I know or can do",
   auth0Title: "Logged In User Info",
   notes: "my self learning and notes",
-  canada: "my express entry details for Canada"
+  feedback: "Feedbacks from Ex Colleagues and Friends",
+  canada: "my express entry details for Canada",
 };
 export default pageTitles;

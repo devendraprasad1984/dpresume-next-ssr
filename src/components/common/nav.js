@@ -86,45 +86,45 @@ const Nav = (props) => {
           </span>
         ) : null}
       </div>
-      <HashRouter>
-        <div id="bggif" className="row h100 bggif">
-          {open && (
-            <div className="flex1 content-left">
-              {ismobile && (
-                <div className="row">
-                  <span
-                    className="right  bl size35 padding-rl"
-                    onClick={() => setOpen(!open)}
-                  >
-                    {open
-                      ? `${config.chars.close}`
-                      : `${config.chars.hamburger}`}
-                  </span>
-                </div>
-              )}
 
-              <div className="col">
-                {/*<img className="imgPic img-animate" src={dp} alt={"dp"}/>*/}
-                <div>
-                  <LoginWithAuth0 />
+      <HashRouter>
+        <div id="bggif" className="bggif" style={{ backgroundColor: bgColor }}>
+          <div className="row whiteRightPanel">
+            {open && (
+              <div className="flex1 content-left">
+                {ismobile && (
+                  <div className="row">
+                    <span
+                      className="right  bl size35 padding-rl"
+                      onClick={() => setOpen(!open)}
+                    >
+                      {open
+                        ? `${config.chars.close}`
+                        : `${config.chars.hamburger}`}
+                    </span>
+                  </div>
+                )}
+
+                <div className="col">
+                  {/*<img className="imgPic img-animate" src={dp} alt={"dp"}/>*/}
+                  <div>
+                    <LoginWithAuth0 />
+                  </div>
+                  <span>created with...</span>
+                  <Badges list={["patience", "passion", "love", "care"]} />
                 </div>
-                <span>created with...</span>
-                <Badges list={["patience", "passion", "love", "care"]} />
+                <div className="front col">{displayMenu()}</div>
+                <div className="sidePicLeft">&nbsp;</div>
               </div>
-              <div className="front col whiteLeftPanel">{displayMenu()}</div>
-              <div className="sidePicLeft">&nbsp;</div>
+            )}
+            <div className="content-right front">
+              <Switch>
+                <Route exact path={"/"}>
+                  <Home title={config.pageTitles.home} />
+                </Route>
+                {displayRoute()}
+              </Switch>
             </div>
-          )}
-          <div
-            className="content-right whiteRightPanel front"
-            style={{ backgroundColor: bgColor }}
-          >
-            <Switch>
-              <Route exact path={"/"}>
-                <Home title={config.pageTitles.home} />
-              </Route>
-              {displayRoute()}
-            </Switch>
           </div>
         </div>
       </HashRouter>

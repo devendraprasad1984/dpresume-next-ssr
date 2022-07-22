@@ -7,8 +7,16 @@ import { bgColors, colors } from "./colors";
 import chars from "./chars";
 import pageTitles from "./pageTitles";
 import AppEnums from "./appEnums";
+import get, { getAsync } from "../apis";
+
+export const getMyIP = () => {
+  const res = getAsync(config.endpoints.GETIPAddress);
+  console.log("this ip", res);
+  return res;
+};
 
 export const config = {
+  myip: () => getMyIP(),
   name: "Devendra Prasad",
   rightTitle: "Lead Application Developer",
   info: "technophile . dynamic . motivated . inquisitive",

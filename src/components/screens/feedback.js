@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import OneLinerHeader from "../common/oneLinerHeader";
 import useAPI from "../../hooks/useAPI";
@@ -56,17 +56,27 @@ const AddFeedback = (props) => {
 };
 
 const DisplayFeedback = (props) => {
-  const { data } = props;
+  const { data, ip } = props;
   if (!data || data.length === 0) return null;
   return (
     <div className="height400">
       {data.map((row, i) => {
         return (
-          <div className="row size10" key={`row-${i}`}>
-            <span className="wid20">{row.time}</span>
-            <span className="wid20">{row.title}</span>
-            <span className="wid100">{row.feedback}</span>
-            <span className="wid5">{1 === 2 ? "self" : null}</span>
+          <div className="gridLine" key={`row-${i}`}>
+            <div className="row">
+              <span className="wid70 bl size12">{row.time}</span>
+              <span className="size8">{row.title}</span>
+            </div>
+            <div className="row">
+              <span className="wid100 size10">{row.feedback}</span>
+            </div>
+            <div className="right">
+              <span className="">
+                {row.ip === ip.data.ipAddress ? (
+                  <span className="badge danger">Delete</span>
+                ) : null}
+              </span>
+            </div>
           </div>
         );
       })}
@@ -75,17 +85,22 @@ const DisplayFeedback = (props) => {
 };
 
 const Feedback = (props) => {
-  const { data, loading, error, time } = useAPI(config.endpoints.FEEDBACK);
-  // console.log("__IP", config.myip());
+  const [myIp, setMyIp] = useState("");
+  useEffect(() => {
+    getMyIP((res) => {
+      setMyIp(res);
+    });
+  }, []);
 
+  const { data, loading, error, time } = useAPI(config.endpoints.FEEDBACK);
   if (loading) return <NoData text={config.messages.PLZ_WAIT} />;
   if (error) return <NoData text={config.messages.ERROR} />;
 
   return (
-    <div>
+    <div className="wid100">
       <OneLinerHeader title={props.title + ` (${data.length})`} />
       <AddFeedback />
-      <DisplayFeedback data={data} />
+      <DisplayFeedback data={data} ip={myIp} />
     </div>
   );
 };

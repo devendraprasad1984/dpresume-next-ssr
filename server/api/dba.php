@@ -9,6 +9,7 @@ try {
         $input = file_get_contents('php://input');
         $inputData = json_decode($input, true);
         if (isset($inputData['dpFeedbackSave'])) handleFeedbackSave($inputData);
+        if (isset($inputData['dpFeedbackDelete'])) handleFeedbackDelete($inputData);
     }
 
     if ($reqMethod == 'GET') {

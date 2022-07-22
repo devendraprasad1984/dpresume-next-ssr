@@ -159,8 +159,8 @@ input, select, textarea {
 }
 
 ::placeholder {
-    color: var(--black-color);
-    /*opacity: 0.8;*/
+    color: var(--main-color1);
+    opacity: 0.8;
 }
 
 select {

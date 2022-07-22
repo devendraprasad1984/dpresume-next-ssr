@@ -9,7 +9,7 @@ import { postData } from "../../apis/post";
 
 const maxLen = 500;
 const AddFeedback = (props) => {
-  const { ip } = props;
+  const { ip, onSave } = props;
 
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
@@ -25,7 +25,7 @@ const AddFeedback = (props) => {
     let payload = { dpFeedbackSave: 1, title, desc, ip: ip.data.ipAddress };
     postData(config.endpoints.justDB, payload, (res) => {
       if (res.data.status !== "success") return;
-      alert("saved");
+      onSave(true);
     });
   };
 
@@ -58,7 +58,7 @@ const AddFeedback = (props) => {
 };
 
 const DisplayFeedback = (props) => {
-  const { ip, refresh } = props;
+  const { ip, toggleStateChangeOnSave } = props;
   const [refreshCounter, setRefreshCounter] = useState(0);
 
   const handleRefresh = () => {
@@ -73,9 +73,13 @@ const DisplayFeedback = (props) => {
     let payload = { dpFeedbackDelete: 1, id };
     postData(config.endpoints.justDB, payload, (res) => {
       if (res.data.status !== "success") return;
-      alert("deleted");
+      setRefreshCounter((x) => x + 1);
     });
   };
+
+  useEffect(() => {
+    handleRefresh();
+  }, [toggleStateChangeOnSave]);
 
   if (!data || data.length === 0) return null;
   if (loading) return <NoData text={config.messages.PLZ_WAIT} />;
@@ -83,8 +87,6 @@ const DisplayFeedback = (props) => {
 
   return (
     <div className="height400">
-      <button onClick={handleRefresh}>Refresh</button>
-
       <div>{data.length} records found</div>
       {data.map((row, i) => {
         return (
@@ -119,6 +121,7 @@ const DisplayFeedback = (props) => {
 
 const Feedback = (props) => {
   const [myIp, setMyIp] = useState("");
+  const [toggleStateChangeOnSave, setOnSave] = useState(false);
 
   useEffect(() => {
     getMyIP((res) => {
@@ -126,11 +129,18 @@ const Feedback = (props) => {
     });
   }, []);
 
+  const handleOnSave = (flag) => {
+    setOnSave(!toggleStateChangeOnSave);
+  };
+
   return (
     <div className="wid100">
       <OneLinerHeader title={props.title} />
-      <AddFeedback ip={myIp} />
-      <DisplayFeedback ip={myIp} />
+      <AddFeedback ip={myIp} onSave={handleOnSave} />
+      <DisplayFeedback
+        ip={myIp}
+        toggleStateChangeOnSave={toggleStateChangeOnSave}
+      />
     </div>
   );
 };

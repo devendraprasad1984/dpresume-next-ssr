@@ -734,6 +734,15 @@ i,
 .wid100 {
     width: 100%;
 }
+.wid5 {
+    width: 5%;
+}
+.wid10 {
+    width: 10%;
+}
+.wid20 {
+    width: 20%;
+}
 
 .xprimary {
     color: #3881d0 !important;

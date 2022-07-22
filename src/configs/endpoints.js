@@ -1,6 +1,7 @@
 const islocal = window.location.href.indexOf("localhost") !== -1;
 const serverPrefix = islocal ? "http://localhost:6204" : "https://dpresume.com";
 const urlResourceHandler = `${serverPrefix}/server/api/get-resource-handler.php`;
+const urlResourceDB = `${serverPrefix}/server/api/dba.php`;
 const endpoints = {
   SUMMARY: `${urlResourceHandler}?name=summary`,
   LINKS: `${urlResourceHandler}?name=links`,
@@ -13,5 +14,9 @@ const endpoints = {
   SKILLS: `${urlResourceHandler}?name=skills`,
   DONATE: `${urlResourceHandler}?name=donate`,
   BLOGS: `${urlResourceHandler}?name=blogs`,
+  GETIPAddress: `https://api.db-ip.com/v2/free/self`,
+
+  justDB: `${urlResourceDB}`,
+  FEEDBACK: `${urlResourceDB}?getDpFeedback=1`,
 };
 export default endpoints;

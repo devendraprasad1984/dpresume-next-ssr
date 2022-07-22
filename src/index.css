@@ -151,7 +151,7 @@ select {
     font-size: 20px;
 }
 
-input, select {
+input, select, textarea {
     width: 100%;
     border: 2px solid var(--black-color);
     padding: 5px;

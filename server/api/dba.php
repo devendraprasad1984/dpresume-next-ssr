@@ -1,4 +1,5 @@
 <?php
+include "../common/headers.php";
 include "../common/helper.php";
 
 global $success, $conn, $failed;

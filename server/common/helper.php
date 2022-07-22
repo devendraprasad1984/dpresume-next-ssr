@@ -14,10 +14,11 @@ function returnDataset($qur)
 function handleFeedbackSave($data)
 {
     global $success, $conn;
-    $feedback = $conn->real_escape_string($data['feedback']);
-    $ip = 'ip & location';
+    $title = $conn->real_escape_string($data['title']);
+    $feedback = $conn->real_escape_string($data['desc']);
+    $ip = $_SERVER['REMOTE_ADDR'];
 
-    $sql = "INSERT INTO dp_feedback(feedback) values('$feedback')";
+    $sql = "INSERT INTO dp_feedback(feedback,ip) values('$feedback','$ip')";
     $result = $conn->query($sql);
     echo $success;
 //    mysqli_close($conn);

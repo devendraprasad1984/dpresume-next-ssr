@@ -87,16 +87,20 @@ const DisplayFeedback = (props) => {
 
   return (
     <div className="height400">
-      <div>{data.length} records found</div>
+      <div className="xprimary">{data.length} feedback(s) found</div>
       {data.map((row, i) => {
         return (
           <div className="gridLine" key={`row-${i}`}>
             <div className="row">
-              <span className="wid70 bl size12">{row.time}</span>
-              <span className="size8">{row.title}</span>
+              <span className="wid60 bl size12 xJellyBean">{row.time}</span>
+              <span
+                className={`wid40 size10 ${!row.title ? "xred" : "xsuccess"}`}
+              >
+                {!row.title ? "Anonymous" : row.title}
+              </span>
             </div>
             <div className="row">
-              <span className="wid100 size10">{row.feedback}</span>
+              <span className="size12">{row.feedback}</span>
             </div>
             <div className="right">
               {ip && (
@@ -134,7 +138,7 @@ const Feedback = (props) => {
   };
 
   return (
-    <div className="wid100">
+    <div className="margin-ud wid95">
       <OneLinerHeader title={props.title} />
       <AddFeedback ip={myIp} onSave={handleOnSave} />
       <DisplayFeedback

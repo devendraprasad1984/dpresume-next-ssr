@@ -239,7 +239,7 @@ b {
 
 
 .gridLine{
-    border-bottom: 1px solid var(--main-color2);
+    border-bottom: 1px solid var(--colorGrey);
 }
 
 .gridRow {
@@ -784,6 +784,9 @@ i,
 .wid90 {
     width: 90%;
 }
+.wid95 {
+    width: 95%;
+}
 
 
 .xprimary {
@@ -798,8 +801,11 @@ i,
     color: #6c757d !important;
 }
 
+.xJellyBean {
+    color: var(--colorJellyBean) !important;
+}
 .xgray {
-    color: var(--gray-color) !important;
+    color: var(--colorGrey) !important;
 }
 
 .xsuccess {

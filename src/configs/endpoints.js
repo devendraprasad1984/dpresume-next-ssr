@@ -1,8 +1,9 @@
-const islocal = window.location.href.indexOf("localhost") !== -1;
+let islocal = window.location.href.indexOf("localhost") !== -1;
 const serverPrefix = islocal ? "http://localhost:6204" : "https://dpresume.com";
 const urlResourceHandler = `${serverPrefix}/server/api/get-resource-handler.php`;
 const urlResourceDB = `${serverPrefix}/server/api/dba.php`;
 const endpoints = {
+  islocal,
   SUMMARY: `${urlResourceHandler}?name=summary`,
   LINKS: `${urlResourceHandler}?name=links`,
   HOME_DEMO: `${urlResourceHandler}?name=demo`,
@@ -14,6 +15,8 @@ const endpoints = {
   SKILLS: `${urlResourceHandler}?name=skills`,
   DONATE: `${urlResourceHandler}?name=donate`,
   BLOGS: `${urlResourceHandler}?name=blogs`,
+  LeadershipBehavioural: `${urlResourceHandler}?name=leadership_behavioural`,
+
   GETIPAddress: `https://api.db-ip.com/v2/free/self`,
   GetCityDetails: ` http://gd.geobytes.com/GetCityDetails`,
   GeoPlugin: `http://www.geoplugin.net/json.gp`,

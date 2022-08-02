@@ -1,0 +1,44 @@
+[
+  {
+    "what": "",
+    "proj_name_1": "Kroger",
+    "proj_name_2": "Fab",
+    "proj_name_3": "CeX"
+  },
+  {
+    "what": "Challenges",
+    "proj_name_1": "Upstream Services",
+    "proj_name_2": "",
+    "proj_name_3": ""
+  },
+  {
+    "what": "Failures",
+    "proj_name_1": "Time delay to release and few bugs due to upstream, eg one was timeout, we increased at our end",
+    "proj_name_2": "",
+    "proj_name_3": ""
+  },
+  {
+    "what": "Enjoyed",
+    "proj_name_1": "flash sale work <br/> feature toggles, Amp<br/>Tech huddles and review pair calls",
+    "proj_name_2": "",
+    "proj_name_3": ""
+  },
+  {
+    "what": "Leadership",
+    "proj_name_1": "Engg Metrics, RTB calls, SecChamp, working group calls",
+    "proj_name_2": "",
+    "proj_name_3": ""
+  },
+  {
+    "what": "Conflict",
+    "proj_name_1": "Monstly none but review pairing over a call was pushed back but when backed by majority and onshore leads, it was well accepted and helped reduced onsite review comments",
+    "proj_name_2": "",
+    "proj_name_3": ""
+  },
+  {
+    "what": "What was done differently",
+    "proj_name_1": "Tech Huddle platform wide<br/>review pairing like a huddle over a call<br/>speedbacks really helpes us",
+    "proj_name_2": "",
+    "proj_name_3": ""
+  }
+]

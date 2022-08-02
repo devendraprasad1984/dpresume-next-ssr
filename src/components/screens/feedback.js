@@ -9,6 +9,8 @@ import { postData } from "../../apis/post";
 
 const maxLen = 500;
 const AddFeedback = (props) => {
+  const { ip, onSave } = props;
+
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
 
@@ -20,10 +22,10 @@ const AddFeedback = (props) => {
   };
 
   const handleSave = () => {
-    let payload = { dpFeedbackSave: 1, title, desc };
-    console.log(payload);
+    let payload = { dpFeedbackSave: 1, title, desc, ip: ip.data.ipAddress };
     postData(config.endpoints.justDB, payload, (res) => {
-      console.log("res", res);
+      if (res.data.status !== "success") return;
+      onSave(true);
     });
   };
 
@@ -56,51 +58,95 @@ const AddFeedback = (props) => {
 };
 
 const DisplayFeedback = (props) => {
-  const { data, ip } = props;
+  const { ip, toggleStateChangeOnSave } = props;
+  const [refreshCounter, setRefreshCounter] = useState(0);
+
+  const handleRefresh = () => {
+    setRefreshCounter((x) => x + 1);
+  };
+
+  const { data, loading, error, time } = useAPI(
+    config.endpoints.FEEDBACK,
+    refreshCounter
+  );
+  const handleDeleteSelfFeedback = (id) => {
+    let payload = { dpFeedbackDelete: 1, id };
+    postData(config.endpoints.justDB, payload, (res) => {
+      if (res.data.status !== "success") return;
+      setRefreshCounter((x) => x + 1);
+    });
+  };
+
+  useEffect(() => {
+    handleRefresh();
+  }, [toggleStateChangeOnSave]);
+
   if (!data || data.length === 0) return null;
+  if (loading) return <NoData text={config.messages.PLZ_WAIT} />;
+  if (error) return <NoData text={config.messages.ERROR} />;
+
   return (
-    <div className="height400">
-      {data.map((row, i) => {
-        return (
-          <div className="gridLine" key={`row-${i}`}>
-            <div className="row">
-              <span className="wid70 bl size12">{row.time}</span>
-              <span className="size8">{row.title}</span>
+    <React.Fragment>
+      <div className="xprimary">{data.length} feedback(s) found</div>
+      <div className="height400">
+        {data.map((row, i) => {
+          return (
+            <div className="gridLine" key={`row-${i}`}>
+              <div className="row">
+                <span className="wid60 bl size12 xJellyBean">{row.time}</span>
+                <span
+                  className={`wid40 size10 ${!row.title ? "xred" : "xsuccess"}`}
+                >
+                  {!row.title ? "Anonymous" : row.title}
+                </span>
+              </div>
+              <div className="row">
+                <span className="size12">{row.feedback}</span>
+              </div>
+              <div className="right">
+                {ip && (
+                  <span className="">
+                    {row.ip === ip.data.ipAddress ? (
+                      <span
+                        className="badge danger"
+                        onClick={() => handleDeleteSelfFeedback(row.id)}
+                      >
+                        Delete
+                      </span>
+                    ) : null}
+                  </span>
+                )}
+              </div>
             </div>
-            <div className="row">
-              <span className="wid100 size10">{row.feedback}</span>
-            </div>
-            <div className="right">
-              <span className="">
-                {row.ip === ip.data.ipAddress ? (
-                  <span className="badge danger">Delete</span>
-                ) : null}
-              </span>
-            </div>
-          </div>
-        );
-      })}
-    </div>
+          );
+        })}
+      </div>
+    </React.Fragment>
   );
 };
 
 const Feedback = (props) => {
   const [myIp, setMyIp] = useState("");
+  const [toggleStateChangeOnSave, setOnSave] = useState(false);
+
   useEffect(() => {
     getMyIP((res) => {
       setMyIp(res);
     });
   }, []);
 
-  const { data, loading, error, time } = useAPI(config.endpoints.FEEDBACK);
-  if (loading) return <NoData text={config.messages.PLZ_WAIT} />;
-  if (error) return <NoData text={config.messages.ERROR} />;
+  const handleOnSave = (flag) => {
+    setOnSave(!toggleStateChangeOnSave);
+  };
 
   return (
-    <div className="wid100">
-      <OneLinerHeader title={props.title + ` (${data.length})`} />
-      <AddFeedback />
-      <DisplayFeedback data={data} ip={myIp} />
+    <div className="margin-ud wid95">
+      <OneLinerHeader title={props.title} />
+      <AddFeedback ip={myIp} onSave={handleOnSave} />
+      <DisplayFeedback
+        ip={myIp}
+        toggleStateChangeOnSave={toggleStateChangeOnSave}
+      />
     </div>
   );
 };

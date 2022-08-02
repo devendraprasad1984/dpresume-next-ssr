@@ -183,7 +183,7 @@ div {
 }
 
 ::selection {
-    background-color: var(--purple-color);
+    background-color: var(--main-color2);
     color: white;
 }
 
@@ -194,7 +194,7 @@ select {
 
 input, select, textarea {
     width: 100%;
-    border: 2px solid var(--black-color);
+    border: 2px solid var(--main-color2);
     padding: 5px;
     margin-top: 4px;
 }
@@ -219,7 +219,7 @@ select {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--black-color);
+    background: var(--main-color1);
 }
 
 ::-webkit-scrollbar-thumb:hover {

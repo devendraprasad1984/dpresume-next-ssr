@@ -86,40 +86,42 @@ const DisplayFeedback = (props) => {
   if (error) return <NoData text={config.messages.ERROR} />;
 
   return (
-    <div className="height400">
+    <React.Fragment>
       <div className="xprimary">{data.length} feedback(s) found</div>
-      {data.map((row, i) => {
-        return (
-          <div className="gridLine" key={`row-${i}`}>
-            <div className="row">
-              <span className="wid60 bl size12 xJellyBean">{row.time}</span>
-              <span
-                className={`wid40 size10 ${!row.title ? "xred" : "xsuccess"}`}
-              >
-                {!row.title ? "Anonymous" : row.title}
-              </span>
-            </div>
-            <div className="row">
-              <span className="size12">{row.feedback}</span>
-            </div>
-            <div className="right">
-              {ip && (
-                <span className="">
-                  {row.ip === ip.data.ipAddress ? (
-                    <span
-                      className="badge danger"
-                      onClick={() => handleDeleteSelfFeedback(row.id)}
-                    >
-                      Delete
-                    </span>
-                  ) : null}
+      <div className="height400">
+        {data.map((row, i) => {
+          return (
+            <div className="gridLine" key={`row-${i}`}>
+              <div className="row">
+                <span className="wid60 bl size12 xJellyBean">{row.time}</span>
+                <span
+                  className={`wid40 size10 ${!row.title ? "xred" : "xsuccess"}`}
+                >
+                  {!row.title ? "Anonymous" : row.title}
                 </span>
-              )}
+              </div>
+              <div className="row">
+                <span className="size12">{row.feedback}</span>
+              </div>
+              <div className="right">
+                {ip && (
+                  <span className="">
+                    {row.ip === ip.data.ipAddress ? (
+                      <span
+                        className="badge danger"
+                        onClick={() => handleDeleteSelfFeedback(row.id)}
+                      >
+                        Delete
+                      </span>
+                    ) : null}
+                  </span>
+                )}
+              </div>
             </div>
-          </div>
-        );
-      })}
-    </div>
+          );
+        })}
+      </div>
+    </React.Fragment>
   );
 };
 

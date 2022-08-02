@@ -7,7 +7,7 @@
   "extends": [
     "plugin:import/errors",
     "plugin:import/warnings",
-    "plugin:import/typescript",
+    "plugin:import/typescript"
   ],
   "rules": {
     "react/react-in-jsx-scope": "off",

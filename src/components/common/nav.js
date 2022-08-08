@@ -118,6 +118,11 @@ const Nav = (props) => {
               </div>
             )}
             <div className="content-right front">
+              <div className='right'>
+                <a href={config.cvLink} target="_blank" className="bl size12 danger pad5">
+                  download CV
+                </a>
+              </div>
               <Switch>
                 <Route exact path={"/"}>
                   <Home title={config.pageTitles.home} />

@@ -5,11 +5,15 @@ import OneLinerHeader from "../common/oneLinerHeader";
 import GridVanila from "../common/gridVanila";
 import { config } from "../../configs/config";
 import useAPI from "../../hooks/useAPI";
+import NoData from "../common/nodata";
 
 const Notes = (props) => {
-  const { data, loading, error, time } = useAPI(
+  const { data, loading, error, time } =useAPI(
     config.endpoints.LeadershipBehavioural
   );
+
+  if (loading) return <NoData text={config.messages.PLZ_WAIT}/>;
+  if (error) return <NoData text={config.messages.ERROR}/>;
 
   return (
     <div className="wid95">

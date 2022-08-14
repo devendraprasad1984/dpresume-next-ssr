@@ -8,7 +8,7 @@ const OneLinerHeader = ({title}) => {
     // }, [])
     return <div className='console-container'>
         <span id='text'></span>
-        <div className='console-underscore size30' id='console'>{title}</div>
+        <div className='console-underscore size30 bg pad10' id='console'>{title}</div>
     </div>
 };
 

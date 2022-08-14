@@ -69,20 +69,58 @@
 
 }
 
+@font-face {
+    font-family: "Material Icons";
+    font-style: normal;
+    font-weight: 400;
+    src: url(./css/gstaticFont.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "Gotham Rounded";
+    font-style: normal;
+    font-weight: 450;
+    font-display: swap;
+    src: url(./css/GothamRounded-Medium.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "Stanley";
+    font-style: normal;
+    font-weight: 500;
+    src: url(./css/stanley.woff2) format("woff2");
+}
+@font-face {
+    font-family: "Organical";
+    font-style: normal;
+    font-weight: 500;
+    src: url(./css/organical.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "Ephesis";
+    font-style: normal;
+    font-weight: 550;
+    font-display: swap;
+    /*src: url(https://fonts.gstatic.com/s/ephesis/v1/uU9PCBUS8IerL2VG3xTR396EilM.woff2) format('woff2');*/
+    src: url(./css/uU9PCBUS8IerL2VG3xTR396EilM.woff2) format("woff2");
+}
+
+
 /*box-model where width = element width + padding + borders = https://www.w3schools.com/css/css_boxmodel.asp*/
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     border: 0;
     font-size: 100%;
     vertical-align: baseline;
 }
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box; /*disables extra height width due to margin/padding*/
-    font-family: "Gotham Rounded", arial;
+    font-family: "Stanley";
     color: var(--main-color2);
 }
-
 
 
 .main-container {
@@ -94,7 +132,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     /*padding: 10px 10px 10px 10px;*/
 }
 
-.bg{
+.bg {
+    background-image: linear-gradient(to right, var(--main-color1), var(--main-color2));
+    /*opacity: 0.90;*/
     /*background: linear-gradient(to right,#c0f1b5, #f8dcaa, #cacaea);*/
     /*background-color: #85FFBD;*/
     /*background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);*/
@@ -107,7 +147,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     /*background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);*/
 
     /*background-color: #3E5151;*/
-    background-image: linear-gradient(to right, var(--main-color1), var(--main-color2));
     /*background-image: linear-gradient(to right, #fc5c7d, #6a82fb);*/
     /*background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);*/
     /*background-image: linear-gradient(to right, #fffbd5, #b20a2c);*/
@@ -125,33 +164,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     /*background-image: linear-gradient(to right, #2c3e50, #4ca1af);*/
     /*background-image: linear-gradient(to right, #141e30, #243b55);*/
     /*background-image: linear-gradient(to right, #ff9966, #ff5e62);*/
-    opacity: 0.90;
 }
 
-
-@font-face {
-    font-family: "Material Icons";
-    font-style: normal;
-    font-weight: 400;
-    src: url(./css/gstaticFont.woff2) format("woff2");
-}
-
-@font-face {
-    font-family: "Gotham Rounded";
-    font-style: normal;
-    font-weight: 450;
-    font-display: swap;
-    src: url(./css/GothamRounded-Medium.woff2) format("woff2");
-}
-
-@font-face {
-    font-family: "Ephesis";
-    font-style: normal;
-    font-weight: 550;
-    font-display: swap;
-    /*src: url(https://fonts.gstatic.com/s/ephesis/v1/uU9PCBUS8IerL2VG3xTR396EilM.woff2) format('woff2');*/
-    src: url(./css/uU9PCBUS8IerL2VG3xTR396EilM.woff2) format("woff2");
-}
 
 .handwritting {
     box-sizing: border-box;

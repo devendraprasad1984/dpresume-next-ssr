@@ -9,10 +9,6 @@ const HeaderInfo = (props) => {
       <div className="row wrap">
         <div className="size30 xwhite handwritting">
           {config.name + " "}
-          &nbsp;
-          <a href={config.cvLink} target="_blank" className="bl size15 xred">
-            download CV
-          </a>
         </div>
         <div className="size30 handwritting xwhite">{config.rightTitle}</div>
       </div>

@@ -21,7 +21,7 @@ const Notes = (props) => {
 
       <div>
         <span>Leadership / Behavioural aspects</span>
-        <GridVanila data={data} style={{ height: "100%" }} />
+        <GridVanila data={data} style={{ height: "100%", width:'100%' }} />
       </div>
 
       {!config.endpoints.islocal && (

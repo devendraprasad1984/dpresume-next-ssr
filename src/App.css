@@ -1111,6 +1111,25 @@ i,
     user-select: none; /* Likely future */
 }
 
+.line {
+    width: 100%;
+    border-bottom: 1px solid #8a8a8a;
+}
+
+.line span {
+    font-size: 12px;
+    display: table-cell;
+    text-align: left;
+    justify-content: left;
+    min-width: 150px;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: black;
+    font-weight: bolder;
+    opacity: 0.7;
+}
+
 .code-content .txt-code {
     width: 200px;
     margin: 0 auto;

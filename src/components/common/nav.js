@@ -1,18 +1,32 @@
-import React, { useState } from "react";
-import { HashRouter, NavLink, Route, Switch } from "react-router-dom";
-import { config, getRandomColor, mobileCheck } from "../../configs/config";
+import React, {useCallback, useRef, useState} from "react";
+import {HashRouter, NavLink, Route, Switch} from "react-router-dom";
+import {config, getRandomColor, mobileCheck} from "../../configs/config";
 import Home from "../screens/home";
+import {Tooltip} from "antd";
 
 import NoData from "./nodata";
 import LoginWithAuth0 from "./loginAuth0";
 import Badges from "./badges";
 
 const Nav = (props) => {
+  const linkRef = useRef()
   const ismobile = mobileCheck();
   const [open, setOpen] = useState(!ismobile);
   const [bgColor, setBgColor] = useState(getRandomColor());
 
+
+  // const handleTooltip = () => {
+  //   // debugger
+  //   // const node = findDOMNode(linkRef);
+  //   // ReactTooltip.show(linkRef);
+  //   setTimeout(()=>ReactTooltip.hide(),1000);
+  //   // setTimeout(() => {
+  //   //   ReactTooltip.hide(linkRef);
+  //   // }, 750);
+  // };
+
   const linkClickPreHandler = () => {
+    // handleTooltip()
     let num = Math.floor(Math.random() * config.bgColors.length);
     let _bgcolor = config.bgColors[num] || "white";
     setBgColor((_) => _bgcolor);
@@ -20,7 +34,7 @@ const Nav = (props) => {
     if (!ismobile) return;
     setOpen(!open);
   };
-  const displayMenu = () => {
+  const displayMenu = useCallback(() => {
     return config.menu.map((item, index) => {
       if (item.show === false) return null;
       // let isHome = window.location.hash === '#/' && item.name.toLowerCase() === 'home'
@@ -29,7 +43,9 @@ const Nav = (props) => {
       let activeParentClass = isItemCurrent ? "active-parent" : "";
       return (
         <span
+          ref={linkRef}
           key={"menu-item-" + index}
+          onClick={linkClickPreHandler}
           className={
             "pad10 size15 margin-ud " +
             activeParentClass +
@@ -37,26 +53,27 @@ const Nav = (props) => {
             (ismobile ? "xwhite" : "")
           }
         >
+          <Tooltip title={<span className='tooltip'>You are viewing {item.name}</span>} placement='bottom'>
           <NavLink
             exact={true}
             activeClassName="active"
             to={"/" + item.name.toLowerCase()}
-            onClick={linkClickPreHandler}
           >
-            {item.name}
+           {item.name}
           </NavLink>
+          </Tooltip>
         </span>
       );
     });
-  };
-  const displayRoute = () => {
+  }, []);
+  const displayRoute = useCallback(() => {
     return config.menu.map((item, index) => {
       let path = "/" + item.name.toLowerCase();
       let routekey = "route-item-" + index;
       if (item.component === undefined)
         return (
           <Route key={routekey} path={path}>
-            <NoData type="404" />
+            <NoData type="404"/>
           </Route>
         );
       return (
@@ -65,7 +82,8 @@ const Nav = (props) => {
         </Route>
       );
     });
-  };
+  }, []);
+
   return (
     <div>
       <div className="row center">
@@ -88,7 +106,7 @@ const Nav = (props) => {
       </div>
 
       <HashRouter>
-        <div id="bggif" className="bggif" style={{ backgroundColor: bgColor }}>
+        <div id="bggif" className="bggif">
           <div className="row whiteRightPanel">
             {open && (
               <div className="flex1 content-left">
@@ -108,24 +126,38 @@ const Nav = (props) => {
                 <div className="col">
                   {/*<img className="imgPic img-animate" src={dp} alt={"dp"}/>*/}
                   <div>
-                    <LoginWithAuth0 />
+                    <LoginWithAuth0/>
                   </div>
                   <span>created with...</span>
-                  <Badges list={["patience", "passion", "love", "care"]} />
+                  <Badges list={["patience", "passion", "love", "care"]}/>
                 </div>
-                <div className="front col">{displayMenu()}</div>
+                <div className="front col">
+                  {/*<ReactTooltip*/}
+                  {/*  type='dark'*/}
+                  {/*  place='right'*/}
+                  {/*  effect='float'*/}
+                  {/*  textColor={'white'}*/}
+                  {/*  multiline={true}*/}
+                  {/*  id={'navLinks'}*/}
+                  {/*/>*/}
+                  {
+                    displayMenu()
+                  }
+                </div>
                 <div className="sidePicLeft">&nbsp;</div>
               </div>
             )}
             <div className="content-right front">
-              <div className='right'>
-                <a href={config.cvLink} target="_blank" className="bl size12 danger pad5">
-                  download CV
-                </a>
+              <div className='row'>
+                <div className='right'>
+                  <Tooltip title={<span className='tooltip'>Download CV in pdf format</span>} placement='bottom'>
+                    <a href={config.cvLink} target="_blank" className="bl size12 danger pad5">download CV</a>
+                  </Tooltip>
+                </div>
               </div>
               <Switch>
                 <Route exact path={"/"}>
-                  <Home title={config.pageTitles.home} />
+                  <Home title={config.pageTitles.home}/>
                 </Route>
                 {displayRoute()}
               </Switch>

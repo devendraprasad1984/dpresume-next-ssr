@@ -135,6 +135,11 @@ div > .btn {
     font-size: 16px;
 }
 
+.tooltip{
+    color: white;
+    /*background-color: var(--main-color2);*/
+}
+
 .cell{
     min-width: 100px;
     width: 100%;

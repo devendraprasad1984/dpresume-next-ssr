@@ -5,6 +5,7 @@ import { createRoot, hydrateRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import "./app.media.css";
+import "antd/dist/antd.css"
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import store from "./_redux/store";

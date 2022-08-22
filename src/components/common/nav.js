@@ -14,17 +14,6 @@ const Nav = (props) => {
   const [open, setOpen] = useState(!ismobile);
   const [bgColor, setBgColor] = useState(getRandomColor());
 
-
-  // const handleTooltip = () => {
-  //   // debugger
-  //   // const node = findDOMNode(linkRef);
-  //   // ReactTooltip.show(linkRef);
-  //   setTimeout(()=>ReactTooltip.hide(),1000);
-  //   // setTimeout(() => {
-  //   //   ReactTooltip.hide(linkRef);
-  //   // }, 750);
-  // };
-
   const linkClickPreHandler = () => {
     // handleTooltip()
     let num = Math.floor(Math.random() * config.bgColors.length);
@@ -132,14 +121,6 @@ const Nav = (props) => {
                   <Badges list={["patience", "passion", "love", "care"]}/>
                 </div>
                 <div className="front col">
-                  {/*<ReactTooltip*/}
-                  {/*  type='dark'*/}
-                  {/*  place='right'*/}
-                  {/*  effect='float'*/}
-                  {/*  textColor={'white'}*/}
-                  {/*  multiline={true}*/}
-                  {/*  id={'navLinks'}*/}
-                  {/*/>*/}
                   {
                     displayMenu()
                   }

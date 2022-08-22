@@ -135,6 +135,11 @@ div > .btn {
     font-size: 16px;
 }
 
+.tooltip{
+    color: white;
+    /*background-color: var(--main-color2);*/
+}
+
 .cell{
     min-width: 100px;
     width: 100%;
@@ -499,6 +504,8 @@ p {
 
 .btn,
 button {
+    background-color: var(--main-color2);
+    color: var(--main-color1);
     display: inline-block;
     font-weight: bold;
     text-align: center;
@@ -508,15 +515,9 @@ button {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    /*border: 1px solid transparent;*/
-    padding: 10px 10px;
-    /*font-size: 1rem;*/
-    /*line-height: 1.2;*/
-    border-radius: 0.25rem;
+    padding: 5px 5px;
+    border-radius: 0.5rem;
     cursor: pointer;
-    /*color: var(--white) !important;*/
-    /*transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,*/
-    /*border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;*/
 }
 
 code,
@@ -534,6 +535,12 @@ samp {
 .flexbox {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     display: grid;
+}
+.flexboxSkill {
+    display: flex;
+    justify-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .flexbox-video {

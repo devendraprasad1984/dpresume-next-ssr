@@ -6,14 +6,14 @@ import {TTS} from "../../configs/config";
 import ShowCompute from "./showCompute";
 
 const _tts = new TTS()
-const BasicDisplay = ({list, tag, className, time, loadTime}) => {
+const BasicDisplay = ({list, tag, className, time, loadTime,isarrow}) => {
     const [isSpeaking, setIsSpeaking] = useState(false)
 
     const display = (data) => {
         return data.map((row, index) => {
             return (
                 <div key={"key-" + index}>
-                    <HtmlComponent text={row}/>
+                    <HtmlComponent text={row} arrow={isarrow}/>
                 </div>
             );
         });
@@ -38,7 +38,7 @@ const BasicDisplay = ({list, tag, className, time, loadTime}) => {
     return (<React.Fragment>
         <div className={className}>
             <ShowCompute time={time} loadTime={loadTime}/>
-            <button className='btn xwhite primary' onClick={() => handleSpeak()}>{!isSpeaking ? 'Speak' : 'Stop Speaking'}</button>
+            <button className='btn xwhite' onClick={() => handleSpeak()}>{!isSpeaking ? 'Speak' : 'Stop Speaking'}</button>
             <div className="bl xprimary">{tag || ""}</div>
             {displayByList()}
         </div>

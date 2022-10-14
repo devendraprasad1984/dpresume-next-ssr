@@ -10,6 +10,7 @@ const HtmlComponent = ({ text, children, arrow = true }) => {
   let _htmlSanitized = sanitizeHtml(text || children);
   return (
     <div
+        className='linegap'
       dangerouslySetInnerHTML={{
         __html: ` ${
           arrow === true ? config.chars.pointArrow : ""

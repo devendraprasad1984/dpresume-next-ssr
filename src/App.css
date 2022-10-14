@@ -122,6 +122,19 @@ div > .btn {
     font-weight: bolder;
 }
 
+.bgColorLabelAnimate{
+    transition: all 0.7s ease-out;
+}
+.bgColorLabelAnimate:hover{
+    background-color: var(--main-color2);
+    color: var(--colorColdPurple);
+}
+
+.linegap{
+    line-height: 25px;
+    margin-top: 10px;
+}
+
 .pcenter {
     display: flex;
     justify-content: center;
@@ -594,15 +607,12 @@ samp {
     justify-content: space-between;
     flex-direction: row;
     flex-flow: row;
+    /*flex: 1 0 auto;*/
 }
 
 .wrap {
     flex: auto;
     flex-wrap: wrap;
-}
-
-.row * {
-    margin: 1px;
 }
 
 .flex {
@@ -611,7 +621,7 @@ samp {
 }
 
 
-.row * {
+.row > * {
     margin: 2px;
     line-height: 1.5rem;
 }
@@ -625,6 +635,7 @@ samp {
     display: flex;
     /*justify-content: space-between;*/
     flex-direction: column;
+    flex: 1 0 auto;
 }
 
 .bottom a {

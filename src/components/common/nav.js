@@ -36,7 +36,7 @@ const Nav = (props) => {
           key={"menu-item-" + index}
           onClick={linkClickPreHandler}
           className={
-            "pad10 size15 margin-ud " +
+            "pad5 size15 bgColorLabelAnimate " +
             activeParentClass +
             " " +
             (ismobile ? "xwhite" : "")
@@ -98,7 +98,7 @@ const Nav = (props) => {
         <div id="bggif" className="bggif">
           <div className="row whiteRightPanel">
             {open && (
-              <div className="flex1 content-left">
+              <div className="content-left">
                 {ismobile && (
                   <div className="row">
                     <span

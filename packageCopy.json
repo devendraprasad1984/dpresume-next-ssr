@@ -54,6 +54,12 @@
       "git add -A ."
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "if [ $(git rev-parse --abbrev-ref HEAD) = master ]; then echo \"\n❌ Don't push to the master branch!\n\"; exit 1; fi"
+    }
+  },
   "eslintConfig": {
     "extends": [
       "react-app",

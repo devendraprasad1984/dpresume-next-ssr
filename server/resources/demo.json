@@ -9,6 +9,10 @@
       "name": "BMI Calculator NodeJs App"
     },
     {
+      "href": "https://dpresume.com/react-vanila-js/#/",
+      "name": "React-Vanila-JS"
+    },
+    {
       "href": "https://dpresume.com/bmi/coverage/lcov-report/index.html",
       "name": "BMI-JEST"
     },
@@ -59,10 +63,6 @@
     {
       "href": "https://github.com/devendraprasad1984/nodejs/tree/master/ts-node-postgres-orm-api",
       "name": "nodejs typeorm sample"
-    },
-    {
-      "href": "https://github.com/devendraprasad1984/nodejs/tree/master/react-graphql-atom-recoil/test-recoil-atom",
-      "name": "react recoil graphql"
     },
     {
       "href": "https://dpresume.com/swagger",

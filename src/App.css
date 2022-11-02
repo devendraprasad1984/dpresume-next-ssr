@@ -637,6 +637,9 @@ samp {
     flex-direction: column;
     flex: 1 0 auto;
 }
+.col * {
+    margin-top: 2%;
+}
 
 .bottom a {
     font-size: var(--size10px);
@@ -747,6 +750,7 @@ i,
     z-index: 10;
     background-color: var(--white);
     opacity: 0.95;
+    min-height: var(--min-div-height);
 }
 
 .whiteOverlay {
@@ -780,7 +784,7 @@ i,
     top: 0;
     width: 100%;
     height: auto;
-    min-height: calc(100vh - 100px);
+    min-height: var(--min-div-height);;
     background-image: url("/assets/bg.gif");
     background-repeat: no-repeat;
     background-position: center;

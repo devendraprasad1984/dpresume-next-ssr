@@ -30,7 +30,7 @@ const AddFeedback = (props) => {
   };
 
   return (
-    <div>
+    <div className='col'>
       <input
         type="text"
         placeholder="Title/name/description/summary or leave blank"
@@ -87,7 +87,7 @@ const DisplayFeedback = (props) => {
 
   return (
     <React.Fragment>
-      <div className="xprimary">{data.length} feedback(s) found</div>
+      <div className="xprimary size20">{data.length} feedback(s) found</div>
       <div className="height400">
         {data.map((row, i) => {
           return (
@@ -101,7 +101,7 @@ const DisplayFeedback = (props) => {
                 </span>
               </div>
               <div className="row">
-                <span className="size12">{row.feedback}</span>
+                <span className="size15">{row.feedback}</span>
               </div>
               <div className="right">
                 {ip && (

@@ -7,9 +7,8 @@ export default function ShowCompute(props) {
     if (time === undefined && loadTime === undefined) return null
     return (
         <div className='right'>
-            fetched in {time && <span className='xprimary'>{time}ms</span>}
-            {loadTime && "rendered in"}
-            {loadTime && <span className='xprimary'>{loadTime}ms</span>}
+            {time && <span className='xprimary'><b>fetched in</b> {time}ms</span>}
+            {loadTime && <span className='xprimary'>rendered in {loadTime}ms</span>}
         </div>
     )
 }

@@ -42,7 +42,7 @@ const Nav = (props) => {
             (ismobile ? "xwhite" : "")
           }
         >
-          <Tooltip title={<span className='tooltip'>You are viewing {item.name}</span>} placement='bottom'>
+          <Tooltip title={<span className='tooltip'>You are viewing {item.name}</span>} placement='top'>
           <NavLink
             exact={true}
             activeClassName="active"
@@ -55,6 +55,7 @@ const Nav = (props) => {
       );
     });
   }, []);
+
   const displayRoute = useCallback(() => {
     return config.menu.map((item, index) => {
       let path = "/" + item.name.toLowerCase();
@@ -128,7 +129,7 @@ const Nav = (props) => {
                 <div className="sidePicLeft">&nbsp;</div>
               </div>
             )}
-            <div className="content-right front">
+            <div className="content-right front size15">
               <div className='row'>
                 <div className='right'>
                   <Tooltip title={<span className='tooltip'>Download CV in pdf format</span>} placement='bottom'>

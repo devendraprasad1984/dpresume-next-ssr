@@ -9,6 +9,7 @@
     --grad-color3: white;
     --main-color1: #DECBA4;
     --main-color2: #3E5151;
+    --min-div-height: calc(100vh - 100px);
     --gradient-image-color: linear-gradient(
             150deg,
             var(--main-color1) 40%,

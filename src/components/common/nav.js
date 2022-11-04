@@ -36,7 +36,7 @@ const Nav = (props) => {
           key={"menu-item-" + index}
           onClick={linkClickPreHandler}
           className={
-            "pad5 size15 bgColorLabelAnimate " +
+            "pad5 size15 bgColorLabelAnimate wrap " +
             activeParentClass +
             " " +
             (ismobile ? "xwhite" : "")

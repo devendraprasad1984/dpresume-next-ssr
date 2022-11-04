@@ -6,7 +6,7 @@ export default function get(uri, callback) {
     .then((res) => {
       return res.json();
     })
-    .then((data) => callback({ data }))
+    .then((data) => callback(data))
     .catch((err) => callback({ error: err }));
 }
 
@@ -17,7 +17,7 @@ export const getAsync = (uri) => {
       const res = await fetch(uri, header);
       const resdata = await res.json();
       let data = await resdata;
-      console.log("ip", data);
+      // console.log("ip", data);
       return await data;
     })();
   } catch (err) {

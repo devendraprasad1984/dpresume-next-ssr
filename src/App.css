@@ -269,7 +269,8 @@ b {
 
 
 .gridLine {
-    border-bottom: 1px solid var(--colorGrey);
+    border-bottom: 2px solid var(--colorGrey);
+    margin-bottom: 20px;
 }
 
 .gridRow {
@@ -461,7 +462,7 @@ section {
 }
 
 .content-left {
-    padding: 10px;
+    padding: var(--size20px);
     width: var(--left-panel-width);
 }
 
@@ -481,7 +482,7 @@ section {
 
 .content-right {
     width: var(--right-panel-width);
-    /*padding-left: var(--size10px);*/
+    padding-left: var(--size20px);
     /*padding-right: var(--size10px);*/
     float: left;
 }
@@ -613,6 +614,10 @@ samp {
 .wrap {
     flex: auto;
     flex-wrap: wrap;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
 }
 
 .flex {

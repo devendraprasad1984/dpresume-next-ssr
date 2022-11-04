@@ -19,7 +19,7 @@ export function postData(url = "", payload = {}, callback) {
         return response.json();
       })
       .then((data) => {
-        callback({ data });
+        callback(data );
       })
       .catch((err) => callback({ err }));
   } catch (err) {

@@ -38,6 +38,7 @@
     "local": "PORT=3004 react-scripts start",
     "dev:server": "NODE_ENV=development nodemon ./SSRExpress/bootstrap.js",
     "build": "react-scripts build",
+    "build-1": "node ./override-build.js",
     "lint": "lint-staged",
     "test": "CI=false react-scripts test --verbose --env=jsdom --findRelatedTests=**/*test.{js,ts,tsx,jsx} -u",
     "testx": "CI=true react-scripts test --verbose --env=jsdom --watchAll=false --findRelatedTests=**/*test.{js,ts,tsx,jsx} --bail --forceExit -u",
@@ -86,6 +87,7 @@
     "lint-staged": "^11.1.2",
     "prettier": "^2.4.0",
     "prop-types": "^15.7.2",
+    "rewire": "^6.0.0",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2"
   },

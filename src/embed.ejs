@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title><%= htmlWebpackPlugin.options.title %></title>
+        <script>
+            ;(function () {
+                window.__API_ROOT_URL__ =
+                    '<%= htmlWebpackPlugin.options.apiRootUrl %>'
+            })()
+        </script>
+    </head>
+    <body>
+        <script>
+            window.fa =
+                window.fa ||
+                function () {
+                    ;(fa.q = fa.q || []).push(arguments)
+                }
+            fa.l = +new Date()
+            fa('init', { product: 'localhost test page' })
+            fa('pageview')
+        </script>
+    </body>
+</html>

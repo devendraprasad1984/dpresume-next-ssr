@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title><%= htmlWebpackPlugin.options.title %></title>
+        <script>
+            ;(function () {
+                window.__API_ROOT_URL__ =
+                    '<%= htmlWebpackPlugin.options.apiRootUrl %>'
+            })()
+        </script>
+    </head>
+    <body>
+        <div data-role="react-content"></div>
+    </body>
+</html>

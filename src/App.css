@@ -8,8 +8,7 @@ span.link:has(a.active) {
     /*background-image: var(--gradient-image-color);*/
     /*-webkit-background-clip: text;*/
     /*-webkit-text-fill-color: transparent;*/
-    font-size: 18px;
-    color: #181515 !important;
+    font-size: 14px;
     text-decoration: underline;
 }
 
@@ -515,23 +514,48 @@ p {
 .margin10 {
     padding: var(--size10px);
 }
+.ripple {
+    background-position: center;
+    transition: background 0.2s ease-in;
+}
+.ripple:hover {
+    background: #f2f4f5 radial-gradient(circle, transparent 5%, #f2f4f5 1%) center/15000%;
+}
+.ripple:active {
+    background-color: #bac4c7;
+    background-size: 100%;
+    transition: background 0s ease-out;
+}
+
+.ripplex{
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+    position: fixed;
+    border-radius: 50%;
+    border: .5px solid var(--main-color2);
+}
+
+@keyframes ripple-effect {
+    to {
+        transform:scale(15);
+        opacity: 0.01;
+    }
+}
 
 .btn,
 button {
     background-color: var(--main-color2);
     color: var(--main-color1);
-    display: inline-block;
-    font-weight: bold;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    padding: 5px 5px;
-    border-radius: 0.5rem;
+    border: none;
+    border-radius: 2px;
+    padding: 12px 18px;
+    font-size: 16px;
+    text-transform: uppercase;
     cursor: pointer;
+    box-shadow: 0 0 4px #848282;
+    outline: none;
+    border-radius: 5px;
 }
 
 code,
@@ -576,11 +600,11 @@ samp {
     color: var(--main-color2);
 }
 
-.cards span:hover,
-.cards a:hover {
-    background-color: var(--main-color2);
-    color: var(--main-color1);
-}
+/*.cards span:hover,*/
+/*.cards a:hover {*/
+/*    background-color: var(--main-color2);*/
+/*    color: var(--main-color1);*/
+/*}*/
 
 .video-cards > span,
 .video-cards > a {

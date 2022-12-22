@@ -4,6 +4,7 @@ import "./console.css";
 import Main from "./components/main";
 import Welcome from "./components/screens/welcome";
 import { config } from "./configs/config";
+import {createRipple} from "./configs/utils";
 
 const nameFromLocalStorage = localStorage.getItem(
   config.enums.localStorage.name
@@ -14,6 +15,7 @@ const isNameSet =
   nameFromLocalStorage !== undefined;
 // console.log('nameFromLocalStorage',nameFromLocalStorage, isNameSet)
 
+
 function App(props) {
   const [canWeShowWelcome, setCanWeShowWelcome] = useState(!isNameSet);
   const handleCloseWelcome = (name) => {
@@ -21,6 +23,7 @@ function App(props) {
     localStorage.setItem(config.enums.localStorage.name, name);
     setCanWeShowWelcome(false);
   };
+
   return canWeShowWelcome ? <Welcome onClose={handleCloseWelcome} /> : <Main />;
   // return <Main />;
 }

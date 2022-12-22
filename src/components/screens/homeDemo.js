@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { config } from "../../configs/config";
 import useAPI from "../../hooks/useAPI";
 import NoData from "../common/nodata";
+import {createRipple} from "../../configs/utils";
+import Button from "../common/button";
 
 const HomeDemo = () => {
   const [videoMode, setVideoMode] = useState(false);
@@ -21,7 +23,7 @@ const HomeDemo = () => {
         return (
           <a
             key={"link-demo" + i}
-            className="white mcard"
+            className="mcard ripple"
             target="_blank"
             href={x.href}
           >
@@ -53,26 +55,16 @@ const HomeDemo = () => {
     if (error) return <NoData text={config.messages.ERROR} />;
     return (
       <div className="margin-ud">
-        <h1 className="row">
-          <span
-            className="btn info"
-            onClick={() => {
-              setDemoMode(!demoMode);
-              setVideoMode(false);
-            }}
-          >
-            Demo Apps
-          </span>
-          <span
-            className="btn primary"
-            onClick={() => {
-              setVideoMode(!videoMode);
-              setDemoMode(false);
-            }}
-          >
-            Click To see Video Demo
-          </span>
-        </h1>
+        <div className="row">
+          <Button click={(e) => {
+            setDemoMode(!demoMode);
+            setVideoMode(false);
+          }}>Demo Apps</Button>
+          <Button click={(e) => {
+            setVideoMode(!videoMode);
+            setDemoMode(false);
+          }}>Video Demo Apps</Button>
+        </div>
         {demoMode && <div className="flexbox cards">{printLinks()}</div>}
         {videoMode && (
           <div className="flexbox-video video-cards">

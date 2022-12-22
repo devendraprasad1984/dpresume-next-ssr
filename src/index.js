@@ -10,6 +10,7 @@ import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import store from "./_redux/store";
 import { Auth0Provider } from "@auth0/auth0-react";
+import {applyCursorRippleEffect} from "./configs/utils";
 // import {watchNetworkConnection} from "./configs/config";
 // watchNetworkConnection()
 
@@ -30,6 +31,7 @@ const auth0Domain = process.env.REACT_APP_AUTH0_DOMAIN;
 const auth0Client = process.env.REACT_APP_AUTH0_ClIENT;
 
 //change background image setinterval
+document.onclick = (e) => applyCursorRippleEffect(e);
 const changeBg = () => {
   let bodyBg = document.getElementById("bggif");
   let imgNum = Math.floor(Math.random() * 9);

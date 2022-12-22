@@ -38,7 +38,7 @@ const BasicDisplay = ({list, tag, className, time, loadTime,isarrow}) => {
     return (<React.Fragment>
         <div className={className}>
             <ShowCompute time={time} loadTime={loadTime}/>
-            <button className='btn xwhite' onClick={() => handleSpeak()}>{!isSpeaking ? 'Speak' : 'Stop Speaking'}</button>
+            <button className='btn ripple xwhite' onClick={() => handleSpeak()}>{!isSpeaking ? 'Speak' : 'Stop Speaking'}</button>
             <div className="bl xprimary">{tag || ""}</div>
             {displayByList()}
         </div>

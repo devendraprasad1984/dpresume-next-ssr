@@ -26,9 +26,12 @@ import {applyCursorRippleEffect} from "./configs/utils";
 // })
 
 //getting vars from env file
-const isSSR = process.env.REACT_APP_IS_SSR !== "false";
-const auth0Domain = process.env.REACT_APP_AUTH0_DOMAIN;
-const auth0Client = process.env.REACT_APP_AUTH0_ClIENT;
+// const isSSR = process.env.REACT_APP_IS_SSR !== "false";
+// const auth0Domain = process.env.REACT_APP_AUTH0_DOMAIN;
+// const auth0Client = process.env.REACT_APP_AUTH0_ClIENT;
+const isSSR = import.meta.env.REACT_APP_IS_SSR !== "false";
+const auth0Domain = import.meta.env.REACT_APP_AUTH0_DOMAIN;
+const auth0Client = import.meta .env.REACT_APP_AUTH0_ClIENT;
 
 //change background image setinterval
 document.onclick = (e) => applyCursorRippleEffect(e);
@@ -36,7 +39,7 @@ const changeBg = () => {
   let bodyBg = document.getElementById("bggif");
   let imgNum = Math.floor(Math.random() * 9);
   try {
-    bodyBg.style.backgroundImage = `url("/assets/bg${imgNum}.gif")`;
+    bodyBg.style.backgroundImage = `url("/public/assets/bg${imgNum}.gif")`;
   } catch (err) {}
 };
 
@@ -57,7 +60,8 @@ const IndexApp = (
 );
 
 const container = document.getElementById("root");
-const root = isSSR ? hydrateRoot(container) : createRoot(container);
+// const root = isSSR ? hydrateRoot(container) : createRoot(container);
+const root = createRoot(container);
 // const renderMethod = isSSR ? ReactDOM.hydrate : ReactDOM.render
 // renderMethod(IndexApp, root)
 root.render(IndexApp);

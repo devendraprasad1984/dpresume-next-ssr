@@ -34,7 +34,7 @@ const auth0Domain = import.meta.env.REACT_APP_AUTH0_DOMAIN;
 const auth0Client = import.meta .env.REACT_APP_AUTH0_ClIENT;
 
 //change background image setinterval
-document.onclick = (e) => applyCursorRippleEffect(e);
+// document.onclick = (e) => applyCursorRippleEffect(e);
 const changeBg = () => {
   let bodyBg = document.getElementById("bggif");
   let imgNum = Math.floor(Math.random() * 9);

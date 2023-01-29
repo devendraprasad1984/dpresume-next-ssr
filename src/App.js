@@ -4,7 +4,7 @@ import "./console.css";
 import Main from "./components/main";
 import Welcome from "./components/screens/welcome";
 import { config } from "./configs/config";
-import {createRipple} from "./configs/utils";
+// import {createRipple} from "./configs/utils";
 
 const nameFromLocalStorage = localStorage.getItem(
   config.enums.localStorage.name

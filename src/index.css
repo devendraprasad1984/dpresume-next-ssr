@@ -10,6 +10,7 @@
     --grad-color3: white;
     --main-color1: #DECBA4;
     --main-color2: #3E5151;
+    --main-color3: #f4ffff;
     --min-div-height: calc(100vh - 100px);
     --gradient-image-color: linear-gradient(
             150deg,
@@ -95,14 +96,14 @@
 @font-face {
     font-family: "Organical";
     font-style: normal;
-    font-weight: 300;
+    font-weight: 400;
     src: url(./css/organical.woff2) format("woff2");
 }
 
 @font-face {
     font-family: "Ephesis";
     font-style: normal;
-    font-weight: 350;
+    font-weight: 400;
     font-display: swap;
     /*src: url(https://fonts.gstatic.com/s/ephesis/v1/uU9PCBUS8IerL2VG3xTR396EilM.woff2) format('woff2');*/
     src: url(./css/uU9PCBUS8IerL2VG3xTR396EilM.woff2) format("woff2");
@@ -117,16 +118,18 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 body{
-    margin: auto;
     font-size: 12px;
-    display: flex;
-    /*place-items: center;*/
-    min-width: 420px;
-    /*min-height: 100vh;*/
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-right: 5vw;
+    padding-left: 5vw;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--main-color3);
 }
 
 *, :after, :before {
@@ -142,7 +145,6 @@ body{
 
 .bg {
     /*background-image: linear-gradient(to right, var(--main-color1), var(--main-color2));*/
-    background-color: var(--main-color2);
     /*opacity: 0.90;*/
 }
 

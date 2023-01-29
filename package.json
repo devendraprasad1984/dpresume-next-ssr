@@ -34,8 +34,8 @@
     "start:lerna-app1": "lerna exec --scope @dp1/app1 -- yarn start1",
     "start:lerna-app": "lerna exec --scope @dp1/app1 -- yarn start",
     "dev:server": "NODE_ENV=development nodemon ./SSRExpress/bootstrap.js",
-    "build": "react-scripts build",
-    "build-1": "node ./override-build.js",
+    "buildx": "react-scripts build",
+    "build1": "node ./override-build.js",
     "lint": "lint-staged",
     "test": "CI=false react-scripts test --verbose --env=jsdom --findRelatedTests=**/*test.{js,ts,tsx,jsx} -u",
     "testx": "CI=true react-scripts test --verbose --env=jsdom --watchAll=false --findRelatedTests=**/*test.{js,ts,tsx,jsx} --bail --forceExit -u",
@@ -44,8 +44,8 @@
     "testg": "npm run testx",
     "command": "npm lint && npm testg",
     "prepare": "husky install",
-    "devvite": "vite --config vite.config.js",
-    "buildvite": "vite build",
+    "dev": "vite --config vite.config.js",
+    "build": "vite build",
     "preview": "vite preview"
 
   },

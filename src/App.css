@@ -388,6 +388,7 @@ pre {
 
 .bottom {
     margin: 5rem 0 5rem 0;
+    background-color: var(--colorVanillaIce);
 }
 
 section {

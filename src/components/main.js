@@ -15,7 +15,7 @@ const Main = (props) => {
                 <Nav/>
             </section>
             {/*<NoPropDrilling/>*/}
-            <section className='bottom'>
+            <section className='bottom pad20'>
                 <BottomBar/>
             </section>
         </div>

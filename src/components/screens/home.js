@@ -53,7 +53,6 @@ const Home = (props) => {
             {/*<TestUpDownConnect/>*/}
             <OneLinerHeader title={props.title}/>
             {data && <BasicDisplay list={data} time={time} loadTime={loadTime}/>}
-            <NoData text={config.messages.PLZ_WAIT} />
             <HomeDemo/>
         </div>
     );

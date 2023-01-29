@@ -1375,3 +1375,22 @@ i,
     opacity: 1;
     visibility: visible;
 }
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background-color: var(--white);
+    opacity: 0.9;
+    /*transform: translate(-50%, -50%);*/
+}
+.loading-image{
+    height: 40vh;
+    width: 40vw;
+}

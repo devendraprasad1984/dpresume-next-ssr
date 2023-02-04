@@ -3,19 +3,20 @@ span.link:has(a.active) {
     border-bottom: 2px solid var(--gray-color);
 }
 
-.active {
-    /*background: var(--gradient-image-color);*/
-    /*background-image: var(--gradient-image-color);*/
-    /*-webkit-background-clip: text;*/
-    /*-webkit-text-fill-color: transparent;*/
-    font-size: 18px;
-    color: #181515 !important;
-    text-decoration: underline;
-}
+/*.active {*/
+/*    !*background: var(--gradient-image-color);*!*/
+/*    !*background-image: var(--gradient-image-color);*!*/
+/*    !*-webkit-background-clip: text;*!*/
+/*    !*-webkit-text-fill-color: transparent;*!*/
+/*    !*font-size: 14px;*!*/
+/*    text-decoration: underline;*/
+/*}*/
 
 .active-parent {
-    background-color: #e3dfdf;
-    opacity: 0.8;
+    text-decoration: underline;
+    background-color: var(--main-color1);
+    opacity: 0.9;
+    color: var(--main-color2);
 }
 
 div {
@@ -269,7 +270,8 @@ b {
 
 
 .gridLine {
-    border-bottom: 1px solid var(--colorGrey);
+    border-bottom: 2px solid var(--colorGrey);
+    margin-bottom: 20px;
 }
 
 .gridRow {
@@ -388,6 +390,7 @@ pre {
 
 .bottom {
     margin: 5rem 0 5rem 0;
+    background-color: var(--colorVanillaIce);
 }
 
 section {
@@ -461,7 +464,7 @@ section {
 }
 
 .content-left {
-    padding: 10px;
+    padding: var(--size20px);
     width: var(--left-panel-width);
 }
 
@@ -481,8 +484,8 @@ section {
 
 .content-right {
     width: var(--right-panel-width);
-    /*padding-left: var(--size10px);*/
-    /*padding-right: var(--size10px);*/
+    padding-left: var(--size10px);
+    padding-right: var(--size10px);
     float: left;
 }
 
@@ -515,22 +518,50 @@ p {
     padding: var(--size10px);
 }
 
+
+.ripple {
+    background-position: center;
+    transition: background 0.5s;
+}
+.ripple:hover {
+    /*background: var(--main-color3) radial-gradient(circle, transparent 1%, var(--main-color3) 1%) center/15000%;*/
+    background:  var(--main-color3) radial-gradient(circle, transparent 1%,  var(--main-color3) 1%) center/20000%;
+}
+.ripple:active {
+    background-color: var(--main-color1);
+    background-size: 100%;
+    transition: background 0s ease-out;
+}
+
+.ripplex{
+    width: 3vw;
+    height: 3vh;
+    background-color: transparent;
+    position: fixed;
+    border-radius: 50%;
+    border: .10px solid var(--main-color2);
+}
+
+@keyframes ripple-effect {
+    to {
+        transform:scale(15);
+        opacity: 0.01;
+    }
+}
+
 .btn,
 button {
     background-color: var(--main-color2);
     color: var(--main-color1);
-    display: inline-block;
-    font-weight: bold;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    padding: 5px 5px;
-    border-radius: 0.5rem;
+    border: none;
+    border-radius: 2px;
+    padding: 12px 18px;
+    font-size: 16px;
+    text-transform: uppercase;
     cursor: pointer;
+    box-shadow: 0 0 4px #848282;
+    outline: none;
+    border-radius: 5px;
 }
 
 code,
@@ -575,11 +606,11 @@ samp {
     color: var(--main-color2);
 }
 
-.cards span:hover,
-.cards a:hover {
-    background-color: var(--main-color2);
-    color: var(--main-color1);
-}
+/*.cards span:hover,*/
+/*.cards a:hover {*/
+/*    background-color: var(--main-color2);*/
+/*    color: var(--main-color1);*/
+/*}*/
 
 .video-cards > span,
 .video-cards > a {
@@ -613,6 +644,10 @@ samp {
 .wrap {
     flex: auto;
     flex-wrap: wrap;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
 }
 
 .flex {
@@ -785,7 +820,7 @@ i,
     width: 100%;
     height: auto;
     min-height: var(--min-div-height);;
-    background-image: url("/assets/bg.gif");
+    background-image: url("/assets/bg0.gif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1342,3 +1377,47 @@ i,
     opacity: 1;
     visibility: visible;
 }
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background-color: var(--white);
+    opacity: 0.9;
+    /*transform: translate(-50%, -50%);*/
+}
+.loading-image{
+    height: 40vh;
+    width: 40vw;
+}
+
+
+#progressBarContainer {
+    position: fixed;
+    z-index: 10;
+    background: rgba(255,255,255,0.05);
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+#progressBar {
+    background: linear-gradient(to left, var(--main-color2), var(--main-color3));
+    transform-origin: top left;
+    transform: scale(0,0);
+    opacity: 0;
+}
+
+#progressBarContainer,
+#progressBar {
+    height: var(--size10px);
+}
+
+

@@ -14,7 +14,7 @@ const Badges = (props) => {
           ? { backgroundColor: color }
           : { color: color };
         return (
-          <span key={badge} className={`pad5 roundCorner bgColorLabelAnimate`} style={styleProps}>
+          <span key={badge} className={`pad5 roundCorner bgColorLabelAnimate ripple`} style={styleProps}>
             {badge}
           </span>
         );

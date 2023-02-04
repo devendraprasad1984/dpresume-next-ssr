@@ -7,14 +7,14 @@ const HeaderInfo = (props) => {
   return (
     <div className="">
       <div className="row wrap">
-        <div className="size30 xwhite handwritting">
+        <div className="size30 handwritting">
           {config.name + " "}
         </div>
-        <div className="size30 handwritting xwhite">{config.rightTitle}</div>
+        <div className="size30 handwritting">{config.rightTitle}</div>
       </div>
       <div className="row">
-        <p className="size10 xwhite">{config.info}</p>
-        <p className="size10 xwhite">{config.contactline}</p>
+        <p className="size10">{config.info}</p>
+        <p className="size10">{config.contactline}</p>
       </div>
       <div className="wid100">
         <Badges

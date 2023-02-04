@@ -1,14 +1,14 @@
 import {useEffect, useRef, useState} from "react";
 
 import get from "../apis";
-import {calculatePerformance} from "../configs/utils";
-import {debouncing, throttling} from "../configs/debouncingThrottling";
+// import {calculatePerformance} from "../configs/utils";
+import {debouncing} from "../configs/debouncingThrottling";
 
 const useAPI = (url, reload) => {
   const firstRender = useRef(true);
   const changeInUrl = useRef(url);
 
-  let {runtime} = calculatePerformance(); //closure
+  // let {runtime} = calculatePerformance(); //closure
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -16,16 +16,16 @@ const useAPI = (url, reload) => {
   // const [loadTime, setLoadtime] = useState('');
 
   useEffect(() => {
-    if (!firstRender.current && changeInUrl.current === url) return;
+    // if (!firstRender.current && changeInUrl.current === url && reload===false) return;
     //mounting
     setLoading(true);
     debouncing(get(url, (res) => {
       if (res.error !== undefined) {
         setError({error: res.error});
-        setTime((t) => runtime());
+        // setTime((t) => runtime());
       } else {
-        setData(res.data === null ? [] : res.data);
-        setTime((t) => runtime());
+        setData(res);
+        // setTime((t) => runtime());
         setLoading(false);
       }
     }));
@@ -34,7 +34,7 @@ const useAPI = (url, reload) => {
       //unmounting
       setLoading(false);
     };
-  }, [reload, changeInUrl]);
+  }, [reload]);
   return {data, loading, error, time};
 };
 export default useAPI;

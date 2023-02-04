@@ -1,6 +1,7 @@
 echo "starting build"
 echo "cleaning up older build"
-rm -rf build/
+rm -Rf build/
+rm -Rf dist/
 echo "building..."
 #npm run build
 yarn build
@@ -9,4 +10,4 @@ yarn build
 #echo "cleaning up"
 #rm -rf build/
 #npx gulp
-echo "success. completed"
+echo "Build generated"

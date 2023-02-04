@@ -3,18 +3,20 @@ span.link:has(a.active) {
     border-bottom: 2px solid var(--gray-color);
 }
 
-.active {
-    /*background: var(--gradient-image-color);*/
-    /*background-image: var(--gradient-image-color);*/
-    /*-webkit-background-clip: text;*/
-    /*-webkit-text-fill-color: transparent;*/
-    font-size: 14px;
-    text-decoration: underline;
-}
+/*.active {*/
+/*    !*background: var(--gradient-image-color);*!*/
+/*    !*background-image: var(--gradient-image-color);*!*/
+/*    !*-webkit-background-clip: text;*!*/
+/*    !*-webkit-text-fill-color: transparent;*!*/
+/*    !*font-size: 14px;*!*/
+/*    text-decoration: underline;*/
+/*}*/
 
 .active-parent {
-    background-color: #e3dfdf;
-    opacity: 0.8;
+    text-decoration: underline;
+    background-color: var(--main-color1);
+    opacity: 0.9;
+    color: var(--main-color2);
 }
 
 div {
@@ -1394,3 +1396,28 @@ i,
     height: 40vh;
     width: 40vw;
 }
+
+
+#progressBarContainer {
+    position: fixed;
+    z-index: 10;
+    background: rgba(255,255,255,0.05);
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+#progressBar {
+    background: linear-gradient(to left, var(--main-color2), var(--main-color3));
+    transform-origin: top left;
+    transform: scale(0,0);
+    opacity: 0;
+}
+
+#progressBarContainer,
+#progressBar {
+    height: var(--size10px);
+}
+
+

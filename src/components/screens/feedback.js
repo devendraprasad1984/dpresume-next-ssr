@@ -88,7 +88,7 @@ const DisplayFeedback = (props) => {
     return (
         <React.Fragment>
             <div className="xprimary size20">{data.length} feedback(s) found</div>
-            <div className="height400">
+            <div className="">
                 {data.map((row, i) => {
                     return (
                         <div className="gridLine" key={`row-${i}`}>

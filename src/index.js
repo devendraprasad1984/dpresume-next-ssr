@@ -1,16 +1,17 @@
 import React from "react";
 // import ReactDOM from "react-dom";
-import { createRoot, hydrateRoot } from "react-dom/client";
+import {createRoot, hydrateRoot} from "react-dom/client";
 
 import "./index.css";
 import App from "./App";
 import "./app.media.css";
 import "antd/dist/antd.css"
 import reportWebVitals from "./reportWebVitals";
-import { Provider } from "react-redux";
+import {Provider} from "react-redux";
 import store from "./_redux/store";
-import { Auth0Provider } from "@auth0/auth0-react";
+import {Auth0Provider} from "@auth0/auth0-react";
 import {applyCursorRippleEffect} from "./configs/utils";
+import ProgressValue from "./components/common/progressValue";
 // import {watchNetworkConnection} from "./configs/config";
 // watchNetworkConnection()
 
@@ -31,32 +32,34 @@ import {applyCursorRippleEffect} from "./configs/utils";
 // const auth0Client = process.env.REACT_APP_AUTH0_ClIENT;
 const isSSR = import.meta.env.REACT_APP_IS_SSR !== "false";
 const auth0Domain = import.meta.env.REACT_APP_AUTH0_DOMAIN;
-const auth0Client = import.meta .env.REACT_APP_AUTH0_ClIENT;
+const auth0Client = import.meta.env.REACT_APP_AUTH0_ClIENT;
 
 //change background image setinterval
 // document.onclick = (e) => applyCursorRippleEffect(e);
 const changeBg = () => {
-  let bodyBg = document.getElementById("bggif");
-  let imgNum = Math.floor(Math.random() * 9);
-  try {
-    bodyBg.style.backgroundImage = `url("/public/assets/bg${imgNum}.gif")`;
-  } catch (err) {}
+    let bodyBg = document.getElementById("bggif");
+    let imgNum = Math.floor(Math.random() * 9);
+    try {
+        bodyBg.style.backgroundImage = `url("/public/assets/bg${imgNum}.gif")`;
+    } catch (err) {
+    }
 };
 
 const IndexApp = (
-  <React.StrictMode>
-    <Auth0Provider
-      domain={auth0Domain}
-      clientId={auth0Client}
-      redirectUri={window.location.origin}
-    >
-      <div className="main-container">
-        <Provider store={store}>
-          <App />
-        </Provider>
-      </div>
-    </Auth0Provider>
-  </React.StrictMode>
+    <React.StrictMode>
+        <Auth0Provider
+            domain={auth0Domain}
+            clientId={auth0Client}
+            redirectUri={window.location.origin}
+        >
+            <div className="main-container">
+                <Provider store={store}>
+                    <ProgressValue/>
+                    <App/>
+                </Provider>
+            </div>
+        </Auth0Provider>
+    </React.StrictMode>
 );
 
 const container = document.getElementById("root");

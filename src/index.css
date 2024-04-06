@@ -1,221 +1,57 @@
 :root {
-    color-scheme: light dark;
-    --purple-color: #7f279e;
-    --gray-color: #c2bebe;
-    --default-text-color: #797777;
-    --black-color: #222;
-    --white: white;
-    --grad-color1: #f8decc;
-    --grad-color2: #d4f8d4;
-    --grad-color3: white;
-    --main-color1: #DECBA4;
-    --main-color2: #3E5151;
-    --main-color3: #f4ffff;
-    --min-div-height: calc(100vh - 100px);
-    --gradient-image-color: linear-gradient(
-            150deg,
-            var(--main-color1) 40%,
-            var(--main-color2) 60%
-    );
-    --left-panel-width: 20%;
-    --right-panel-width: 100%;
-    --body-linear-grad-color: linear-gradient(
-            115deg,
-            var(--grad-color1) 0%,
-            var(--grad-color3) 40%,
-            var(--grad-color2) 100%
-    );
-    --medium-violet: #b71d7d;
-    --size10px: 10px;
-    --size15px: 15px;
-    --size20px: 20px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
 
-    --colorBrickRed: #c03950;
-    --colorMandy: #e14963;
-    --colorNavy: #0f0d52;
-    --colorJellyBean: #2ca5a9;
-    --colorParadiso: #32bcc1;
-    --colorJava: #55d6da;
-    --colorPolar: #f4fdfd;
-    --colorConfetti: #f6992c;
-    --colorCitrine: #fcf5e8;
-    --colorPink: #ffc9d2;
-    --colorVanillaIce: #faf1f3;
-    --colorAquaHaze: #e0edef;
-    --colorFrenchGrey: #d3d2d6;
-    --colorMischka: #e5e4e9;
-    --colorGrey: #e9e8ec;
-    --colorAthensGrey: #f1f0f2;
-    --colorWildSand: #f7f7fd;
-    --colorWhisperGray: #f8f8fa;
-    --colorWhite: #ffffff;
-    --colorDisabled: #bab8c5;
-    --colorStormGray: #60656d;
-    --colorBlack: #000000;
-    --colorSteelGrey: #211f30;
-    --colorDolphin: #656374;
-    --colorWaterloo: #7e7c90;
-    --colorColdPurple: #989eda;
-    --colorBlueViolet: #5d52b1;
-    --colorPlum: #484782;
-    --colorGrape: #2a283e;
-    --colorSuccess: #24a192;
-    --defaultTransitionDuration: 0.2s;
-    --colorTransitionDuration: 0.2s;
-    --dropdownTransitionDuration: 0.2s;
-    --widthDesktop: 60rem;
-    --opacityDisabled: 0.5;
-    --main-color: #5d52b1;
-    --app-color1: #DECBA4;
-    --app-color2: #3E5151;
-    --marginPanelLR: 40%;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
 
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@font-face {
-    font-family: "Material Icons";
-    font-style: normal;
-    font-weight: 400;
-    src: url(./css/gstaticFont.woff2) format("woff2");
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
 }
 
-@font-face {
-    font-family: "Gotham Rounded";
-    font-style: normal;
-    font-weight: 450;
-    font-display: swap;
-    src: url(./css/GothamRounded-Medium.woff2) format("woff2");
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
-@font-face {
-    font-family: "Stanley";
-    font-style: normal;
-    font-weight: 300;
-    src: url(./css/stanley.woff2) format("woff2");
-}
-@font-face {
-    font-family: "Organical";
-    font-style: normal;
-    font-weight: 400;
-    src: url(./css/organical.woff2) format("woff2");
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 
-@font-face {
-    font-family: "Ephesis";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    /*src: url(https://fonts.gstatic.com/s/ephesis/v1/uU9PCBUS8IerL2VG3xTR396EilM.woff2) format('woff2');*/
-    src: url(./css/uU9PCBUS8IerL2VG3xTR396EilM.woff2) format("woff2");
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
 }
-
-
-/*box-model where width = element width + padding + borders = https://www.w3schools.com/css/css_boxmodel.asp*/
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    border: 0;
-    /*font-size: 14px;*/
-    vertical-align: baseline;
+button:hover {
+  border-color: #646cff;
 }
-
-body{
-    font-size: 12px;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
-    min-height: 100vh;
-    overflow-x: hidden;
-    padding-right: 5vw;
-    padding-left: 5vw;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: var(--main-color3);
-}
-
-*, :after, :before {
-    box-sizing: border-box; /*disables extra height width due to margin/padding*/
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    /*font-family: "Stanley";*/
-    color: var(--main-color2);
-}
-
-.bg {
-    /*background-image: linear-gradient(to right, var(--main-color1), var(--main-color2));*/
-    /*opacity: 0.90;*/
-}
-
-
-.handwritting {
-    box-sizing: border-box;
-    font-family: "Ephesis", cursive;
-}
-
-.topbar {
-    z-index: 1002;
-    /*width: calc(100% - 200px);*/
-}
-
-.fixed {
-    /*position: fixed;*/
-    top: 0;
-    margin: 0 auto;
-}
-
-.mainabs {
-    position: absolute;
-    width: 98vw;
-}
-
-.blur {
-    backdrop-filter: blur(12px);
-}
-
-::selection {
-    background-color: var(--main-color2);
-    color: white;
-}
-
-select {
-    font-weight: bolder;
-    font-size: 20px;
-}
-
-input, select, textarea {
-    width: 100%;
-    border: 2px solid var(--main-color2);
-    padding: 5px;
-    margin-top: 4px;
-}
-
-::placeholder {
-    color: var(--main-color1);
-    opacity: 0.8;
-}
-
-select {
-    margin: 2px;
-    padding: 2px;
-    background-color: white;
-}
-
-::-webkit-scrollbar {
-    width: var(--size10px);
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--main-color1);
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #e9e8ec;
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
@@ -227,6 +63,6 @@ select {
     color: #747bff;
   }
   button {
-    background-color: #312e2e;
+    background-color: #f9f9f9;
   }
 }

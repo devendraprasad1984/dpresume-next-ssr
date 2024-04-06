@@ -1,0 +1,66 @@
+@media screen and (max-width: 600px) {
+
+    .flexbox {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        display: grid;
+    }
+
+    .menuicon {
+        font-size: 20px;
+    }
+
+    .content-left {
+        overflow-y: auto;
+        overflow-x: hidden;
+        position: fixed;
+        z-index: 120;
+        opacity: 0.93;
+        height: 100%;
+        width: 70vw;
+        top: 0;
+        left: 0;
+        background-color: var(--white);
+    }
+
+    .sidePicLeft{
+        width: 100%;
+    }
+
+    .bg{
+        background-size: auto;
+    }
+
+    #imgPic, .imgPic {
+        bottom: 0;
+        margin-bottom: 10%;
+        position: fixed;
+        z-index: 100001;
+    }
+
+    .topbar > .name > span,
+    .topbar .name > i,
+    div a > i {
+        font-size: 15px;
+    }
+
+    .overlay .closebtn {
+        font-size: var(--size10px);
+        top: 5px;
+        right: -40px;
+    }
+
+    .pright {
+        margin-bottom: 20px;
+    }
+
+
+    #idLinks a {
+        font-size: 8px;
+    }
+
+    .btn {
+        padding: 0.275rem 0.225rem;
+        line-height: 1;
+    }
+
+}

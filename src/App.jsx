@@ -1,14 +1,27 @@
-import { useState } from 'react'
-import './App.css'
+import React, {useState} from "react";
+import "./App.css";
+import "./console.css";
+import Main from "./components/main";
+import Welcome from "./components/screens/welcome";
+import {config} from "./configs/config";
+// import {createRipple} from "./configs/utils";
 
-function App() {
-  const [count, setCount] = useState(0)
+const nameFromLocalStorage = localStorage.getItem(
+    config.enums.localStorage.name
+);
+const isNameSet =
+    nameFromLocalStorage !== "" &&
+    nameFromLocalStorage !== null &&
+    nameFromLocalStorage !== undefined;
 
-  return (
-    <>
-      Hello DP
-    </>
-  )
+function App(props) {
+  const [canWeShowWelcome, setCanWeShowWelcome] = useState(!isNameSet);
+  const handleCloseWelcome = (name) => {
+    localStorage.setItem(config.enums.localStorage.name, name);
+    setCanWeShowWelcome(false);
+  };
+
+  return canWeShowWelcome ? <Welcome onClose={handleCloseWelcome}/> : <Main/>;
 }
 
-export default App
+export default App;

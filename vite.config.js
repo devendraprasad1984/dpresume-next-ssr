@@ -52,7 +52,7 @@ export default defineConfig({
   esbuild: {
     jsxFactory: "jsx",
     jsxFragment: "jsx.Fragment",
-    loader: "jsx",
+    loader: "js",
     include: [
       sourceJSPattern,
       "src/**/*.jsx",

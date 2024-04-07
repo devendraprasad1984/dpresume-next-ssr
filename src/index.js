@@ -1,13 +1,13 @@
 import React from "react";
 import {createRoot} from "react-dom/client";
+// import {Provider} from "react-redux";
 
+// import store from "./_redux/store";
+// import ProgressValue from "./components/common/progressValue.jsx";
 import "./index.css";
-import App from "./App";
 import "./app.media.css";
-import reportWebVitals from "./reportWebVitals";
-import {Provider} from "react-redux";
-import store from "./_redux/store";
-import ProgressValue from "./components/common/progressValue.jsx";
+import App from "./App";
+
 // import {watchNetworkConnection} from "./configs/config";
 // watchNetworkConnection()
 
@@ -24,24 +24,24 @@ import ProgressValue from "./components/common/progressValue.jsx";
 
 //getting vars from env file
 // const isSSR = process.env.REACT_APP_IS_SSR !== "false";
-const isSSR = import.meta.env.REACT_APP_IS_SSR !== "false";
+// const isSSR = import.meta.env.REACT_APP_IS_SSR !== "false";
 
 //change background image setinterval
 // document.onclick = (e) => applyCursorRippleEffect(e);
-const changeBg = () => {
-  let bodyBg = document.getElementById("bggif");
-  let imgNum = Math.floor(Math.random() * 9);
-  try {
-    bodyBg.style.backgroundImage = `url("/public/assets/bg${imgNum}.gif")`;
-  } catch (err) {
-  }
-};
+// const changeBg = () => {
+//   let bodyBg = document.getElementById("bggif");
+//   let imgNum = Math.floor(Math.random() * 9);
+//   try {
+//     bodyBg.style.backgroundImage = `url("/public/assets/bg${imgNum}.gif")`;
+//   } catch (err) {
+//   }
+// };
 
 const IndexApp = <div className="main-container">
-  <Provider store={store}>
-    <ProgressValue/>
+  {/*<Provider store={store}>*/}
+  {/*  <ProgressValue/>*/}
     <App/>
-  </Provider>
+  {/*</Provider>*/}
 </div>;
 
 const container = document.getElementById("root");
@@ -50,10 +50,4 @@ const root = createRoot(container);
 // const renderMethod = isSSR ? ReactDOM.hydrate : ReactDOM.render
 // renderMethod(IndexApp, root)
 root.render(IndexApp);
-
-setInterval(changeBg, 7000);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// setInterval(changeBg, 7000);

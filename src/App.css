@@ -820,7 +820,7 @@ i,
     width: 100%;
     height: auto;
     min-height: var(--min-div-height);;
-    background-image: url("/assets/bg0.gif");
+    /*background-image: url("src/assets/bg0.gif");*/
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -833,7 +833,7 @@ i,
     min-width: 50px;
     height: 50px;
     width: 50px;
-    background-image: url("/assets/react-loading4.gif");
+    /*background-image: url("/assets/react-loading4.gif");*/
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -847,7 +847,7 @@ i,
     /*width: 100%;*/
     /*min-height: 300px;*/
     height: 600px;
-    background-image: url("/assets/dp.png");
+    /*background-image: url("src/assets/dp.png");*/
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.7;

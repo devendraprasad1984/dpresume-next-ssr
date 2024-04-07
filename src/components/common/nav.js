@@ -1,5 +1,5 @@
 import React, {useCallback, useRef, useState} from "react";
-import {HashRouter, NavLink, Route, Switch} from "react-router-dom";
+import {HashRouter, NavLink, Route} from "react-router-dom";
 import {config, getRandomColor, mobileCheck} from "../../configs/config";
 import Home from "../screens/home";
 
@@ -140,12 +140,10 @@ const Nav = (props) => {
                     </Tooltip>
                   </div>
                 </div>
-                <Switch>
-                  <Route exact path={"/"}>
-                    <Home title={config.pageTitles.home}/>
-                  </Route>
-                  {displayRoute()}
-                </Switch>
+                <Route exact path={"/"}>
+                  <Home title={config.pageTitles.home}/>
+                </Route>
+                {displayRoute()}
               </div>
             </div>
           </div>
